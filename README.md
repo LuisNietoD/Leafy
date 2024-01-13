@@ -1,2 +1,2 @@
 # Leafy
- Plant idle game
+ Plant idle game project
