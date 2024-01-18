@@ -36,6 +36,44 @@ public class CartesManager : MonoBehaviour
     private int nombreCartesRares = 0; // Variable pour stocker le nombre de cartes rares obtenues
 
     // Fonction appelée lorsque le joueur appuie sur le bouton
+
+
+    public TextMeshProUGUI infoCartesText; // Référence au Text UI pour afficher les informations sur les cartes
+
+    // Fonction appelée lorsque la souris entre dans la zone du bouton
+    public void AfficherCartesPossibles()
+    {
+        string infoCartes = "Cartes possibles :\n";
+
+        foreach (string carte in cartes)
+        {
+            infoCartes += carte + "\n";
+        }
+
+        // Affiche les informations sur les cartes dans le Text UI dédié
+        if (infoCartesText != null)
+        {
+            infoCartesText.text = infoCartes;
+        }
+        else
+        {
+            Debug.LogError("Text UI non assigné pour afficher les informations sur les cartes.");
+        }
+    }
+
+    // Fonction appelée lorsque la souris quitte la zone du bouton
+    public void CacherCartesPossibles()
+    {
+        // Efface le texte d'information sur les cartes
+        if (infoCartesText != null)
+        {
+            infoCartesText.text = "";
+        }
+        else
+        {
+            Debug.LogError("Text UI non assigné pour afficher les informations sur les cartes.");
+        }
+    }
     public void ObtenirCartes()
     {
         if (jetons >= 5f) // Vérifie si le joueur a assez de jetons
