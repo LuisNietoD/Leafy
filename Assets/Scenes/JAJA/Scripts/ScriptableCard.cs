@@ -21,7 +21,7 @@ public class ScriptableCard : ScriptableObject
 {
     public new string name;
     public Sprite artwork;
-    public Color background_color;
+    public Color background_color = Color.white;
     public int price;
     public bool sellable;
     public List<GameObject> craft_recipe;

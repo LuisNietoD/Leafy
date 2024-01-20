@@ -10,10 +10,12 @@ namespace Leafy.Manager
         
         private Card draggedCard;
         private Card hoveredCard;
+
+        private int ID = 0;
         
         private float draggedCardSpeed = 10;
         private Vector3 offset;
-        private float frontViewZ;
+        private float frontViewZ = -9;
         
         private void Update()
         {
@@ -25,6 +27,7 @@ namespace Leafy.Manager
                 offset = hoveredCard.SetDragged();
                 draggedCard = hoveredCard;
                 draggedCard.FrontViewAllCard(draggedCard.GetLastCard(draggedCard));
+                draggedCard.ChangeID(ID++);
                 hoveredCard = null;
             }
             //Drop the dragged card

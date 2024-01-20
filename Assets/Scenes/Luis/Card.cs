@@ -2,17 +2,23 @@ using UnityEngine;
 using System;
 using System.Collections;
 using Leafy.Manager;
+using TMPro;
 using Unity.VisualScripting;
 
 namespace Leafy.Objects
 {
     public class Card : MonoBehaviour
     {
+        public ScriptableCard info;
+        
         private float movementSpeed = 30.0f;
         private float offsetY = 0.5f;
         private float offsetZ = 0.1f;
         
         private Collider2D collider;
+        private TextMeshPro cardName;
+        private SpriteRenderer artwork;
+        private SpriteRenderer background;
         
         private Card parent;
         private Card child;
@@ -21,8 +27,18 @@ namespace Leafy.Objects
         private void Awake()
         {
             collider = GetComponent<Collider2D>();
+            cardName = transform.GetChild(1).GetComponent<TextMeshPro>();
+            artwork = transform.GetChild(2).GetComponent<SpriteRenderer>();
+            background = GetComponent<SpriteRenderer>();
         }
-        
+
+        private void Start()
+        {
+            cardName.text = info.name;
+            background.color = info.background_color;
+            artwork.sprite = info.artwork;
+        }
+
         private void Update()
         {
             //Move the card with a little delay
@@ -34,6 +50,13 @@ namespace Leafy.Objects
                 float z = parent.transform.position.z - offsetZ;
                 transform.position = new Vector3(position.x, position.y, z);
             }
+        }
+
+        public void UpdateRenderID(int id)
+        {
+            background.sortingOrder = id;
+            cardName.sortingOrder = id;
+            artwork.sortingOrder = id;
         }
 
         /// <summary>
@@ -106,6 +129,14 @@ namespace Leafy.Objects
                 child.ChangeStackCollider(enable);
             
             collider.enabled = enable;
+        }
+        
+        public void ChangeID(int id)
+        {
+            if(child != null)
+                child.ChangeID(id);
+            
+            UpdateRenderID(id);
         }
     }
 }
