@@ -1,6 +1,7 @@
 using System;
 using Leafy.Objects;
 using UnityEngine;
+using Leafy.Data;
 
 namespace Leafy.Manager
 {
@@ -16,7 +17,10 @@ namespace Leafy.Manager
         private float draggedCardSpeed = 10;
         private Vector3 offset;
         private float frontViewZ = -9;
-        
+
+        public GameObject crafterPrefab;
+        public float crafterOffsetY;
+
         private void Update()
         {
             hoveredCard = RayTestCard();
@@ -29,13 +33,39 @@ namespace Leafy.Manager
                 draggedCard.FrontViewAllCard(draggedCard.GetLastCard(draggedCard));
                 draggedCard.ChangeID(ID++);
                 hoveredCard = null;
+                //add event for update craft loader
             }
             //Drop the dragged card
             else if (Input.GetMouseButtonUp(0) && draggedCard != null)
             {
+                
                 draggedCard.Drop(hoveredCard);
+                Card firstStackCard = draggedCard.GetFirstCard(draggedCard);
+                int craft = Craft.GetCraft(firstStackCard.GetStackIDList(firstStackCard));
+                if (craft >= 0)
+                {
+                    LaunchCraft(craft, firstStackCard);
+                }
+                
                 draggedCard = null;
             }
+        }
+
+        private void LaunchCraft(int craftID, Card firstStackCard)
+        {
+            ScriptableCard toCraft = CardList.GetCardByID(craftID);
+            if(toCraft == null)
+                Debug.LogError("Cannot find this craft ID");
+
+            Vector3 pos = firstStackCard.transform.position;
+            pos.y += crafterOffsetY;
+            GameObject crafter = Instantiate(crafterPrefab, pos, Quaternion.identity);
+
+            CraftLoading cl = crafter.GetComponent<CraftLoading>();
+
+            cl.timeToCraft = toCraft.timeToCraft;
+            cl.drop = toCraft;
+            cl.stack = firstStackCard.GetStackList(firstStackCard);
         }
 
         private void FixedUpdate()

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Leafy.Manager;
 using TMPro;
 using Unity.VisualScripting;
@@ -19,6 +20,7 @@ namespace Leafy.Objects
         private TextMeshPro cardName;
         private SpriteRenderer artwork;
         private SpriteRenderer background;
+        private int ID;
         
         private Card parent;
         private Card child;
@@ -34,10 +36,18 @@ namespace Leafy.Objects
 
         private void Start()
         {
+            UpdateCardInfo();
+        }
+
+        public void UpdateCardInfo()
+        {
             cardName.text = info.name;
             background.color = info.background_color;
             artwork.sprite = info.artwork;
+            ID = info.ID;
         }
+
+        
 
         private void Update()
         {
@@ -103,6 +113,46 @@ namespace Leafy.Objects
                 return card;
             return GetLastCard(card.child);
         }
+        
+        public Card GetFirstCard(Card card)
+        {
+            if (card == null)
+                return null;
+            if (card.parent == null)
+                return card;
+            return GetFirstCard(card.parent);
+        }
+
+        public List<int> GetStackIDList(Card start)
+        {
+            List<int> stack = new List<int>();
+
+            Card actual = start;
+
+            while (actual != null)
+            {
+                stack.Add(actual.ID);
+                actual = actual.child;
+            }
+
+            stack.Sort();
+            return stack;
+        }
+        
+        public List<Card> GetStackList(Card start)
+        {
+            List<Card> stack = new List<Card>();
+
+            Card actual = start;
+
+            while (actual != null)
+            {
+                stack.Add(actual);
+                actual = actual.child;
+            }
+            return stack;
+        }
+        
 
         /// <summary>
         /// Put all the stack on front view when dragged
