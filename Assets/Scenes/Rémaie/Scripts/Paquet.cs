@@ -32,8 +32,18 @@ public class CartesManager : MonoBehaviour
         "Carte Violette",
     };
 
-    [SerializeField] private float[] probabilitesCouleurs = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.06f, 0.06f };
-    [SerializeField][Range(0.0f, 1.0f)] private float seuilRarete = 0.06f;
+    [SerializeField] private float[] probabilitesCouleurs = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
+
+    [SerializeField][Range(0.0f, 1.0f)] private float seuilRarete = 0.02f;
+
+    // Liste de cartes rares
+    private List<string> cartesRares = new List<string>()
+    {
+        "Carte Vert",
+        "Carte Violette",
+        // Ajoutez d'autres cartes rares si nécessaire
+    };
+
     private int nombrePaquetsOuverts = 0;
     private int nombreCartesRares = 0;
 
@@ -170,7 +180,7 @@ public class CartesManager : MonoBehaviour
     {
         foreach (string carte in cartesObtenues)
         {
-            if (probabilitesCouleurs[cartes.IndexOf(carte)] == seuilRarete)
+            if (cartesRares.Contains(carte))
             {
                 nombreCartesRares++;
             }
