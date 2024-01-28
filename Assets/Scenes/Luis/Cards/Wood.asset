@@ -15,9 +15,13 @@ MonoBehaviour:
   name: Wood
   ID: 1
   artwork: {fileID: 21300000, guid: c78070ca9c5f3a04d8f70d025993bd8a, type: 3}
-  background_color: {r: 1, g: 0.7859151, b: 0.48113203, a: 1}
-  price: 0
-  sellable: 0
-  craft_recipe: []
+  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background_color: {r: 0.97735846, g: 0.5735065, b: 0.5735065, a: 1}
   type: 0
-  timeToCraft: 0
+  sellable: 0
+  craftable: 0
+  harvestable: 0
+  price: 0
+  timeToCraft: 5
+  infinite: 0
+  life: 0

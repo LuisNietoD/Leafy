@@ -15,9 +15,13 @@ MonoBehaviour:
   name: Stick
   ID: 5
   artwork: {fileID: 21300000, guid: fe90e0387937ee64d8330e6ec6609a3f, type: 3}
+  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 1, g: 0.7859151, b: 0.48113203, a: 1}
-  price: 0
-  sellable: 0
-  craft_recipe: []
   type: 0
+  sellable: 0
+  craftable: 0
+  harvestable: 0
+  price: 0
   timeToCraft: 4
+  infinite: 0
+  life: 0

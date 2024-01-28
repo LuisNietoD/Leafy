@@ -15,9 +15,13 @@ MonoBehaviour:
   name: Furnace
   ID: 2
   artwork: {fileID: 21300000, guid: 8f461e84e718eda4dacb8e54261158f1, type: 3}
+  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-  price: 5
-  sellable: 1
-  craft_recipe: []
   type: 0
+  sellable: 1
+  craftable: 0
+  harvestable: 0
+  price: 5
   timeToCraft: 0
+  infinite: 1
+  life: 0

@@ -22,10 +22,20 @@ public class ScriptableCard : ScriptableObject
     public new string name;
     public int ID;
     public Sprite artwork;
+    public Sprite background;
     public Color background_color = Color.white;
-    public int price;
-    public bool sellable;
-    public List<GameObject> craft_recipe;
     public Card_Type type;
+    public bool sellable;
+    public bool craftable;
+    public bool harvestable;
+    
+    [Header("Sell information")]
+    public int price;
+
+    [Header("Craft information")]
     public float timeToCraft;
+    
+    [Header("Harvest information")]
+    public bool infinite;
+    public int life;
 }

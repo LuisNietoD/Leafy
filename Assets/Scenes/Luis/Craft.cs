@@ -10,7 +10,9 @@ namespace Leafy.Data
         public static Dictionary<int, List<int>> list = new Dictionary<int, List<int>>()
         {
             //Stick
-            { 5, new List<int>() { 1, 1, 1 } }
+            { 5, new List<int>() { 1, 1, 1 } },
+            //Wood
+            { 1, new List<int>() { 2, 1 } }
         };
     
     

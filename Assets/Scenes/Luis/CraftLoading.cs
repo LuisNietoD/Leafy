@@ -22,7 +22,6 @@ public class CraftLoading : MonoBehaviour
     {
         elapsed += Time.deltaTime;
 
-        Debug.Log(Mathf.Lerp(360, 0, Mathf.Clamp01(elapsed/timeToCraft)));
         loadImage.material.SetFloat("_RadialClip", Mathf.Lerp(360, 0, Mathf.Clamp01(elapsed/timeToCraft)));
         
 
@@ -33,7 +32,7 @@ public class CraftLoading : MonoBehaviour
 
             foreach (Card card in stack)
             {
-                Destroy(card.gameObject);
+                card.ReduceLife();
             }
             Destroy(gameObject);
         }

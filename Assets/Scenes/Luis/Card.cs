@@ -11,6 +11,7 @@ namespace Leafy.Objects
     public class Card : MonoBehaviour
     {
         public ScriptableCard info;
+        public GameObject loader;
         
         private float movementSpeed = 30.0f;
         private float offsetY = 0.5f;
@@ -24,6 +25,9 @@ namespace Leafy.Objects
         
         private Card parent;
         private Card child;
+        private int life;
+        private bool infinite;
+
 
 
         private void Awake()
@@ -45,6 +49,8 @@ namespace Leafy.Objects
             background.color = info.background_color;
             artwork.sprite = info.artwork;
             ID = info.ID;
+            life = info.life;
+            infinite = info.infinite;
         }
 
         
@@ -80,6 +86,8 @@ namespace Leafy.Objects
             parent = null;
                 
             ChangeStackCollider(false);
+            if(loader != null)
+                Destroy(loader);
             
             return transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
@@ -187,6 +195,36 @@ namespace Leafy.Objects
                 child.ChangeID(id);
             
             UpdateRenderID(id);
+        }
+
+        public void SetLoader(GameObject loader)
+        {
+            this.loader = loader;
+        }
+
+        public void ReduceLife()
+        {
+            life -= 1;
+            if (life <= 0 && !infinite)
+            {
+                if(loader != null)
+                    Destroy(loader);
+                if (child != null)
+                {
+                    if (parent != null)
+                    {
+                        parent.child = child;
+                        child.parent = parent;
+                    }
+                    else
+                        child.transform.position = transform.position;
+                }
+                Destroy(gameObject);
+            }
+            else
+            {
+                GameManager.instance.TestCraft(this);
+            }
         }
     }
 }

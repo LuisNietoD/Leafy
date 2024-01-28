@@ -7,6 +7,8 @@ namespace Leafy.Manager
 {
     public class GameManager: MonoBehaviour
     {
+        public static GameManager instance;
+        
         public LayerMask cardLayer;
         
         private Card draggedCard;
@@ -20,6 +22,18 @@ namespace Leafy.Manager
 
         public GameObject crafterPrefab;
         public float crafterOffsetY;
+
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else if (instance != this)
+            {
+                Destroy(this);
+            }
+        }
 
         private void Update()
         {
@@ -51,6 +65,17 @@ namespace Leafy.Manager
             }
         }
 
+        public void TestCraft(Card card)
+        {
+            Card firstStackCard = card.GetFirstCard(card);
+            int craft = Craft.GetCraft(firstStackCard.GetStackIDList(firstStackCard));
+            
+            if (craft >= 0 && firstStackCard.loader == null)
+            {
+                LaunchCraft(craft, firstStackCard);
+            }
+        }
+
         private void LaunchCraft(int craftID, Card firstStackCard)
         {
             ScriptableCard toCraft = CardList.GetCardByID(craftID);
@@ -66,6 +91,11 @@ namespace Leafy.Manager
             cl.timeToCraft = toCraft.timeToCraft;
             cl.drop = toCraft;
             cl.stack = firstStackCard.GetStackList(firstStackCard);
+
+            foreach (Card c in cl.stack)
+            {
+                c.SetLoader(cl.gameObject);
+            }
         }
 
         private void FixedUpdate()
