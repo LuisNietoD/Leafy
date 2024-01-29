@@ -11,8 +11,6 @@ namespace Leafy.Data
         {
             //Stick
             { 5, new List<int>() { 1, 1, 1 } },
-            //Wood
-            { 1, new List<int>() { 2, 1 } }
         };
     
     

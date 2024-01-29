@@ -32,7 +32,7 @@ public class CraftLoading : MonoBehaviour
 
             foreach (Card card in stack)
             {
-                card.ReduceLife();
+                Destroy(card.gameObject);
             }
             Destroy(gameObject);
         }

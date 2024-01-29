@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Wood.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Wood.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Craft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Craft.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +79,7 @@
       <workItem from="1705591019230" duration="7948000" />
       <workItem from="1705759093429" duration="13288000" />
       <workItem from="1705882541118" duration="2649000" />
-      <workItem from="1706517392861" duration="3097000" />
+      <workItem from="1706517392861" duration="13727000" />
     </task>
     <servers />
   </component>
