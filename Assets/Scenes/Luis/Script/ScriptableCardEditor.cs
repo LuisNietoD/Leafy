@@ -22,6 +22,8 @@ public class ScriptableCardEditor : Editor
     SerializedProperty infiniteProp;
     SerializedProperty timeToCraftProp;
 
+    private Texture2D finalBackground;
+
     void OnEnable()
     {
         // Initialize serialized properties
@@ -103,7 +105,7 @@ public class ScriptableCardEditor : Editor
             centeredRect.x += centerX;
 
             // Create a new texture with the blended background color
-            Texture2D finalBackground = GetBlendedBackground(backgroundTexture, backgroundColorProp.colorValue);
+            finalBackground = GetBlendedBackground(backgroundTexture, backgroundColorProp.colorValue);
 
             // Draw the final blended background
             GUI.DrawTexture(centeredRect, finalBackground);
@@ -133,6 +135,20 @@ public class ScriptableCardEditor : Editor
             Vector3 labelPosition = new Vector3(labelX, labelY, 0f);
 
             Handles.Label(labelPosition, labelText, labelStyle);
+            
+            // Display ID in white below the name
+            string idText = "ID: " + IDProp.intValue;
+            GUIStyle idStyle = new GUIStyle(EditorStyles.label);
+            idStyle.normal.textColor = Color.white;
+            idStyle.fontStyle = FontStyle.Bold;
+            idStyle.fontSize = 30; // Adjust font size as needed
+
+            Vector2 idSize = idStyle.CalcSize(new GUIContent(idText));
+            float idX = centeredRect.x + (centeredRect.width - idSize.x) * 0.5f;
+            float idY = centeredRect.y + centeredRect.height * 0.92f;
+            Vector3 idPosition = new Vector3(idX, idY, 0f);
+
+            Handles.Label(idPosition, idText, idStyle);
         }
 
         // Apply changes to the serialized object
@@ -171,4 +187,34 @@ public class ScriptableCardEditor : Editor
         return finalBackground;
     }
     
+    public override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)
+    {
+        ScriptableCard soCard = (ScriptableCard)target;
+
+        Texture2D cardIcon = soCard.GetCardIcon(); 
+        
+        if (cardIcon != null)
+        {
+            Texture2D resizedIcon = ResizeTexture(cardIcon, width, height);
+
+            return resizedIcon;
+        }
+
+        return null;
+    }
+    
+    private Texture2D ResizeTexture(Texture2D sourceTexture, int targetWidth, int targetHeight)
+    {
+        RenderTexture rt = new RenderTexture(targetWidth, targetHeight, 24);
+        Graphics.Blit(sourceTexture, rt);
+
+        Texture2D result = new Texture2D(targetWidth, targetHeight);
+        result.ReadPixels(new Rect(0, 0, targetWidth, targetHeight), 0, 0);
+        result.Apply();
+
+        RenderTexture.active = null;
+        DestroyImmediate(rt);
+
+        return result;
+    }
 }

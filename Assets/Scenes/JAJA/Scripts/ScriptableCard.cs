@@ -38,4 +38,9 @@ public class ScriptableCard : ScriptableObject
     [Header("Harvest information")]
     public bool infinite;
     public int life;
+    
+    public Texture2D GetCardIcon()
+    {
+        return artwork.texture;
+    }
 }
