@@ -68,6 +68,7 @@ namespace Leafy.Objects
             }
         }
 
+        
         public void UpdateRenderID(int id)
         {
             background.sortingOrder = id;

@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  cardIcon: {fileID: 0}
   name: Wood
   ID: 1
   artwork: {fileID: 21300000, guid: c78070ca9c5f3a04d8f70d025993bd8a, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 1, g: 0.6698113, b: 0.6698113, a: 1}
+  background_color: {r: 0.9622642, g: 0.5646493, b: 0.5646493, a: 1}
   type: 0
   sellable: 0
   craftable: 0

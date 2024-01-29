@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/2933617.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/2933617.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/3275464.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/3275464.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CARD.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CARD.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Card.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Card.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CardBG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CardBG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CardList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CardList.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Wood.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Wood.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Craft.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Craft.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CraftLoading.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/CraftLoading.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Loading.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Loading.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/ScriptableCardEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/ScriptableCardEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/flower (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/flower (1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/flower.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/flower.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/french-stick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/french-stick.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/furnace.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/furnace.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/plant.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/plant.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +73,7 @@
       <workItem from="1705591019230" duration="7948000" />
       <workItem from="1705759093429" duration="13288000" />
       <workItem from="1705882541118" duration="2649000" />
-      <workItem from="1706517392861" duration="2435000" />
+      <workItem from="1706517392861" duration="3097000" />
     </task>
     <servers />
   </component>
