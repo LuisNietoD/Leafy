@@ -44,8 +44,11 @@ namespace Leafy.Manager
             {
                 offset = hoveredCard.SetDragged();
                 draggedCard = hoveredCard;
-                draggedCard.FrontViewAllCard(draggedCard.GetLastCard(draggedCard));
-                draggedCard.ChangeID(ID++);
+                CardUtils.ApplyMethodOnStack(draggedCard, card =>
+                {
+                    card.BringToFront();
+                    card.ChangeID(ID++);
+                });
                 hoveredCard = null;
                 //add event for update craft loader
             }
@@ -54,11 +57,10 @@ namespace Leafy.Manager
             {
                 
                 draggedCard.Drop(hoveredCard);
-                Card firstStackCard = draggedCard.GetFirstCard(draggedCard);
-                int craft = Craft.GetCraft(firstStackCard.GetStackIDList(firstStackCard));
+                int craft = Craft.GetCraft(CardUtils.GetStackIDList(draggedCard));
                 if (craft >= 0)
                 {
-                    LaunchCraft(craft, firstStackCard);
+                    LaunchCraft(craft, CardUtils.GetRootCard(draggedCard));
                 }
                 
                 draggedCard = null;
@@ -67,8 +69,8 @@ namespace Leafy.Manager
 
         public void TestCraft(Card card)
         {
-            Card firstStackCard = card.GetFirstCard(card);
-            int craft = Craft.GetCraft(firstStackCard.GetStackIDList(firstStackCard));
+            Card firstStackCard = CardUtils.GetRootCard(card);
+            int craft = Craft.GetCraft(CardUtils.GetStackIDList(firstStackCard));
             
             if (craft >= 0 && firstStackCard.loader == null)
             {
@@ -90,7 +92,7 @@ namespace Leafy.Manager
 
             cl.timeToCraft = toCraft.timeToCraft;
             cl.drop = toCraft;
-            cl.stack = firstStackCard.GetStackList(firstStackCard);
+            cl.stack = CardUtils.GetStackCardList(firstStackCard);
 
             foreach (Card c in cl.stack)
             {
