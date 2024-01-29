@@ -3,21 +3,21 @@ using UnityEngine.EventSystems;
 
 public class BoutonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public CartesUIManager cartesUIManager;
+    public CardsUIManager cardsUIManager;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (cartesUIManager != null)
+        if (cardsUIManager != null)
         {
-            cartesUIManager.AfficherCartesPanel();
+            cardsUIManager.ShowCardsPanel();
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (cartesUIManager != null)
+        if (cardsUIManager != null)
         {
-            cartesUIManager.CacherCartesPanel();
+            cardsUIManager.HideCardsPanel();
         }
     }
 }

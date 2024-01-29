@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 356452373713669370}
   - component: {fileID: 8860733885933241004}
   m_Layer: 0
-  m_Name: Carte Rouge
+  m_Name: RedCard
   m_TagString: Carte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

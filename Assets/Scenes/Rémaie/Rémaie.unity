@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 76303003}
   - component: {fileID: 76303002}
   m_Layer: 5
-  m_Name: "JauneMasqu\xE9"
+  m_Name: YellowMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 236228352}
   - component: {fileID: 236228351}
   m_Layer: 5
-  m_Name: "VertMasqu\xE9"
+  m_Name: GreenMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 312403501}
   - component: {fileID: 312403500}
   m_Layer: 5
-  m_Name: ProbaOrange
+  m_Name: OrangeProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 437021432}
   - component: {fileID: 437021431}
   m_Layer: 5
-  m_Name: Jaune
+  m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -705,7 +705,6 @@ RectTransform:
   - {fileID: 1841952420}
   - {fileID: 1689058987}
   - {fileID: 1623226480}
-  - {fileID: 1600614822}
   - {fileID: 886355572}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -726,7 +725,7 @@ GameObject:
   - component: {fileID: 515135953}
   - component: {fileID: 515135952}
   m_Layer: 5
-  m_Name: "RoseMasqu\xE9"
+  m_Name: PinkMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,10 +815,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e19fb1c77006a8479f37043d2da38c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetons: 99999
+  tokens: 99999
   consoleText: {fileID: 1689058988}
-  cartesRaresText: {fileID: 1623226478}
-  prefabsCartes:
+  rareCardsText: {fileID: 1623226478}
+  cardsPrefabs:
   - {fileID: 4746357798088482288, guid: 1a7c3ae3dbce9104798c881e6c3142de, type: 3}
   - {fileID: 6171199460926362605, guid: f5a1d0cfad43c2d4b8b4fb25c556debd, type: 3}
   - {fileID: 2827942153360859261, guid: 40c9ae463f87e6348b20f7a91417be88, type: 3}
@@ -827,7 +826,7 @@ MonoBehaviour:
   - {fileID: 2920868362505002920, guid: a810c374951cde74080f5d2c532a1d94, type: 3}
   - {fileID: 1732551286320596134, guid: 819ffbbf1802ffa4c908c444a5677657, type: 3}
   - {fileID: 5669888537421377917, guid: de8d25751859dfc4497a981e5b40ed05, type: 3}
-  distanceSpawnDevantCamera: 5
+  distanceSpawnInFrontOfCamera: 5
   Mask1: {fileID: 1049330134}
   Mask2: {fileID: 76303002}
   Mask3: {fileID: 776293069}
@@ -835,7 +834,7 @@ MonoBehaviour:
   Mask5: {fileID: 2135473853}
   Mask6: {fileID: 236228351}
   Mask7: {fileID: 2127151364}
-  probabilitesCouleurs:
+  colorProbabilities:
   - 0.5
   - 0.12
   - 0.12
@@ -843,8 +842,8 @@ MonoBehaviour:
   - 0.12
   - 0.01
   - 0.01
-  seuilRarete: 0.06
-  infoCartesText: {fileID: 1600614820}
+  rarityThreshold: 0.02
+  cardsInfoText: {fileID: 1689058988}
 --- !u!4 &515160623
 Transform:
   m_ObjectHideFlags: 0
@@ -872,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf6e3341a5c6ac499adad5ac3452d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cartesPanel: {fileID: 886355569}
+  cardsPanel: {fileID: 886355569}
 --- !u!1 &528720944
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +884,7 @@ GameObject:
   - component: {fileID: 528720947}
   - component: {fileID: 528720946}
   m_Layer: 5
-  m_Name: ProbaViolet
+  m_Name: PurpleProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1019,7 +1018,7 @@ GameObject:
   - component: {fileID: 550305863}
   - component: {fileID: 550305862}
   m_Layer: 5
-  m_Name: ProbaRouge
+  m_Name: RedProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,7 +1152,7 @@ GameObject:
   - component: {fileID: 582910313}
   - component: {fileID: 582910312}
   m_Layer: 5
-  m_Name: Rouge
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1225,7 +1224,7 @@ GameObject:
   - component: {fileID: 637763423}
   - component: {fileID: 637763422}
   m_Layer: 5
-  m_Name: ProbaBleu
+  m_Name: BlueProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1359,7 +1358,7 @@ GameObject:
   - component: {fileID: 638280816}
   - component: {fileID: 638280815}
   m_Layer: 5
-  m_Name: Violet
+  m_Name: Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1431,7 +1430,7 @@ GameObject:
   - component: {fileID: 776293070}
   - component: {fileID: 776293069}
   m_Layer: 5
-  m_Name: "OrangeMasqu\xE9"
+  m_Name: OrangeMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1503,7 +1502,7 @@ GameObject:
   - component: {fileID: 860413057}
   - component: {fileID: 860413056}
   m_Layer: 5
-  m_Name: Rose
+  m_Name: Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,7 +1574,7 @@ GameObject:
   - component: {fileID: 865483337}
   - component: {fileID: 865483336}
   m_Layer: 5
-  m_Name: ProbaVert
+  m_Name: GreenProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1709,7 +1708,7 @@ GameObject:
   - component: {fileID: 886355571}
   - component: {fileID: 886355570}
   m_Layer: 5
-  m_Name: Cartes Disponibles
+  m_Name: AvailableCards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,7 +1941,7 @@ GameObject:
   - component: {fileID: 1049330135}
   - component: {fileID: 1049330134}
   m_Layer: 5
-  m_Name: "BleuMasqu\xE9"
+  m_Name: BlueMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2014,7 +2013,7 @@ GameObject:
   - component: {fileID: 1282375014}
   - component: {fileID: 1282375013}
   m_Layer: 5
-  m_Name: Bleu
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2160,7 +2159,7 @@ GameObject:
   - component: {fileID: 1436499011}
   - component: {fileID: 1436499014}
   m_Layer: 5
-  m_Name: Acheter Paquet
+  m_Name: Buy Pack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2231,8 +2230,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 515160622}
-        m_TargetAssemblyTypeName: CartesManager, Assembly-CSharp
-        m_MethodName: ObtenirCartes
+        m_TargetAssemblyTypeName: CardsManager, Assembly-CSharp
+        m_MethodName: GetCards
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2292,7 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43e7cd4cb22dae4f817dc89d6cbb11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cartesUIManager: {fileID: 0}
+  cardsUIManager: {fileID: 0}
 --- !u!1 &1515721132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,7 +2372,7 @@ GameObject:
   - component: {fileID: 1543571611}
   - component: {fileID: 1543571610}
   m_Layer: 5
-  m_Name: Vert
+  m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2433,140 +2432,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543571608}
   m_CullTransparentMesh: 1
---- !u!1 &1600614819
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1600614822}
-  - component: {fileID: 1600614821}
-  - component: {fileID: 1600614820}
-  m_Layer: 5
-  m_Name: TestDispo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1600614820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600614819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1600614821
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600614819}
-  m_CullTransparentMesh: 1
---- !u!224 &1600614822
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600614819}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 470304748}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.36664, y: -85.93698}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1623226477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,7 +2444,7 @@ GameObject:
   - component: {fileID: 1623226479}
   - component: {fileID: 1623226478}
   m_Layer: 5
-  m_Name: Compteur Rare
+  m_Name: RareCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2713,7 +2578,7 @@ GameObject:
   - component: {fileID: 1689058989}
   - component: {fileID: 1689058988}
   m_Layer: 5
-  m_Name: "R\xE9sultats"
+  m_Name: Results
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2847,7 +2712,7 @@ GameObject:
   - component: {fileID: 1724636336}
   - component: {fileID: 1724636335}
   m_Layer: 5
-  m_Name: ProbaRose
+  m_Name: PinkProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3155,7 +3020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43e7cd4cb22dae4f817dc89d6cbb11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cartesUIManager: {fileID: 515160624}
+  cardsUIManager: {fileID: 515160624}
 --- !u!114 &1841952422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3250,7 +3115,7 @@ GameObject:
   - component: {fileID: 1845792251}
   - component: {fileID: 1845792250}
   m_Layer: 5
-  m_Name: ProbaJaune
+  m_Name: YellowProbability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3384,7 +3249,7 @@ GameObject:
   - component: {fileID: 2127151365}
   - component: {fileID: 2127151364}
   m_Layer: 5
-  m_Name: "VioletMasqu\xE9"
+  m_Name: PurpleMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3456,7 +3321,7 @@ GameObject:
   - component: {fileID: 2135473854}
   - component: {fileID: 2135473853}
   m_Layer: 5
-  m_Name: "RougeMasqu\xE9"
+  m_Name: RedMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
