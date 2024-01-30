@@ -33,6 +33,8 @@ MonoBehaviour:
     - AllIn1SpriteShaderAssembly
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - SingularityGroup.HotReload.Runtime
+    - SingularityGroup.HotReload.Runtime.Public
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
