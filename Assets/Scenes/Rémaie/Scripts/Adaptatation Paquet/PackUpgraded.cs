@@ -35,15 +35,6 @@ public class PackUpgraded : MonoBehaviour
 
     [SerializeField] private float[] colorProbabilities = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
 
-    [SerializeField][Range(0.0f, 1.0f)] private float rarityThreshold = 0.02f;
-
-    private List<string> rareCards = new List<string>()
-    {
-        "Green Card",
-        "Purple Card",
-        // Ajouter d'autres cartes rares si nécessaire
-    };
-
     [System.Serializable]
     public class CustomMask
     {
@@ -101,7 +92,6 @@ public class PackUpgraded : MonoBehaviour
 
             StartCoroutine(ShowCardsOneByOne(obtainedCards, cardIndex));
 
-            CheckRareCards(obtainedCards);
         }
         else
         {
@@ -192,17 +182,6 @@ public class PackUpgraded : MonoBehaviour
         }
 
         return randomCards;
-    }
-
-    private void CheckRareCards(List<string> obtainedCards)
-    {
-        foreach (string card in obtainedCards)
-        {
-            if (rareCards.Contains(card))
-            {
-                // Faire quelque chose avec les cartes rares
-            }
-        }
     }
 
     private void DestroyExistingCards()

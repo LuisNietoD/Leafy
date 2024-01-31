@@ -97,24 +97,24 @@ GameObject:
   - component: {fileID: 8379100167640166061}
   - component: {fileID: 3730662432702582655}
   - component: {fileID: 2809795027092500218}
+  - component: {fileID: 5319132124698801492}
   m_Layer: 6
-  m_Name: CardTest
+  m_Name: CardTestUI
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3300883229470890312
-Transform:
+--- !u!224 &3300883229470890312
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819979330338786182}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -0.43, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 162.45528, y: 162.45528, z: 162.45528}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4783527860633662522}
@@ -122,6 +122,11 @@ Transform:
   - {fileID: 4427159205794281718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 3, y: 4.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &7390978041484970417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -245,6 +250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94daff91dda43ee8f399c0ed493a679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!222 &5319132124698801492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819979330338786182}
+  m_CullTransparentMesh: 1
 --- !u!1 &3409428780165441972
 GameObject:
   m_ObjectHideFlags: 0

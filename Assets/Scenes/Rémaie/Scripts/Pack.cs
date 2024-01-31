@@ -34,8 +34,6 @@ public class CardsManager : MonoBehaviour
 
     [SerializeField] private float[] colorProbabilities = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
 
-    [SerializeField][Range(0.0f, 1.0f)] private float rarityThreshold = 0.02f;
-
     // List of rare cards
     private List<string> rareCards = new List<string>()
     {
