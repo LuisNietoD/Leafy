@@ -1,4 +1,3 @@
-using System;
 using Leafy.Objects;
 using UnityEngine;
 using Leafy.Data;
@@ -11,8 +10,8 @@ namespace Leafy.Manager
         
         public LayerMask cardLayer;
         
-        private Card draggedCard;
-        private Card hoveredCard;
+        private CardUI _draggedCardUI;
+        private CardUI _hoveredCardUI;
 
         private int ID = 0;
         
@@ -37,54 +36,54 @@ namespace Leafy.Manager
 
         private void Update()
         {
-            hoveredCard = RayTestCard();
+            _hoveredCardUI = RayTestCard();
 
             //Grab the hovered card and drag it
-            if (Input.GetMouseButtonDown(0) && hoveredCard != null)
+            if (Input.GetMouseButtonDown(0) && _hoveredCardUI != null)
             {
-                offset = hoveredCard.SetDragged();
-                draggedCard = hoveredCard;
-                CardUtils.ApplyMethodOnStack(draggedCard, card =>
+                offset = _hoveredCardUI.SetDragged();
+                _draggedCardUI = _hoveredCardUI;
+                CardUtils.ApplyMethodOnStack(_draggedCardUI, card =>
                 {
                     card.BringToFront();
                     card.ChangeID(ID++);
                 });
-                hoveredCard = null;
+                _hoveredCardUI = null;
                 //add event for update craft loader
             }
             //Drop the dragged card
-            else if (Input.GetMouseButtonUp(0) && draggedCard != null)
+            else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
             {
                 
-                draggedCard.Drop(hoveredCard);
-                int craft = Craft.GetCraft(CardUtils.GetStackIDList(draggedCard));
+                _draggedCardUI.Drop(_hoveredCardUI);
+                int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
                 if (craft >= 0)
                 {
-                    LaunchCraft(craft, CardUtils.GetRootCard(draggedCard));
+                    LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
                 }
                 
-                draggedCard = null;
+                _draggedCardUI = null;
             }
         }
 
-        public void TestCraft(Card card)
+        public void TestCraft(CardUI cardUI)
         {
-            Card firstStackCard = CardUtils.GetRootCard(card);
-            int craft = Craft.GetCraft(CardUtils.GetStackIDList(firstStackCard));
+            CardUI firstStackCardUI = CardUtils.GetRootCard(cardUI);
+            int craft = Craft.GetCraft(CardUtils.GetStackIDList(firstStackCardUI));
             
-            if (craft >= 0 && firstStackCard.loader == null)
+            if (craft >= 0 && firstStackCardUI.loader == null)
             {
-                LaunchCraft(craft, firstStackCard);
+                LaunchCraft(craft, firstStackCardUI);
             }
         }
 
-        private void LaunchCraft(int craftID, Card firstStackCard)
+        private void LaunchCraft(int craftID, CardUI firstStackCardUI)
         {
             ScriptableCard toCraft = CardList.GetCardByID(craftID);
             if(toCraft == null)
                 Debug.LogError("Cannot find this craft ID");
 
-            Vector3 pos = firstStackCard.transform.position;
+            Vector3 pos = firstStackCardUI.transform.position;
             pos.y += crafterOffsetY;
             GameObject crafter = Instantiate(crafterPrefab, pos, Quaternion.identity);
 
@@ -92,9 +91,9 @@ namespace Leafy.Manager
 
             cl.timeToCraft = toCraft.timeToCraft;
             cl.drop = toCraft;
-            cl.stack = CardUtils.GetStackCardList(firstStackCard);
+            cl.stack = CardUtils.GetStackCardList(firstStackCardUI);
 
-            foreach (Card c in cl.stack)
+            foreach (CardUI c in cl.stack)
             {
                 c.SetLoader(cl.gameObject);
             }
@@ -103,12 +102,12 @@ namespace Leafy.Manager
         private void FixedUpdate()
         {
             //Drag the card with a little delay
-            if (draggedCard != null)
+            if (_draggedCardUI != null)
             {
                 Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
-                Vector2 position = Vector2.Lerp(draggedCard.transform.position, targetPosition, draggedCardSpeed * Time.deltaTime);
+                Vector2 position = Vector2.Lerp(_draggedCardUI.transform.position, targetPosition, draggedCardSpeed * Time.deltaTime);
                 float z = frontViewZ;
-                draggedCard.transform.position = new Vector3(position.x, position.y, z);
+                _draggedCardUI.transform.position = new Vector3(position.x, position.y, z);
             }
         }
 
@@ -116,17 +115,17 @@ namespace Leafy.Manager
         /// Return the first card hit on the board
         /// </summary>
         /// <returns></returns>
-        public Card RayTestCard()
+        public CardUI RayTestCard()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, cardLayer);
 
             if (hit.collider != null)
             {
-                Card card = hit.collider.GetComponent<Card>();
-                if (card != null)
+                CardUI cardUI = hit.collider.GetComponent<CardUI>();
+                if (cardUI != null)
                 {
-                    return card;
+                    return cardUI;
                 }
             }
             return null;

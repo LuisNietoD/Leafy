@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Leafy.Data;
 using Leafy.Objects;
 using UnityEngine;
 
 public class CraftLoading : MonoBehaviour
 {
-    public List<Card> stack = new List<Card>();
+    public List<CardUI> stack = new List<CardUI>();
     public GameObject cardPrefab;
     public ScriptableCard drop;
     public float timeToCraft = 1;
@@ -28,9 +29,9 @@ public class CraftLoading : MonoBehaviour
         if (elapsed >= timeToCraft)
         {
             GameObject d = Instantiate(cardPrefab, stack[0].transform.position, Quaternion.identity);
-            d.GetComponent<Card>().info = drop;
+            d.GetComponent<CardUI>().card = new Card(drop);
 
-            foreach (Card card in stack)
+            foreach (CardUI card in stack)
             {
                 Destroy(card.gameObject);
             }
