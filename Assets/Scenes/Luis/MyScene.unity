@@ -156,6 +156,8 @@ MonoBehaviour:
   cardLayer:
     serializedVersion: 2
     m_Bits: 64
+  snapX: 2.2
+  snapY: 3.2
   crafterPrefab: {fileID: 6941699429152953829, guid: 6c432080b1a692b4cb6516bdca76e5bd, type: 3}
   crafterOffsetY: 2
 --- !u!4 &188358814
