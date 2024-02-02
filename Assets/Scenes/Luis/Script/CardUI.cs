@@ -1,17 +1,13 @@
 using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Leafy.Data;
-using Leafy.Manager;
 using TMPro;
 
 namespace Leafy.Objects
 {
-    [RequireComponent(typeof(CardBehavior))]
     public class CardUI : MonoBehaviour
     {
         public Card card;
+        public CardBehavior behavior;
         public GameObject loader;
         
         private float movementSpeed = 30.0f;
@@ -28,7 +24,7 @@ namespace Leafy.Objects
         internal int ID;
 
 
-        private CardBehavior cardBehavior;
+        //private CardBehavior cardBehavior;
         private bool hovered;
 
 
@@ -43,10 +39,10 @@ namespace Leafy.Objects
         private void Start()
         {
             CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
-            if (TryGetComponent(out cardBehavior))
+            /*if (TryGetComponent(out cardBehavior))
             {
                 cardBehavior.Spawn();
-            }
+            }*/
         }
 
         private void OnDestroy()
@@ -76,7 +72,7 @@ namespace Leafy.Objects
             artwork.sortingOrder = id;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             //Move the card with a little delay
             if(parent != null)
@@ -87,21 +83,12 @@ namespace Leafy.Objects
                 float z = parent.transform.position.z - offsetZ;
                 transform.position = new Vector3(position.x, position.y, z);
             }
-
-            if (hovered)
-            {
-                cardBehavior.OnHoverStay();
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                UpdateCardInfo(new Card(CardList.GetRandomCard()));
-            }
+            
         }
 
         private void OnMouseEnter()
         {
-            cardBehavior.OnHover();
+            //cardBehavior.OnHover();
             hovered = true;
         }
 
@@ -136,7 +123,7 @@ namespace Leafy.Objects
             if(parent != null)
                 parent.child = this;
             
-            cardBehavior.OnDrop();
+            //cardBehavior.OnDrop();
             
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
         }
@@ -170,6 +157,12 @@ namespace Leafy.Objects
         public void SetLoader(GameObject loader)
         {
             this.loader = loader;
+        }
+
+        public void SetParent(CardUI c)
+        {
+            parent = c;
+            c.child = this;
         }
     }
 }

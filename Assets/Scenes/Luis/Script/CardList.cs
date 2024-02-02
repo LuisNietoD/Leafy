@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 namespace Leafy.Data
@@ -31,15 +32,14 @@ namespace Leafy.Data
         {
             List<ScriptableCard> cardList = new List<ScriptableCard>();
 
-            string[] guids = AssetDatabase.FindAssets("t:" + typeof(ScriptableCard).Name, new[] { scriptableObjectsDirectory });
+            // Assuming your ScriptableCard assets are located in a "Resources" folder
+            Object[] loadedObjects = Resources.LoadAll("Cards", typeof(ScriptableCard));
 
-            foreach (var guid in guids)
+            foreach (var obj in loadedObjects)
             {
-                string cardPath = AssetDatabase.GUIDToAssetPath(guid);
-                ScriptableCard card = AssetDatabase.LoadAssetAtPath<ScriptableCard>(cardPath);
-
-                if (card != null)
+                if (obj is ScriptableCard)
                 {
+                    ScriptableCard card = (ScriptableCard)obj;
                     cardList.Add(card);
                 }
             }
@@ -61,6 +61,30 @@ namespace Leafy.Data
         {
             Debug.Log(Cards.Count);
             return Cards[Random.Range(0, Cards.Count)];
+        }
+
+        public static List<ScriptableCard> GetCardList(int id, int count)
+        {
+            List<ScriptableCard> cards = new List<ScriptableCard>();
+
+            for (int i = 0; i < count; i++)
+            {
+                cards.Add(GetCardByID(id));
+            }
+
+            return cards;
+        }
+        
+        public static List<ScriptableCard> GetRandomCardList(int count)
+        {
+            List<ScriptableCard> cards = new List<ScriptableCard>();
+
+            for (int i = 0; i < count; i++)
+            {
+                cards.Add(GetRandomCard());
+            }
+
+            return cards;
         }
     }
 }

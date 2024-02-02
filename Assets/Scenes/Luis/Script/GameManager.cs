@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Leafy.Objects;
 using UnityEngine;
 using Leafy.Data;
@@ -9,6 +10,7 @@ namespace Leafy.Manager
         public static GameManager instance;
         
         public LayerMask cardLayer;
+        public GameObject cardPrefab;
         
         public float snapX = 1;
         public float snapY = 2;
@@ -69,7 +71,30 @@ namespace Leafy.Manager
                 _draggedCardUI = null;
             }
             
-            
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                List<ScriptableCard> c = CardList.GetRandomCardList(8);
+              
+                Vector3 p = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                
+
+                foreach (ScriptableCard card in c)
+                {
+                    GameObject myCard = Instantiate(cardPrefab, p, Quaternion.identity);
+                    if (myCard.TryGetComponent(out CardUI cardUI))
+                    {
+                        cardUI.UpdateCardInfo(new Card(card));
+                        if(lastCard != null)
+                            cardUI.SetParent(lastCard);
+                        SetLastCard(cardUI);
+                    }
+
+                    myCard.transform.position = new Vector3(p.x, p.y, 0);
+                }
+
+                lastCard = null;
+                c.Clear();
+            }
         }
 
         private void SnapCardToGrid()
@@ -121,6 +146,13 @@ namespace Leafy.Manager
             }
         }
 
+        CardUI lastCard;
+
+        private void SetLastCard(CardUI c)
+        {
+            lastCard = c;
+        }
+        
         private void FixedUpdate()
         {
             //Drag the card with a little delay
@@ -151,10 +183,14 @@ namespace Leafy.Manager
 
             if (hit.collider != null)
             {
-                CardUI cardUI = hit.collider.GetComponent<CardUI>();
-                if (cardUI != null)
+                if (hit.collider.TryGetComponent(out CardUI cardUI))
                 {
                     return cardUI;
+                }
+                else if(hit.collider.TryGetComponent(out Booster b))
+                {
+                    if(Input.GetMouseButtonDown(0))
+                        b.SpawnCard();
                 }
             }
             return null;

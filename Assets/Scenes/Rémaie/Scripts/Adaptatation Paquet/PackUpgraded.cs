@@ -11,7 +11,7 @@ using UnityEngine.Rendering;
 public class PackUpgraded : MonoBehaviour
 {
     public float tokens = 50;
-    public GameObject[] cardsPrefabs;
+    public GameObject cardsPrefab;
     public float distanceSpawnInFrontOfCamera = 5f;
     public RawImage Mask1;
     public RawImage Mask2;
@@ -83,14 +83,14 @@ public class PackUpgraded : MonoBehaviour
 
         if (buttonPressCount < 6)
         {
-            GetCard(buttonPressCount - 1); // Passer l'indice de la carte à obtenir
+            GetCard(buttonPressCount - 1); // Passer l'indice de la carte ï¿½ obtenir
         }
         else if (buttonPressCount == 6)
         {
-            // Après la 5e pression, désactive le premier bouton et active le deuxième bouton
+            // Aprï¿½s la 5e pression, dï¿½sactive le premier bouton et active le deuxiï¿½me bouton
             firstButton.gameObject.SetActive(false);
-            buttonPressCount = 0; // Réinitialise le compteur de pression de bouton
-            DestroyExistingCards(); // Détruit toutes les cartes existantes
+            buttonPressCount = 0; // Rï¿½initialise le compteur de pression de bouton
+            DestroyExistingCards(); // Dï¿½truit toutes les cartes existantes
 
         }
     }
@@ -154,9 +154,9 @@ public class PackUpgraded : MonoBehaviour
 
         int cardIndex = cards.IndexOf(card);
 
-        if (cardIndex >= 0 && cardIndex < cardsPrefabs.Length)
+        if (cardIndex >= 0 && cardIndex < 5)
         {
-            GameObject newCard = Instantiate(cardsPrefabs[cardIndex], positionInFrontOfCamera, Quaternion.identity);
+            GameObject newCard = Instantiate(cardsPrefab, positionInFrontOfCamera, Quaternion.identity);
             newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(CardList.GetRandomCard()));
             Debug.Log("Aled");
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Leafy.Objects
 {
-    public abstract class CardBehavior: MonoBehaviour
+    public abstract class CardBehavior
     {
         public abstract void Spawn();
         public abstract void OnDrag();
