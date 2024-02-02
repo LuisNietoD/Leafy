@@ -33,6 +33,8 @@ MonoBehaviour:
     - AllIn1SpriteShaderAssembly
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - LTX.ChanneledProperties
+    - LTX.ChanneledProperties.Samples
     - SingularityGroup.HotReload.Runtime
     - SingularityGroup.HotReload.Runtime.Public
     showAdvancedSettings: 0

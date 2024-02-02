@@ -5,7 +5,7 @@ using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Scenes.GUS.Script
+namespace Leafy.Data
 {
     public class EasySaveManager : MonoBehaviour
     {
