@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Leafy.Objects;
+using Leafy.Data;
 
 [ExecuteInEditMode]
 public class CardsManager : MonoBehaviour
@@ -32,7 +34,14 @@ public class CardsManager : MonoBehaviour
         "Purple Card",
     };
 
-    [SerializeField] private float[] colorProbabilities = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
+    private List<int> ID = new List<int>()
+    {
+        1,
+        2,
+        3
+    };
+
+    private float[] colorProbabilities = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
 
     // List of rare cards
     private List<string> rareCards = new List<string>()
@@ -216,6 +225,8 @@ public class CardsManager : MonoBehaviour
                 Vector3 positionInFrontOfCamera = lastPosition + Vector3.right * distanceBetweenCards;
 
                 GameObject newCard = Instantiate(cardsPrefabs[cardIndex], positionInFrontOfCamera, Quaternion.identity);
+
+                newCard.GetComponent<CardUI>().card = new Card(CardList.GetCardByID(ID[UnityEngine.Random.Range(0,ID.Count)]));
 
                 lastPosition = positionInFrontOfCamera;
 

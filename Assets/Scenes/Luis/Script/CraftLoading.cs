@@ -29,7 +29,11 @@ public class CraftLoading : MonoBehaviour
         if (elapsed >= timeToCraft)
         {
             GameObject d = Instantiate(cardPrefab, stack[0].transform.position, Quaternion.identity);
-            d.GetComponent<CardUI>().card = new Card(drop);
+            if (d.TryGetComponent(out CardUI cardUI))
+            {
+                cardUI.UpdateCardInfo(new Card(drop));
+            }
+            
 
             foreach (CardUI card in stack)
             {

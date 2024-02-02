@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Card
   - Carte
+  - Sell
   layers:
   - Default
   - TransparentFX

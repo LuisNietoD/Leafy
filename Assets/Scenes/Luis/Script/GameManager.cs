@@ -10,6 +10,10 @@ namespace Leafy.Manager
         
         public LayerMask cardLayer;
         
+        public float snapX = 1;
+        public float snapY = 2;
+        private float lerpingSpeed = 30f;
+        
         private CardUI _draggedCardUI;
         private CardUI _hoveredCardUI;
 
@@ -64,8 +68,26 @@ namespace Leafy.Manager
                 
                 _draggedCardUI = null;
             }
+            
+            
         }
 
+        private void SnapCardToGrid()
+        {
+            
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            float snappedX = Mathf.Round(mousePosition.x / snapX) * snapX;
+            float snappedY = Mathf.Round(mousePosition.y / snapY) * snapY;
+
+            Vector3 finalSnappedPosition = new Vector3(snappedX, snappedY, 0f);
+
+            // Lerp towards the snapped position
+            _draggedCardUI.transform.position = Vector3.Lerp(_draggedCardUI.transform.position, finalSnappedPosition, Time.deltaTime * lerpingSpeed);
+        
+        }
+
+        
         public void TestCraft(CardUI cardUI)
         {
             CardUI firstStackCardUI = CardUtils.GetRootCard(cardUI);
@@ -104,10 +126,17 @@ namespace Leafy.Manager
             //Drag the card with a little delay
             if (_draggedCardUI != null)
             {
-                Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
-                Vector2 position = Vector2.Lerp(_draggedCardUI.transform.position, targetPosition, draggedCardSpeed * Time.deltaTime);
-                float z = frontViewZ;
-                _draggedCardUI.transform.position = new Vector3(position.x, position.y, z);
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                {
+                    SnapCardToGrid();
+                }
+                else
+                {
+                    Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+                    Vector2 position = Vector2.Lerp(_draggedCardUI.transform.position, targetPosition, draggedCardSpeed * Time.deltaTime);
+                    float z = frontViewZ;
+                    _draggedCardUI.transform.position = new Vector3(position.x, position.y, z);
+                }
             }
         }
 

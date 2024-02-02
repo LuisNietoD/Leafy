@@ -56,12 +56,13 @@ namespace Leafy.Objects
 
         void OnScriptableObjectsLoadedHandler()
         {
-            card = new Card(CardList.GetRandomCard());
-            UpdateCardInfo();
+            //UpdateCardInfo(new Card(CardList.GetRandomCard()));
+            UpdateCardInfo(new Card(CardList.GetCardByID(1)));
         }
 
-        private void UpdateCardInfo()
+        public void UpdateCardInfo(Card c)
         {
+            card = c;
             cardName.text = card.name;
             background.color = card.backgroundColor;
             artwork.sprite = card.artwork;
@@ -94,8 +95,7 @@ namespace Leafy.Objects
 
             if (Input.GetKeyDown(KeyCode.A))
             {
-                card = new Card(CardList.GetRandomCard());
-                UpdateCardInfo();
+                UpdateCardInfo(new Card(CardList.GetRandomCard()));
             }
         }
 
