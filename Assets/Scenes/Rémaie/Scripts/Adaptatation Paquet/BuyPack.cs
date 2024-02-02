@@ -25,9 +25,4 @@ public class BuyPack : MonoBehaviour
         }
     }
 
-    public void EndOfPack() 
-    {
-
-    }
-
 }
