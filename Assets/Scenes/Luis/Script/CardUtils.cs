@@ -81,6 +81,24 @@ namespace Leafy.Data
             return c;
         }
 
+        public static bool IsParentOf(CardUI parent, CardUI child)
+        {
+            CardUI c = child;
+            do
+            {
+                if (c == parent)
+                    return true;
+                c = c.parent;
+            } while (c != null);
+
+            return false;
+        }
+
+        public static bool IsInTheSameStack(CardUI card1, CardUI card2)
+        {
+            return GetStackCardList(card1).Contains(card2);
+        }
+
         /// <summary>
         /// Apply a methods on each card of the stack
         /// </summary>

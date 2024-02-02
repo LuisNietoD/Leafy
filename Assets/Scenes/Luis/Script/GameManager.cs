@@ -67,7 +67,8 @@ namespace Leafy.Manager
                 {
                     LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
                 }
-                
+
+                CardUtils.ApplyMethodOnStack(_draggedCardUI, c => c.dragged = false);
                 _draggedCardUI = null;
             }
             

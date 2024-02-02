@@ -6,29 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Furnace.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Furnace.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Plant.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Plant.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Stick.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Stick.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Villager.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Villager.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Wood.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Cards/Wood.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/Credit.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/Credit.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ScriptableCardEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ScriptableCardEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/Scripts/Adaptatation Paquet/PackUpgraded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/Scripts/Adaptatation Paquet/PackUpgraded.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/CARD.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/CARD.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/CopieLuis.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/CopieLuis.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/Rémaïe2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/Rémaïe2.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +137,8 @@
       <workItem from="1706609028730" duration="3054000" />
       <workItem from="1706692051012" duration="2362000" />
       <workItem from="1706703439391" duration="7271000" />
-      <workItem from="1706876706395" duration="5955000" />
+      <workItem from="1706876706395" duration="6734000" />
+      <workItem from="1706891115300" duration="3456000" />
     </task>
     <servers />
   </component>

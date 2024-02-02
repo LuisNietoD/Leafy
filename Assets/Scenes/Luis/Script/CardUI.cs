@@ -26,6 +26,7 @@ namespace Leafy.Objects
 
         //private CardBehavior cardBehavior;
         private bool hovered;
+        public bool dragged;
 
 
         private void Awake()
@@ -84,6 +85,34 @@ namespace Leafy.Objects
                 transform.position = new Vector3(position.x, position.y, z);
             }
             
+            TestCollision();
+        }
+        
+        public float pushForce = 1.0f;
+        public LayerMask cardLayer;
+
+        public void PushCard(Vector2 force)
+        {
+            transform.Translate(force);
+        }
+
+        private void TestCollision()
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
+
+            foreach (var collider in colliders)
+            {
+                CardUI otherCard = collider.GetComponent<CardUI>();
+                
+                if (otherCard != null && otherCard != this && !dragged && !CardUtils.IsInTheSameStack(this, otherCard))
+                {
+                    Vector2 pushDirection = transform.position - collider.transform.position;
+                    pushDirection.Normalize();
+                    float forcePercent = Mathf.Clamp01(Vector2.Distance(otherCard.transform.position, transform.position));
+
+                    CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
+                }
+            }
         }
 
         private void OnMouseEnter()
@@ -106,9 +135,13 @@ namespace Leafy.Objects
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(false));
             if(loader != null)
                 Destroy(loader);
+
+            CardUtils.ApplyMethodOnStack(this, c => c.dragged = true);
             
             return transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+        
+        
 
         /// <summary>
         /// Change all necessary value to drop the card
