@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using Leafy.Objects;
+using Leafy.Data;
+using UnityEngine.Rendering;
 
 [ExecuteInEditMode]
+
 public class PackUpgraded : MonoBehaviour
 {
     public float tokens = 50;
@@ -33,7 +36,18 @@ public class PackUpgraded : MonoBehaviour
         "Purple Card",
     };
 
-    [SerializeField] private float[] colorProbabilities = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
+    private List<int> ID = new List<int>()
+    {
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+    };
+
+     private float[] colorProbabilities = { 0.5f, 0.12f, 0.12f, 0.12f, 0.12f, 0.01f, 0.01f };
 
     [System.Serializable]
     public class CustomMask
@@ -143,7 +157,8 @@ public class PackUpgraded : MonoBehaviour
         if (cardIndex >= 0 && cardIndex < cardsPrefabs.Length)
         {
             GameObject newCard = Instantiate(cardsPrefabs[cardIndex], positionInFrontOfCamera, Quaternion.identity);
-           //newCard.GetComponent<Card>().info (A voir plus tard)
+            newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(CardList.GetRandomCard()));
+            Debug.Log("Aled");
 
             if (cardToMask.ContainsKey(card) && !cardToMask[card].destroyed)
             {
