@@ -28,7 +28,9 @@ public class CraftLoading : MonoBehaviour
 
         if (elapsed >= timeToCraft)
         {
-            GameObject d = Instantiate(cardPrefab, stack[0].transform.position, Quaternion.identity);
+            Vector3 pos = stack[0].transform.position;
+            pos.x += 2;
+            GameObject d = Instantiate(cardPrefab, pos, Quaternion.identity);
             if (d.TryGetComponent(out CardUI cardUI))
             {
                 cardUI.UpdateCardInfo(new Card(drop));
@@ -37,9 +39,12 @@ public class CraftLoading : MonoBehaviour
 
             foreach (CardUI card in stack)
             {
-                Destroy(card.gameObject);
+                card.ReduceLife();
+                //Destroy(card.gameObject);
             }
-            Destroy(gameObject);
+
+            elapsed = 0;
+            
         }
     }
 }

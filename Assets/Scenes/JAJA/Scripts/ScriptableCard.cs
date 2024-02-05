@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Leafy.Objects;
+using RNGNeeds;
 using UnityEngine;
 
 
@@ -28,6 +30,7 @@ public class ScriptableCard : ScriptableObject
     public bool sellable;
     public bool craftable;
     public bool harvestable;
+    public bool inventory;
     
     [Header("Sell information")]
     public int price;
@@ -38,6 +41,12 @@ public class ScriptableCard : ScriptableObject
     [Header("Harvest information")]
     public bool infinite;
     public int life;
+    public bool shakable;
+    public ProbabilityList<ScriptableCard> drop;
+    public List<int> activators;
+
+    [Header("Inventory information")] 
+    public int slot;
     
     public Texture2D GetCardIcon()
     {

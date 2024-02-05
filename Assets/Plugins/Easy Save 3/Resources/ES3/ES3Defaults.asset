@@ -35,8 +35,10 @@ MonoBehaviour:
     - Assembly-CSharp-firstpass
     - LTX.ChanneledProperties
     - LTX.ChanneledProperties.Samples
+    - RNGNeeds
     - SingularityGroup.HotReload.Runtime
     - SingularityGroup.HotReload.Runtime.Public
+    - StarphaseTools.Core
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

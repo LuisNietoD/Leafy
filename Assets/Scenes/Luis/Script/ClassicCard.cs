@@ -5,6 +5,11 @@ namespace Leafy.Objects
 {
     public class ClassicCard: CardBehavior
     {
+        public ClassicCard()
+        {
+            Debug.Log("test");
+        }
+        
         public override void Spawn()
         {
             Debug.Log("spawn");
@@ -33,6 +38,11 @@ namespace Leafy.Objects
         public override void OnHoverStay()
         {
             Debug.Log("OnHoverStay");
+        }
+
+        public override void StayAction()
+        {
+            Debug.Log("StayAction");
         }
     }
 }

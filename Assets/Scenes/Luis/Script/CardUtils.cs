@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Leafy.Objects;
+using Unity.VisualScripting;
 
 namespace Leafy.Data
 {
     public static class CardUtils
     {
+        public static int ID = 0;
+        
         /// <summary>
         /// Return the list of ID of the card stack
         /// </summary>
@@ -81,6 +84,12 @@ namespace Leafy.Data
             return c;
         }
 
+        /// <summary>
+        /// If the first parameter is a parent of the second parameter
+        /// </summary>
+        /// <param name="parent"></param>
+        /// <param name="child"></param>
+        /// <returns></returns>
         public static bool IsParentOf(CardUI parent, CardUI child)
         {
             CardUI c = child;
@@ -94,6 +103,12 @@ namespace Leafy.Data
             return false;
         }
 
+        /// <summary>
+        /// Return true if this two card are in the same stack
+        /// </summary>
+        /// <param name="card1"></param>
+        /// <param name="card2"></param>
+        /// <returns></returns>
         public static bool IsInTheSameStack(CardUI card1, CardUI card2)
         {
             return GetStackCardList(card1).Contains(card2);
@@ -113,6 +128,7 @@ namespace Leafy.Data
                 method(c);
             }
         }
+        
         
     }
 }

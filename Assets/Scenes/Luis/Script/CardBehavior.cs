@@ -11,5 +11,6 @@ namespace Leafy.Objects
         public abstract void OnClick();
         public abstract void OnHover();
         public abstract void OnHoverStay();
+        public abstract void StayAction();
     }
 }

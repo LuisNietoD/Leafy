@@ -1,5 +1,6 @@
 using UnityEngine;
 using Leafy.Data;
+using Leafy.Manager;
 using TMPro;
 
 namespace Leafy.Objects
@@ -9,6 +10,8 @@ namespace Leafy.Objects
         public Card card;
         public CardBehavior behavior;
         public GameObject loader;
+        public int idStart;
+        public int uniqueID;
         
         private float movementSpeed = 30.0f;
         private float offsetY = 0.5f;
@@ -22,6 +25,7 @@ namespace Leafy.Objects
         internal CardUI parent;
         internal CardUI child;
         internal int ID;
+        
 
 
         //private CardBehavior cardBehavior;
@@ -32,14 +36,18 @@ namespace Leafy.Objects
         private void Awake()
         {
             collider = GetComponent<Collider2D>();
-            cardName = transform.GetChild(1).GetComponent<TextMeshPro>();
-            artwork = transform.GetChild(2).GetComponent<SpriteRenderer>();
-            background = GetComponent<SpriteRenderer>();
+            cardName = transform.Find("Model/CARD NAME").GetComponent<TextMeshPro>();
+            artwork = transform.Find("Model/ICON").GetComponent<SpriteRenderer>();
+            background = transform.Find("Model/BACKGROUND").GetComponent<SpriteRenderer>();
+
         }
 
         private void Start()
         {
             CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
+            if(behavior != null)
+                behavior.Spawn();
+            uniqueID = CardUtils.ID++;
             /*if (TryGetComponent(out cardBehavior))
             {
                 cardBehavior.Spawn();
@@ -54,7 +62,7 @@ namespace Leafy.Objects
         void OnScriptableObjectsLoadedHandler()
         {
             //UpdateCardInfo(new Card(CardList.GetRandomCard()));
-            UpdateCardInfo(new Card(CardList.GetCardByID(1)));
+            UpdateCardInfo(new Card(CardList.GetCardByID(idStart)));
         }
 
         public void UpdateCardInfo(Card c)
@@ -64,6 +72,14 @@ namespace Leafy.Objects
             background.color = card.backgroundColor;
             artwork.sprite = card.artwork;
             ID = card.ID;
+            if (card.harvestable && behavior == null)
+            {
+                behavior = new Harvestable(this);
+            }
+            else if (behavior == null)
+            {
+                behavior = new ClassicCard();
+            }
         }
 
         private void UpdateRenderID(int id)
@@ -71,6 +87,7 @@ namespace Leafy.Objects
             background.sortingOrder = id;
             cardName.sortingOrder = id;
             artwork.sortingOrder = id;
+            cardName.sortingOrder = id;
         }
 
         private void FixedUpdate()
@@ -84,8 +101,16 @@ namespace Leafy.Objects
                 float z = parent.transform.position.z - offsetZ;
                 transform.position = new Vector3(position.x, position.y, z);
             }
+
+            if (loader != null)
+            {
+                Vector3 pos = CardUtils.GetRootCard(this).transform.position;
+                pos.y += 2;
+                loader.transform.position = pos;
+            }
             
             TestCollision();
+            behavior?.StayAction();
         }
         
         public float pushForce = 1.0f;
@@ -106,6 +131,13 @@ namespace Leafy.Objects
                 
                 if (otherCard != null && otherCard != this && !dragged && !CardUtils.IsInTheSameStack(this, otherCard))
                 {
+                    if (otherCard.card.ID == card.ID && parent == null && otherCard.child == null && uniqueID > otherCard.uniqueID)
+                    {
+                        SetParent(otherCard);
+                        CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                        return;
+                    }
+
                     Vector2 pushDirection = transform.position - collider.transform.position;
                     pushDirection.Normalize();
                     float forcePercent = Mathf.Clamp01(Vector2.Distance(otherCard.transform.position, transform.position));
@@ -128,19 +160,14 @@ namespace Leafy.Objects
         /// <returns></returns>
         public Vector3 SetDragged()
         {
-            if(parent != null)
-                parent.child = null;
-            parent = null;
+            SetParent(null);
                 
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(false));
-            if(loader != null)
-                Destroy(loader);
 
             CardUtils.ApplyMethodOnStack(this, c => c.dragged = true);
             
             return transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-        
         
 
         /// <summary>
@@ -152,9 +179,7 @@ namespace Leafy.Objects
             Vector3 p = transform.position;
             p.z = 0;
             transform.position = p;
-            parent = CardUtils.GetLastCard(cardUI);
-            if(parent != null)
-                parent.child = this;
+            SetParent(CardUtils.GetLastCard(cardUI));
             
             //cardBehavior.OnDrop();
             
@@ -181,6 +206,21 @@ namespace Leafy.Objects
         {
             collider.enabled = enable;
         }
+
+        public void ReduceLife()
+        {
+            if (card.harvestable && !card.infinite)
+            {
+                card.life--;
+                if (card.life <= 0)
+                {
+                    Destroy(loader);
+                    if(child != null)
+                        child.SetParent(parent);
+                    Destroy(gameObject);
+                }
+            }
+        }
         
         public void ChangeID(int id)
         {
@@ -194,8 +234,26 @@ namespace Leafy.Objects
 
         public void SetParent(CardUI c)
         {
-            parent = c;
-            c.child = this;
+            if (parent != null)
+            {
+                parent.child = null;
+                if(parent.loader != null)
+                    Destroy(parent.loader);
+            }
+
+            if (c != null)
+            {
+                if ((card.harvestable && c.card.ID == card.ID) || !card.harvestable)
+                    parent = c;
+            }
+            else
+            {
+                parent = null;
+            }
+
+
+            if(parent != null)
+                c.child = this;
         }
     }
 }

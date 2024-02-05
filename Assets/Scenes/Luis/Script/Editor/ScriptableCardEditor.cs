@@ -19,7 +19,12 @@ public class ScriptableCardEditor : Editor
     // Section
     SerializedProperty priceProp;
     SerializedProperty lifeProp;
+    SerializedProperty shakableProp;
     SerializedProperty infiniteProp;
+    SerializedProperty dropProp;
+    SerializedProperty activatorsProp;
+    SerializedProperty inventoryProp;
+    SerializedProperty slotProp;
     SerializedProperty timeToCraftProp;
 
     private Texture2D finalBackground;
@@ -40,8 +45,13 @@ public class ScriptableCardEditor : Editor
 
         priceProp = serializedObject.FindProperty("price");
         lifeProp = serializedObject.FindProperty("life");
+        shakableProp = serializedObject.FindProperty("shakable");
         infiniteProp = serializedObject.FindProperty("infinite");
+        dropProp = serializedObject.FindProperty("drop");
+        activatorsProp = serializedObject.FindProperty("activators");
         timeToCraftProp = serializedObject.FindProperty("timeToCraft");
+        inventoryProp = serializedObject.FindProperty("inventory");
+        slotProp = serializedObject.FindProperty("slot");
     }
 
     public override void OnInspectorGUI()
@@ -60,6 +70,7 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(sellableProp);
         EditorGUILayout.PropertyField(craftableProp);
         EditorGUILayout.PropertyField(harvestProp);
+        EditorGUILayout.PropertyField(inventoryProp);
 
         // Display sell information
         if (sellableProp.boolValue)
@@ -79,6 +90,14 @@ public class ScriptableCardEditor : Editor
             EditorGUILayout.PropertyField(infiniteProp, new GUIContent("Infinite"));
             if (!infiniteProp.boolValue)
                 EditorGUILayout.PropertyField(lifeProp, new GUIContent("Life"));
+            EditorGUILayout.PropertyField(shakableProp, new GUIContent("Shakable"));
+            EditorGUILayout.PropertyField(dropProp, new GUIContent("Drop"));
+            EditorGUILayout.PropertyField(activatorsProp, new GUIContent("Activators"));
+        }
+
+        if (inventoryProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(slotProp, new GUIContent("Slots"));
         }
 
         // Custom preview area

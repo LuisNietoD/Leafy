@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
+  m_Name: 3-Bucket
+  m_EditorClassIdentifier: 
+  name: Bucket
+  ID: 3
+  artwork: {fileID: 21300000, guid: a718f1551c7e0054483f595c4344ae08, type: 3}
+  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background_color: {r: 0.5018867, g: 0.21874683, b: 0.21874683, a: 1}
+  type: 0
+  sellable: 0
+  craftable: 0
+  harvestable: 0
+  price: 5
+  timeToCraft: 0
+  infinite: 1
+  life: 0
+  drop: {fileID: 0}
+  activators: 

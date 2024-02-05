@@ -19,14 +19,14 @@ namespace Leafy.Manager
         private CardUI _draggedCardUI;
         private CardUI _hoveredCardUI;
 
-        private int ID = 0;
+        public int ID = 0;
         
         private float draggedCardSpeed = 10;
         private Vector3 offset;
         private float frontViewZ = -9;
 
         public GameObject crafterPrefab;
-        public float crafterOffsetY;
+        private float crafterOffsetY = 2;
 
         private void Awake()
         {
@@ -141,10 +141,28 @@ namespace Leafy.Manager
             cl.drop = toCraft;
             cl.stack = CardUtils.GetStackCardList(firstStackCardUI);
 
-            foreach (CardUI c in cl.stack)
-            {
-                c.SetLoader(cl.gameObject);
-            }
+            
+            cl.stack[0].SetLoader(cl.gameObject);
+            
+        }
+        
+        public void LaunchCraft(int craftID, List<CardUI> stack)
+        {
+            ScriptableCard toCraft = CardList.GetCardByID(craftID);
+            if(toCraft == null)
+                Debug.LogError("Cannot find this craft ID");
+
+            Vector3 pos = stack[0].transform.position;
+            pos.y += crafterOffsetY;
+            GameObject crafter = Instantiate(crafterPrefab, pos, Quaternion.identity);
+
+            CraftLoading cl = crafter.GetComponent<CraftLoading>();
+
+            cl.timeToCraft = toCraft.timeToCraft;
+            cl.drop = toCraft;
+            cl.stack = stack;
+
+            cl.stack[0].SetLoader(cl.gameObject);
         }
 
         CardUI lastCard;
@@ -195,6 +213,15 @@ namespace Leafy.Manager
                 }
             }
             return null;
+        }
+        
+        public void SpawnCard(Vector3 pos, int id, CardUI card)
+        {
+            GameObject newCard = Instantiate(cardPrefab, pos, Quaternion.identity);
+            CardUI c = newCard.GetComponent<CardUI>();
+            c.UpdateCardInfo(new Card(CardList.GetCardByID(id)));
+            c.ChangeID(ID++);
+            card.ChangeID(ID++);
         }
     }
 }

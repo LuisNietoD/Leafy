@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
+  m_Name: 4-Box
+  m_EditorClassIdentifier: 
+  name: Box
+  ID: 4
+  artwork: {fileID: 21300000, guid: cb59ee770f9a9464f81020bf429238df, type: 3}
+  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background_color: {r: 0.3647059, g: 0.3647059, b: 0.3647059, a: 1}
+  type: 0
+  sellable: 0
+  craftable: 0
+  harvestable: 1
+  price: 5
+  timeToCraft: 0
+  infinite: 1
+  life: 0
+  shakable: 1
+  drop:
+    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 4ece53c65e3e5ee4ab54f059d1cc1e63, type: 2}
+      m_BaseProbability: 0.46999982
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: a757f52c8aa381e4c90ed889eb79273e, type: 2}
+      m_BaseProbability: 0.050000183
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: d0124930a46a4a341a974de031b5cd8f, type: 2}
+      m_BaseProbability: 0.01
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: a011ba792e359e0408f7181be47ef2db, type: 2}
+      m_BaseProbability: 0.47
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 901307760
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  activators: 
