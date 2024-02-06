@@ -252,6 +252,14 @@ namespace Leafy.Manager
             c.ChangeID(ID++);
             card.ChangeID(ID++);
         }
+        
+        public void SpawnCard(Vector3 pos, int id)
+        {
+            GameObject newCard = Instantiate(cardPrefab, pos, Quaternion.identity);
+            CardUI c = newCard.GetComponent<CardUI>();
+            c.UpdateCardInfo(new Card(CardList.GetCardByID(id)));
+            c.ChangeID(ID++);
+        }
     }
 }
 
