@@ -25,6 +25,7 @@ namespace Leafy.Data
         public bool sellable;
         public int price;
 
+
         public Card(ScriptableCard card)
         {
             name = card.name;

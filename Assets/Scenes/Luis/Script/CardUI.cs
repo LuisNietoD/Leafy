@@ -10,6 +10,7 @@ namespace Leafy.Objects
         public Card card;
         public CardBehavior behavior;
         public GameObject loader;
+        public GameObject pack;
         public int idStart;
         public int uniqueID;
 
@@ -144,19 +145,23 @@ namespace Leafy.Objects
                     CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
                 }
 
-                if (collider.CompareTag("Sell") && CardUtils.GetRootCard(this) == this )
+                if (collider.CompareTag("Sell") && CardUtils.GetRootCard(this) == this)
                 {
                     SellCard();
                 }
+
+                if (collider.CompareTag("Buy"))
+                {
+                    BuyCard();
+                }
             }
         }
-
         private void SellCard()
         {
-            if (card.sellable)      
+            if (card.sellable)
             {
                 // Définir le nombre de nouveaux prefabs à créer
-              
+
 
                 // Crée deux nouveaux prefabs à la position actuelle
                 for (int i = 0; i < card.price; i++)
@@ -169,6 +174,15 @@ namespace Leafy.Objects
             else
             {
                 Debug.Log("Tu peux pas gros bouff");
+            }
+        }
+
+        private void BuyCard()
+        {
+            if (card.ID == 1)
+            {
+                GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
+                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
             }
         }
 
