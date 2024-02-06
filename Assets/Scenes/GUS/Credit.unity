@@ -636,14 +636,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits\n\nRemerciements speciaux :\n\n\nUn grand merci a tous ceux qui
-    ont contribue a la conception de Leafy \n\r\n\n-2D ARTIST-\r\nLAZZOUNI Marina
-    Lead\r\nBENFAIDA Llina\r\nBLANZAT Claire\r\nBOUET Maena\r\nDIBLAN Anna\r\nDOMY
-    Lisa\r\nESPIONOSA Anouchka\r\nGIBERT Jade\r\nJEANNIN Chlo\xE9\r\nLAURENDON Judy\r\nLOPEZ
-    Axel\r\nROCHET Alix\r\nSPINOSI Agathe\n\n\n-GAME DESIGNER-\nNIETO Luis Lead\r\nBOUDOURESQUE
-    Jeanne\r\nCARDOT R\xE9my\r\nGUILLOT Auguste \n\n\r\n-UI / VFX ARTIST-\nBERKANE
-    Mounia\n\r\n\r\n-DEVELOPER-\nNIETO Luis Lead\r\nBOUDOURESQUE Jeanne\r\nCARDOT
-    R\xE9my\r\nGUILLOT Auguste\r\nSOLIGNAC-MEURLARGE Dylan\n\n\n-PRODUCER-\nMARTHOURET
-    Elsa Lead\r\nLAZZOUNI Marina Lead\r\nESPIONOSA Anouchka\r\nLOPEZ Axel"
+    ont contribue a la conception de Leafy.\nEt a KAZKO pour le plugin RNGNeeds.\n\r\n\n-2D
+    ARTIST-\r\nLAZZOUNI Marina Lead\r\nBENFAIDA Llina\r\nBLANZAT Claire\r\nBOUET
+    Maena\r\nDIBLAN Anna\r\nDOMY Lisa\r\nESPIONOSA Anouchka\r\nGIBERT Jade\r\nJEANNIN
+    Chlo\xE9\r\nLAURENDON Judy\r\nLOPEZ Axel\r\nROCHET Alix\r\nSPINOSI Agathe\n\n\n-GAME
+    DESIGNER-\nNIETO Luis Lead\r\nBOUDOURESQUE Jeanne\r\nCARDOT R\xE9my\r\nGUILLOT
+    Auguste \n\n\r\n-UI / VFX ARTIST-\nBERKANE Mounia\n\r\n\r\n-DEVELOPER-\nNIETO
+    Luis Lead\r\nBOUDOURESQUE Jeanne\r\nCARDOT R\xE9my\r\nGUILLOT Auguste\r\nSOLIGNAC-MEURLARGE
+    Dylan\n\n\n-PRODUCER-\nMARTHOURET Elsa Lead\r\nLAZZOUNI Marina Lead\r\nESPIONOSA
+    Anouchka\r\nLOPEZ Axel"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
