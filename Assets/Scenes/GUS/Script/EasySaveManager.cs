@@ -19,8 +19,7 @@ namespace Leafy.Data
             {
                 LoadObjectPositions();
             }
-
-            // Commencez la sauvegarde automatique toutes les 3 secondes
+            
             StartCoroutine(AutoSaveRoutine());
         }
 
@@ -28,10 +27,10 @@ namespace Leafy.Data
         {
             while (true)
             {
-                // Attendre 3 secondes
+                
                 yield return new WaitForSeconds(3f);
 
-                // Appeler la méthode de sauvegarde
+                
                 SaveObjectPositions();
             }
         }
