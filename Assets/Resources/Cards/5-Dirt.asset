@@ -18,7 +18,7 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.15686277, g: 0.36337012, b: 0.47843137, a: 1}
   type: 0
-  sellable: 0
+  sellable: 1
   craftable: 0
   harvestable: 0
   inventory: 0

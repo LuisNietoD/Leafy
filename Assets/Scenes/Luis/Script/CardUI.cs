@@ -26,9 +26,6 @@ namespace Leafy.Objects
         internal CardUI child;
         internal int ID;
 
-        public GameObject prefabToSpawn;
-
-
 
         //private CardBehavior cardBehavior;
         private bool hovered;
@@ -147,7 +144,7 @@ namespace Leafy.Objects
                     CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
                 }
 
-                if (collider.CompareTag("Sell"))
+                if (collider.CompareTag("Sell") && CardUtils.GetRootCard(this) == this )
                 {
                     SellCard();
                 }
@@ -156,13 +153,23 @@ namespace Leafy.Objects
 
         private void SellCard()
         {
+            if (card.sellable)      
+            {
+                // Définir le nombre de nouveaux prefabs à créer
+              
 
-            // Crée deux nouveaux prefabs à la position actuelle
-            GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 8);
-            GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 8);
+                // Crée deux nouveaux prefabs à la position actuelle
+                for (int i = 0; i < card.price; i++)
+                {
+                    GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
+                }
 
-            // Détruit la carte actuelle
-            Destroy(gameObject);
+                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            }
+            else
+            {
+                Debug.Log("Tu peux pas gros bouff");
+            }
         }
 
 

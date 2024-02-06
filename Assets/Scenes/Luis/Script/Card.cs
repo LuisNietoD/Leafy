@@ -22,6 +22,8 @@ namespace Leafy.Data
         public bool evolve;
         public float evolveTime;
         public ProbabilityList<ScriptableCard> evolutions;
+        public bool sellable;
+        public int price;
 
         public Card(ScriptableCard card)
         {
@@ -32,7 +34,9 @@ namespace Leafy.Data
             harvestable = card.harvestable;
             inventory = card.inventory;
             evolve = card.evolve;
-            
+            sellable = card.sellable;
+            price = card.price;
+
             if (harvestable)
             {
                 infinite = card.infinite;
