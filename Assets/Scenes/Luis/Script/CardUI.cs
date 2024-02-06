@@ -2,7 +2,6 @@ using UnityEngine;
 using Leafy.Data;
 using Leafy.Manager;
 using TMPro;
-using Unity.VisualScripting;
 
 namespace Leafy.Objects
 {
@@ -13,20 +12,22 @@ namespace Leafy.Objects
         public GameObject loader;
         public int idStart;
         public int uniqueID;
-        
+
         private float movementSpeed = 30.0f;
         private float offsetY = 0.5f;
         private float offsetZ = 0.1f;
-        
+
         private Collider2D collider;
         private TextMeshPro cardName;
         private SpriteRenderer artwork;
         private SpriteRenderer background;
-        
+
         internal CardUI parent;
         internal CardUI child;
         internal int ID;
-        
+
+        public GameObject prefabToSpawn;
+
 
 
         //private CardBehavior cardBehavior;
@@ -46,7 +47,7 @@ namespace Leafy.Objects
         private void Start()
         {
             CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
-            if(behavior != null)
+            if (behavior != null)
                 behavior.Spawn();
             uniqueID = CardUtils.ID++;
             /*if (TryGetComponent(out cardBehavior))
@@ -77,10 +78,6 @@ namespace Leafy.Objects
             {
                 behavior = new Harvestable(this);
             }
-            else if (card.evolve && behavior == null)
-            {
-                behavior = new Evolve(this);
-            }
             else if (behavior == null)
             {
                 behavior = new ClassicCard();
@@ -98,7 +95,7 @@ namespace Leafy.Objects
         private void FixedUpdate()
         {
             //Move the card with a little delay
-            if(parent != null)
+            if (parent != null)
             {
                 Vector3 targetPosition = parent.transform.position;
                 targetPosition.y -= offsetY;
@@ -113,11 +110,11 @@ namespace Leafy.Objects
                 pos.y += 2;
                 loader.transform.position = pos;
             }
-            
+
             TestCollision();
             behavior?.StayAction();
         }
-        
+
         public float pushForce = 1.0f;
         public LayerMask cardLayer;
 
@@ -133,7 +130,7 @@ namespace Leafy.Objects
             foreach (var collider in colliders)
             {
                 CardUI otherCard = collider.GetComponent<CardUI>();
-                
+
                 if (otherCard != null && otherCard != this && !dragged && !CardUtils.IsInTheSameStack(this, otherCard))
                 {
                     if (otherCard.card.ID == card.ID && parent == null && otherCard.child == null && uniqueID > otherCard.uniqueID)
@@ -149,8 +146,26 @@ namespace Leafy.Objects
 
                     CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
                 }
+
+                if (collider.CompareTag("Sell"))
+                {
+                    SellCard();
+                }
             }
         }
+
+        private void SellCard()
+        {
+
+            // Crée deux nouveaux prefabs à la position actuelle
+            GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 8);
+            GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 8);
+
+            // Détruit la carte actuelle
+            Destroy(gameObject);
+        }
+
+
 
         private void OnMouseEnter()
         {
@@ -166,14 +181,14 @@ namespace Leafy.Objects
         public Vector3 SetDragged()
         {
             SetParent(null);
-                
+
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(false));
 
             CardUtils.ApplyMethodOnStack(this, c => c.dragged = true);
-            
+
             return transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-        
+
 
         /// <summary>
         /// Change all necessary value to drop the card
@@ -185,9 +200,9 @@ namespace Leafy.Objects
             p.z = 0;
             transform.position = p;
             SetParent(CardUtils.GetLastCard(cardUI));
-            
+
             //cardBehavior.OnDrop();
-            
+
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
         }
 
@@ -220,13 +235,13 @@ namespace Leafy.Objects
                 if (card.life <= 0)
                 {
                     Destroy(loader);
-                    if(child != null)
+                    if (child != null)
                         child.SetParent(parent);
                     Destroy(gameObject);
                 }
             }
         }
-        
+
         public void ChangeID(int id)
         {
             UpdateRenderID(id);
@@ -242,7 +257,7 @@ namespace Leafy.Objects
             if (parent != null)
             {
                 parent.child = null;
-                if(parent.loader != null)
+                if (parent.loader != null)
                     Destroy(parent.loader);
             }
 
@@ -257,10 +272,8 @@ namespace Leafy.Objects
             }
 
 
-            if(parent != null)
+            if (parent != null)
                 c.child = this;
         }
-        
     }
 }
-
