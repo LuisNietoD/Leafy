@@ -7,19 +7,22 @@ namespace Leafy.Data
 {
     public class Craft
     {
-        public static Dictionary<int, List<int>> list = new Dictionary<int, List<int>>()
-        {
-            //Stick
-            { 5, new List<int>() { 1, 1, 1 } },
-        };
+        public static Dictionary<int, List<int>> list = new Dictionary<int, List<int>>();
     
     
         public static int GetCraft(List<int> stack)
         {
+            stack.Sort();
             foreach (var kvp in list)
             {
-                if (stack.Count == kvp.Value.Count && stack.All(kvp.Value.Contains))
+                kvp.Value.Sort();
+                if (stack.Count == kvp.Value.Count && stack.SequenceEqual(kvp.Value))
                 {
+                    Debug.Log("Crafting ======" + kvp.Key);
+                    foreach (var v in stack)
+                    {
+                        Debug.Log(v + " Value========");
+                    }
                     return kvp.Key;
                 }
             }

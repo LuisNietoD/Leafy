@@ -22,10 +22,15 @@ public class ScriptableCardEditor : Editor
     SerializedProperty shakableProp;
     SerializedProperty infiniteProp;
     SerializedProperty dropProp;
+    SerializedProperty harvestTimeProp;
     SerializedProperty activatorsProp;
     SerializedProperty inventoryProp;
     SerializedProperty slotProp;
     SerializedProperty timeToCraftProp;
+    SerializedProperty recipeProp;
+    SerializedProperty evolveProp;
+    SerializedProperty evolveTimeProp;
+    SerializedProperty evolutionsProp;
 
     private Texture2D finalBackground;
 
@@ -52,6 +57,11 @@ public class ScriptableCardEditor : Editor
         timeToCraftProp = serializedObject.FindProperty("timeToCraft");
         inventoryProp = serializedObject.FindProperty("inventory");
         slotProp = serializedObject.FindProperty("slot");
+        harvestTimeProp = serializedObject.FindProperty("harvestTime");
+        recipeProp = serializedObject.FindProperty("recipe");
+        evolveProp = serializedObject.FindProperty("evolve");
+        evolveTimeProp = serializedObject.FindProperty("evolveTime");
+        evolutionsProp = serializedObject.FindProperty("evolutions");
     }
 
     public override void OnInspectorGUI()
@@ -71,6 +81,7 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(craftableProp);
         EditorGUILayout.PropertyField(harvestProp);
         EditorGUILayout.PropertyField(inventoryProp);
+        EditorGUILayout.PropertyField(evolveProp);
 
         // Display sell information
         if (sellableProp.boolValue)
@@ -82,6 +93,7 @@ public class ScriptableCardEditor : Editor
         if (craftableProp.boolValue)
         {
             EditorGUILayout.PropertyField(timeToCraftProp, new GUIContent("Time to Craft"));
+            EditorGUILayout.PropertyField(recipeProp, new GUIContent("Recipe"));
         }
 
         // Check if infinite is true, then show life
@@ -91,6 +103,7 @@ public class ScriptableCardEditor : Editor
             if (!infiniteProp.boolValue)
                 EditorGUILayout.PropertyField(lifeProp, new GUIContent("Life"));
             EditorGUILayout.PropertyField(shakableProp, new GUIContent("Shakable"));
+            EditorGUILayout.PropertyField(harvestTimeProp, new GUIContent("Harvest Time"));
             EditorGUILayout.PropertyField(dropProp, new GUIContent("Drop"));
             EditorGUILayout.PropertyField(activatorsProp, new GUIContent("Activators"));
         }
@@ -98,6 +111,12 @@ public class ScriptableCardEditor : Editor
         if (inventoryProp.boolValue)
         {
             EditorGUILayout.PropertyField(slotProp, new GUIContent("Slots"));
+        }
+
+        if (evolveProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(evolveTimeProp, new GUIContent("Evolve Time"));
+            EditorGUILayout.PropertyField(evolutionsProp, new GUIContent("Evolutions"));
         }
 
         // Custom preview area

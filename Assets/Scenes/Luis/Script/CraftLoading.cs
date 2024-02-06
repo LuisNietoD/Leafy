@@ -13,6 +13,7 @@ public class CraftLoading : MonoBehaviour
     public float timeToCraft = 1;
     public float elapsed = 0;
     public SpriteRenderer loadImage;
+    public bool destroyStack;
 
     private void Start()
     {
@@ -39,12 +40,19 @@ public class CraftLoading : MonoBehaviour
 
             foreach (CardUI card in stack)
             {
-                card.ReduceLife();
+                if(destroyStack)
+                    Destroy(card.gameObject);
+                else
+                    card.ReduceLife();
                 //Destroy(card.gameObject);
             }
 
             elapsed = 0;
-            
+            if (destroyStack)
+            {
+                Debug.Log("Test");
+                Destroy(gameObject);
+            }
         }
     }
 }

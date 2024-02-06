@@ -14,10 +14,14 @@ namespace Leafy.Data
         public int life;
         public bool shakable;
         public bool infinite;
+        public float harvestTime;
         public ProbabilityList<ScriptableCard> drop;
         public List<int> activators;
         public bool inventory;
         public int slots;
+        public bool evolve;
+        public float evolveTime;
+        public ProbabilityList<ScriptableCard> evolutions;
 
         public Card(ScriptableCard card)
         {
@@ -27,12 +31,14 @@ namespace Leafy.Data
             ID = card.ID;
             harvestable = card.harvestable;
             inventory = card.inventory;
+            evolve = card.evolve;
             
             if (harvestable)
             {
                 infinite = card.infinite;
                 life = card.life;
                 shakable = card.shakable;
+                harvestTime = card.harvestTime;
                 drop = card.drop;
                 activators = card.activators;
             }
@@ -40,6 +46,12 @@ namespace Leafy.Data
             if (inventory)
             {
                 slots = card.slot;
+            }
+
+            if (evolve)
+            {
+                evolveTime = card.evolveTime;
+                evolutions = card.evolutions;
             }
         }
     }

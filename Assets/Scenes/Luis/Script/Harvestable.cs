@@ -57,7 +57,8 @@ namespace Leafy.Objects
             {
                 if (card.activators.Contains(cardUI.child.ID))
                 {
-                    GameManager.instance.LaunchCraft(card.drop.PickValue().ID, new List<CardUI>() {cardUI, cardUI.child});
+                    GameManager.instance.LaunchCraft(card.drop.PickValue().ID, 
+                        new List<CardUI>() {cardUI, cardUI.child}, card.harvestTime);
                 }
             }
             

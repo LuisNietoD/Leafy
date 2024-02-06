@@ -72,7 +72,7 @@ namespace Leafy.Manager
                 _draggedCardUI = null;
             }
             
-            if (Input.GetKeyDown(KeyCode.A))
+           /* if (Input.GetKeyDown(KeyCode.A))
             {
                 List<ScriptableCard> c = CardList.GetRandomCardList(8);
               
@@ -95,7 +95,7 @@ namespace Leafy.Manager
 
                 lastCard = null;
                 c.Clear();
-            }
+            }*/
         }
 
         private void SnapCardToGrid()
@@ -127,6 +127,8 @@ namespace Leafy.Manager
 
         private void LaunchCraft(int craftID, CardUI firstStackCardUI)
         {
+            if(firstStackCardUI.loader != null)
+                return;
             ScriptableCard toCraft = CardList.GetCardByID(craftID);
             if(toCraft == null)
                 Debug.LogError("Cannot find this craft ID");
@@ -140,14 +142,17 @@ namespace Leafy.Manager
             cl.timeToCraft = toCraft.timeToCraft;
             cl.drop = toCraft;
             cl.stack = CardUtils.GetStackCardList(firstStackCardUI);
+            cl.destroyStack = true;
 
             
             cl.stack[0].SetLoader(cl.gameObject);
             
         }
         
-        public void LaunchCraft(int craftID, List<CardUI> stack)
+        public void LaunchCraft(int craftID, List<CardUI> stack, float harvestTime)
         {
+            if(stack[0].loader != null)
+                return;
             ScriptableCard toCraft = CardList.GetCardByID(craftID);
             if(toCraft == null)
                 Debug.LogError("Cannot find this craft ID");
@@ -158,9 +163,33 @@ namespace Leafy.Manager
 
             CraftLoading cl = crafter.GetComponent<CraftLoading>();
 
-            cl.timeToCraft = toCraft.timeToCraft;
+            cl.timeToCraft = harvestTime;
             cl.drop = toCraft;
             cl.stack = stack;
+            
+
+            cl.stack[0].SetLoader(cl.gameObject);
+        }
+        
+        public void LaunchCraft(int craftID, List<CardUI> stack, float harvestTime, bool destroy)
+        {
+            if(stack[0].loader != null)
+                return;
+            ScriptableCard toCraft = CardList.GetCardByID(craftID);
+            if(toCraft == null)
+                Debug.LogError("Cannot find this craft ID");
+
+            Vector3 pos = stack[0].transform.position;
+            pos.y += crafterOffsetY;
+            GameObject crafter = Instantiate(crafterPrefab, pos, Quaternion.identity);
+
+            CraftLoading cl = crafter.GetComponent<CraftLoading>();
+
+            cl.timeToCraft = harvestTime;
+            cl.drop = toCraft;
+            cl.stack = stack;
+            cl.destroyStack = destroy;
+            
 
             cl.stack[0].SetLoader(cl.gameObject);
         }

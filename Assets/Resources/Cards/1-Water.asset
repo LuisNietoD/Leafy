@@ -19,11 +19,54 @@ MonoBehaviour:
   background_color: {r: 0.11886788, g: 0.3962264, b: 0.1708726, a: 1}
   type: 0
   sellable: 0
-  craftable: 1
+  craftable: 0
   harvestable: 0
+  inventory: 0
   price: 0
   timeToCraft: 2
   infinite: 0
   life: 3
-  drop: {fileID: 11400000, guid: 9d0813bad331c3f4cbe4c6d2e07a9b86, type: 2}
+  shakable: 0
+  harvestTime: 0
+  drop:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 0
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
   activators: 
+  slot: 0

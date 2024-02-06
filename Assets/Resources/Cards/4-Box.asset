@@ -21,11 +21,14 @@ MonoBehaviour:
   sellable: 0
   craftable: 0
   harvestable: 1
+  inventory: 0
+  evolve: 0
   price: 5
   timeToCraft: 0
-  infinite: 1
-  life: 0
+  infinite: 0
+  life: 5
   shakable: 1
+  harvestTime: 0
   drop:
     m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
     m_ProbabilityItems:
@@ -83,11 +86,576 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 901307760
+    m_Seed: 3037393351
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History:
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428265082772920
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428265074440570
+      - m_Index: 1
+        m_Time:
+          Ticks: 638428265066993120
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428262995241468
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428262986924190
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428262978913509
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428262970570273
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428262963131318
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428261431685591
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428261423370039
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428261415365266
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428261407023806
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428261399577286
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428258808296606
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428258799971999
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428258791959430
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428258783635548
+      - m_Index: 1
+        m_Time:
+          Ticks: 638428258775316937
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428256509141610
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428256456814667
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428256448803654
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428256440470225
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428256432469589
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428251962917994
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428251954584042
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428251946574663
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428251938241627
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428251930788686
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247241322458
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247233300248
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247224953805
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428247216960920
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247208639987
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428246906358753
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428246898062055
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428246890049207
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428246881725275
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428246873356097
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428207182722309
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428207174510488
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428207166326015
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428207158133718
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428207142767157
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428204107832790
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428204099637062
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428204091439129
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428204083248661
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428204075052221
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428202039065170
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428202030868524
+      - m_Index: 3
+        m_Time:
+          Ticks: 638428202022658608
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428202014448886
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428202006892648
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427712540778153
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427712532628232
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427712524113238
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427712515957540
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427712508341425
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711972097290
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711963916314
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711955752925
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711947411979
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711939986437
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711407542399
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711399358060
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711391190259
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711382862535
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711375298779
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711189606061
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711181273573
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711173242260
+      - m_Index: 2
+        m_Time:
+          Ticks: 638427711164607192
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711156300796
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711148255682
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711139897861
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711116575804
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711108591320
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711100257220
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711091907871
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711083744028
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711075568206
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711066079619
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711057410126
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711039390178
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711030740336
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711019412352
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427711011074940
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427711002907071
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710994753239
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710986576613
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427710978402730
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710970093187
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710961905533
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710953732298
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710945572403
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427710937400256
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710929075869
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710920917220
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710912755408
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710904562730
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710896416854
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710888645920
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710662323558
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710654002579
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710645979099
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710633007848
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710624668494
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710612986779
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710603649597
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710591666687
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710558992967
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710548321950
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710516145283
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427710507976455
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427710499808113
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710466977760
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427710459377909
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708769082451
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708760467871
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708751781502
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708743752217
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708735427006
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708727413794
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427708718782571
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708710750629
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427708702421264
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708694093344
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708685083097
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708676745934
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708667414647
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708608768982
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708588757839
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708575429972
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708567084129
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708541750375
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708533443360
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708525112142
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708517088115
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708508770091
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708500763066
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708492441206
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708484107845
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708476098509
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708467763444
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708459760879
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708451437476
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708443416660
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708435082497
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427708426771790
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708418750889
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708410405161
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708402092588
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708393924425
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708385738405
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708377576708
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708369407005
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427708361635741
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427706123333095
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427706115163703
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427706106821651
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427706098646671
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427706090489142
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427706082153143
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427706073993437
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427706066389395
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427704961983812
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427704953623037
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427704945459097
+      - m_Index: 1
+        m_Time:
+          Ticks: 638427704937291043
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427704928957383
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427704920795296
+      - m_Index: 3
+        m_Time:
+          Ticks: 638427704912659713
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427704904465512
+      - m_Index: 0
+        m_Time:
+          Ticks: 638427704896701944
+      m_Capacity: 1000
+    m_LastPickCount: 1
+    m_SelectionMethodID: LSMRegular
+  activators: 
+  slot: 0
+  recipe: 
+  evolveTime: 0
+  evolutions:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 0
     m_KeepSeed: 0
     m_PickHistory:
       m_History: []
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  activators: 

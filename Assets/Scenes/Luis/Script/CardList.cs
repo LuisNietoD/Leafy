@@ -41,9 +41,11 @@ namespace Leafy.Data
                 {
                     ScriptableCard card = (ScriptableCard)obj;
                     cardList.Add(card);
+                    if(card.craftable)
+                        Craft.list.Add(card.ID, card.recipe);
                 }
             }
-
+            
             Cards = cardList;
 
             // You can yield here if you want to wait for something else.

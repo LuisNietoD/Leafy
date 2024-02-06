@@ -2,6 +2,7 @@ using UnityEngine;
 using Leafy.Data;
 using Leafy.Manager;
 using TMPro;
+using Unity.VisualScripting;
 
 namespace Leafy.Objects
 {
@@ -75,6 +76,10 @@ namespace Leafy.Objects
             if (card.harvestable && behavior == null)
             {
                 behavior = new Harvestable(this);
+            }
+            else if (card.evolve && behavior == null)
+            {
+                behavior = new Evolve(this);
             }
             else if (behavior == null)
             {
@@ -255,6 +260,7 @@ namespace Leafy.Objects
             if(parent != null)
                 c.child = this;
         }
+        
     }
 }
 

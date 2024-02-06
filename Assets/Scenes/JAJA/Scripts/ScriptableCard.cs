@@ -31,22 +31,31 @@ public class ScriptableCard : ScriptableObject
     public bool craftable;
     public bool harvestable;
     public bool inventory;
+    public bool evolve;
     
     [Header("Sell information")]
     public int price;
 
     [Header("Craft information")]
-    public float timeToCraft;
+    public float timeToCraft = 2;
     
     [Header("Harvest information")]
     public bool infinite;
     public int life;
     public bool shakable;
+    public float harvestTime;
     public ProbabilityList<ScriptableCard> drop;
     public List<int> activators;
 
     [Header("Inventory information")] 
     public int slot;
+    
+    [Header("Recipe information")] 
+    public List<int> recipe;
+    
+    [Header("Evolve information")] 
+    public float evolveTime;
+    public ProbabilityList<ScriptableCard> evolutions;
     
     public Texture2D GetCardIcon()
     {

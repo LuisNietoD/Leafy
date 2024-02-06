@@ -21,11 +21,14 @@ MonoBehaviour:
   sellable: 0
   craftable: 0
   harvestable: 1
+  inventory: 0
+  evolve: 0
   price: 0
   timeToCraft: 5
-  infinite: 1
-  life: 0
+  infinite: 0
+  life: 4
   shakable: 0
+  harvestTime: 1
   drop:
     m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
     m_ProbabilityItems:
@@ -65,6 +68,53 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    m_Seed: 1901628735
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428109339736646
+      m_Capacity: 1000
+    m_LastPickCount: 1
+    m_SelectionMethodID: LSMRegular
+  activators: 03000000
+  slot: 0
+  recipe: 
+  evolveTime: 0
+  evolutions:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     m_Seed: 0
     m_KeepSeed: 0
     m_PickHistory:
@@ -72,4 +122,3 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  activators: 03000000
