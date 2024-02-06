@@ -10,7 +10,6 @@ namespace Leafy.Data
 {
     public class CardList : MonoBehaviour
     {
-        public string scriptableObjectsDirectory = "Assets/Scenes/Luis/Cards";
         private static List<ScriptableCard> Cards = new List<ScriptableCard>();
 
         public static event Action OnScriptableObjectsLoaded;
