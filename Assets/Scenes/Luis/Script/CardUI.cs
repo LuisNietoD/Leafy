@@ -160,10 +160,10 @@ namespace Leafy.Objects
         {
             if (card.sellable)
             {
-                // Définir le nombre de nouveaux prefabs à créer
+                // DÃ©finir le nombre de nouveaux prefabs Ã  crÃ©er
 
 
-                // Crée deux nouveaux prefabs à la position actuelle
+                // CrÃ©e deux nouveaux prefabs Ã  la position actuelle
                 for (int i = 0; i < card.price; i++)
                 {
                     GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
