@@ -49,6 +49,7 @@ namespace Leafy.Manager
             {
                 offset = _hoveredCardUI.SetDragged();
                 _draggedCardUI = _hoveredCardUI;
+                _draggedCardUI.behavior?.OnDrag();
                 CardUtils.ApplyMethodOnStack(_draggedCardUI, card =>
                 {
                     card.BringToFront();
@@ -60,7 +61,7 @@ namespace Leafy.Manager
             //Drop the dragged card
             else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
             {
-                
+                _draggedCardUI.behavior?.OnDrop();
                 _draggedCardUI.Drop(_hoveredCardUI);
                 int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
                 if (craft >= 0)
@@ -111,18 +112,6 @@ namespace Leafy.Manager
             // Lerp towards the snapped position
             _draggedCardUI.transform.position = Vector3.Lerp(_draggedCardUI.transform.position, finalSnappedPosition, Time.deltaTime * lerpingSpeed);
         
-        }
-
-        
-        public void TestCraft(CardUI cardUI)
-        {
-            CardUI firstStackCardUI = CardUtils.GetRootCard(cardUI);
-            int craft = Craft.GetCraft(CardUtils.GetStackIDList(firstStackCardUI));
-            
-            if (craft >= 0 && firstStackCardUI.loader == null)
-            {
-                LaunchCraft(craft, firstStackCardUI);
-            }
         }
 
         private void LaunchCraft(int craftID, CardUI firstStackCardUI)
@@ -193,13 +182,6 @@ namespace Leafy.Manager
 
             cl.stack[0].SetLoader(cl.gameObject);
         }
-
-        CardUI lastCard;
-
-        private void SetLastCard(CardUI c)
-        {
-            lastCard = c;
-        }
         
         private void FixedUpdate()
         {
@@ -259,6 +241,12 @@ namespace Leafy.Manager
             CardUI c = newCard.GetComponent<CardUI>();
             c.UpdateCardInfo(new Card(CardList.GetCardByID(id)));
             c.ChangeID(ID++);
+        }
+
+        public GameObject SpawnObject(Vector3 pos, GameObject prefab)
+        {
+            GameObject obj = Instantiate(prefab, pos, Quaternion.identity);
+            return obj;
         }
     }
 }
