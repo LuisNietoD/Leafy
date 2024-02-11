@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using Leafy.Data;
 using Leafy.Manager;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.EventSystems;
 
 namespace Leafy.Objects
 {
@@ -47,14 +49,9 @@ namespace Leafy.Objects
 
         private void Start()
         {
-            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
-            if (behavior != null)
-                behavior.Spawn();
+            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler; 
+            behavior?.Spawn();
             uniqueID = CardUtils.ID++;
-            /*if (TryGetComponent(out cardBehavior))
-            {
-                cardBehavior.Spawn();
-            }*/
         }
 
         private void OnDestroy()
@@ -254,16 +251,6 @@ namespace Leafy.Objects
             CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
         }
 
-
-
-
-        private void OnMouseEnter()
-        {
-            //cardBehavior.OnHover();
-            hovered = true;
-        }
-
-
         /// <summary>
         /// Change all necessary value to make a card the main dragged object
         /// </summary>
@@ -364,6 +351,21 @@ namespace Leafy.Objects
 
             if (parent != null)
                 c.child = this;
+        }
+
+        private void OnMouseDown()
+        {
+            behavior?.OnClick();
+        }
+        
+        private void OnMouseEnter()
+        {
+            behavior?.OnHover();
+        }
+
+        private void OnMouseOver()
+        {
+            behavior?.OnHoverStay();
         }
     }
 }
