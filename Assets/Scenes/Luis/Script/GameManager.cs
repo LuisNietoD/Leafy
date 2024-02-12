@@ -13,12 +13,6 @@ namespace Leafy.Manager
         public LayerMask cardLayer;
         public GameObject cardPrefab;
         
-        [Header("StartCards")]
-        public GameObject sourceCard;
-        public GameObject bucketCard;
-        public GameObject boxCard;
-        public GameObject potCard;
-        public GameObject waterCard;
         
         public float snapX = 1;
         public float snapY = 2;
@@ -38,12 +32,6 @@ namespace Leafy.Manager
 
         private void Awake()
         {
-            CheckAndSetActive(sourceCard);
-            CheckAndSetActive(bucketCard);
-            CheckAndSetActive(boxCard);
-            CheckAndSetActive(potCard);
-            CheckAndSetActive(waterCard);
-            
             if (instance == null)
             {
                 instance = this;
@@ -52,15 +40,6 @@ namespace Leafy.Manager
             {
                 Destroy(this);
             }
-        }
-        void CheckAndSetActive(GameObject obj)
-        {
-            if(ES3.FileExists("SaveFile.es3") && obj == null)
-            {
-                Debug.LogWarning("Le GameObject est null. Il sera désactivé.");
-                return;
-            }
-            obj.SetActive(true);
         }
 
         private void Update()
