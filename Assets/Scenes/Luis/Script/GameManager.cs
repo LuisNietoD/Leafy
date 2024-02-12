@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Xml;
 using Leafy.Objects;
 using UnityEngine;
 using Leafy.Data;
@@ -11,6 +12,13 @@ namespace Leafy.Manager
         
         public LayerMask cardLayer;
         public GameObject cardPrefab;
+        
+        [Header("StartCards")]
+        public GameObject sourceCard;
+        public GameObject bucketCard;
+        public GameObject boxCard;
+        public GameObject potCard;
+        public GameObject waterCard;
         
         public float snapX = 1;
         public float snapY = 2;
@@ -30,6 +38,17 @@ namespace Leafy.Manager
 
         private void Awake()
         {
+            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Card"); 
+
+            foreach (GameObject go in gameObjects)
+            {
+                int uniqueID = go.GetComponent<CardUI>().uniqueID;
+                if (uniqueID > 5)
+                {
+                    go.SetActive(false);
+                }
+            }
+            
             if (instance == null)
             {
                 instance = this;
