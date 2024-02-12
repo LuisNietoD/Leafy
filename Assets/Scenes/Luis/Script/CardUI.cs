@@ -49,7 +49,7 @@ namespace Leafy.Objects
 
         private void Start()
         {
-            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler; 
+            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
             behavior?.Spawn();
             uniqueID = CardUtils.ID++;
         }
@@ -81,7 +81,6 @@ namespace Leafy.Objects
                 behavior = new ClassicCard();
             }
         }
-
         private void UpdateRenderID(int id)
         {
             background.sortingOrder = id;
@@ -193,8 +192,8 @@ namespace Leafy.Objects
             {
                 CardUI lastCard = CardUtils.GetLastCard(this);
 
-                // Vérifiez si la pile a exactement 5 cartes et que toutes les cartes ont un ID égal à 1
-                if (lastCard != null && CardUtils.GetStackCardList(this).Count == 5 && AllCardsInStackHaveID(1))
+                // Vérifiez si au moins une carte dans la pile a un ID égal à 1
+                if (lastCard != null && AllCardsInStackHaveID(1))
                 {
                     int numberOfCardsInStack = CardUtils.GetStackCardList(this).Count;
 
@@ -209,13 +208,11 @@ namespace Leafy.Objects
                         // Activez le pack
                         ActivatePack();
                     }
-
-                    GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
                     CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
                 }
                 else
                 {
-                    Debug.Log("La pile doit avoir exactement 5 cartes, et toutes les cartes doivent avoir un ID égal à 1, pour permettre l'achat.");
+                    Debug.Log("La pile doit avoir au moins une carte avec un ID égal à 1 pour permettre l'achat.");
                 }
             }
         }
@@ -236,20 +233,33 @@ namespace Leafy.Objects
             return true;
         }
 
-
-
-
         private void ActivatePack()
         {
+            // Récupérez la valeur actuelle de BuyPack
+            int numberOfCardsToSpawn = BuyPack - 5; // Modifiez cette ligne
+
             // Créez le nouveau pack
             GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
 
             // Réinitialisez la valeur BuyPack à 0
             BuyPack = 0;
 
+            // Vérifiez si BuyPack atteint 5
+            if (numberOfCardsToSpawn > 0)
+            {
+                // Instanciez autant de cartes que nécessaire (avec l'ID 1)
+                for (int i = 0; i < numberOfCardsToSpawn; i++)
+                {
+                    GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
+                }
+            }
+
             // Appliquez la méthode sur toute la pile pour détruire les cartes
             CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
         }
+
+
+
 
         /// <summary>
         /// Change all necessary value to make a card the main dragged object
@@ -357,7 +367,7 @@ namespace Leafy.Objects
         {
             behavior?.OnClick();
         }
-        
+
         private void OnMouseEnter()
         {
             behavior?.OnHover();
