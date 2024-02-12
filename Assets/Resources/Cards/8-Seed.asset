@@ -23,7 +23,7 @@ MonoBehaviour:
   harvestable: 0
   inventory: 0
   evolve: 0
-  price: 5
+  price: 0
   timeToCraft: 0
   infinite: 0
   life: 0

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Leafy.Data;
 using Leafy.Objects;
+using RNGNeeds;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,14 +14,20 @@ public class Booster : MonoBehaviour
     public GameObject cardsPrefab;
     private int index = 0;
     private List<Vector3> positions = new List<Vector3>();
+    public ProbabilityList<ScriptableCard> cards = new ProbabilityList<ScriptableCard>();
 
 
-    void Start() => positions = GeneratePositions(transform.position, numberOfPositions, radius);
+    void Start()
+    {
+        positions = GeneratePositions(transform.position, numberOfPositions, radius);
+        cards.PreventRepeat = PreventRepeatMethod.Shuffle;
+    } 
     
     public void SpawnCard()
     {
         GameObject newCard = Instantiate(cardsPrefab, positions[index], Quaternion.identity);
-        newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(CardList.GetRandomCard()));
+        
+        newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(cards.PickValue()));
         index++;
         if(index >= numberOfPositions)
             Destroy(gameObject);

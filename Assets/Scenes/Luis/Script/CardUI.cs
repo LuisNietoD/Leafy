@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 using Leafy.Data;
 using Leafy.Manager;
 using TMPro;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.EventSystems;
 
 namespace Leafy.Objects
 {
@@ -32,6 +36,7 @@ namespace Leafy.Objects
         private bool hovered;
         public bool dragged;
 
+        private static int BuyPack = 0;
 
         private void Awake()
         {
@@ -44,14 +49,9 @@ namespace Leafy.Objects
 
         private void Start()
         {
-            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
-            if (behavior != null)
-                behavior.Spawn();
+            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler; 
+            behavior?.Spawn();
             uniqueID = CardUtils.ID++;
-            /*if (TryGetComponent(out cardBehavior))
-            {
-                cardBehavior.Spawn();
-            }*/
         }
 
         private void OnDestroy()
@@ -158,42 +158,98 @@ namespace Leafy.Objects
         }
         private void SellCard()
         {
-            if (card.sellable)
+            List<CardUI> stackCards = CardUtils.GetStackCardList(this);
+
+            // Vérifier si toutes les cartes dans le stack sont sellables
+            if (stackCards.All(c => c.card.sellable))
             {
-                // Définir le nombre de nouveaux prefabs à créer
+                // Calculer le nombre total de cartes en tenant compte des stacks
+                int totalNumberOfCards = 0;
 
+                foreach (CardUI stackCard in stackCards)
+                {
+                    totalNumberOfCards += stackCard.card.price;
+                }
 
-                // Crée deux nouveaux prefabs à la position actuelle
-                for (int i = 0; i < card.price; i++)
+                // Créer le nombre total de nouveaux prefabs à la position actuelle
+                for (int i = 0; i < totalNumberOfCards; i++)
                 {
                     GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
                 }
 
+                // Détruire toutes les cartes de la pile
                 CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
             }
             else
             {
-                Debug.Log("Tu peux pas gros bouff");
+                Debug.Log("Impossible de vendre cette pile car au moins une carte n'est pas sellable.");
             }
         }
 
         private void BuyCard()
         {
+            // Vérifiez si la carte actuelle a un ID égal à 1
             if (card.ID == 1)
             {
-                GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
-                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+                CardUI lastCard = CardUtils.GetLastCard(this);
+
+                // Vérifiez si la pile a exactement 5 cartes et que toutes les cartes ont un ID égal à 1
+                if (lastCard != null && CardUtils.GetStackCardList(this).Count == 5 && AllCardsInStackHaveID(1))
+                {
+                    int numberOfCardsInStack = CardUtils.GetStackCardList(this).Count;
+
+                    BuyPack += numberOfCardsInStack;
+
+                    // Affichez la nouvelle valeur (vous pouvez le retirer dans le code final)
+                    Debug.Log("La valeur a été augmentée ! Nouvelle valeur : " + BuyPack);
+
+                    // Vérifiez si BuyPack atteint 5
+                    if (BuyPack >= 5)
+                    {
+                        // Activez le pack
+                        ActivatePack();
+                    }
+
+                    GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
+                    CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+                }
+                else
+                {
+                    Debug.Log("La pile doit avoir exactement 5 cartes, et toutes les cartes doivent avoir un ID égal à 1, pour permettre l'achat.");
+                }
             }
         }
 
-
-
-        private void OnMouseEnter()
+        // Méthode pour vérifier si toutes les cartes dans le stack ont un ID donné
+        private bool AllCardsInStackHaveID(int targetID)
         {
-            //cardBehavior.OnHover();
-            hovered = true;
+            List<CardUI> cards = CardUtils.GetStackCardList(this);
+
+            foreach (CardUI c in cards)
+            {
+                if (c.card.ID != targetID)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
+
+
+
+        private void ActivatePack()
+        {
+            // Créez le nouveau pack
+            GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
+
+            // Réinitialisez la valeur BuyPack à 0
+            BuyPack = 0;
+
+            // Appliquez la méthode sur toute la pile pour détruire les cartes
+            CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+        }
 
         /// <summary>
         /// Change all necessary value to make a card the main dragged object
@@ -295,6 +351,21 @@ namespace Leafy.Objects
 
             if (parent != null)
                 c.child = this;
+        }
+
+        private void OnMouseDown()
+        {
+            behavior?.OnClick();
+        }
+        
+        private void OnMouseEnter()
+        {
+            behavior?.OnHover();
+        }
+
+        private void OnMouseOver()
+        {
+            behavior?.OnHoverStay();
         }
     }
 }

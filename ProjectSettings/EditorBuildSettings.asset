@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GUS/Credit.unity
     guid: 46040e2bb8533b04b9ef98c12643d296
+  - enabled: 1
+    path: Assets/Scenes/Luis/MyScene.unity
+    guid: 67dfc8640a8de1f47953506387c629b4
   m_configObjects: {}
