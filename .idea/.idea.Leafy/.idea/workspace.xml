@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/MyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllIn1SpriteShader/2DRenderer-URP-Package-2021.2+.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllIn1SpriteShader/2DRenderer-URP-Package.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Editor/ES3Asmdefs.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +58,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Utilisateur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Utilisateur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Utilisateur\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\augus\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\augus\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\augus\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -140,6 +139,7 @@
       <workItem from="1707080861232" duration="27588000" />
       <workItem from="1707405616532" duration="3577000" />
       <workItem from="1707463329036" duration="6079000" />
+      <workItem from="1707726533770" duration="4981000" />
     </task>
     <servers />
   </component>

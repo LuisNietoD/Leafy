@@ -38,16 +38,11 @@ namespace Leafy.Manager
 
         private void Awake()
         {
-            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Card"); 
-
-            foreach (GameObject go in gameObjects)
-            {
-                int uniqueID = go.GetComponent<CardUI>().uniqueID;
-                if (uniqueID > 5)
-                {
-                    go.SetActive(false);
-                }
-            }
+            CheckAndSetActive(sourceCard);
+            CheckAndSetActive(bucketCard);
+            CheckAndSetActive(boxCard);
+            CheckAndSetActive(potCard);
+            CheckAndSetActive(waterCard);
             
             if (instance == null)
             {
@@ -57,6 +52,15 @@ namespace Leafy.Manager
             {
                 Destroy(this);
             }
+        }
+        void CheckAndSetActive(GameObject obj)
+        {
+            if(ES3.FileExists("SaveFile.es3") && obj == null)
+            {
+                Debug.LogWarning("Le GameObject est null. Il sera désactivé.");
+                return;
+            }
+            obj.SetActive(true);
         }
 
         private void Update()
