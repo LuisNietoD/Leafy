@@ -159,10 +159,8 @@ namespace Leafy.Objects
         {
             List<CardUI> stackCards = CardUtils.GetStackCardList(this);
 
-            // Vérifier si toutes les cartes dans le stack sont sellables
             if (stackCards.All(c => c.card.sellable))
             {
-                // Calculer le nombre total de cartes en tenant compte des stacks
                 int totalNumberOfCards = 0;
 
                 foreach (CardUI stackCard in stackCards)
@@ -170,54 +168,45 @@ namespace Leafy.Objects
                     totalNumberOfCards += stackCard.card.price;
                 }
 
-                // Créer le nombre total de nouveaux prefabs à la position actuelle
                 for (int i = 0; i < totalNumberOfCards; i++)
                 {
                     GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
                 }
 
-                // Détruire toutes les cartes de la pile
                 CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
             }
             else
             {
-                Debug.Log("Impossible de vendre cette pile car au moins une carte n'est pas sellable.");
+                Debug.Log("This card is not Sellable");
             }
         }
 
         private void BuyCard()
         {
-            // Vérifiez si la carte actuelle a un ID égal à 1
             if (card.ID == 1)
             {
                 CardUI lastCard = CardUtils.GetLastCard(this);
 
-                // Vérifiez si au moins une carte dans la pile a un ID égal à 1
                 if (lastCard != null && AllCardsInStackHaveID(1))
                 {
                     int numberOfCardsInStack = CardUtils.GetStackCardList(this).Count;
 
                     BuyPack += numberOfCardsInStack;
 
-                    // Affichez la nouvelle valeur (vous pouvez le retirer dans le code final)
-                    Debug.Log("La valeur a été augmentée ! Nouvelle valeur : " + BuyPack);
+                    Debug.Log("New valor : " + BuyPack);
 
-                    // Vérifiez si BuyPack atteint 5
                     if (BuyPack >= 5)
                     {
-                        // Activez le pack
                         ActivatePack();
                     }
                     CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
                 }
                 else
                 {
-                    Debug.Log("La pile doit avoir au moins une carte avec un ID égal à 1 pour permettre l'achat.");
+                    Debug.Log("This card can't buy pack");
                 }
             }
         }
-
-        // Méthode pour vérifier si toutes les cartes dans le stack ont un ID donné
         private bool AllCardsInStackHaveID(int targetID)
         {
             List<CardUI> cards = CardUtils.GetStackCardList(this);
@@ -235,26 +224,19 @@ namespace Leafy.Objects
 
         private void ActivatePack()
         {
-            // Récupérez la valeur actuelle de BuyPack
-            int numberOfCardsToSpawn = BuyPack - 5; // Modifiez cette ligne
+            int numberOfCardsToSpawn = BuyPack - 5; 
 
-            // Créez le nouveau pack
             GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
 
-            // Réinitialisez la valeur BuyPack à 0
             BuyPack = 0;
 
-            // Vérifiez si BuyPack atteint 5
             if (numberOfCardsToSpawn > 0)
             {
-                // Instanciez autant de cartes que nécessaire (avec l'ID 1)
                 for (int i = 0; i < numberOfCardsToSpawn; i++)
                 {
                     GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
                 }
             }
-
-            // Appliquez la méthode sur toute la pile pour détruire les cartes
             CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
         }
 

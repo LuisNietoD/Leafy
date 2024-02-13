@@ -149,7 +149,13 @@ MonoBehaviour:
   cardsPrefab: {fileID: 1819979330338786182, guid: dbc087cb741d81749bd1daf78187a172, type: 3}
   cards:
     m_PLID: dc877e56-63e2-460b-9d32-9f42e6ff667d
-    m_ProbabilityItems: []
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 96635c6fe3d92274aa7eef144df5ff24, type: 2}
+      m_BaseProbability: 1
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
     m_PreventRepeat: 0
     m_ShuffleIterations: 1
     m_PickCountMin: 1
