@@ -10,131 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 12-Short-lived Plant
+  m_Name: 29-Lingot de Fer
   m_EditorClassIdentifier: 
-  name: Short-lived Plant
-  ID: 12
-  artwork: {fileID: 21300000, guid: 0c7115710cd1d4645834230e29af0288, type: 3}
+  name: Lingot de Fer
+  ID: 29
+  artwork: {fileID: 21300000, guid: 2da93ce169cab3f4290b1cdeedcfb3c6, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.3660378, g: 0.3660378, b: 0.3660378, a: 1}
-  type: 0
-  sellable: 0
+  background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
+  type: 1
+  sellable: 1
   craftable: 0
-  harvestable: 1
+  harvestable: 0
   inventory: 0
   evolve: 0
-  price: 0
-  timeToCraft: 5
+  interfaces: 0
+  transmute: 0
+  price: 2
+  timeToCraft: 0
   infinite: 0
-  life: 4
-  shakable: 1
-  harvestTime: 2
+  life: 0
+  storeCard: 0
+  inventorySize: 0
+  shakable: 0
+  harvestTime: 0
   drop:
-    m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
-    m_ProbabilityItems:
-    - m_Value: {fileID: 11400000, guid: 96635c6fe3d92274aa7eef144df5ff24, type: 2}
-      m_BaseProbability: 1
-      m_Enabled: 1
-      m_Locked: 0
-      m_InfluenceSpread: {x: 0, y: 1}
-      m_InfluenceProvider: {fileID: 0}
-    m_PreventRepeat: 0
-    m_ShuffleIterations: 1
-    m_PickCountMin: 1
-    m_PickCountMax: 1
-    m_LinkPickCounts: 1
-    m_MaintainPickCountIfDisabled: 0
-    m_PickCountCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_Seed: 3607545921
-    m_KeepSeed: 0
-    m_PickHistory:
-      m_History:
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428259226989711
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428259218963592
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428259210314617
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428259202283853
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428256270478668
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428252199575310
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428252191572123
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428252183247721
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428252175230329
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428247611623853
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428247603306135
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428247595302213
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428247586304314
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428207452322590
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428207444112286
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428207435923697
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428207427714240
-      - m_Index: 0
-        m_Time:
-          Ticks: 638428204324440253
-      m_Capacity: 1000
-    m_LastPickCount: 1
-    m_SelectionMethodID: LSMRegular
-  activators: 
-  slot: 0
-  recipe: 0a0000000800000001000000
-  evolveTime: 6
-  evolutions:
-    m_PLID: ac33f840-1b86-4f72-9b69-04b8c955218a
+    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
     m_ProbabilityItems: []
     m_PreventRepeat: 0
     m_ShuffleIterations: 1
@@ -166,10 +66,56 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 940904725
+    m_Seed: 901307760
     m_KeepSeed: 0
     m_PickHistory:
       m_History: []
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  activators: 
+  slot: 0
+  recipes: []
+  evolveTime: 0
+  evolutions:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 0
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  transmuteList: []

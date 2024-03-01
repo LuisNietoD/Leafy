@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water
   ID: 1
-  artwork: {fileID: 21300000, guid: 771853c7f8e71b3448a47b15918e2abe, type: 3}
+  artwork: {fileID: 21300000, guid: a413fa2347f7d9c44b3aee2e78a2e300, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.11886788, g: 0.3962264, b: 0.1708726, a: 1}
+  background_color: {r: 0.5153079, g: 0.7283019, b: 0.55790675, a: 1}
   type: 0
   sellable: 0
   craftable: 0

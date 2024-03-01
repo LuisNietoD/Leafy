@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: -1695109657
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d8cebd6398cbb2b4da466e541a4ea3ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 801263585cdd1164c949c1b204411585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,8 +123,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.63, y: 3.09}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 4.5}
+    newSize: {x: 12, y: 18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -148,10 +148,34 @@ MonoBehaviour:
   radius: 4
   cardsPrefab: {fileID: 1819979330338786182, guid: dbc087cb741d81749bd1daf78187a172, type: 3}
   cards:
-    m_PLID: dc877e56-63e2-460b-9d32-9f42e6ff667d
+    m_PLID: d5a39b70-b5fa-46de-868a-7b1c13e86b36
     m_ProbabilityItems:
     - m_Value: {fileID: 11400000, guid: 96635c6fe3d92274aa7eef144df5ff24, type: 2}
-      m_BaseProbability: 1
+      m_BaseProbability: 0.1
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 57677f99cd50c2540b08dfdf8eb7a0aa, type: 2}
+      m_BaseProbability: 0.40000007
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: b10d0c20b12f68e4e97704fbd8bea459, type: 2}
+      m_BaseProbability: 0.049999915
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 1d6685070f8494740a4effc16845fd09, type: 2}
+      m_BaseProbability: 0.3
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: d0124930a46a4a341a974de031b5cd8f, type: 2}
+      m_BaseProbability: 0.15
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}
@@ -193,6 +217,8 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  fixedList: 0
+  fixedCard: []
 --- !u!1 &5080328305622041366
 GameObject:
   m_ObjectHideFlags: 0

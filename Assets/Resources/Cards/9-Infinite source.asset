@@ -14,19 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Infinite Source
   ID: 9
-  artwork: {fileID: 21300000, guid: f150135f833541c44bcf823b7ca41fe2, type: 3}
+  artwork: {fileID: 21300000, guid: 72ac722c3fedd9d4d8c2745f5317bff1, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.3660378, g: 0.3660378, b: 0.3660378, a: 1}
-  type: 0
+  background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  type: 2
   sellable: 0
   craftable: 1
   harvestable: 1
   inventory: 0
   evolve: 0
+  interfaces: 0
+  transmute: 0
   price: 0
   timeToCraft: 5
   infinite: 1
   life: 0
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 8
   drop:
@@ -68,10 +72,25 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 2749297674
+    m_Seed: 1341565506
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448502110385915
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447515208733371
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447506280646189
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447502146463989
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447485385578660
       - m_Index: 0
         m_Time:
           Ticks: 638428130005288233
@@ -83,7 +102,9 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 03000000
   slot: 0
-  recipe: 02000000020000000200000002000000
+  recipes:
+  - machine: 0
+    recipe: 02000000020000000200000002000000
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -125,3 +146,5 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  transmuteList: []

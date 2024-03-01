@@ -40,8 +40,22 @@ namespace Leafy.Data
                 {
                     ScriptableCard card = (ScriptableCard)obj;
                     cardList.Add(card);
-                    if(card.craftable)
-                        Craft.list.Add(card.ID, card.recipe);
+                    if (card.craftable)
+                    {
+                        foreach (CraftRecipe recipe in card.recipes)
+                        {
+                            switch (recipe.machine)
+                            {
+                                case Machine.None:
+                                    Craft.list.Add(card.ID, recipe.recipe);
+                                    break;
+                                case Machine.Press:
+                                    Craft.press.Add(recipe.recipe[0], card.ID);
+                                    break;
+                            }
+                        }
+                    }
+                        
                 }
             }
             

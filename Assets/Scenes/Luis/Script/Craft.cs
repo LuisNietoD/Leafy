@@ -8,6 +8,7 @@ namespace Leafy.Data
     public class Craft
     {
         public static Dictionary<int, List<int>> list = new Dictionary<int, List<int>>();
+        public static Dictionary<int, int> press = new Dictionary<int, int>();
     
     
         public static int GetCraft(List<int> stack)

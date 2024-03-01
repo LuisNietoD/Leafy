@@ -15,7 +15,7 @@ public class ScriptableCardEditor : Editor
     SerializedProperty sellableProp;
     SerializedProperty craftableProp;
     SerializedProperty harvestProp;
-
+    SerializedProperty evolveProp;
     // Section
     SerializedProperty priceProp;
     SerializedProperty lifeProp;
@@ -28,9 +28,14 @@ public class ScriptableCardEditor : Editor
     SerializedProperty slotProp;
     SerializedProperty timeToCraftProp;
     SerializedProperty recipeProp;
-    SerializedProperty evolveProp;
     SerializedProperty evolveTimeProp;
     SerializedProperty evolutionsProp;
+    SerializedProperty interfaceProp;
+    SerializedProperty interfaceListProp;
+    SerializedProperty storeCardProp;
+    SerializedProperty storeCardSizeProp;
+    SerializedProperty transmuteProp;
+    SerializedProperty transmuteListProp;
 
     private Texture2D finalBackground;
 
@@ -58,10 +63,16 @@ public class ScriptableCardEditor : Editor
         inventoryProp = serializedObject.FindProperty("inventory");
         slotProp = serializedObject.FindProperty("slot");
         harvestTimeProp = serializedObject.FindProperty("harvestTime");
-        recipeProp = serializedObject.FindProperty("recipe");
+        recipeProp = serializedObject.FindProperty("recipes");
         evolveProp = serializedObject.FindProperty("evolve");
         evolveTimeProp = serializedObject.FindProperty("evolveTime");
         evolutionsProp = serializedObject.FindProperty("evolutions");
+        interfaceProp = serializedObject.FindProperty("interfaces");
+        interfaceListProp = serializedObject.FindProperty("interfaceList");
+        storeCardProp = serializedObject.FindProperty("storeCard");
+        storeCardSizeProp = serializedObject.FindProperty("inventorySize");
+        transmuteProp = serializedObject.FindProperty("transmute");
+        transmuteListProp = serializedObject.FindProperty("transmuteList");
     }
 
     public override void OnInspectorGUI()
@@ -82,6 +93,8 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(harvestProp);
         EditorGUILayout.PropertyField(inventoryProp);
         EditorGUILayout.PropertyField(evolveProp);
+        EditorGUILayout.PropertyField(interfaceProp);
+        EditorGUILayout.PropertyField(transmuteProp);
 
         // Display sell information
         if (sellableProp.boolValue)
@@ -103,6 +116,8 @@ public class ScriptableCardEditor : Editor
             if (!infiniteProp.boolValue)
                 EditorGUILayout.PropertyField(lifeProp, new GUIContent("Life"));
             EditorGUILayout.PropertyField(shakableProp, new GUIContent("Shakable"));
+            EditorGUILayout.PropertyField(storeCardProp, new GUIContent("Store card"));
+            EditorGUILayout.PropertyField(storeCardSizeProp, new GUIContent("Inventory Size"));
             EditorGUILayout.PropertyField(harvestTimeProp, new GUIContent("Harvest Time"));
             EditorGUILayout.PropertyField(dropProp, new GUIContent("Drop"));
             EditorGUILayout.PropertyField(activatorsProp, new GUIContent("Activators"));
@@ -117,6 +132,16 @@ public class ScriptableCardEditor : Editor
         {
             EditorGUILayout.PropertyField(evolveTimeProp, new GUIContent("Evolve Time"));
             EditorGUILayout.PropertyField(evolutionsProp, new GUIContent("Evolutions"));
+        }
+
+        if (interfaceProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(interfaceListProp, new GUIContent("Interface List"));
+        }
+        
+        if (transmuteProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(transmuteListProp, new GUIContent("Transmute List"));
         }
 
         // Custom preview area

@@ -47,6 +47,20 @@ namespace Leafy.Data
             return cards;
         }
         
+        public static List<CardUI> GetChildCardList(CardUI cardUI)
+        {
+            CardUI c = cardUI;
+            List<CardUI> cards = new List<CardUI>();
+
+            do
+            {
+                cards.Add(c);
+                c = c.child;
+            } while (c != null);
+
+            return cards;
+        }
+        
         /// <summary>
         /// Return the first card of the stack
         /// </summary>
@@ -122,6 +136,16 @@ namespace Leafy.Data
         public static void ApplyMethodOnStack(CardUI cardUI, Action<CardUI> method)
         {
             List<CardUI> cards = GetStackCardList(cardUI);
+
+            foreach (CardUI c in cards)
+            {
+                method(c);
+            }
+        }
+        
+        public static void ApplyMethodOnAllChild(CardUI cardUI, Action<CardUI> method)
+        {
+            List<CardUI> cards = GetChildCardList(cardUI);
 
             foreach (CardUI c in cards)
             {

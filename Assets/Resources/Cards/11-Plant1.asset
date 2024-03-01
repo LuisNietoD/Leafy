@@ -14,19 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Plant
   ID: 11
-  artwork: {fileID: 21300000, guid: 08c63374a6ddc6043a9e66d277013d7e, type: 3}
+  artwork: {fileID: 21300000, guid: 6cf1e9d637d889d428f94b7f6699f6c3, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.3660378, g: 0.3660378, b: 0.3660378, a: 1}
-  type: 0
-  sellable: 0
+  background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  type: 6
+  sellable: 1
   craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 1
-  price: 0
+  interfaces: 0
+  transmute: 0
+  price: 4
   timeToCraft: 5
   infinite: 1
   life: 0
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 5
   drop:
@@ -77,13 +81,27 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 03000000
   slot: 0
-  recipe: 0a0000000800000001000000
+  recipes:
+  - machine: 0
+    recipe: 01000000080000000a000000
   evolveTime: 6
   evolutions:
     m_PLID: ac33f840-1b86-4f72-9b69-04b8c955218a
     m_ProbabilityItems:
     - m_Value: {fileID: 11400000, guid: 17f003a1deb2e6c4385bd6b7846076c0, type: 2}
-      m_BaseProbability: 1
+      m_BaseProbability: 0.3333333
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 0df3d5eb65932494b935199bc72f94c1, type: 2}
+      m_BaseProbability: 0.3333333
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: f466d2e859524fc448d73e5ad395eacf, type: 2}
+      m_BaseProbability: 0.33333334
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}
@@ -118,10 +136,100 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 2699693885
+    m_Seed: 3056064948
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448345588907702
+      - m_Index: 1
+        m_Time:
+          Ticks: 638448345576559847
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448345174353001
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448344862799912
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448344565972083
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448344078771920
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448344067377770
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448343327366377
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448342807276293
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448342440617338
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448342226461962
+      - m_Index: 1
+        m_Time:
+          Ticks: 638448340160780018
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448339830624773
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448339472214003
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448338737238356
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448338403956725
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448337849131624
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448337386984611
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448337181532979
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448336903640348
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448336887171863
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448336183030289
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448335143501435
+      - m_Index: 1
+        m_Time:
+          Ticks: 638448335025026896
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448335016069639
+      - m_Index: 2
+        m_Time:
+          Ticks: 638448333523294226
+      - m_Index: 1
+        m_Time:
+          Ticks: 638448333233103090
+      - m_Index: 1
+        m_Time:
+          Ticks: 638448332467298366
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448332448779504
+      - m_Index: 1
+        m_Time:
+          Ticks: 638448331598861303
       - m_Index: 0
         m_Time:
           Ticks: 638428207334497676
@@ -131,3 +239,5 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  transmuteList: []

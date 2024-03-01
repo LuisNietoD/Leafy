@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Full Cracked Pot
   ID: 10
-  artwork: {fileID: 21300000, guid: 81b4e8e5afbeaa842842fdf22219066c, type: 3}
+  artwork: {fileID: 21300000, guid: 06548df6ad3a8aa47adaf9b0bf596b82, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.3660378, g: 0.3660378, b: 0.3660378, a: 1}
-  type: 0
-  sellable: 0
+  background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  type: 1
+  sellable: 1
   craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 0
-  price: 0
+  interfaces: 0
+  price: 3
   timeToCraft: 5
   infinite: 1
   life: 0
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 5
   drop:
@@ -77,7 +80,9 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 03000000
   slot: 0
-  recipe: 0700000005000000
+  recipes:
+  - machine: 0
+    recipe: 0500000007000000
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -119,3 +124,4 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []

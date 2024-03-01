@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dirt
   ID: 5
-  artwork: {fileID: 21300000, guid: 6dc21efb3b6a2b54fa2d69cca45eabaa, type: 3}
+  artwork: {fileID: 21300000, guid: 24f0d64551ea92c458c26c7be5db272c, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.15686277, g: 0.36337012, b: 0.47843137, a: 1}
-  type: 0
+  background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
+  type: 1
   sellable: 1
   craftable: 0
   harvestable: 0
   inventory: 0
   evolve: 0
-  price: 5
+  interfaces: 0
+  price: 1
   timeToCraft: 0
   infinite: 0
   life: 0
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 0
   drop:
@@ -71,7 +74,7 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 
   slot: 0
-  recipe: 
+  recipes: []
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -113,3 +116,4 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []

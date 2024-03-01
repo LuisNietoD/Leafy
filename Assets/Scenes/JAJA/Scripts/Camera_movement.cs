@@ -10,16 +10,27 @@ public class Camera_movement : MonoBehaviour
     public float minFOV = 5f;
     public float maxFOV = 20f;
 
+    private CinemachineVirtualCamera mainCamera;
+
     private Vector3 lastMousePos;
+
+    private Vector3 origin;
+    private Vector3 difference;
+    private bool drag;
+
+    private void Start()
+    {
+        mainCamera = GetComponent<CinemachineVirtualCamera>();
+    }
 
     void Update()
     {
         // Make sure this object's position matches the main camera's position
-        if (transform.position != Camera.main.transform.position)
+        if (transform.position != mainCamera.transform.position)
         {
-            transform.position = Camera.main.transform.position;
+            transform.position = mainCamera.transform.position;
         }
-        
+
         // Movement using arrow keys or WASD
         float horizontalMovement = Input.GetAxis("Horizontal");
         float verticalMovement = Input.GetAxis("Vertical");
@@ -28,19 +39,25 @@ public class Camera_movement : MonoBehaviour
 
         // Zoom using scroll wheel
         float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
-        CinemachineVirtualCamera cameraComponent = GetComponent<CinemachineVirtualCamera>();
-        cameraComponent.m_Lens.OrthographicSize = Mathf.Clamp(cameraComponent.m_Lens.OrthographicSize - scrollWheel * zoomSpeed, minFOV, maxFOV);
-
-        // Camera dragging with right mouse button
-        if (Input.GetMouseButtonDown(1)) // Right mouse button clicked
+        mainCamera.m_Lens.OrthographicSize = Mathf.Clamp(mainCamera.m_Lens.OrthographicSize - scrollWheel * zoomSpeed, minFOV, maxFOV);
+        
+        if (Input.GetMouseButton(1))
         {
-            lastMousePos = Input.mousePosition;
+            difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            if (!drag)
+            {
+                drag = true;
+                origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            }
         }
-        else if (Input.GetMouseButton(1)) // Right mouse button held down
+        else
         {
-            Vector3 delta = Input.mousePosition - lastMousePos;
-            transform.Translate(-delta.x * Time.deltaTime, -delta.y * Time.deltaTime, 0);
-            lastMousePos = Input.mousePosition;
+            drag = false;
+        }
+
+        if (drag)
+        {
+            transform.position = origin - difference;
         }
         
     }

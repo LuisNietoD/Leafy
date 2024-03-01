@@ -15,6 +15,8 @@ public class Booster : MonoBehaviour
     private int index = 0;
     private List<Vector3> positions = new List<Vector3>();
     public ProbabilityList<ScriptableCard> cards = new ProbabilityList<ScriptableCard>();
+    public bool fixedList;
+    public List<ScriptableCard> fixedCard = new List<ScriptableCard>();
 
 
     void Start()
@@ -27,13 +29,21 @@ public class Booster : MonoBehaviour
     {
         GameObject newCard = Instantiate(cardsPrefab, positions[index], Quaternion.identity);
         
-        newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(cards.PickValue()));
+        if(!fixedList)
+            newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(cards.PickValue()));
+        else
+            newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(fixedCard[index]));
         index++;
         if(index >= numberOfPositions)
             Destroy(gameObject);
     }
-    
-    
+
+    private void OnMouseOver()
+    {
+        
+    }
+
+
     List<Vector3> GeneratePositions(Vector3 center, int count, float radius)
     {
         List<Vector3> positions = new List<Vector3>();

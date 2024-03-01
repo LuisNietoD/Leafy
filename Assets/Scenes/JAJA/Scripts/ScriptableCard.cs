@@ -8,14 +8,35 @@ using UnityEngine;
 
 public enum Card_Type
 {
-    energies,
-    resources,
-    interaction,
-    activator,
-    storage,
-    interfaceCard,
-    autoCard,
-    tools
+    Energy,
+    Resource,
+    Harvestable,
+    Activator,
+    Storage,
+    Plant,
+    Standalone,
+    Tools
+}
+
+public enum Machine
+{
+    None,
+    Press
+}
+
+[Serializable]
+public class CraftRecipe
+{
+    public Machine machine;
+    public List<int> recipe;
+}
+
+[Serializable]
+public class TransmuteRecipe
+{
+    public List<int> recipe;
+    public int resultAmount;
+    public ProbabilityList<ScriptableCard> result;
 }
 
 [CreateAssetMenuAttribute(fileName = "Scriptable Card", menuName = "My Game/ Scriptable Card")]
@@ -32,6 +53,8 @@ public class ScriptableCard : ScriptableObject
     public bool harvestable;
     public bool inventory;
     public bool evolve;
+    public bool interfaces;
+    public bool transmute;
     
     [Header("Sell information")]
     public int price;
@@ -42,6 +65,8 @@ public class ScriptableCard : ScriptableObject
     [Header("Harvest information")]
     public bool infinite;
     public int life;
+    public bool storeCard;
+    public int inventorySize;
     public bool shakable;
     public float harvestTime;
     public ProbabilityList<ScriptableCard> drop;
@@ -49,13 +74,17 @@ public class ScriptableCard : ScriptableObject
 
     [Header("Inventory information")] 
     public int slot;
-    
-    [Header("Recipe information")] 
-    public List<int> recipe;
+
+    [Header("Recipe information")] public List<CraftRecipe> recipes = new List<CraftRecipe>();
     
     [Header("Evolve information")] 
     public float evolveTime;
     public ProbabilityList<ScriptableCard> evolutions;
+    
+    [Header("Interfaces information")] 
+    public List<GameObject> interfaceList = new List<GameObject>();
+
+    [Header("Transmute information")] public List<TransmuteRecipe> transmuteList;
     
     public Texture2D GetCardIcon()
     {

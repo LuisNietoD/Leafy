@@ -14,19 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Source
   ID: 2
-  artwork: {fileID: 21300000, guid: f150135f833541c44bcf823b7ca41fe2, type: 3}
+  artwork: {fileID: 21300000, guid: d54e7f01144d0d048a5681e506f966a7, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.3660378, g: 0.3660378, b: 0.3660378, a: 1}
-  type: 0
+  background_color: {r: 0.5320754, g: 0.5320754, b: 0.5320754, a: 1}
+  type: 2
   sellable: 0
   craftable: 0
   harvestable: 1
   inventory: 0
   evolve: 0
+  interfaces: 0
+  transmute: 0
   price: 0
   timeToCraft: 5
   infinite: 0
   life: 4
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 1
   drop:
@@ -68,10 +72,16 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 1901628735
+    m_Seed: 2546015797
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638445573521688664
+      - m_Index: 0
+        m_Time:
+          Ticks: 638445562422952053
       - m_Index: 0
         m_Time:
           Ticks: 638428109339736646
@@ -80,7 +90,7 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 03000000
   slot: 0
-  recipe: 
+  recipes: []
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -122,3 +132,5 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  transmuteList: []

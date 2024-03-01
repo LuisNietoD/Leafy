@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Crackled Pot
   ID: 7
-  artwork: {fileID: 21300000, guid: 29b286d72948ed348891a1525ae9e5cf, type: 3}
+  artwork: {fileID: 21300000, guid: 7ac6006d0cf062542bb342566d1f8b46, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.15686275, g: 0.3647059, b: 0.47843137, a: 1}
-  type: 0
-  sellable: 0
+  background_color: {r: 0.40392157, g: 0.5686275, b: 0.65882355, a: 1}
+  type: 1
+  sellable: 1
   craftable: 0
   harvestable: 0
   inventory: 0
   evolve: 0
-  price: 5
+  interfaces: 0
+  price: 2
   timeToCraft: 0
   infinite: 0
   life: 0
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 0
   drop:
@@ -71,7 +74,7 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 
   slot: 0
-  recipe: 
+  recipes: []
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -113,3 +116,4 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []

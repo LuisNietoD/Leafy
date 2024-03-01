@@ -14,19 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Sand
   ID: 6
-  artwork: {fileID: 21300000, guid: beb2bdb6b37bea94d87c62434ba8a580, type: 3}
+  artwork: {fileID: 21300000, guid: a6521b6c2cd45f44ba997b80fe48b06f, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.15686275, g: 0.3647059, b: 0.47843137, a: 1}
-  type: 0
-  sellable: 0
-  craftable: 0
+  background_color: {r: 0.40392157, g: 0.5686275, b: 0.65882355, a: 1}
+  type: 1
+  sellable: 1
+  craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 0
-  price: 5
+  interfaces: 0
+  transmute: 0
+  price: 2
   timeToCraft: 0
   infinite: 0
   life: 0
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 0
   drop:
@@ -71,7 +75,9 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 
   slot: 0
-  recipe: 
+  recipes:
+  - machine: 1
+    recipe: 05000000
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -113,3 +119,5 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  transmuteList: []

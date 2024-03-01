@@ -15,21 +15,26 @@ namespace Leafy.Objects
         public CardBehavior behavior;
         public GameObject loader;
         public GameObject pack;
-        public int idStart;
         public int uniqueID;
 
         private float movementSpeed = 30.0f;
-        private float offsetY = 0.5f;
+        private float offsetY = 0.6f;
         private float offsetZ = 0.1f;
 
         private Collider2D collider;
         private TextMeshPro cardName;
         private SpriteRenderer artwork;
         private SpriteRenderer background;
+        private TextMeshPro typeName;
+        private SpriteRenderer bord;
+        private SpriteRenderer shadow;
+        public GameObject model;
 
         internal CardUI parent;
         internal CardUI child;
         internal int ID;
+
+        private GameObject _interface;
 
 
         //private CardBehavior cardBehavior;
@@ -41,34 +46,27 @@ namespace Leafy.Objects
         private void Awake()
         {
             collider = GetComponent<Collider2D>();
-            cardName = transform.Find("Model/CARD NAME").GetComponent<TextMeshPro>();
-            artwork = transform.Find("Model/ICON").GetComponent<SpriteRenderer>();
-            background = transform.Find("Model/BACKGROUND").GetComponent<SpriteRenderer>();
+            cardName = transform.Find("MODEL/CARD NAME").GetComponent<TextMeshPro>();
+            typeName = transform.Find("MODEL/TYPE").GetComponent<TextMeshPro>();
+            artwork = transform.Find("MODEL/ICON").GetComponent<SpriteRenderer>();
+            background = transform.Find("MODEL/BACKGROUND").GetComponent<SpriteRenderer>();
+            bord = transform.Find("MODEL/BORD").GetComponent<SpriteRenderer>();
+            shadow = transform.Find("SHADOW").GetComponent<SpriteRenderer>();
+            model = transform.Find("MODEL").gameObject;
 
         }
 
         private void Start()
         {
-            CardList.OnScriptableObjectsLoaded += OnScriptableObjectsLoadedHandler;
             behavior?.Spawn();
             uniqueID = CardUtils.ID++;
-        }
-
-        private void OnDestroy()
-        {
-            CardList.OnScriptableObjectsLoaded -= OnScriptableObjectsLoadedHandler;
-        }
-
-        void OnScriptableObjectsLoadedHandler()
-        {
-            //UpdateCardInfo(new Card(CardList.GetRandomCard()));
-            UpdateCardInfo(new Card(CardList.GetCardByID(idStart)));
         }
 
         public void UpdateCardInfo(Card c)
         {
             card = c;
             cardName.text = card.name;
+            typeName.text = card.type;
             background.color = card.backgroundColor;
             artwork.sprite = card.artwork;
             ID = card.ID;
@@ -76,17 +74,38 @@ namespace Leafy.Objects
             {
                 behavior = new Harvestable(this);
             }
+            else if (card.evolve && behavior == null)
+            {
+                behavior = new Evolve(this);
+            }
+            else if (card.transmute && behavior == null)
+            {
+                behavior = new Transmute(this);
+            }
             else if (behavior == null)
             {
                 behavior = new ClassicCard();
             }
+            
+
+            foreach (GameObject i in card.interfaceList)
+            {
+                GameObject g = Instantiate(i, transform.position, Quaternion.identity);
+                g.transform.SetParent(transform);
+                g.transform.localPosition = Vector3.zero;
+                g.name = "INTERFACE";
+
+            }
         }
+        
         private void UpdateRenderID(int id)
         {
             background.sortingOrder = id;
+            bord.sortingOrder = id;
             cardName.sortingOrder = id;
             artwork.sortingOrder = id;
-            cardName.sortingOrder = id;
+            typeName.sortingOrder = id;
+            shadow.sortingOrder = id - 1;
         }
 
         private void FixedUpdate()
@@ -144,18 +163,30 @@ namespace Leafy.Objects
                     CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
                 }
 
-                if (collider.CompareTag("Sell") && CardUtils.GetRootCard(this) == this)
+                if(Input.GetMouseButton(0))
+                    return;
+                
+                if (collider.CompareTag("Sell"))
                 {
-                    SellCard();
+                    Debug.Log("test");
+                    SellZone s = collider.GetComponent<SellZone>();
+                    SellCard(s);
                 }
 
-                if (collider.CompareTag("Buy"))
+                if (collider.CompareTag("Buy") && ID == 1)
                 {
-                    BuyCard();
+                    BuyZone b = collider.GetComponent<BuyZone>();
+                    BuyCard(b);
+                }
+                else if(collider.CompareTag("Buy"))
+                {
+                    Vector3 p = collider.transform.position;
+                    p.y -= 5;
+                    transform.position = p;
                 }
             }
         }
-        private void SellCard()
+        private void SellCard(SellZone s)
         {
             List<CardUI> stackCards = CardUtils.GetStackCardList(this);
 
@@ -167,44 +198,42 @@ namespace Leafy.Objects
                 {
                     totalNumberOfCards += stackCard.card.price;
                 }
-
-                for (int i = 0; i < totalNumberOfCards; i++)
-                {
-                    GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
-                }
-
+                
+                s.Sell(totalNumberOfCards);
                 CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
-            }
-            else
-            {
-                Debug.Log("This card is not Sellable");
             }
         }
 
-        private void BuyCard()
+        private void BuyCard(BuyZone buyZone)
         {
-            if (card.ID == 1)
+            if (AllCardsInStackHaveID(1))
             {
-                CardUI lastCard = CardUtils.GetLastCard(this);
+                List<CardUI> stack = CardUtils.GetStackCardList(this);
 
-                if (lastCard != null && AllCardsInStackHaveID(1))
+                foreach (CardUI c in stack)
                 {
-                    int numberOfCardsInStack = CardUtils.GetStackCardList(this).Count;
-
-                    BuyPack += numberOfCardsInStack;
-
-                    Debug.Log("New valor : " + BuyPack);
-
-                    if (BuyPack >= 5)
+                    if (buyZone.actualPrice > 0)
                     {
-                        ActivatePack();
+                        buyZone.Buy();
+                        if (c.child != null)
+                        {
+                            c.child.parent = null;
+                            Vector3 p = c.child.transform.position;
+                            p.y -= 4;
+                            c.child.transform.position = p;
+                        }
+
+                        Destroy(c.gameObject);
                     }
-                    CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+                    else
+                        return;
                 }
-                else
-                {
-                    Debug.Log("This card can't buy pack");
-                }
+            }
+            else
+            {
+                Vector3 p = collider.transform.position;
+                p.y -= 4;
+                transform.position = p;
             }
         }
         private bool AllCardsInStackHaveID(int targetID)
@@ -221,28 +250,22 @@ namespace Leafy.Objects
 
             return true;
         }
-
-        private void ActivatePack()
+        
+        private bool AllCardsInStackSellable()
         {
-            int numberOfCardsToSpawn = BuyPack - 5; 
+            List<CardUI> cards = CardUtils.GetStackCardList(this);
 
-            GameObject newObject = Instantiate(pack, new Vector3(0, 0, 2), Quaternion.identity);
-
-            BuyPack = 0;
-
-            if (numberOfCardsToSpawn > 0)
+            foreach (CardUI c in cards)
             {
-                for (int i = 0; i < numberOfCardsToSpawn; i++)
+                if (!c.card.sellable)
                 {
-                    GameManager.instance.SpawnCard(new Vector3(-4, -3, 2), 1);
+                    return false;
                 }
             }
-            CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            return true;
         }
 
-
-
-
+        
         /// <summary>
         /// Change all necessary value to make a card the main dragged object
         /// </summary>
@@ -344,20 +367,42 @@ namespace Leafy.Objects
             if (parent != null)
                 c.child = this;
         }
-
-        private void OnMouseDown()
+        
+        public void CardEnter()
         {
-            behavior?.OnClick();
+            Vector3 p = model.transform.localPosition;
+            model.transform.localPosition = new Vector3(p.x, 0.1f, p.z);
+            behavior?.OnHover();
+        }
+        public void CardExit()
+        {
+            Vector3 p = model.transform.localPosition;
+            model.transform.localPosition = new Vector3(p.x, 0, p.z);
         }
 
-        private void OnMouseEnter()
+        public void CardDrag()
         {
-            behavior?.OnHover();
+            Vector3 p = model.transform.localPosition;
+            model.transform.localPosition = new Vector3(p.x, 0.2f, p.z);
+        }
+
+        public void CardDrop()
+        {
+            Vector3 p = model.transform.localPosition;
+            model.transform.localPosition = new Vector3(p.x, 0f, p.z);
         }
 
         private void OnMouseOver()
         {
             behavior?.OnHoverStay();
         }
+
+        private void OnDestroy()
+        {
+            if(loader != null)
+                Destroy(loader);
+        }
+        
+        
     }
 }

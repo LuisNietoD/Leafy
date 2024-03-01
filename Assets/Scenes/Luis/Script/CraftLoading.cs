@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Leafy.Data;
+using Leafy.Manager;
 using Leafy.Objects;
 using UnityEngine;
 
@@ -14,7 +15,9 @@ public class CraftLoading : MonoBehaviour
     public float elapsed = 0;
     public SpriteRenderer loadImage;
     public bool destroyStack;
-
+    public bool multipleCards;
+    public List<int> toCraft = new List<int>();
+    
     private void Start()
     {
         loadImage.material = new Material(loadImage.material);
@@ -29,19 +32,26 @@ public class CraftLoading : MonoBehaviour
 
         if (elapsed >= timeToCraft)
         {
+            
             Vector3 pos = stack[0].transform.position;
             pos.x += 2;
-            GameObject d = Instantiate(cardPrefab, pos, Quaternion.identity);
-            if (d.TryGetComponent(out CardUI cardUI))
+            if (multipleCards)
             {
-                cardUI.UpdateCardInfo(new Card(drop));
+                GameManager.instance.SpawnStackPrecise(pos, toCraft);
             }
-            
+            else
+            {
+                GameManager.instance.SpawnCard(pos, drop.ID);
+            }
 
             foreach (CardUI card in stack)
             {
-                if(destroyStack)
+                if (destroyStack)
+                {
+                    if(card.child != null)
+                        card.child.SetParent(card.parent);
                     Destroy(card.gameObject);
+                }
                 else
                     card.ReduceLife();
                 //Destroy(card.gameObject);
@@ -50,7 +60,6 @@ public class CraftLoading : MonoBehaviour
             elapsed = 0;
             if (destroyStack)
             {
-                Debug.Log("Test");
                 Destroy(gameObject);
             }
         }

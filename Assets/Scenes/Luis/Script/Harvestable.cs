@@ -13,6 +13,11 @@ namespace Leafy.Objects
         private float elapsed;
         private Vector3 lastPosition;
         private float speed;
+        private float elapsedTime;
+        private List<int> cardIDs = new List<int>(); 
+        
+        public float shakeIntensity = 0.2f;
+        public float shakeSpeed = 10f;
 
         public Harvestable(CardUI cardUI)
         {
@@ -37,7 +42,11 @@ namespace Leafy.Objects
 
         public override void OnClick()
         {
-            Debug.Log("OnClick");
+            Vector3 p = cardUI.transform.position;
+            p.x += 4;
+            if(cardIDs.Count > 0)
+                GameManager.instance.SpawnStackPrecise(p, cardIDs);
+            cardIDs.Clear();
         }
 
         public override void OnHover()
@@ -52,7 +61,6 @@ namespace Leafy.Objects
         
         public override void StayAction()
         {
-            
             if (cardUI.child != null && cardUI.loader == null)
             {
                 if (card.activators.Contains(cardUI.child.ID))
@@ -61,7 +69,28 @@ namespace Leafy.Objects
                         new List<CardUI>() {cardUI, cardUI.child}, card.harvestTime);
                 }
             }
-            
+
+            if (card.activators.Count <= 0 && !card.shakable && cardIDs.Count < card.inventorySize)
+            {
+                elapsedTime += Time.deltaTime;
+                if (elapsedTime >= card.harvestTime)
+                {
+                    cardIDs.Add(card.drop.PickValue().ID);
+                    elapsedTime = 0;
+                }
+            }
+
+            if (card.storeCard && cardIDs.Count == card.inventorySize)
+            {
+                float offsetX = Mathf.PerlinNoise(0, Time.time * shakeSpeed) * shakeIntensity - shakeIntensity / 2f;
+                float offsetY = Mathf.PerlinNoise(Time.time * shakeSpeed, 0) * shakeIntensity - shakeIntensity / 2f;
+
+                Vector3 shakeOffset = new Vector3(offsetX, offsetY, 0f);
+                shakeOffset.y = cardUI.model.transform.localPosition.y;
+                cardUI.model.transform.localPosition = Vector3.zero + shakeOffset;
+            }
+
+
             elapsed += Time.deltaTime;
             Vector3 currentPosition = cardUI.transform.position;
             currentPosition.z = lastPosition.z;
