@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 3-Bucket
+  m_Name: 41-Point de savoir
   m_EditorClassIdentifier: 
-  name: Bucket
-  ID: 3
-  artwork: {fileID: 21300000, guid: f196100b84802784eb1d37515a7f8359, type: 3}
+  name: Point de Savoir
+  ID: 41
+  artwork: {fileID: 21300000, guid: 36b6e94f7d49efb488758967b3db64e4, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.6528301, g: 0.6251716, b: 0.4126379, a: 1}
-  type: 3
-  sellable: 0
+  background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
+  type: 1
+  sellable: 1
   craftable: 0
   harvestable: 0
   inventory: 0
   evolve: 0
   interfaces: 0
   transmute: 0
-  price: 5
+  price: 3
   timeToCraft: 0
-  infinite: 1
+  infinite: 0
   life: 0
   storeCard: 0
   inventorySize: 0
   shakable: 0
   harvestTime: 0
   drop:
-    m_PLID: 
+    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
     m_ProbabilityItems: []
     m_PreventRepeat: 0
     m_ShuffleIterations: 1
@@ -66,7 +66,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 0
+    m_Seed: 901307760
     m_KeepSeed: 0
     m_PickHistory:
       m_History: []

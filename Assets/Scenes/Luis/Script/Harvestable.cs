@@ -88,6 +88,11 @@ namespace Leafy.Objects
                 Vector3 shakeOffset = new Vector3(offsetX, offsetY, 0f);
                 shakeOffset.y = cardUI.model.transform.localPosition.y;
                 cardUI.model.transform.localPosition = Vector3.zero + shakeOffset;
+                card.plantIsFull = true;
+            }
+            else
+            {
+                card.plantIsFull = false;
             }
 
 

@@ -51,6 +51,15 @@ namespace Leafy.Objects
             
             if (cardUI.child != null && cardUI.loader == null)
             {
+                if (cardUI.child.ID == 39 && card.requiereEnergy)
+                {
+                    if (card.actualEnergy < card.maxEnergy)
+                    {
+                        card.actualEnergy++;
+                        GameManager.instance.DestroyObject(cardUI.child.gameObject);
+                    }
+                }
+                
                 List<CardUI> childList = CardUtils.GetChildCardList(cardUI.child);
     
                 if (card.transmuteRecipes != null)
@@ -61,11 +70,19 @@ namespace Leafy.Objects
                         List<CardUI> c = IsRecipeInChildStack(childList, recipe);
                         if (c != null)
                         {
+                            if (card.requiereEnergy)
+                            {
+                                if(card.actualEnergy < card.energyCost)
+                                    return;
+                            }
+                                
                             List<int> ids = new List<int>();
+                            
                             for (int i = 0; i < recipe.resultAmount; i++)
                             {
                                 ids.Add(recipe.result.PickValue().ID);
                             }
+
                             GameManager.instance.LaunchTransmute(cardUI, ids, c, 2);
                         }
                     }

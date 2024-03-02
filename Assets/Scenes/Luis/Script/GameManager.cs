@@ -20,8 +20,11 @@ namespace Leafy.Manager
         
         private CardUI _draggedCardUI;
         private CardUI _hoveredCardUI;
+        
+        private GameObject _hoveredBooster;
+        private GameObject _draggedBooster;
 
-        public int ID = 0;
+        public int ID = 1;
         
         private float draggedCardSpeed = 10;
         private Vector3 offset;
@@ -49,7 +52,7 @@ namespace Leafy.Manager
             _hoveredCardUI = RayTestCard();
 
             //Grab the hovered card and drag it
-            if (Input.GetMouseButtonDown(0) && _hoveredCardUI != null)
+            if (Input.GetMouseButtonDown(0) && _hoveredCardUI != null && _draggedBooster == null)
             {
                 offset = _hoveredCardUI.SetDragged();
                 _hoveredCardUI.transform.parent = null;
@@ -89,7 +92,7 @@ namespace Leafy.Manager
                 
                 if (Input.GetMouseButtonUp(0))
                 {
-                    if (time <= 0.8f)
+                    if (time <= 0.2f)
                     {
                         _draggedCardUI.behavior?.OnClick();
                         time = 0;
@@ -97,6 +100,29 @@ namespace Leafy.Manager
                 }
                 
                 _draggedCardUI = null;
+            }
+            
+            
+            
+            Debug.Log(_hoveredBooster +"boooooooooster");
+            //Grab the hovered booster
+            if (Input.GetMouseButtonDown(0) && _hoveredBooster != null && _draggedCardUI == null)
+            {
+                _draggedBooster = _hoveredBooster;
+                _draggedBooster.GetComponent<SpriteRenderer>().sortingOrder = ID++;
+                _hoveredBooster = null;
+                
+            }
+            //Drop the dragged card
+            else if (Input.GetMouseButtonUp(0) && _draggedBooster != null)
+            {
+                if (time <= 0.2f)
+                {
+                    _draggedBooster.GetComponent<Booster>().SpawnCard();
+                    time = 0;
+                }
+                
+                _draggedBooster = null;
             }
             
             if (Input.GetMouseButton(0))
@@ -110,7 +136,7 @@ namespace Leafy.Manager
             
         }
 
-        private void SnapCardToGrid()
+        private void SnapCardToGrid(Transform obj)
         {
             
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -121,8 +147,7 @@ namespace Leafy.Manager
             Vector3 finalSnappedPosition = new Vector3(snappedX, snappedY, 0f);
 
             // Lerp towards the snapped position
-            _draggedCardUI.transform.position = Vector3.Lerp(_draggedCardUI.transform.position, finalSnappedPosition, Time.deltaTime * lerpingSpeed);
-        
+            obj.position = Vector3.Lerp(obj.position, finalSnappedPosition, Time.deltaTime * lerpingSpeed);
         }
 
         private void LaunchCraft(int craftID, CardUI firstStackCardUI)
@@ -212,6 +237,7 @@ namespace Leafy.Manager
             cl.drop = toCraft;
             cl.stack = stackToDestroy;
             cl.destroyStack = true;
+            cl.parent = transmuter;
             
             transmuter.SetLoader(cl.gameObject);
         }
@@ -232,6 +258,7 @@ namespace Leafy.Manager
             cl.destroyStack = true;
             cl.multipleCards = true;
             cl.toCraft = cardID;
+            cl.parent = transmuter;
             
             transmuter.SetLoader(cl.gameObject);
         }
@@ -243,7 +270,7 @@ namespace Leafy.Manager
             {
                 if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                 {
-                    SnapCardToGrid();
+                    SnapCardToGrid(_draggedCardUI.transform);
                 }
                 else
                 {
@@ -251,6 +278,21 @@ namespace Leafy.Manager
                     Vector2 position = Vector2.Lerp(_draggedCardUI.transform.position, targetPosition, draggedCardSpeed * Time.deltaTime);
                     float z = frontViewZ;
                     _draggedCardUI.transform.position = new Vector3(position.x, position.y, z);
+                }
+            }
+
+            if (_draggedBooster != null)
+            {
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                {
+                    SnapCardToGrid(_draggedBooster.transform);
+                }
+                else
+                {
+                    Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+                    Vector2 position = Vector2.Lerp(_draggedBooster.transform.position, targetPosition, draggedCardSpeed * Time.deltaTime);
+                    float z = frontViewZ;
+                    _draggedBooster.transform.position = new Vector3(position.x, position.y, z);
                 }
             }
         }
@@ -279,9 +321,16 @@ namespace Leafy.Manager
                 }
                 if(hit.collider.TryGetComponent(out Booster b))
                 {
-                    if(Input.GetMouseButtonDown(0))
-                        b.SpawnCard();
+                    _hoveredBooster = b.gameObject;
                 }
+                else
+                {
+                    _hoveredBooster = null;
+                }
+            }
+            else
+            {
+                _hoveredBooster = null;
             }
 
             if (_hoveredCardUI != null)

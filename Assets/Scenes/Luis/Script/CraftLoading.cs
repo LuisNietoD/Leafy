@@ -9,7 +9,6 @@ using UnityEngine;
 public class CraftLoading : MonoBehaviour
 {
     public List<CardUI> stack = new List<CardUI>();
-    public GameObject cardPrefab;
     public ScriptableCard drop;
     public float timeToCraft = 1;
     public float elapsed = 0;
@@ -17,6 +16,7 @@ public class CraftLoading : MonoBehaviour
     public bool destroyStack;
     public bool multipleCards;
     public List<int> toCraft = new List<int>();
+    public CardUI parent;
     
     private void Start()
     {
@@ -29,6 +29,7 @@ public class CraftLoading : MonoBehaviour
 
         loadImage.material.SetFloat("_RadialClip", Mathf.Lerp(360, 0, Mathf.Clamp01(elapsed/timeToCraft)));
         
+        Debug.Log(destroyStack + " dwadawopjdoidjaowjdoawijdoaiwjdoawjd");
 
         if (elapsed >= timeToCraft)
         {
@@ -44,11 +45,15 @@ public class CraftLoading : MonoBehaviour
                 GameManager.instance.SpawnCard(pos, drop.ID);
             }
 
+            if(parent != null)
+                if (parent.card.requiereEnergy)
+                    parent.card.actualEnergy -= parent.card.energyCost;
+
             foreach (CardUI card in stack)
             {
                 if (destroyStack)
                 {
-                    if(card.child != null)
+                    if(card.child != null) 
                         card.child.SetParent(card.parent);
                     Destroy(card.gameObject);
                 }

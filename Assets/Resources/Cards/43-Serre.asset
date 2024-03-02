@@ -10,31 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 3-Bucket
+  m_Name: 43-Serre
   m_EditorClassIdentifier: 
-  name: Bucket
-  ID: 3
-  artwork: {fileID: 21300000, guid: f196100b84802784eb1d37515a7f8359, type: 3}
+  name: Serre
+  ID: 43
+  artwork: {fileID: 21300000, guid: 7001c442ac6142245b4c8893184ac1ff, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.6528301, g: 0.6251716, b: 0.4126379, a: 1}
-  type: 3
-  sellable: 0
-  craftable: 0
+  background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
+  type: 6
+  sellable: 1
+  craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 0
-  interfaces: 0
+  interfaces: 1
   transmute: 0
-  price: 5
-  timeToCraft: 0
-  infinite: 1
+  activableInterface: 1
+  price: 3
+  timeToCraft: 8
+  infinite: 0
   life: 0
   storeCard: 0
   inventorySize: 0
   shakable: 0
   harvestTime: 0
   drop:
-    m_PLID: 
+    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
     m_ProbabilityItems: []
     m_PreventRepeat: 0
     m_ShuffleIterations: 1
@@ -66,7 +67,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 0
+    m_Seed: 901307760
     m_KeepSeed: 0
     m_PickHistory:
       m_History: []
@@ -75,7 +76,9 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   activators: 
   slot: 0
-  recipes: []
+  recipes:
+  - machine: 0
+    recipe: 1d0000001d0000001d0000001d00000025000000250000002500000025000000
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -117,7 +120,8 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  interfaceList: []
+  interfaceList:
+  - {fileID: 4662021953626504517, guid: 103a3143b899570418f5b7ed34a3cbda, type: 3}
   requireEnergy: 0
   maxEnergyStored: 0
   energyPerCraft: 0

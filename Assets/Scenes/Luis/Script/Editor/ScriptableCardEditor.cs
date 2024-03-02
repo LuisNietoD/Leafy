@@ -36,6 +36,10 @@ public class ScriptableCardEditor : Editor
     SerializedProperty storeCardSizeProp;
     SerializedProperty transmuteProp;
     SerializedProperty transmuteListProp;
+    SerializedProperty transmuteEnergyProp;
+    SerializedProperty transmuteCostProp;
+    SerializedProperty transmuteEnergyStoredProp;
+    SerializedProperty activableInterfaceProp;
 
     private Texture2D finalBackground;
 
@@ -73,6 +77,10 @@ public class ScriptableCardEditor : Editor
         storeCardSizeProp = serializedObject.FindProperty("inventorySize");
         transmuteProp = serializedObject.FindProperty("transmute");
         transmuteListProp = serializedObject.FindProperty("transmuteList");
+        transmuteEnergyProp = serializedObject.FindProperty("requireEnergy");
+        transmuteCostProp = serializedObject.FindProperty("energyPerCraft");
+        transmuteEnergyStoredProp = serializedObject.FindProperty("maxEnergyStored");
+        activableInterfaceProp = serializedObject.FindProperty("activableInterface");
     }
 
     public override void OnInspectorGUI()
@@ -95,6 +103,7 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(evolveProp);
         EditorGUILayout.PropertyField(interfaceProp);
         EditorGUILayout.PropertyField(transmuteProp);
+        EditorGUILayout.PropertyField(activableInterfaceProp);
 
         // Display sell information
         if (sellableProp.boolValue)
@@ -141,6 +150,13 @@ public class ScriptableCardEditor : Editor
         
         if (transmuteProp.boolValue)
         {
+            EditorGUILayout.PropertyField(transmuteEnergyProp, new GUIContent("Energy required"));
+            if (transmuteEnergyProp.boolValue)
+            {
+                EditorGUILayout.PropertyField(transmuteCostProp, new GUIContent("Transmute cost"));
+                EditorGUILayout.PropertyField(transmuteEnergyStoredProp, new GUIContent("Max Energy stored"));
+            }
+
             EditorGUILayout.PropertyField(transmuteListProp, new GUIContent("Transmute List"));
         }
 

@@ -31,6 +31,12 @@ namespace Leafy.Data
         public List<GameObject> interfaceList = new List<GameObject>();
         public bool transmute;
         public List<TransmuteRecipe> transmuteRecipes;
+        public bool requiereEnergy;
+        public bool activableInterface;
+        public int energyCost;
+        public int maxEnergy;
+        public int actualEnergy;
+        public bool plantIsFull;
 
 
         public Card(ScriptableCard card)
@@ -47,6 +53,8 @@ namespace Leafy.Data
             price = card.price;
             interfaces = card.interfaces;
             transmute = card.transmute;
+            requiereEnergy = card.requireEnergy;
+            activableInterface = card.activableInterface;
 
             if (harvestable)
             {
@@ -76,6 +84,12 @@ namespace Leafy.Data
 
             if (transmute)
             {
+                if (requiereEnergy)
+                {
+                    maxEnergy = card.maxEnergyStored;
+                    energyCost = card.energyPerCraft;
+                    actualEnergy = 0;
+                }
                 transmuteRecipes = new List<TransmuteRecipe>(card.transmuteList);
             }
         }

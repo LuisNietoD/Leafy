@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fibre vegetal
   ID: 16
-  artwork: {fileID: 21300000, guid: 9378c592f361c0d4f9412e3a16f431a5, type: 3}
+  artwork: {fileID: 21300000, guid: e970d7fa1a430584dae131840451e448, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
@@ -118,4 +118,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 38-Generateur Thermique
+  m_Name: 40-Microscope
   m_EditorClassIdentifier: 
-  name: Generateur Thermique
-  ID: 38
-  artwork: {fileID: 21300000, guid: e90b8d7102fe52843a71b4023431ed34, type: 3}
+  name: Microscope
+  ID: 40
+  artwork: {fileID: 21300000, guid: 55685ebcc0c6ea049ba928b4064b80fb, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
   type: 6
@@ -137,7 +137,7 @@ MonoBehaviour:
   slot: 0
   recipes:
   - machine: 0
-    recipe: 1f0000001f0000001f0000001f00000021000000210000002100000021000000230000002300000023000000
+    recipe: 1d0000001d0000001d0000001d000000240000002400000024000000
   evolveTime: 6
   evolutions:
     m_PLID: ac33f840-1b86-4f72-9b69-04b8c955218a
@@ -180,37 +180,118 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
-  requireEnergy: 0
-  maxEnergyStored: 0
-  energyPerCraft: 0
+  requireEnergy: 1
+  maxEnergyStored: 100
+  energyPerCraft: 2
   transmuteList:
-  - recipe: 13000000
+  - recipe: 11000000
     resultAmount: 1
     result:
-      m_PLID: 664767b7-6fbc-44ae-805e-854c8f985c9b
+      m_PLID: 26aedada-1412-4f16-bd4c-a3aae082bb66
       m_ProbabilityItems:
-      - m_Value: {fileID: 11400000, guid: d5e7197ad473fa644b5b4acaff12d848, type: 2}
+      - m_Value: {fileID: 11400000, guid: f3163d9c5e1e6ac4d85c830bb3452a8c, type: 2}
         m_BaseProbability: 1
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       m_PreventRepeat: 0
-      m_ShuffleIterations: 0
-      m_PickCountMin: 0
-      m_PickCountMax: 0
-      m_LinkPickCounts: 0
+      m_ShuffleIterations: 1
+      m_PickCountMin: 1
+      m_PickCountMax: 1
+      m_LinkPickCounts: 1
       m_MaintainPickCountIfDisabled: 0
       m_PickCountCurve:
         serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-      m_Seed: 0
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Seed: 377777332
       m_KeepSeed: 0
       m_PickHistory:
-        m_History: []
-        m_Capacity: 0
-      m_LastPickCount: 0
-      m_SelectionMethodID: 
+        m_History:
+        - m_Index: 0
+          m_Time:
+            Ticks: 638449271192629618
+        - m_Index: 0
+          m_Time:
+            Ticks: 638449262299845067
+        - m_Index: 0
+          m_Time:
+            Ticks: 638449261613023567
+        m_Capacity: 1000
+      m_LastPickCount: 1
+      m_SelectionMethodID: LSMRegular
+  - recipe: 10000000
+    resultAmount: 1
+    result:
+      m_PLID: c01a5ca6-aef2-4de3-8014-3a9d834125da
+      m_ProbabilityItems:
+      - m_Value: {fileID: 11400000, guid: ffb0341d47c19304c81d30b4515a71ce, type: 2}
+        m_BaseProbability: 1
+        m_Enabled: 1
+        m_Locked: 0
+        m_InfluenceSpread: {x: 0, y: 1}
+        m_InfluenceProvider: {fileID: 0}
+      m_PreventRepeat: 0
+      m_ShuffleIterations: 1
+      m_PickCountMin: 1
+      m_PickCountMax: 1
+      m_LinkPickCounts: 1
+      m_MaintainPickCountIfDisabled: 0
+      m_PickCountCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Seed: 2280688202
+      m_KeepSeed: 0
+      m_PickHistory:
+        m_History:
+        - m_Index: 0
+          m_Time:
+            Ticks: 638449271216528851
+        - m_Index: 0
+          m_Time:
+            Ticks: 638449262272001807
+        m_Capacity: 1000
+      m_LastPickCount: 1
+      m_SelectionMethodID: LSMRegular

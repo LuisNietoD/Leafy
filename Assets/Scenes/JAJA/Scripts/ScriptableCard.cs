@@ -55,6 +55,7 @@ public class ScriptableCard : ScriptableObject
     public bool evolve;
     public bool interfaces;
     public bool transmute;
+    public bool activableInterface;
     
     [Header("Sell information")]
     public int price;
@@ -84,7 +85,11 @@ public class ScriptableCard : ScriptableObject
     [Header("Interfaces information")] 
     public List<GameObject> interfaceList = new List<GameObject>();
 
-    [Header("Transmute information")] public List<TransmuteRecipe> transmuteList;
+    [Header("Transmute information")] 
+    public bool requireEnergy;
+    public int maxEnergyStored;
+    public int energyPerCraft;
+    public List<TransmuteRecipe> transmuteList;
     
     public Texture2D GetCardIcon()
     {

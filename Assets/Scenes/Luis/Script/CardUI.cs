@@ -28,7 +28,15 @@ namespace Leafy.Objects
         private TextMeshPro typeName;
         private SpriteRenderer bord;
         private SpriteRenderer shadow;
+        private SpriteRenderer noEnergyIcon;
+        private SpriteRenderer noEnergyBar;
+        private GameObject noEnergy;
+        private GameObject energy;
+        private TextMeshPro energyText;
+        private SpriteRenderer energyIcon;
         public GameObject model;
+
+        public GameObject interfaceSlot;
 
         internal CardUI parent;
         internal CardUI child;
@@ -52,7 +60,15 @@ namespace Leafy.Objects
             background = transform.Find("MODEL/BACKGROUND").GetComponent<SpriteRenderer>();
             bord = transform.Find("MODEL/BORD").GetComponent<SpriteRenderer>();
             shadow = transform.Find("SHADOW").GetComponent<SpriteRenderer>();
+            energyIcon = transform.Find("MODEL/ENERGY/ICON").GetComponent<SpriteRenderer>();
+            noEnergyIcon = transform.Find("MODEL/NOENERGY/ICON").GetComponent<SpriteRenderer>();
+            noEnergyBar = transform.Find("MODEL/NOENERGY/BAR").GetComponent<SpriteRenderer>();
+            noEnergy = transform.Find("MODEL/NOENERGY").gameObject;
+            energy = transform.Find("MODEL/ENERGY").gameObject;
+            energyText = transform.Find("MODEL/ENERGY/ENERGYTEXT").GetComponent<TextMeshPro>();
             model = transform.Find("MODEL").gameObject;
+            energy.SetActive(false);
+            noEnergy.SetActive(false);
 
         }
 
@@ -82,6 +98,10 @@ namespace Leafy.Objects
             {
                 behavior = new Transmute(this);
             }
+            else if (card.activableInterface && behavior == null)
+            {
+                behavior = new ActivableInterface(this);
+            }
             else if (behavior == null)
             {
                 behavior = new ClassicCard();
@@ -95,6 +115,12 @@ namespace Leafy.Objects
                 g.transform.localPosition = Vector3.zero;
                 g.name = "INTERFACE";
 
+                interfaceSlot = g;
+            }
+
+            if (card.requiereEnergy)
+            {
+                energy.SetActive(true);
             }
         }
         
@@ -105,6 +131,10 @@ namespace Leafy.Objects
             cardName.sortingOrder = id;
             artwork.sortingOrder = id;
             typeName.sortingOrder = id;
+            energyText.sortingOrder = id;
+            energyIcon.sortingOrder = id;
+            noEnergyBar.sortingOrder = id;
+            noEnergyIcon.sortingOrder = id;
             shadow.sortingOrder = id - 1;
         }
 
@@ -129,6 +159,11 @@ namespace Leafy.Objects
 
             TestCollision();
             behavior?.StayAction();
+            if (card.requiereEnergy)
+            {
+                energyText.text = card.actualEnergy + "/" + card.maxEnergy;
+                noEnergy.SetActive(card.actualEnergy < card.energyCost);
+            }
         }
 
         public float pushForce = 1.0f;
@@ -156,7 +191,7 @@ namespace Leafy.Objects
                         return;
                     }
 
-                    Vector2 pushDirection = transform.position - collider.transform.position;
+                    Vector2 pushDirection = transform.position - collider.transform.position - new Vector3(0.01f, 0.01f, 0);
                     pushDirection.Normalize();
                     float forcePercent = Mathf.Clamp01(Vector2.Distance(otherCard.transform.position, transform.position));
 
@@ -401,6 +436,8 @@ namespace Leafy.Objects
         {
             if(loader != null)
                 Destroy(loader);
+            if(child != null)
+                child.SetParent(parent);
         }
         
         

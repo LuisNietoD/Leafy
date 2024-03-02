@@ -27,7 +27,7 @@ public class Booster : MonoBehaviour
     
     public void SpawnCard()
     {
-        GameObject newCard = Instantiate(cardsPrefab, positions[index], Quaternion.identity);
+        GameObject newCard = Instantiate(cardsPrefab, transform.position + positions[index], Quaternion.identity);
         
         if(!fixedList)
             newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(cards.PickValue()));
@@ -38,12 +38,6 @@ public class Booster : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnMouseOver()
-    {
-        
-    }
-
-
     List<Vector3> GeneratePositions(Vector3 center, int count, float radius)
     {
         List<Vector3> positions = new List<Vector3>();
@@ -51,9 +45,9 @@ public class Booster : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             float angle = (360f / count) * i;
-            float x = center.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle);
-            float y = center.y + radius * Mathf.Sin(Mathf.Deg2Rad * angle);
-            float z = center.z;
+            float x = radius * Mathf.Cos(Mathf.Deg2Rad * angle);
+            float y = radius * Mathf.Sin(Mathf.Deg2Rad * angle);
+            float z = 0;
 
             Vector3 position = new Vector3(x, y, z);
             positions.Add(position);
