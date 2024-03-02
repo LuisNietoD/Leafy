@@ -40,6 +40,9 @@ public class ScriptableCardEditor : Editor
     SerializedProperty transmuteCostProp;
     SerializedProperty transmuteEnergyStoredProp;
     SerializedProperty activableInterfaceProp;
+    SerializedProperty typeSlotProp;
+    SerializedProperty preciseSlotBoolProp;
+    SerializedProperty preciseSlotIdProp;
 
     private Texture2D finalBackground;
 
@@ -65,7 +68,7 @@ public class ScriptableCardEditor : Editor
         activatorsProp = serializedObject.FindProperty("activators");
         timeToCraftProp = serializedObject.FindProperty("timeToCraft");
         inventoryProp = serializedObject.FindProperty("inventory");
-        slotProp = serializedObject.FindProperty("slot");
+        slotProp = serializedObject.FindProperty("slotAmount");
         harvestTimeProp = serializedObject.FindProperty("harvestTime");
         recipeProp = serializedObject.FindProperty("recipes");
         evolveProp = serializedObject.FindProperty("evolve");
@@ -81,6 +84,9 @@ public class ScriptableCardEditor : Editor
         transmuteCostProp = serializedObject.FindProperty("energyPerCraft");
         transmuteEnergyStoredProp = serializedObject.FindProperty("maxEnergyStored");
         activableInterfaceProp = serializedObject.FindProperty("activableInterface");
+        typeSlotProp = serializedObject.FindProperty("slotType");
+        preciseSlotBoolProp = serializedObject.FindProperty("preciseCardID");
+        preciseSlotIdProp = serializedObject.FindProperty("preciseCard");
     }
 
     public override void OnInspectorGUI()
@@ -135,6 +141,9 @@ public class ScriptableCardEditor : Editor
         if (inventoryProp.boolValue)
         {
             EditorGUILayout.PropertyField(slotProp, new GUIContent("Slots"));
+            EditorGUILayout.PropertyField(typeSlotProp, new GUIContent("Slot type"));
+            EditorGUILayout.PropertyField(preciseSlotBoolProp, new GUIContent("Precise slot"));
+            EditorGUILayout.PropertyField(preciseSlotIdProp, new GUIContent("Slot ID"));
         }
 
         if (evolveProp.boolValue)

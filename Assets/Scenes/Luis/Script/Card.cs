@@ -21,7 +21,10 @@ namespace Leafy.Data
         public ProbabilityList<ScriptableCard> drop;
         public List<int> activators;
         public bool inventory;
-        public int slots;
+        public int slotAmount;
+        public Card_Type typeSlot;
+        public bool preciseCard;
+        public int preciseCardID;
         public bool evolve;
         public float evolveTime;
         public ProbabilityList<ScriptableCard> evolutions;
@@ -37,6 +40,8 @@ namespace Leafy.Data
         public int maxEnergy;
         public int actualEnergy;
         public bool plantIsFull;
+        public bool stockEmpty;
+        
 
 
         public Card(ScriptableCard card)
@@ -70,7 +75,10 @@ namespace Leafy.Data
 
             if (inventory)
             {
-                slots = card.slot;
+                slotAmount = card.slotAmount;
+                typeSlot = card.slotType;
+                preciseCard = card.preciseCard;
+                preciseCardID = card.preciseCardID;
             }
 
             if (evolve)

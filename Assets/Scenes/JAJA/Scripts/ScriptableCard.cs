@@ -74,7 +74,10 @@ public class ScriptableCard : ScriptableObject
     public List<int> activators;
 
     [Header("Inventory information")] 
-    public int slot;
+    public int slotAmount;
+    public Card_Type slotType;
+    public int preciseCardID;
+    public bool preciseCard;
 
     [Header("Recipe information")] public List<CraftRecipe> recipes = new List<CraftRecipe>();
     

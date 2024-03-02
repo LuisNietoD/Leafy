@@ -34,6 +34,9 @@ namespace Leafy.Objects
         private GameObject energy;
         private TextMeshPro energyText;
         private SpriteRenderer energyIcon;
+        public GameObject inventory;
+        public TextMeshPro slotText;
+        public SpriteRenderer slotIcon;
         public GameObject model;
 
         public GameObject interfaceSlot;
@@ -67,8 +70,13 @@ namespace Leafy.Objects
             energy = transform.Find("MODEL/ENERGY").gameObject;
             energyText = transform.Find("MODEL/ENERGY/ENERGYTEXT").GetComponent<TextMeshPro>();
             model = transform.Find("MODEL").gameObject;
+            slotIcon = transform.Find("MODEL/INVENTORY/ICON").GetComponent<SpriteRenderer>();
+            slotText = transform.Find("MODEL/INVENTORY/SLOTTEXT").GetComponent<TextMeshPro>();
+            inventory = transform.Find("MODEL/INVENTORY").gameObject;
+            
             energy.SetActive(false);
             noEnergy.SetActive(false);
+            inventory.SetActive(false);
 
         }
 
@@ -101,6 +109,10 @@ namespace Leafy.Objects
             else if (card.activableInterface && behavior == null)
             {
                 behavior = new ActivableInterface(this);
+            }
+            else if (card.inventory && behavior == null)
+            {
+                behavior = new Inventory(this);
             }
             else if (behavior == null)
             {
@@ -135,6 +147,8 @@ namespace Leafy.Objects
             energyIcon.sortingOrder = id;
             noEnergyBar.sortingOrder = id;
             noEnergyIcon.sortingOrder = id;
+            slotIcon.sortingOrder = id;
+            slotText.sortingOrder = id;
             shadow.sortingOrder = id - 1;
         }
 
