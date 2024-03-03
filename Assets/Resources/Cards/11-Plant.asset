@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 11-Plant1
+  m_Name: 11-Plant
   m_EditorClassIdentifier: 
-  name: Plant
+  name: Plante
   ID: 11
   artwork: {fileID: 21300000, guid: 6cf1e9d637d889d428f94b7f6699f6c3, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -25,6 +25,12 @@ MonoBehaviour:
   evolve: 1
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  utilities:
+  - cardName: Plant(Fournaise, Arbuste, Base)
+    recipe: Pousse seule en une plante aleatoire
   price: 4
   timeToCraft: 5
   infinite: 1
@@ -80,7 +86,10 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 03000000
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 01000000080000000a000000
@@ -240,4 +249,7 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

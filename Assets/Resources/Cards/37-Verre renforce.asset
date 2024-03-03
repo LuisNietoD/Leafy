@@ -25,6 +25,12 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 1 x Pepite de Plomb<br>1 x Verre
+  utilities:
+  - cardName: Serre
+    recipe: 4 x Lingot de Fer<br>4 x Verre Renforce
   price: 2
   timeToCraft: 4
   infinite: 0
@@ -74,7 +80,10 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 2400000016000000
@@ -120,4 +129,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

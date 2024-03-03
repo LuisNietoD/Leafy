@@ -25,6 +25,12 @@ MonoBehaviour:
   evolve: 0
   interfaces: 1
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 3 x Lingot de Fer<br>3 x Lingot de Plomb
+  utilities:
+  - cardName: Cylindre de Lithium
+    recipe: 1 x Morceau de Lithium<br>(Slot de press)
   price: 6
   timeToCraft: 5
   infinite: 0
@@ -134,7 +140,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 1d0000001d0000001d0000001f0000001f0000001f000000
@@ -181,4 +190,7 @@ MonoBehaviour:
     m_SelectionMethodID: LSMRegular
   interfaceList:
   - {fileID: 6385911780463879018, guid: 7217bd05d9554f1439ac67c1e67dee41, type: 3}
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

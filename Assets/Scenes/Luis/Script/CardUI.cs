@@ -38,6 +38,9 @@ namespace Leafy.Objects
         public TextMeshPro slotText;
         public SpriteRenderer slotIcon;
         public GameObject model;
+        public GameObject sellable;
+        public TextMeshPro price;
+        public SpriteRenderer priceIcon;
 
         public GameObject interfaceSlot;
 
@@ -73,10 +76,14 @@ namespace Leafy.Objects
             slotIcon = transform.Find("MODEL/INVENTORY/ICON").GetComponent<SpriteRenderer>();
             slotText = transform.Find("MODEL/INVENTORY/SLOTTEXT").GetComponent<TextMeshPro>();
             inventory = transform.Find("MODEL/INVENTORY").gameObject;
+            sellable = transform.Find("MODEL/SELLABLE").gameObject;
+            priceIcon = transform.Find("MODEL/SELLABLE/ICON").GetComponent<SpriteRenderer>();
+            price = transform.Find("MODEL/SELLABLE/PRICE").GetComponent<TextMeshPro>();
             
             energy.SetActive(false);
             noEnergy.SetActive(false);
             inventory.SetActive(false);
+            sellable.SetActive(false);
 
         }
 
@@ -134,6 +141,12 @@ namespace Leafy.Objects
             {
                 energy.SetActive(true);
             }
+
+            if (card.sellable)
+            {
+                sellable.SetActive(true);
+                price.text = card.price.ToString();
+            }
         }
         
         private void UpdateRenderID(int id)
@@ -150,6 +163,8 @@ namespace Leafy.Objects
             slotIcon.sortingOrder = id;
             slotText.sortingOrder = id;
             shadow.sortingOrder = id - 1;
+            priceIcon.sortingOrder = id;
+            price.sortingOrder = id;
         }
 
         private void FixedUpdate()

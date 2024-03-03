@@ -26,6 +26,13 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  recipeText:
+  - 4 x Bois
+  utilities:
+  - cardName: Upgrade
+    recipe: 1 x Coffre en Bois<br>1 x Coffre en Bois (vide)
+  - cardName: Utilisation
+    recipe: Permet de Stocker 1 type de cartes
   price: 3
   timeToCraft: 5
   infinite: 0

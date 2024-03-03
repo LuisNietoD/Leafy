@@ -25,6 +25,13 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  utilities:
+  - cardName: Fibre, Pollen
+    recipe: Cliquez pour recolter du Pollen et des Fibres, tremble quand elle est
+      rempli
   price: 5
   timeToCraft: 5
   infinite: 1
@@ -329,7 +336,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes: []
   evolveTime: 6
   evolutions:
@@ -373,4 +383,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

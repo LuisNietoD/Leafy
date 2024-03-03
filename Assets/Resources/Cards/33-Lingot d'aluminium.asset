@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Lingot d'Aluminium
   ID: 33
-  artwork: {fileID: 21300000, guid: 2da93ce169cab3f4290b1cdeedcfb3c6, type: 3}
+  artwork: {fileID: 21300000, guid: 51046da10fab75a44996ca03c0b6bfb2, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
@@ -25,6 +25,12 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 5 x Pepite d'Aluminium<br>1 x Plante Fournaise
+  utilities:
+  - cardName: Generateur Thermique
+    recipe: 4 x Lingot de Plomb<br>4 x Lingot d'Aluminium<br>3 x Lingot d'Or
   price: 2
   timeToCraft: 0
   infinite: 0
@@ -74,7 +80,10 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes: []
   evolveTime: 0
   evolutions:
@@ -118,4 +127,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

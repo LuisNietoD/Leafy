@@ -25,6 +25,12 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 1
+  activableInterface: 0
+  recipeText:
+  - 4 x Lingot de Plomb<br>4 x Lingot d'Aluminium<br>3 x Lingot d'Or
+  utilities:
+  - cardName: Electricite
+    recipe: 1 x Generateur Thermique<br>1 x Charbon
   price: 5
   timeToCraft: 5
   infinite: 1
@@ -134,7 +140,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 1f0000001f0000001f0000001f00000021000000210000002100000021000000230000002300000023000000

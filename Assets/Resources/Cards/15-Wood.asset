@@ -25,6 +25,14 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - Produit par l'Arbuste
+  utilities:
+  - cardName: Coffre en Bois
+    recipe: 4 x Bois
+  - cardName: Charbon
+    recipe: 1 x Bois<br>1 x Plante Fournaise
   price: 1
   timeToCraft: 0
   infinite: 0
@@ -74,7 +82,10 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes: []
   evolveTime: 0
   evolutions:
@@ -118,4 +129,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

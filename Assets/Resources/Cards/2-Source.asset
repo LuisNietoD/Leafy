@@ -25,10 +25,18 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - Obtenu dans les booster
+  utilities:
+  - cardName: Source infinie
+    recipe: 4 x Source
+  - cardName: Eau
+    recipe: 1 x Seau<br>1 x Source
   price: 0
   timeToCraft: 5
   infinite: 0
-  life: 4
+  life: 3
   storeCard: 0
   inventorySize: 0
   shakable: 0
@@ -89,7 +97,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 03000000
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes: []
   evolveTime: 0
   evolutions:
@@ -133,4 +144,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

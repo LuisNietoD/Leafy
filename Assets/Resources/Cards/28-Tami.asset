@@ -25,6 +25,14 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 1
+  activableInterface: 0
+  recipeText:
+  - 4 x Fibre Vegetal
+  utilities:
+  - cardName: 2 Pepite(Fer, Zinc, Plomb, Cuivre)
+    recipe: 1 x Terre<br>1 x Tami
+  - cardName: 2 x Pepites(Lithium, aluminium, Or, Argent)
+    recipe: 1 x Sable<br>1 x Tami
   price: 5
   timeToCraft: 5
   infinite: 1
@@ -134,7 +142,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 10000000100000001000000010000000

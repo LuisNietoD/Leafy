@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 4-Box
   m_EditorClassIdentifier: 
-  name: Box
+  name: Vieille boite
   ID: 4
   artwork: {fileID: 21300000, guid: 84e1011c09d8e7244b86ac5d73e90876, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -25,10 +25,16 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - Obtenu dans les booster
+  utilities:
+  - cardName: Secouez la boite
+    recipe: 1 x Terre<br>1 x Sable<br>1 x Graine<br>1 x Pot
   price: 5
   timeToCraft: 0
   infinite: 0
-  life: 5
+  life: 3
   storeCard: 0
   inventorySize: 0
   shakable: 1
@@ -1271,7 +1277,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes: []
   evolveTime: 0
   evolutions:
@@ -1315,4 +1324,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

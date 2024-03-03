@@ -41,8 +41,9 @@ namespace Leafy.Data
         public int actualEnergy;
         public bool plantIsFull;
         public bool stockEmpty;
+        public List<string> recipes;
+        public List<utility> utilities;
         
-
 
         public Card(ScriptableCard card)
         {
@@ -60,6 +61,8 @@ namespace Leafy.Data
             transmute = card.transmute;
             requiereEnergy = card.requireEnergy;
             activableInterface = card.activableInterface;
+            recipes = card.recipeText;
+            utilities = card.utilities;
 
             if (harvestable)
             {

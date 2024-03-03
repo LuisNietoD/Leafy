@@ -26,6 +26,12 @@ MonoBehaviour:
   interfaces: 1
   transmute: 0
   activableInterface: 1
+  recipeText:
+  - 4 x Lingot de Fer<br>4 x Verre Renforce
+  utilities:
+  - cardName: Serre
+    recipe: Cliquer pour Afficher/Cacher l'interface, Tremble quand toutes les plantes
+      sont rempli
   price: 3
   timeToCraft: 8
   infinite: 0
@@ -75,7 +81,10 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 1d0000001d0000001d0000001d00000025000000250000002500000025000000

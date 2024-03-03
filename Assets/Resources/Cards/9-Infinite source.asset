@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 9-Infinite source
   m_EditorClassIdentifier: 
-  name: Infinite Source
+  name: Source infinie
   ID: 9
   artwork: {fileID: 21300000, guid: 72ac722c3fedd9d4d8c2745f5317bff1, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -25,6 +25,12 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 4 x Source
+  utilities:
+  - cardName: Eau
+    recipe: 1 x Seau<br>1 x Source infinie
   price: 0
   timeToCraft: 5
   infinite: 1
@@ -101,7 +107,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 03000000
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 02000000020000000200000002000000
@@ -147,4 +156,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
   transmuteList: []

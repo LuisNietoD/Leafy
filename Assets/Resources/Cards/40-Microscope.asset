@@ -25,6 +25,17 @@ MonoBehaviour:
   evolve: 0
   interfaces: 0
   transmute: 1
+  activableInterface: 0
+  recipeText:
+  - 5 x Lingot de Fer<br>3 x Verre
+  utilities:
+  - cardName: Utilisation
+    recipe: Le Microscope a besoin d'electricite, Chargez le en posant des cartes
+      Electricite dessus
+  - cardName: Point de Savoir
+    recipe: 1 x Pollen<br>1 x Microscope
+  - cardName: Proteine
+    recipe: 1 x Fibre Vegetal<br>1 x Microscope
   price: 5
   timeToCraft: 5
   infinite: 1
@@ -134,7 +145,10 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
   recipes:
   - machine: 0
     recipe: 1d0000001d0000001d0000001d000000240000002400000024000000

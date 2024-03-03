@@ -104,10 +104,10 @@ namespace Leafy.Manager
             
             
             
-            Debug.Log(_hoveredBooster +"boooooooooster");
             //Grab the hovered booster
             if (Input.GetMouseButtonDown(0) && _hoveredBooster != null && _draggedCardUI == null)
             {
+                offset = _hoveredBooster.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 _draggedBooster = _hoveredBooster;
                 _draggedBooster.GetComponent<SpriteRenderer>().sortingOrder = ID++;
                 _hoveredBooster = null;

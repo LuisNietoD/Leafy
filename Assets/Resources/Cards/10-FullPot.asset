@@ -10,31 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 7-CrackledPot
+  m_Name: 10-FullPot
   m_EditorClassIdentifier: 
-  name: Crackled Pot
-  ID: 7
-  artwork: {fileID: 21300000, guid: 7ac6006d0cf062542bb342566d1f8b46, type: 3}
+  name: Full pot
+  ID: 10
+  artwork: {fileID: 21300000, guid: 06548df6ad3a8aa47adaf9b0bf596b82, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
-  background_color: {r: 0.40392157, g: 0.5686275, b: 0.65882355, a: 1}
+  background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
   type: 1
   sellable: 1
-  craftable: 0
+  craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 0
   interfaces: 0
-  price: 2
-  timeToCraft: 0
-  infinite: 0
+  transmute: 0
+  activableInterface: 0
+  recipeText:
+  - 1 x Terre<br>1 x Pot
+  utilities:
+  - cardName: Plant(Fournaise, Arbuste, Base)
+    recipe: 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  price: 3
+  timeToCraft: 5
+  infinite: 1
   life: 0
   storeCard: 0
   inventorySize: 0
   shakable: 0
-  harvestTime: 0
+  harvestTime: 5
   drop:
-    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
-    m_ProbabilityItems: []
+    m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 96635c6fe3d92274aa7eef144df5ff24, type: 2}
+      m_BaseProbability: 1
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
     m_PreventRepeat: 0
     m_ShuffleIterations: 1
     m_PickCountMin: 1
@@ -65,16 +78,21 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 901307760
+    m_Seed: 0
     m_KeepSeed: 0
     m_PickHistory:
       m_History: []
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  activators: 
-  slot: 0
-  recipes: []
+  activators: 03000000
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
+  recipes:
+  - machine: 0
+    recipe: 0500000007000000
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -117,3 +135,7 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
+  transmuteList: []

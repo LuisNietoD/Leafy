@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Leafy.Data;
 using Leafy.Objects;
 using RNGNeeds;
 using UnityEngine;
@@ -56,6 +57,9 @@ public class ScriptableCard : ScriptableObject
     public bool interfaces;
     public bool transmute;
     public bool activableInterface;
+
+    public List<string> recipeText;
+    public List<utility> utilities;
     
     [Header("Sell information")]
     public int price;

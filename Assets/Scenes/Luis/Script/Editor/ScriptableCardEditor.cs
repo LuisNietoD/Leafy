@@ -43,6 +43,8 @@ public class ScriptableCardEditor : Editor
     SerializedProperty typeSlotProp;
     SerializedProperty preciseSlotBoolProp;
     SerializedProperty preciseSlotIdProp;
+    SerializedProperty recipeTextProp;
+    SerializedProperty utilitiesProp;
 
     private Texture2D finalBackground;
 
@@ -87,6 +89,8 @@ public class ScriptableCardEditor : Editor
         typeSlotProp = serializedObject.FindProperty("slotType");
         preciseSlotBoolProp = serializedObject.FindProperty("preciseCardID");
         preciseSlotIdProp = serializedObject.FindProperty("preciseCard");
+        recipeTextProp = serializedObject.FindProperty("recipeText");
+        utilitiesProp = serializedObject.FindProperty("utilities");
     }
 
     public override void OnInspectorGUI()
@@ -110,6 +114,8 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(interfaceProp);
         EditorGUILayout.PropertyField(transmuteProp);
         EditorGUILayout.PropertyField(activableInterfaceProp);
+        EditorGUILayout.PropertyField(recipeTextProp);
+        EditorGUILayout.PropertyField(utilitiesProp);
 
         // Display sell information
         if (sellableProp.boolValue)

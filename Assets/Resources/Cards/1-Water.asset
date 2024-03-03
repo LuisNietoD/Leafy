@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 1-Water
   m_EditorClassIdentifier: 
-  name: Water
+  name: Eau
   ID: 1
   artwork: {fileID: 21300000, guid: a413fa2347f7d9c44b3aee2e78a2e300, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -23,10 +23,22 @@ MonoBehaviour:
   harvestable: 0
   inventory: 0
   evolve: 0
+  interfaces: 0
+  transmute: 0
+  activableInterface: 0
+  recipeText:
+  - Peut etre obtenu dans les sources d'eau ou en vendant des cartes
+  utilities:
+  - cardName: Cartes
+    recipe: Sert a acheter des cartes
+  - cardName: Plant
+    recipe: 1 x Pot Rempli<br>1 x Graine<br>1 x Eau
   price: 0
   timeToCraft: 2
   infinite: 0
   life: 3
+  storeCard: 0
+  inventorySize: 0
   shakable: 0
   harvestTime: 0
   drop:
@@ -70,8 +82,11 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
-  slot: 0
-  recipe: 
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
+  recipes: []
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -113,3 +128,8 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
+  transmuteList: []

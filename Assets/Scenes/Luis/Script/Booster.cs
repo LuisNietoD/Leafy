@@ -17,6 +17,8 @@ public class Booster : MonoBehaviour
     public ProbabilityList<ScriptableCard> cards = new ProbabilityList<ScriptableCard>();
     public bool fixedList;
     public List<ScriptableCard> fixedCard = new List<ScriptableCard>();
+    public Animator anim;
+    public bool isOpen;
 
 
     void Start()
@@ -27,6 +29,12 @@ public class Booster : MonoBehaviour
     
     public void SpawnCard()
     {
+        if (!isOpen)
+        {
+            isOpen = true;
+            anim.Play("OpenPack");
+            return;
+        }
         GameObject newCard = Instantiate(cardsPrefab, transform.position + positions[index], Quaternion.identity);
         
         if(!fixedList)

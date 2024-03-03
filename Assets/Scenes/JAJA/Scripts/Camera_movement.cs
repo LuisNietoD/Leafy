@@ -9,6 +9,8 @@ public class Camera_movement : MonoBehaviour
     public float zoomSpeed = 5f;
     public float minFOV = 5f;
     public float maxFOV = 20f;
+    public float maxX = 20f;
+    public float maxY = 20f;
 
     private CinemachineVirtualCamera mainCamera;
 
@@ -59,6 +61,10 @@ public class Camera_movement : MonoBehaviour
         {
             transform.position = origin - difference;
         }
-        
+
+        Vector3 p = transform.position;
+        p.x = Mathf.Clamp(p.x, -maxX, maxX);
+        p.y = Mathf.Clamp(p.y, -maxY, maxY);
+        transform.position = p;
     }
 }
