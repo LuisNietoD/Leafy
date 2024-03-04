@@ -193,6 +193,17 @@ namespace Leafy.Objects
                 energyText.text = card.actualEnergy + "/" + card.maxEnergy;
                 noEnergy.SetActive(card.actualEnergy < card.energyCost);
             }
+
+            if (parent == null && dragged)
+            {
+                if (GameManager.instance._draggedCardUI != this)
+                {
+                    
+                    CardUtils.ApplyMethodOnStack(this, c => c.dragged = false);
+                    CardUtils.ApplyMethodOnStack(this, card => card.CardDrop());
+                    CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
+                }
+            }
         }
 
         public float pushForce = 1.0f;

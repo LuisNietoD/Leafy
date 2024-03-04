@@ -18,7 +18,7 @@ namespace Leafy.Manager
         public float snapY = 2;
         private float lerpingSpeed = 30f;
         
-        private CardUI _draggedCardUI;
+        public CardUI _draggedCardUI;
         private CardUI _hoveredCardUI;
         
         private GameObject _hoveredBooster;

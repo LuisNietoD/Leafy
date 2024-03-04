@@ -10,7 +10,6 @@ public class InfoManager : MonoBehaviour
     public TextMeshProUGUI title;
     public TextMeshProUGUI recipe;
     public GameObject buttonNext;
-    public GameObject buttonPrevious;
     public LayerMask cardLayer;
 
     public string cardName;
@@ -39,7 +38,6 @@ public class InfoManager : MonoBehaviour
                     recipe.text = recipeList[0];
                     index = 0;
                     buttonNext.SetActive(recipeList.Count > 1); 
-                    buttonPrevious.SetActive(recipeList.Count > 1);
                     infoCanvas.SetActive(true);
                     
                 }
@@ -63,7 +61,6 @@ public class InfoManager : MonoBehaviour
                     recipe.text = utilityList[0].recipe;
                     index = 0;
                     buttonNext.SetActive(utilityList.Count > 1); 
-                    buttonPrevious.SetActive(utilityList.Count > 1);
                     infoCanvas.SetActive(true);
                     
                 }

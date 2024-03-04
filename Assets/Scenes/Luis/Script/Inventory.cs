@@ -53,17 +53,7 @@ namespace Leafy.Objects
                 actualstoredCard = 0;
             }
 
-            if (actualstoredCard <= 0)
-            {
-                actualstoredCardID = 0;
-                if (!card.preciseCard)
-                    cardUI.slotIcon.enabled = false;
-                card.stockEmpty = true;
-            }
-            else
-            {
-                card.stockEmpty = false;
-            }
+           
             
         }
 
@@ -83,15 +73,21 @@ namespace Leafy.Objects
             {
                 if (card.preciseCard && card.preciseCardID == cardUI.child.ID)
                 {
-                    actualstoredCardID = card.preciseCardID;
-                    actualstoredCard++;
-                    GameManager.instance.DestroyObject(cardUI.child.gameObject);
+                    if (actualstoredCard < cardUI.card.slotAmount)
+                    {
+                        actualstoredCardID = card.preciseCardID;
+                        actualstoredCard++;
+                        GameManager.instance.DestroyObject(cardUI.child.gameObject);
+                    }
                 }
                 else if (!card.preciseCard && (cardUI.child.ID == actualstoredCardID || actualstoredCardID == 0) && cardUI.child.card.type == card.typeSlot.ToString())
                 {
-                    actualstoredCardID = cardUI.child.ID;
-                    actualstoredCard++;
-                    GameManager.instance.DestroyObject(cardUI.child.gameObject);
+                    if (actualstoredCard < cardUI.card.slotAmount)
+                    {
+                        actualstoredCardID = cardUI.child.ID;
+                        actualstoredCard++;
+                        GameManager.instance.DestroyObject(cardUI.child.gameObject);
+                    }
                 }
 
                 if (cardUI.child.ID == cardUI.ID)
@@ -112,6 +108,18 @@ namespace Leafy.Objects
             else if (card.preciseCard)
             {
                 cardUI.slotIcon.sprite = CardList.GetCardByID(card.preciseCardID).artwork;
+            }
+            
+            if (actualstoredCard <= 0)
+            {
+                actualstoredCardID = 0;
+                if (!card.preciseCard)
+                    cardUI.slotIcon.enabled = false;
+                card.stockEmpty = true;
+            }
+            else if(actualstoredCard > 0)
+            {
+                card.stockEmpty = false;
             }
 
             cardUI.slotText.text = actualstoredCard + "/" + card.slotAmount;

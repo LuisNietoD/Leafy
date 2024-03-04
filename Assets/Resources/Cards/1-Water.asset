@@ -29,9 +29,9 @@ MonoBehaviour:
   recipeText:
   - Peut etre obtenu dans les sources d'eau ou en vendant des cartes
   utilities:
-  - cardName: Cartes
+  - cardName: Eau
     recipe: Sert a acheter des cartes
-  - cardName: Plant
+  - cardName: Plante
     recipe: 1 x Pot Rempli<br>1 x Graine<br>1 x Eau
   price: 0
   timeToCraft: 2
