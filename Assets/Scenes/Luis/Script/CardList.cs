@@ -71,6 +71,11 @@ namespace Leafy.Data
         {
             return Cards.Find(card => card.ID == targetID);
         }
+        
+        public static ScriptableCard GetCardByName(string name)
+        {
+            return Cards.Find(card => card.name.ToLower() == name.ToLower());
+        }
 
         public static ScriptableCard GetRandomCard()
         {

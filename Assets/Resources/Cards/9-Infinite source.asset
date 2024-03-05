@@ -27,7 +27,16 @@ MonoBehaviour:
   transmute: 0
   activableInterface: 0
   recipeText:
-  - 4 x Source
+  - '<link="Stack,4:Source"></link>
+
+    Produit de <color=yellow> <link="Eau">l''eau</link></color>
+    a l''infini, mais produit plus lentement qu''une <color=yellow> <link="Source">source</link></color>.
+
+
+    Craft:
+
+    1
+    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
   utilities:
   - cardName: Eau
     recipe: 1 x Seau<br>1 x Source infinie

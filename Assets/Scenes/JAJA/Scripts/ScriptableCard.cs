@@ -58,6 +58,7 @@ public class ScriptableCard : ScriptableObject
     public bool transmute;
     public bool activableInterface;
 
+    [TextArea(1,20)]
     public List<string> recipeText;
     public List<utility> utilities;
     

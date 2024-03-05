@@ -27,7 +27,32 @@ MonoBehaviour:
   transmute: 0
   activableInterface: 0
   recipeText:
-  - Peut etre obtenu dans les sources d'eau ou en vendant des cartes
+  - '<link="Stack,1:Source,1:Seau"></link>
+
+    Money du jeu, Permet d''acheter des
+    packs mais aussi de faire pousser des <color=yellow> <link="Plante">plantes</link></color>
+    et de les upgrades.
+
+
+    Craft:
+
+    1 x <color=yellow> <link="Source">Source</link></color>
+
+    1
+    x <color=yellow> <link="Seau">Seau</link></color>'
+  - '<link="Stack,1:Source infinie,1:Seau"></link>
+
+    Money du jeu, Permet d''acheter
+    des packs mais aussi de faire pousser des <color=yellow> <link="Plante">plantes</link></color>
+    et de les upgrades.
+
+
+    Craft:
+
+    1 x <color=yellow> <link="Source infinie">Source
+    infinie</link></color>
+
+    1 x <color=yellow> <link="Seau">Seau</link></color>'
   utilities:
   - cardName: Eau
     recipe: Sert a acheter des cartes

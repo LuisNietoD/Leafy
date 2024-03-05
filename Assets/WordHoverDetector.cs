@@ -1,3 +1,4 @@
+using Leafy.Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
@@ -5,10 +6,12 @@ using UnityEngine.UI;
 
 public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Image waterImage; // Reference to your water image
-    private TextMeshProUGUI textMeshPro; // Reference to the TextMeshProUGUI component
-    private bool isMouseOverText; // Flag to track whether mouse is over the text
+    public GameObject cardShow;
+    public TextMeshProUGUI title;
+    private TextMeshProUGUI textMeshPro;
+    private bool isMouseOverText;
     public float offset;
+    public TutoDisplayer tuto;
 
     void Start()
     {
@@ -23,26 +26,47 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void OnPointerExit(PointerEventData eventData)
     {
         isMouseOverText = false;
-        waterImage.enabled = false; // Make sure to hide image when exiting text area
+        cardShow.SetActive(false);
     }
 
     void Update()
     {
         if (isMouseOverText)
         {
-            int wordIndex = TMP_TextUtilities.FindIntersectingWord(textMeshPro, Input.mousePosition, null);
-
-            if (wordIndex != -1 && textMeshPro.textInfo.wordInfo[wordIndex].GetWord() == "Eau") // Change "Eau" to your word
+            int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMeshPro, Input.mousePosition, null);
+            string word = "";
+            if(linkIndex != -1)
             {
+                word = textMeshPro.textInfo.linkInfo[linkIndex].GetLinkID();
+            }
+
+            ScriptableCard card = null;
+            if(word != "")
+            {
+                card = CardList.GetCardByName(word);
+            }
+
+            if (linkIndex != -1 && card != null)
+            {
+                cardShow.GetComponent<FakeCard>().ChangeVisual(card);
+                
                 Vector3 mousePosition = Input.mousePosition;
-                mousePosition.z = Camera.main.nearClipPlane; // Set the z-position to match the camera's near clip plane distance
+                mousePosition.z = Camera.main.nearClipPlane;
                 mousePosition.x += offset;
-                waterImage.transform.position = mousePosition; // Convert screen position to world position
-                waterImage.enabled = true;
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    title.text = card.name;
+                    textMeshPro.text = card.recipeText[0];
+                    tuto.ChangeTuto(textMeshPro);
+                }
+
+                cardShow.transform.position = mousePosition;
+                cardShow.SetActive(true);
             }
             else
             {
-                waterImage.enabled = false;
+                cardShow.SetActive(false);
             }
         }
     }

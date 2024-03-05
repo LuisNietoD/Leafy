@@ -27,7 +27,18 @@ MonoBehaviour:
   transmute: 0
   activableInterface: 0
   recipeText:
-  - 1 x Terre<br>1 x Pot
+  - '<link="Stack,1:Pot,1:Terre"></link>
+
+    Premier pas dans l''agriculture, permet
+    des faire les premieres <color=yellow> <link="Plante">Plante</link></color>
+
+
+    Craft:
+
+    1
+    x <color=yellow> <link="Pot">Pot</link></color>
+
+    1 x <color=yellow> <link="Terre">Terre</link></color>'
   utilities:
   - cardName: Plant(Fournaise, Arbuste, Base)
     recipe: 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau

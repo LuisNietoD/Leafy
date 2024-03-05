@@ -9,10 +9,18 @@
       <change beforePath="$PROJECT_DIR$/Assets/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InfoManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/11-Plant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/11-Plant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/38-Generateur Thermique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/38-Generateur Thermique.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/5-Dirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/5-Dirt.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/6-Sand.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/6-Sand.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/7-Pot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/7-Pot.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/8-Seed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/8-Seed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/9-Infinite source.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/9-Infinite source.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WordHoverDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WordHoverDetector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +34,15 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BuyZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CursorManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FakeCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InfoManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Lever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PressInterface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SellZone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShowBigCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Slot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TutoDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WordHoverDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -156,7 +167,9 @@
       <workItem from="1709134745742" duration="21215000" />
       <workItem from="1709321089073" duration="10650000" />
       <workItem from="1709394302028" duration="3436000" />
-      <workItem from="1709482887800" duration="13036000" />
+      <workItem from="1709482887800" duration="13366000" />
+      <workItem from="1709556694579" duration="7691000" />
+      <workItem from="1709644940954" duration="12973000" />
     </task>
     <servers />
   </component>
