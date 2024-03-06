@@ -622,11 +622,11 @@ PrefabInstance:
     - target: {fileID: -7076129767065156862, guid: 77677a43a6446de478307ee8e1aa1b46, type: 3}
       propertyPath: fixedCard.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 0054fb984268fc84990b4dbfff3efc20, type: 2}
+      objectReference: {fileID: 11400000, guid: 4468210fad807c741af982b64f45accc, type: 2}
     - target: {fileID: -7076129767065156862, guid: 77677a43a6446de478307ee8e1aa1b46, type: 3}
       propertyPath: fixedCard.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: df6c2f45c0a881c4dacfe2c6b31343b0, type: 2}
+      objectReference: {fileID: 11400000, guid: 0df3d5eb65932494b935199bc72f94c1, type: 2}
     - target: {fileID: -7076129767065156862, guid: 77677a43a6446de478307ee8e1aa1b46, type: 3}
       propertyPath: fixedCard.Array.data[2]
       value: 
@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1819979330338786182, guid: 77677a43a6446de478307ee8e1aa1b46, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3300883229470890312, guid: 77677a43a6446de478307ee8e1aa1b46, type: 3}
       propertyPath: m_LocalPosition.x

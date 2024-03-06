@@ -11,7 +11,7 @@ namespace Leafy.Objects
         private CardUI cardUI;
         private Card card;
 
-        public Transmute(CardUI cardUI)
+        public Transmute(CardUI cardUI) : base()
         {
             this.cardUI = cardUI;
             card = this.cardUI.card;

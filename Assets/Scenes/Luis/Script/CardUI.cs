@@ -5,7 +5,6 @@ using Leafy.Manager;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.EventSystems;
 
 namespace Leafy.Objects
 {
@@ -120,6 +119,15 @@ namespace Leafy.Objects
             else if (card.inventory && behavior == null)
             {
                 behavior = new Inventory(this);
+            }
+            else if (card.machineSavoir && behavior == null)
+            {
+                behavior = new MachineSavoir(this);
+            }
+            else if (card.customBehavior && behavior == null)
+            {
+                if(card.behavior == "WateringCanBehavior")
+                    behavior = new WateringCanBehavior(this);
             }
             else if (behavior == null)
             {

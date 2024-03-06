@@ -32,12 +32,10 @@ namespace Leafy.Objects
 
         public override void OnDrag()
         {
-            Debug.Log("OnDrag");
         }
 
         public override void OnDrop()
         {
-            Debug.Log("OnDrop");
         }
 
         public override void OnClick()
@@ -51,12 +49,10 @@ namespace Leafy.Objects
 
         public override void OnHover()
         {
-            Debug.Log("OnHover");
         }
 
         public override void OnHoverStay()
         {
-            Debug.Log("OnHoverStay");
         }
         
         public override void StayAction()
@@ -72,7 +68,9 @@ namespace Leafy.Objects
 
             if (card.activators.Count <= 0 && !card.shakable && cardIDs.Count < card.inventorySize)
             {
-                elapsedTime += Time.deltaTime;
+                elapsedTime += Time.deltaTime * card.plantRate;
+                Debug.Log("Rate = " + card.plantRate);
+                Debug.Log(Mathf.RoundToInt(elapsedTime) + " " + cardIDs.Count + "   plaaaaaaaaaaaanntt");
                 if (elapsedTime >= card.harvestTime)
                 {
                     cardIDs.Add(card.drop.PickValue().ID);

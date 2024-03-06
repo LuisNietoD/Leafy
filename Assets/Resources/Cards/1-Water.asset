@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Eau
   ID: 1
-  artwork: {fileID: 21300000, guid: a413fa2347f7d9c44b3aee2e78a2e300, type: 3}
+  artwork: {fileID: 21300000, guid: cf09f25dc8260f94391e15d92bd124d0, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.5153079, g: 0.7283019, b: 0.55790675, a: 1}
   type: 0
@@ -26,6 +26,7 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  machineSavoir: 0
   recipeText:
   - '<link="Stack,1:Source,1:Seau"></link>
 
@@ -34,7 +35,7 @@ MonoBehaviour:
     et de les upgrades.
 
 
-    Craft:
+    Recette:
 
     1 x <color=yellow> <link="Source">Source</link></color>
 
@@ -47,7 +48,7 @@ MonoBehaviour:
     et de les upgrades.
 
 
-    Craft:
+    Recette:
 
     1 x <color=yellow> <link="Source infinie">Source
     infinie</link></color>
@@ -158,3 +159,4 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []

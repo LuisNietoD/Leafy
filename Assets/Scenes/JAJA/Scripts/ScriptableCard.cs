@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using Leafy.Data;
 using Leafy.Objects;
 using RNGNeeds;
+using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 public enum Card_Type
@@ -40,6 +42,13 @@ public class TransmuteRecipe
     public ProbabilityList<ScriptableCard> result;
 }
 
+[Serializable]
+public class SavoirList
+{
+    public int pointDeSavoir;
+    public List<int> result;
+}
+
 [CreateAssetMenuAttribute(fileName = "Scriptable Card", menuName = "My Game/ Scriptable Card")]
 public class ScriptableCard : ScriptableObject
 {
@@ -57,6 +66,8 @@ public class ScriptableCard : ScriptableObject
     public bool interfaces;
     public bool transmute;
     public bool activableInterface;
+    public bool customBehavior;
+    public bool machineSavoir;
 
     [TextArea(1,20)]
     public List<string> recipeText;
@@ -98,6 +109,9 @@ public class ScriptableCard : ScriptableObject
     public int maxEnergyStored;
     public int energyPerCraft;
     public List<TransmuteRecipe> transmuteList;
+
+    [Header("Machine a savoir")] public List<SavoirList> savoirList;
+    [Header("Custom Behavior")] public string behavior;
     
     public Texture2D GetCardIcon()
     {

@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InfoManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/11-Plant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/11-Plant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/38-Generateur Thermique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/38-Generateur Thermique.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/14-Arbuste.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/14-Arbuste.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/49-Cylindre de lithium.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/49-Cylindre de lithium.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/5-Dirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/5-Dirt.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/6-Sand.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/6-Sand.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/7-Pot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/7-Pot.asset" afterDir="false" />
@@ -18,9 +18,14 @@
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/9-Infinite source.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/9-Infinite source.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WordHoverDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WordHoverDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Peach Cake SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Peach Cake SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Editor/ScriptableCardEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Editor/ScriptableCardEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Transmute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Transmute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +37,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5879d8d225474494bcffdfe64965038e174000/1d/a337c6a7/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5879d8d225474494bcffdfe64965038e174000/9f/d09bb52d/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5879d8d225474494bcffdfe64965038e174000/c4/96e180dd/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BuyZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CursorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FakeCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InfoManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Lever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PressInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RainZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SellZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShowBigCard.cs" root0="FORCE_HIGHLIGHTING" />
@@ -169,7 +178,7 @@
       <workItem from="1709394302028" duration="3436000" />
       <workItem from="1709482887800" duration="13366000" />
       <workItem from="1709556694579" duration="7691000" />
-      <workItem from="1709644940954" duration="12973000" />
+      <workItem from="1709644940954" duration="25559000" />
     </task>
     <servers />
   </component>
@@ -192,6 +201,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scenes/Luis/Script/Transmute.cs</url>
+          <line>13</line>
+          <properties documentPath="D:\Projet\LeafyGit\Leafy\Assets\Scenes\Luis\Script\Transmute.cs" initialLine="13" containingFunctionPresentation="Constructor 'Transmute'">
+            <startOffsets>
+              <option value="286" />
+            </startOffsets>
+            <endOffsets>
+              <option value="290" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

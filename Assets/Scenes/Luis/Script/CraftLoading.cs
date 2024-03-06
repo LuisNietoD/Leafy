@@ -29,7 +29,6 @@ public class CraftLoading : MonoBehaviour
 
         loadImage.material.SetFloat("_RadialClip", Mathf.Lerp(360, 0, Mathf.Clamp01(elapsed/timeToCraft)));
         
-        Debug.Log(destroyStack + " dwadawopjdoidjaowjdoawijdoaiwjdoawjd");
 
         if (elapsed >= timeToCraft)
         {

@@ -1,8 +1,11 @@
-﻿using Unity.VisualScripting;
+﻿using System;
+using Leafy.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Leafy.Objects
 {
+    [Serializable]
     public abstract class CardBehavior
     {
         public abstract void Spawn();

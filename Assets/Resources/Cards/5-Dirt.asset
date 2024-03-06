@@ -33,10 +33,10 @@ MonoBehaviour:
     des <link="Vieille boite">Vieille boite</link></color>.
 
 
-    Craft:
+    Obtenu dans:
 
-    1 x
-    <color=yellow> <link="Vieille boite">Vieille boite</link></color>
+    1
+    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>
 
 '
   utilities:

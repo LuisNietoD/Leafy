@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using Leafy.Objects;
+using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(ScriptableCard))]
@@ -45,6 +46,10 @@ public class ScriptableCardEditor : Editor
     SerializedProperty preciseSlotIdProp;
     SerializedProperty recipeTextProp;
     SerializedProperty utilitiesProp;
+    SerializedProperty savoirProp;
+    SerializedProperty savoirListProp;
+    SerializedProperty customBehaviorProp;
+    SerializedProperty behaviorProp;
 
     private Texture2D finalBackground;
 
@@ -91,6 +96,10 @@ public class ScriptableCardEditor : Editor
         preciseSlotIdProp = serializedObject.FindProperty("preciseCard");
         recipeTextProp = serializedObject.FindProperty("recipeText");
         utilitiesProp = serializedObject.FindProperty("utilities");
+        savoirProp = serializedObject.FindProperty("machineSavoir");
+        savoirListProp = serializedObject.FindProperty("savoirList");
+        customBehaviorProp = serializedObject.FindProperty("customBehavior");
+        behaviorProp = serializedObject.FindProperty("behavior");
     }
 
     public override void OnInspectorGUI()
@@ -114,8 +123,11 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(interfaceProp);
         EditorGUILayout.PropertyField(transmuteProp);
         EditorGUILayout.PropertyField(activableInterfaceProp);
+        EditorGUILayout.PropertyField(customBehaviorProp);
         EditorGUILayout.PropertyField(recipeTextProp);
         EditorGUILayout.PropertyField(utilitiesProp);
+        EditorGUILayout.PropertyField(savoirProp);
+        
 
         // Display sell information
         if (sellableProp.boolValue)
@@ -173,6 +185,16 @@ public class ScriptableCardEditor : Editor
             }
 
             EditorGUILayout.PropertyField(transmuteListProp, new GUIContent("Transmute List"));
+        }
+
+        if (savoirProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(savoirListProp, new GUIContent("Savoir List"));
+        }
+        
+        if (customBehaviorProp.boolValue)
+        {
+            EditorGUILayout.PropertyField(behaviorProp, new GUIContent("Behavior"));
         }
 
         // Custom preview area

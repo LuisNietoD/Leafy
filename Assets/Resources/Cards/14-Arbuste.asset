@@ -26,6 +26,8 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
   recipeText:
   - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
   utilities:
@@ -38,7 +40,7 @@ MonoBehaviour:
   storeCard: 1
   inventorySize: 5
   shakable: 0
-  harvestTime: 2
+  harvestTime: 5
   drop:
     m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
     m_ProbabilityItems:
@@ -78,10 +80,241 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 3607545921
+    m_Seed: 1369586402
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453523515713363
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453523465493678
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453523416129791
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521667201807
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521617005514
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521566861701
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521516605350
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521467227920
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521170739119
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521120496341
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521070302100
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521020117225
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520970755589
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520147926169
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520097670009
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520047490430
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519997282541
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519947904722
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519545595482
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519495387439
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519445806694
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518434345944
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518384130524
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518333950590
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518283750670
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518206142328
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518155920011
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518105731450
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518055518710
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518006010621
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515598452190
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515547924551
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515314356801
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515264204106
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515214018232
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515084770900
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515034568795
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453514984354645
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453514934157459
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453514884655117
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513177099997
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513156815367
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513136631169
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513116429895
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513096228916
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513016834782
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512996622792
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512976432418
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512956210973
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512936023876
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512884828892
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512864633922
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512844418820
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512824230465
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512804818160
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511298366515
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511278183026
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511257982404
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511237791806
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511217569197
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511197447753
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511177193986
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511156996848
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511136812592
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511097761691
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511077569678
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511057384184
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511037183349
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511017618534
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453510731683226
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453510711486447
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453510692067111
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508786007527
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508765809664
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508691333958
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508671081292
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508651616163
       - m_Index: 0
         m_Time:
           Ticks: 638428259226989711
@@ -191,3 +424,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 
