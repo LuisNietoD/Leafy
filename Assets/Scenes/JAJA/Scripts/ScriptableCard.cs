@@ -24,7 +24,8 @@ public enum Card_Type
 public enum Machine
 {
     None,
-    Press
+    Press,
+    Genetic
 }
 
 [Serializable]

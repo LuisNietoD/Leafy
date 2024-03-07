@@ -23,9 +23,10 @@ MonoBehaviour:
   harvestable: 0
   inventory: 0
   evolve: 0
-  interfaces: 0
+  interfaces: 1
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
   machineSavoir: 0
   recipeText:
   - 1 x Pepite de Lithium(Slot de Press)
@@ -127,9 +128,11 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  interfaceList: []
+  interfaceList:
+  - {fileID: 4055373962459471328, guid: 42b13bdd2751a9141897b93f724665db, type: 3}
   requireEnergy: 0
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
   savoirList: []
+  behavior: 

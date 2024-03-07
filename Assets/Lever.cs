@@ -13,6 +13,7 @@ namespace Leafy.Objects
         public float t = 0;
         public bool cooldown;
         private CardGameInterface cardInterface;
+        public LayerMask layer;
 
         private void Start()
         {
@@ -21,14 +22,17 @@ namespace Leafy.Objects
 
         private void Update()
         {
+            
+            Debug.Log("ahdiahdi " + moving);
             if (!moving)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, layer);
 
                 if (hit.collider != null)
                 {
-                    if (hit.collider.transform == transform && Input.GetMouseButtonDown(0))
+                    Debug.Log(hit.collider.transform.name);
+                    if (hit.collider.transform == transform && Input.GetMouseButton(0))
                     {
                         moving = true;
                     }
@@ -40,15 +44,15 @@ namespace Leafy.Objects
                 t += Time.deltaTime;
                 float y;
                 if(t <= actionTime/2)
-                    y = Mathf.Lerp(0.3f, -0.3f, t / (actionTime / 2));
+                    y = Mathf.Lerp(0.39f, -0.39f, t / (actionTime / 2));
                 else
-                    y = Mathf.Lerp(-0.3f, 0.3f, (t-actionTime/2) / (actionTime / 2));
+                    y = Mathf.Lerp(-0.39f, 0.39f, (t-actionTime/2) / (actionTime / 2));
 
-                transform.localScale = new Vector3(0.3f, y, 0.3f);
+                transform.localScale = new Vector3(0.39f, y, 0.39f);
                 if (t > actionTime)
                 {
                     moving = false;
-                    transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+                    transform.localScale = new Vector3(0.39f, 0.39f, 0.39f);
                     t = 0;
                     cooldown = false;
                 }

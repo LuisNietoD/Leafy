@@ -69,8 +69,6 @@ namespace Leafy.Objects
             if (card.activators.Count <= 0 && !card.shakable && cardIDs.Count < card.inventorySize)
             {
                 elapsedTime += Time.deltaTime * card.plantRate;
-                Debug.Log("Rate = " + card.plantRate);
-                Debug.Log(Mathf.RoundToInt(elapsedTime) + " " + cardIDs.Count + "   plaaaaaaaaaaaanntt");
                 if (elapsedTime >= card.harvestTime)
                 {
                     cardIDs.Add(card.drop.PickValue().ID);
