@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f5780e0f6f5f7469259dd83fef1d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkToOpen: https://danlikesdelion.itch.io/it-seeks
+  linkToOpen: https://novaeka.itch.io/leafy
 --- !u!1 &263713428
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -2525}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 30, y: -2807.3794}
+  m_SizeDelta: {x: 100, y: 114.5805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263713430
 MonoBehaviour:
@@ -612,7 +612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 46.440796}
+  m_AnchoredPosition: {x: 0, y: 52.9}
   m_SizeDelta: {x: 749.30255, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488976237
@@ -639,15 +639,14 @@ MonoBehaviour:
     ont contribue a la conception de Leafy.\nEt a KAZKO pour le plugin RNGNeeds.\n\r\n\n-2D
     ARTIST-\r\nLAZZOUNI Marina Lead\r\nBENFAIDA Llina\r\nBLANZAT Claire\r\nBOUET
     Maena\r\nDIBLAN Anna\r\nDOMY Lisa\r\nESPIONOSA Anouchka\r\nGIBERT Jade\r\nJEANNIN
-    Chlo\xE9\r\nLAURENDON Judy\r\nLOPEZ Axel\r\nROCHET Alix\r\nSPINOSI Agathe\n\n\n-GAME
-    DESIGNER-\nNIETO Luis Lead\r\nBOUDOURESQUE Jeanne\r\nCARDOT R\xE9my\r\nGUILLOT
-    Auguste \n\n\r\n-UI / VFX ARTIST-\nBERKANE Mounia\n\r\n\r\n-DEVELOPER-\nNIETO
-    Luis Lead\r\nBOUDOURESQUE Jeanne\r\nCARDOT R\xE9my\r\nGUILLOT Auguste\r\nSOLIGNAC-MEURLARGE
-    Dylan\n\n\n-PRODUCER-\nMARTHOURET Elsa Lead\r\nLAZZOUNI Marina Lead\r\nESPIONOSA
-    Anouchka\r\nLOPEZ Axel"
+    Chloe\nLAURENDON Judy\r\nLOPEZ Axel\r\nROCHET Alix\r\nSPINOSI Agathe\n\n\n-GAME
+    DESIGNER-\nNIETO Luis Lead\r\nBOUDOURESQUE Jeanne\r\nCARDOT Remy\r\nGUILLOT Auguste
+    \n\n\r\n-UI / VFX ARTIST-\nBERKANE Mounia\n\r\n\r\n-DEVELOPER-\nNIETO Luis Lead\r\nBOUDOURESQUE
+    Jeanne\r\nCARDOT Remy\r\nGUILLOT Auguste\r\nSOLIGNAC-MEURLARGE Dylan\n\n\n-PRODUCER-\nMARTHOURET
+    Elsa Lead\r\nLAZZOUNI Marina Lead\r\nESPIONOSA Anouchka\r\nLOPEZ Axel"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
+  m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1015,8 +1014,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
+  m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1255,6 +1254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de396acc07785f4da11bb3b9d29d96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSave: {fileID: 0}
   image: {fileID: 1029312844}
   active: {r: 0, g: 0.6862745, b: 0.015686275, a: 1}
   normal: {r: 1, g: 1, b: 1, a: 1}

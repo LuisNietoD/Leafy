@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InfoManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllIn1SpriteShader/2DRenderer-URP-Package-2021.2+.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllIn1SpriteShader/2DRenderer-URP-Package.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Editor/ES3Asmdefs.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/Credit.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/Credit.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/Script/ButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/Script/ButtonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/Script/ItchBtnLink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/Script/ItchBtnLink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +32,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Lever.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PressInterface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/ChangeButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/FileExist.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SellZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Slot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WordHoverDetector.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,9 +72,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\prolu\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\prolu\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\prolu\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\Utilisateur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Utilisateur\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Utilisateur\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -157,6 +161,12 @@
       <workItem from="1709321089073" duration="10650000" />
       <workItem from="1709394302028" duration="3436000" />
       <workItem from="1709482887800" duration="13036000" />
+      <workItem from="1709556988778" duration="5994000" />
+      <workItem from="1709564808088" duration="3574000" />
+      <workItem from="1709569960479" duration="348000" />
+      <workItem from="1709728045607" duration="6933000" />
+      <workItem from="1709886493015" duration="711000" />
+      <workItem from="1709894089235" duration="10000" />
     </task>
     <servers />
   </component>
