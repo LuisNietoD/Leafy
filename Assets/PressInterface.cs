@@ -18,8 +18,11 @@ namespace Leafy.Objects
             
             Vector3 p = slot.transform.position;
             p.x += 2;
-            GameManager.instance.SpawnCard(p, Craft.press[slot.transform.GetChild(0).GetComponent<CardUI>().ID]);
-            Destroy(slot.transform.GetChild(0).gameObject);
+            if (Craft.press.ContainsKey(slot.transform.GetChild(0).GetComponent<CardUI>().ID))
+            {
+                GameManager.instance.SpawnCard(p, Craft.press[slot.transform.GetChild(0).GetComponent<CardUI>().ID]);
+                Destroy(slot.transform.GetChild(0).gameObject);
+            }
 
         }
     }

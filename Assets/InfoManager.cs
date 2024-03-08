@@ -7,8 +7,7 @@ using UnityEngine;
 public class InfoManager : MonoBehaviour
 {
     public GameObject infoCanvas;
-    public TextMeshProUGUI title;
-    public TextMeshProUGUI recipe;
+    public ShowBigCard recipeMenu;
     public GameObject buttonNext;
     public LayerMask cardLayer;
 
@@ -34,12 +33,10 @@ public class InfoManager : MonoBehaviour
                     cardName = info.cardName;
                     recipeList = info.recipes;
                     
-                    title.text = cardName;
-                    recipe.text = recipeList[0];
                     index = 0;
                     buttonNext.SetActive(recipeList.Count > 1); 
                     infoCanvas.SetActive(true);
-                    
+                    recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), 0);
                 }
             }
         }
@@ -57,8 +54,8 @@ public class InfoManager : MonoBehaviour
                     utilityList = info.utility;
                     
                     
-                    title.text = utilityList[0].cardName;
-                    recipe.text = utilityList[0].recipe;
+                    //title.text = utilityList[0].cardName;
+                    //recipe.text = utilityList[0].recipe;
                     index = 0;
                     buttonNext.SetActive(utilityList.Count > 1); 
                     infoCanvas.SetActive(true);
@@ -79,7 +76,8 @@ public class InfoManager : MonoBehaviour
             if (index < 0)
                 index = recipeList.Count - 1;
             
-            recipe.text = recipeList[index];
+            recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), index);
+            //recipe.text = recipeList[index];
         }
         else
         {
@@ -88,12 +86,12 @@ public class InfoManager : MonoBehaviour
             if (index < 0)
                 index = utilityList.Count - 1;
             
-            title.text = utilityList[index].cardName;
-            recipe.text = utilityList[index].recipe;
+            //title.text = utilityList[index].cardName;
+            //recipe.text = utilityList[index].recipe;
         }
     }
 
-    public void Previous()
+    /*public void Previous()
     {
         index--;
         if(isRecipe)
@@ -103,5 +101,5 @@ public class InfoManager : MonoBehaviour
             title.text = utilityList[index].cardName;
             recipe.text = utilityList[index].recipe;
         }
-    }
+    }*/
 }

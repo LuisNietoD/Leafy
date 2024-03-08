@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Leafy.Objects;
 using RNGNeeds;
 using UnityEngine;
 
@@ -43,6 +44,11 @@ namespace Leafy.Data
         public bool stockEmpty;
         public List<string> recipes;
         public List<utility> utilities;
+        public bool machineSavoir;
+        public List<SavoirList> SavoirList;
+        public bool customBehavior;
+        public string behavior;
+        public float plantRate = 1;
         
 
         public Card(ScriptableCard card)
@@ -61,8 +67,10 @@ namespace Leafy.Data
             transmute = card.transmute;
             requiereEnergy = card.requireEnergy;
             activableInterface = card.activableInterface;
+            customBehavior = card.customBehavior;
             recipes = card.recipeText;
             utilities = card.utilities;
+            machineSavoir = card.machineSavoir;
 
             if (harvestable)
             {
@@ -102,6 +110,16 @@ namespace Leafy.Data
                     actualEnergy = 0;
                 }
                 transmuteRecipes = new List<TransmuteRecipe>(card.transmuteList);
+            }
+
+            if (machineSavoir)
+            {
+                SavoirList = card.savoirList;
+            }
+
+            if (customBehavior)
+            {
+                behavior = card.behavior;
             }
         }
     }

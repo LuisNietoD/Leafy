@@ -52,6 +52,9 @@ namespace Leafy.Data
                                 case Machine.Press:
                                     Craft.press.Add(recipe.recipe[0], card.ID);
                                     break;
+                                case Machine.Genetic:
+                                    Craft.gen.Add(card.ID, recipe.recipe);
+                                    break;
                             }
                         }
                     }
@@ -70,6 +73,11 @@ namespace Leafy.Data
         public static ScriptableCard GetCardByID(int targetID)
         {
             return Cards.Find(card => card.ID == targetID);
+        }
+        
+        public static ScriptableCard GetCardByName(string name)
+        {
+            return Cards.Find(card => card.name.ToLower() == name.ToLower());
         }
 
         public static ScriptableCard GetRandomCard()

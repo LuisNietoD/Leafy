@@ -27,7 +27,16 @@ MonoBehaviour:
   transmute: 0
   activableInterface: 0
   recipeText:
-  - Secouez Vieille Boite
+  - '<link="Stack,1:Vieille boite"></link>
+
+    Obtenu aleatoirement en secouant
+    des <link="Vieille boite">Vieille boite</link></color>.
+
+
+    Recette:
+
+    1
+    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
   - Obtenu dans les booster
   utilities:
   - cardName: Pot Rempli

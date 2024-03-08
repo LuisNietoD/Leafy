@@ -27,7 +27,23 @@ MonoBehaviour:
   transmute: 0
   activableInterface: 0
   recipeText:
-  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  - '<link="Stack,1:Pot Rempli,1:Graine,1:Eau"></link>
+
+    Permet d''obtenir aleatoirement
+    l''une des trois plantes suivante: <color=yellow> <link="Plante fournaise">Plante
+    Fournaise</link></color>-<color=yellow> <link="Arbuste">Arbuste</link></color>-<color=yellow>
+    <link="Plante de base">Plante de base</link></color>
+
+
+    Recette:
+
+    1 x
+    <color=yellow> <link="Pot Rempli">Pot Rempli</link></color>
+
+    1 x <color=yellow>
+    <link="Graine">Graine</link></color>
+
+    1 x <color=yellow> <link="Eau">Eau</link></color>'
   utilities:
   - cardName: Plant(Fournaise, Arbuste, Base)
     recipe: Pousse seule en une plante aleatoire

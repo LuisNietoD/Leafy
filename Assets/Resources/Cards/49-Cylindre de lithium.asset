@@ -26,11 +26,12 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  machineSavoir: 0
   recipeText:
   - 1 x Pepite de Lithium(Slot de Press)
   utilities: []
   price: 2
-  timeToCraft: 0
+  timeToCraft: 2
   infinite: 0
   life: 0
   storeCard: 0
@@ -131,3 +132,4 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
