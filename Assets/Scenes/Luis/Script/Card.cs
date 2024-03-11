@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Leafy.Objects;
 using RNGNeeds;
 using UnityEngine;
 
 namespace Leafy.Data
 {
+    [Serializable]
     public class Card
     {
         public string name;

@@ -98,7 +98,9 @@ namespace Leafy.Objects
                 if (elapsedTime >= card.harvestTime - (card.harvestTime/10 * card.rateLevel))
                 {
                     cardIDs.Add(card.drop.PickValue().ID);
-                    if(Random.Range(0f, 1f) < 0.1f * card.productivityLevel)
+                    float r = Random.Range(0f, 1f);
+                    Debug.Log(r);
+                    if(r < 0.1f * card.productivityLevel)
                         cardIDs.Add(card.drop.PickValue().ID);
                     elapsedTime = 0;
                 }

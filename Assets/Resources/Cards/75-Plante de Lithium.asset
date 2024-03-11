@@ -41,12 +41,18 @@ MonoBehaviour:
   storeCard: 1
   inventorySize: 5
   shakable: 0
-  harvestTime: 5
+  harvestTime: 30
   drop:
     m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
     m_ProbabilityItems:
     - m_Value: {fileID: 11400000, guid: 8d87b14ea38da6a47852615587c3e0ef, type: 2}
-      m_BaseProbability: 1
+      m_BaseProbability: 0.99
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 1b34d787706fc0340877146fcb6b0a0b, type: 2}
+      m_BaseProbability: 0.00999999
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}
@@ -81,10 +87,19 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 2827617773
+    m_Seed: 2076988007
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457773533245655
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457773233250656
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457772933241991
       - m_Index: 0
         m_Time:
           Ticks: 638453829824802798
@@ -383,6 +398,8 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0

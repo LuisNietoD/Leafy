@@ -41,7 +41,7 @@ MonoBehaviour:
   storeCard: 1
   inventorySize: 5
   shakable: 0
-  harvestTime: 5
+  harvestTime: 30
   drop:
     m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
     m_ProbabilityItems:
@@ -81,10 +81,151 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 220129338
+    m_Seed: 3611708155
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457756993918148
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457756943724698
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457756893520464
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457756843322007
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457756793849621
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457743097893279
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457743090478855
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457743047694177
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457743045862161
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457726822547880
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457726815952788
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457726772347412
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457726771323310
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457691469058122
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457691419009786
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634588794507
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634588794507
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634543770163
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634543770163
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634498470167
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634498470167
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634453176247
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634453176247
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634408105627
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634408105627
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634348126414
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634348126414
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634303103825
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634303103825
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634257782589
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634257782589
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634212780167
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634212780167
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634167458363
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634167458363
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634014776489
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457634014776489
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633969783005
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633969783005
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633924467834
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633924467834
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633879447283
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633879447283
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633834108430
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633822797941
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633783782862
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457633778290499
       - m_Index: 0
         m_Time:
           Ticks: 638456024370473233
@@ -479,6 +620,8 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0

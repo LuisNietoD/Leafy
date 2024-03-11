@@ -10,6 +10,7 @@ namespace Leafy.Objects
 {
     public class CardUI : MonoBehaviour
     {
+        [ES3Serializable]
         public Card card;
         public CardBehavior behavior;
         public GameObject loader;
@@ -48,7 +49,7 @@ namespace Leafy.Objects
 
         internal CardUI parent;
         internal CardUI child;
-        internal int ID;
+        public int ID = -1;
 
         private GameObject _interface;
 
@@ -100,6 +101,9 @@ namespace Leafy.Objects
         {
             behavior?.Spawn();
             uniqueID = CardUtils.ID++;
+            
+            if(card != null)
+                UpdateCardInfo(card);
         }
 
         public void UpdateCardInfo(Card c)
