@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-
+    public GameObject gameSave;
     public GameObject image;
     public Color active;
     public Color normal;
@@ -41,7 +41,8 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             case ButtonType.JOUER:
                 Debug.Log("Jouer");
-                SceneManager.LoadScene(2, LoadSceneMode.Single);
+                gameSave.SetActive(true);
+                //SceneManager.LoadScene(2, LoadSceneMode.Single);
                 Click.Play();
             break;
             case ButtonType.CREDITS:

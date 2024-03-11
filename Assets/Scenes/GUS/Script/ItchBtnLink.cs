@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 public class ItchBtnLink : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string linkToOpen = "https://danlikesdelion.itch.io/it-seeks";
+    public string linkToOpen = "https://novaeka.itch.io/leafy";
     
     void Start()
     {
