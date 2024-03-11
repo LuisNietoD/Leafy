@@ -15,6 +15,7 @@ namespace Leafy.Manager
 
         public float maxX;
         public float maxY;
+        public Collider2D board;
         
         
         public float snapX = 1;
@@ -85,7 +86,7 @@ namespace Leafy.Manager
                 
 
                 int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
-                if (craft >= 0)
+                if (craft >= 0 && _draggedCardUI.ID != 11)
                 {
                     LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
                 }
@@ -137,7 +138,9 @@ namespace Leafy.Manager
             {
                 time = 0;
             }
-            
+
+            maxX = board.bounds.max.x - 2;
+            maxY = board.bounds.max.y - 3;
         }
 
         private void SnapCardToGrid(Transform obj)

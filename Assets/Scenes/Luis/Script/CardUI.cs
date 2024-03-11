@@ -470,7 +470,7 @@ namespace Leafy.Objects
 
             if (c != null)
             {
-                if ((card.harvestable && c.card.ID == card.ID) || !card.harvestable)
+                if ((card.harvestable && c.card.ID == card.ID) || !card.harvestable && card.ID != 11)
                     parent = c;
             }
             else
