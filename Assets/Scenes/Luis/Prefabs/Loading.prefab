@@ -99,11 +99,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stack: []
-  cardPrefab: {fileID: 1819979330338786182, guid: dbc087cb741d81749bd1daf78187a172, type: 3}
   drop: {fileID: 0}
   timeToCraft: 0
   elapsed: 0
   loadImage: {fileID: 2357177745476882431}
+  destroyStack: 0
+  multipleCards: 0
+  toCraft: 
+  parent: {fileID: 0}
 --- !u!1 &8746961514154066203
 GameObject:
   m_ObjectHideFlags: 0

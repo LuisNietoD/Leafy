@@ -49,6 +49,12 @@ namespace Leafy.Data
         public bool customBehavior;
         public string behavior;
         public float plantRate = 1;
+        public bool upgradable;
+        public int rateLevel;
+        public int productivityLevel;
+        public int storageLevel;
+        public bool precise;
+        public List<ScriptableCard> preciseList;
         
 
         public Card(ScriptableCard card)
@@ -71,6 +77,9 @@ namespace Leafy.Data
             recipes = card.recipeText;
             utilities = card.utilities;
             machineSavoir = card.machineSavoir;
+            upgradable = card.upgradable;
+            precise = card.preciseSpawn;
+            preciseList = card.preciseList;
 
             if (harvestable)
             {
@@ -121,6 +130,8 @@ namespace Leafy.Data
             {
                 behavior = card.behavior;
             }
+            
+            
         }
     }
 }

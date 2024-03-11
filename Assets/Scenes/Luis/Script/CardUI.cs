@@ -40,6 +40,9 @@ namespace Leafy.Objects
         public GameObject sellable;
         public TextMeshPro price;
         public SpriteRenderer priceIcon;
+        public SpriteRenderer speedIcon;
+        public SpriteRenderer growIcon;
+        public SpriteRenderer stockIcon;
 
         public GameObject interfaceSlot;
 
@@ -78,12 +81,19 @@ namespace Leafy.Objects
             sellable = transform.Find("MODEL/SELLABLE").gameObject;
             priceIcon = transform.Find("MODEL/SELLABLE/ICON").GetComponent<SpriteRenderer>();
             price = transform.Find("MODEL/SELLABLE/PRICE").GetComponent<TextMeshPro>();
+            speedIcon = transform.Find("MODEL/SPEEDICON").GetComponent<SpriteRenderer>();
+            growIcon = transform.Find("MODEL/GROWICON").GetComponent<SpriteRenderer>();
+            stockIcon = transform.Find("MODEL/STOCKICON").GetComponent<SpriteRenderer>();
+
             
             energy.SetActive(false);
             noEnergy.SetActive(false);
             inventory.SetActive(false);
             sellable.SetActive(false);
-
+            speedIcon.enabled = false;
+            growIcon.enabled = false;
+            stockIcon.enabled = false;
+            
         }
 
         private void Start()
@@ -173,6 +183,9 @@ namespace Leafy.Objects
             shadow.sortingOrder = id - 1;
             priceIcon.sortingOrder = id;
             price.sortingOrder = id;
+            speedIcon.sortingOrder = id;
+            growIcon.sortingOrder = id;
+            stockIcon.sortingOrder = id;
         }
 
         private void FixedUpdate()
@@ -212,6 +225,19 @@ namespace Leafy.Objects
                     CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
                 }
             }
+
+            if (card.rateLevel > 0)
+            {
+                speedIcon.enabled = true;
+            }
+            if (card.storageLevel > 0)
+            {
+                stockIcon.enabled = true;
+            }
+            if (card.productivityLevel > 0)
+            {
+                growIcon.enabled = true;
+            }
         }
 
         public float pushForce = 1.0f;
@@ -219,7 +245,13 @@ namespace Leafy.Objects
 
         public void PushCard(Vector2 force)
         {
+            float maxX = GameManager.instance.maxX;
+            float maxY = GameManager.instance.maxY;
+            
+            
             transform.Translate(force);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -maxX, maxX),
+                Mathf.Clamp(transform.position.y, -maxY, maxY), transform.position.z);
         }
 
         private void TestCollision()

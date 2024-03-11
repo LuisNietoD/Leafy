@@ -55,6 +55,9 @@ namespace Leafy.Data
                                 case Machine.Genetic:
                                     Craft.gen.Add(card.ID, recipe.recipe);
                                     break;
+                                case Machine.Mixer:
+                                    Craft.mixer.Add(card.ID, recipe.recipe);
+                                    break;
                             }
                         }
                     }

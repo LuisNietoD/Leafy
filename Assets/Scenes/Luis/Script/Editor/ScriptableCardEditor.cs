@@ -50,6 +50,9 @@ public class ScriptableCardEditor : Editor
     SerializedProperty savoirListProp;
     SerializedProperty customBehaviorProp;
     SerializedProperty behaviorProp;
+    SerializedProperty upgradableProp;
+    SerializedProperty preciseProp;
+    SerializedProperty preciseListProp;
 
     private Texture2D finalBackground;
 
@@ -100,6 +103,9 @@ public class ScriptableCardEditor : Editor
         savoirListProp = serializedObject.FindProperty("savoirList");
         customBehaviorProp = serializedObject.FindProperty("customBehavior");
         behaviorProp = serializedObject.FindProperty("behavior");
+        upgradableProp = serializedObject.FindProperty("upgradable");
+        preciseProp = serializedObject.FindProperty("preciseSpawn");
+        preciseListProp = serializedObject.FindProperty("preciseList");
     }
 
     public override void OnInspectorGUI()
@@ -127,6 +133,8 @@ public class ScriptableCardEditor : Editor
         EditorGUILayout.PropertyField(recipeTextProp);
         EditorGUILayout.PropertyField(utilitiesProp);
         EditorGUILayout.PropertyField(savoirProp);
+        EditorGUILayout.PropertyField(upgradableProp);
+        
         
 
         // Display sell information
@@ -154,6 +162,9 @@ public class ScriptableCardEditor : Editor
             EditorGUILayout.PropertyField(harvestTimeProp, new GUIContent("Harvest Time"));
             EditorGUILayout.PropertyField(dropProp, new GUIContent("Drop"));
             EditorGUILayout.PropertyField(activatorsProp, new GUIContent("Activators"));
+            EditorGUILayout.PropertyField(preciseProp);
+            if(preciseProp.boolValue)
+                EditorGUILayout.PropertyField(preciseListProp);
         }
 
         if (inventoryProp.boolValue)

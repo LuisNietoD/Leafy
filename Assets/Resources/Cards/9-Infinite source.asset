@@ -26,6 +26,9 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
   - '<link="Stack,4:Source"></link>
 
@@ -115,7 +118,9 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
-  activators: 03000000
+  activators: 0300000050000000
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -169,3 +174,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 

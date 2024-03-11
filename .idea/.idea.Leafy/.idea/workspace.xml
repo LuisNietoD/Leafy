@@ -1,22 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Lever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lever.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PressInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PressInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BuyZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BuyZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CursorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CursorManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CursorManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CursorManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FakeCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/FakeCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FakeCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/FakeCard.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneticInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GeneticInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneticInterface.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GeneticInterface.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfoManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lever.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Lever.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lever.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Lever.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PressInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/PressInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PressInterface.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/PressInterface.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RainZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/RainZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RainZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/RainZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/12-Base plant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/12-Base plant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/14-Arbuste.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/14-Arbuste.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/18-Plante fournaise.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/18-Plante fournaise.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/3-Bucket.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/3-Bucket.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/44-Chest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/44-Chest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/45-IronChest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/45-IronChest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/46-Bidon d'eau.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/46-Bidon d'eau.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/47-Chateau d'eau.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/47-Chateau d'eau.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/48-Batterie basique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/48-Batterie basique.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/54-Modificateur Genetique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/54-Modificateur Genetique.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/68-Plante de Fer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/68-Plante de Fer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/69-Plante de Zinc.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/69-Plante de Zinc.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/70-Plante de Plomb.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/70-Plante de Plomb.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/71-Plante de Cuivre.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/71-Plante de Cuivre.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/72-Plante d'Aluminium.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/72-Plante d'Aluminium.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/73-Plante d'Argent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/73-Plante d'Argent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/74-Plante d'Or.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/74-Plante d'Or.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/75-Plante de Lithium.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/75-Plante de Lithium.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/76-Plante de Terre.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/76-Plante de Terre.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/77-Plante de Sable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/77-Plante de Sable.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/78-Plante de Charbon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/78-Plante de Charbon.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Peach Cake SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Peach Cake SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/LeverInterface.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/LeverInterface.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/Loading.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/Loading.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Craft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Craft.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Editor/ScriptableCardEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Editor/ScriptableCardEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/UI_levier_polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/UI_levier_polish.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SellZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/SellZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SellZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/SellZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShowBigCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ShowBigCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ShowBigCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ShowBigCard.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Slot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Slot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutoDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/TutoDisplayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutoDisplayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/TutoDisplayer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WordHoverDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/WordHoverDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WordHoverDetector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/WordHoverDetector.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,21 +83,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5879d8d225474494bcffdfe64965038e174000/1d/a337c6a7/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5879d8d225474494bcffdfe64965038e174000/9f/d09bb52d/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5879d8d225474494bcffdfe64965038e174000/c4/96e180dd/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/BuyZone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CursorManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FakeCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GeneticInterface.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InfoManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Lever.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PressInterface.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RainZone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MixeurInterface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SellZone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ShowBigCard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Slot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TutoDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WordHoverDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SpaceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SpaceObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RectMask2D.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -171,7 +214,9 @@
       <workItem from="1709482887800" duration="13366000" />
       <workItem from="1709556694579" duration="7691000" />
       <workItem from="1709644940954" duration="28595000" />
-      <workItem from="1709837049918" duration="1532000" />
+      <workItem from="1709837049918" duration="1713000" />
+      <workItem from="1709839398899" duration="492000" />
+      <workItem from="1709906098116" duration="13488000" />
     </task>
     <servers />
   </component>

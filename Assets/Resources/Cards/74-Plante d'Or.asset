@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Plante d'Or
   ID: 74
-  artwork: {fileID: 21300000, guid: 0f8b8a9488ff8114c9e2bfffa900fe48, type: 3}
+  artwork: {fileID: 21300000, guid: 635d1588f0ad28e47a7b7c3188e012ff, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
@@ -28,6 +28,7 @@ MonoBehaviour:
   activableInterface: 0
   customBehavior: 0
   machineSavoir: 0
+  upgradable: 1
   recipeText:
   - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
   utilities:
@@ -80,10 +81,274 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 2827617773
+    m_Seed: 664864527
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090212873786
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090191353557
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090191353557
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090162698996
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090141002108
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090141002108
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090090844023
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090090844023
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090040697984
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456090040697984
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089990448558
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089990448558
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089716446829
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089666214605
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089616033470
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089565854918
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089515647443
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089465443260
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089415244947
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089365037658
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089314861779
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456089264635449
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088949417260
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088899247897
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088849029314
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088798814562
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088748672504
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088698431458
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088648214459
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088598034214
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088547810228
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088497644027
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088482625305
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088482625305
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088432424227
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088432424227
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088382238515
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088382238515
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088313236494
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088313236494
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088294037353
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088263050166
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088263050166
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088243817386
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088212846350
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088212846350
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088162631811
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088162631811
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088149621132
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088112414424
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088112414424
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088099458202
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088049250569
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088001828675
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456088001828675
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087999007331
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087951638058
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087951638058
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087948828611
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087901426912
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087901426912
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087900012911
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087898617029
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087851232835
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087849825095
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087848415246
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087847213125
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087801028278
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087799726689
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087798234006
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087797011782
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087750829790
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087749424731
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087748029949
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087746815613
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087700613036
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087699272552
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087697838896
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456087697474130
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456024369115247
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456024275871559
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456024225648094
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456024175440697
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456023916084777
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456022665217011
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456022615012020
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456022564807918
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456022514646996
       - m_Index: 0
         m_Time:
           Ticks: 638453829824802798

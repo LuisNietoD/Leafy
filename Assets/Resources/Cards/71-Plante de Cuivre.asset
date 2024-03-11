@@ -28,6 +28,7 @@ MonoBehaviour:
   activableInterface: 0
   customBehavior: 0
   machineSavoir: 0
+  upgradable: 1
   recipeText:
   - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
   utilities:

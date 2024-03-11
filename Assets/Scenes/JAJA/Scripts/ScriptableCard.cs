@@ -25,7 +25,8 @@ public enum Machine
 {
     None,
     Press,
-    Genetic
+    Genetic,
+    Mixer
 }
 
 [Serializable]
@@ -69,6 +70,7 @@ public class ScriptableCard : ScriptableObject
     public bool activableInterface;
     public bool customBehavior;
     public bool machineSavoir;
+    public bool upgradable;
 
     [TextArea(1,20)]
     public List<string> recipeText;
@@ -89,6 +91,8 @@ public class ScriptableCard : ScriptableObject
     public float harvestTime;
     public ProbabilityList<ScriptableCard> drop;
     public List<int> activators;
+    public bool preciseSpawn;
+    public List<ScriptableCard> preciseList;
 
     [Header("Inventory information")] 
     public int slotAmount;

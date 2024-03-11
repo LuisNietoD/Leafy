@@ -12,6 +12,9 @@ namespace Leafy.Manager
         
         public LayerMask cardLayer;
         public GameObject cardPrefab;
+
+        public float maxX;
+        public float maxY;
         
         
         public float snapX = 1;
@@ -65,7 +68,6 @@ namespace Leafy.Manager
                 });
                 _hoveredCardUI = null;
                 CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
-                //add event for update craft loader
             }
             //Drop the dragged card
             else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
@@ -78,6 +80,8 @@ namespace Leafy.Manager
                 
                 _draggedCardUI.behavior?.OnDrop();
                 _draggedCardUI.Drop(_hoveredCardUI);
+                _draggedCardUI.transform.position = new Vector3(Mathf.Clamp(_draggedCardUI.transform.position.x, -maxX, maxX),
+                    Mathf.Clamp(_draggedCardUI.transform.position.y, -maxY, maxY), _draggedCardUI.transform.position.z);
                 
 
                 int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
@@ -319,6 +323,7 @@ namespace Leafy.Manager
 
                     return cardUI;
                 }
+                
                 if(hit.collider.TryGetComponent(out Booster b))
                 {
                     _hoveredBooster = b.gameObject;
@@ -326,6 +331,28 @@ namespace Leafy.Manager
                 else
                 {
                     _hoveredBooster = null;
+                }
+
+                if (hit.collider.TryGetComponent(out SpaceObject s))
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        CardUI c = SpawnCardRef(s.transform.position, s.cardID);
+                        Destroy(s.gameObject);
+
+                        c.SetDragged();
+                        c.transform.parent = null;
+                        _draggedCardUI = c;
+                        _draggedCardUI.behavior?.OnDrag();
+                        CardUtils.ApplyMethodOnStack(_draggedCardUI, card =>
+                        {
+                            card.BringToFront();
+                            card.ChangeID(ID++);
+                        });
+                        _hoveredCardUI = null;
+                        CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
+                        return null;
+                    }
                 }
             }
             else
