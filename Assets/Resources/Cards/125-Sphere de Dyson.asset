@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 125-Sphere de Dyson
   m_EditorClassIdentifier: 
-  name: Soleil
-  ID: 124
+  name: Sphere de Dyson
+  ID: 125
   artwork: {fileID: 21300000, guid: 327e2b9cb8fdd89438cb2186479e8fce, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
   type: 6
   sellable: 1
-  craftable: 0
+  craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 4
-    recipe: 7a0000007a000000210000002100000021000000210000006600000066000000
+    recipe: 7a0000007a0000007a0000007a000000210000002100000066000000660000007a0000007a0000007a0000007a000000
   evolveTime: 0
   evolutions:
     m_PLID: 
