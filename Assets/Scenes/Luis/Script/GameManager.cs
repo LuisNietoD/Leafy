@@ -66,6 +66,7 @@ namespace Leafy.Manager
                 {
                     card.BringToFront();
                     card.ChangeID(ID++);
+                    card.UpdateRenderLayer(SortingLayer.NameToID("HUD"));
                 });
                 _hoveredCardUI = null;
                 CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
@@ -91,7 +92,11 @@ namespace Leafy.Manager
                     LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
                 }
 
-                CardUtils.ApplyMethodOnStack(_draggedCardUI, c => c.dragged = false);
+                CardUtils.ApplyMethodOnStack(_draggedCardUI, c =>
+                {
+                    c.dragged = false; 
+                    c.UpdateRenderLayer(SortingLayer.NameToID("Card"));
+                });
                 CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrop());
 
                 
@@ -141,6 +146,14 @@ namespace Leafy.Manager
 
             maxX = board.bounds.max.x - 2;
             maxY = board.bounds.max.y - 3;
+
+            if (_draggedCardUI != null)
+            {
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    SortStack();
+                }
+            }
         }
 
         private void SnapCardToGrid(Transform obj)
@@ -302,6 +315,39 @@ namespace Leafy.Manager
                     _draggedBooster.transform.position = new Vector3(position.x, position.y, z);
                 }
             }
+        }
+
+        public void SortStack()
+        {
+            List<CardUI> cards = CardUtils.GetStackCardList(_draggedCardUI);
+            cards.Sort((card1, card2) => card1.ID.CompareTo(card2.ID));
+
+            foreach (var c in cards)
+            {
+                c.SetParent(null);
+            }
+            
+            //Rearrange parent based on list
+            cards[0].SetParent(null);
+            cards[0].ChangeID(ID++);
+            for (int i = 1; i < cards.Count; i++)
+            {
+                cards[i].SetParent(cards[i-1]);
+                cards[i].ChangeID(ID++);
+            }
+            cards[0].child = cards[1];
+            
+            //Take the first card of the list has dragged
+            cards[0].transform.parent = null;
+            cards[0].SetDragged();
+            _draggedCardUI = cards[0];
+            CardUtils.ApplyMethodOnStack(cards[0], card =>
+            {
+                card.BringToFront();
+                card.UpdateRenderLayer(SortingLayer.NameToID("HUD"));
+            });
+            _hoveredCardUI = null;
+            CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
         }
 
         /// <summary>

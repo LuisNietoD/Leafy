@@ -26,7 +26,8 @@ public enum Machine
     None,
     Press,
     Genetic,
-    Mixer
+    Mixer,
+    Assembleur
 }
 
 [Serializable]

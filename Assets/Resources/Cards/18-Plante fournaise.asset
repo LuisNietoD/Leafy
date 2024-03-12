@@ -159,6 +159,8 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -2556,7 +2558,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1400000014000000140000001400000014000000
+  - recipe: 140000001400000014000000
     resultAmount: 1
     result:
       m_PLID: cbdfc328-c6ee-4185-888e-8048214ccb35
@@ -3729,7 +3731,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1500000015000000150000001500000015000000
+  - recipe: 150000001500000015000000
     resultAmount: 1
     result:
       m_PLID: 414055b4-87e7-42af-8bbc-c26ef18cf2ce
@@ -4902,7 +4904,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1600000016000000160000001600000016000000
+  - recipe: 160000001600000016000000
     resultAmount: 1
     result:
       m_PLID: c8172593-2435-4b3e-8c29-7af3498116c0
@@ -6075,7 +6077,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1700000017000000170000001700000017000000
+  - recipe: 170000001700000017000000
     resultAmount: 1
     result:
       m_PLID: de194f78-72c1-4ea9-a809-23e9aac32b1c
@@ -7248,7 +7250,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1900000019000000190000001900000019000000
+  - recipe: 190000001900000019000000
     resultAmount: 1
     result:
       m_PLID: efa9acac-3335-4ebc-a5ee-0116d32aafc6
@@ -8421,7 +8423,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1b0000001b0000001b0000001b0000001b000000
+  - recipe: 1b0000001b0000001b000000
     resultAmount: 1
     result:
       m_PLID: 34e0aa37-915f-4601-a9b6-0e2a94030990
@@ -9594,7 +9596,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 1a0000001a0000001a0000001a0000001a000000
+  - recipe: 1a0000001a0000001a000000
     resultAmount: 1
     result:
       m_PLID: c01a5ca6-aef2-4de3-8014-3a9d834125da
@@ -10767,7 +10769,7 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 5400000054000000540000005400000054000000
+  - recipe: 540000005400000054000000
     resultAmount: 1
     result:
       m_PLID: c5db5a8c-95b6-419a-8459-16ac98746bf2
@@ -11940,10 +11942,10 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
-  - recipe: 5700000057000000570000005700000057000000
+  - recipe: 570000005700000057000000
     resultAmount: 1
     result:
-      m_PLID: c01a5ca6-aef2-4de3-8014-3a9d834125da
+      m_PLID: a37ace19-bf0f-4c07-adf2-979a956ea38a
       m_ProbabilityItems:
       - m_Value: {fileID: 11400000, guid: 3914f603127a2f842886a64d4c5b21e0, type: 2}
         m_BaseProbability: 1

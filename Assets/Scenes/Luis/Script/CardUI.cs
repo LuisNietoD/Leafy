@@ -47,8 +47,8 @@ namespace Leafy.Objects
 
         public GameObject interfaceSlot;
 
-        internal CardUI parent;
-        internal CardUI child;
+        public CardUI parent;
+        public CardUI child;
         public int ID = -1;
 
         private GameObject _interface;
@@ -99,11 +99,13 @@ namespace Leafy.Objects
 
         private void Start()
         {
-            behavior?.Spawn();
             uniqueID = CardUtils.ID++;
             
             if(card != null)
                 UpdateCardInfo(card);
+
+            SpawnCollision();
+            behavior?.Spawn();
         }
 
         public void UpdateCardInfo(Card c)
@@ -151,12 +153,15 @@ namespace Leafy.Objects
 
             foreach (GameObject i in card.interfaceList)
             {
-                GameObject g = Instantiate(i, transform.position, Quaternion.identity);
-                g.transform.SetParent(transform);
-                g.transform.localPosition = Vector3.zero;
-                g.name = "INTERFACE";
+                if (interfaceSlot == null)
+                {
+                    GameObject g = Instantiate(i, transform.position, Quaternion.identity);
+                    g.transform.SetParent(transform);
+                    g.transform.localPosition = Vector3.zero;
+                    g.name = "INTERFACE";
 
-                interfaceSlot = g;
+                    interfaceSlot = g;
+                }
             }
 
             if (card.requiereEnergy)
@@ -190,6 +195,27 @@ namespace Leafy.Objects
             speedIcon.sortingOrder = id;
             growIcon.sortingOrder = id;
             stockIcon.sortingOrder = id;
+        }
+        
+        public void UpdateRenderLayer(int value)
+        {
+            background.sortingLayerID = value;
+            bord.sortingLayerID = value;
+            cardName.sortingLayerID = value;
+            artwork.sortingLayerID = value;
+            typeName.sortingLayerID = value;
+            energyText.sortingLayerID = value;
+            energyIcon.sortingLayerID = value;
+            noEnergyBar.sortingLayerID = value;
+            noEnergyIcon.sortingLayerID = value;
+            slotIcon.sortingLayerID = value;
+            slotText.sortingLayerID = value;
+            shadow.sortingLayerID = value;
+            priceIcon.sortingLayerID = value;
+            price.sortingLayerID = value;
+            speedIcon.sortingLayerID = value;
+            growIcon.sortingLayerID = value;
+            stockIcon.sortingLayerID = value;
         }
 
         private void FixedUpdate()
@@ -260,6 +286,8 @@ namespace Leafy.Objects
 
         private void TestCollision()
         {
+            if(!collide)
+                return;
             Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
 
             foreach (var collider in colliders)
@@ -281,30 +309,77 @@ namespace Leafy.Objects
 
                     CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
                 }
+            }
+        }
+        
+        private void SpawnCollision()
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
 
-                if(Input.GetMouseButton(0))
-                    return;
-                
+            foreach (var collider in colliders)
+            {
+                CardUI otherCard = collider.GetComponent<CardUI>();
+
+                if (otherCard != null && otherCard != this && !dragged && !CardUtils.IsInTheSameStack(this, otherCard))
+                {
+                    if (uniqueID < otherCard.uniqueID)
+                    {
+                        if (parent == null && otherCard.child == null)
+                        {
+                            SetParent(otherCard);
+                            CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                            return;
+                        }
+                        
+                        if (child == null && otherCard.parent == null)
+                        {
+                            otherCard.SetParent(this);
+                            CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        private bool collide = true;
+        
+        private void TestSellCollision()
+        {
+            collide = false;
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
+
+            foreach (var collider in colliders)
+            {
                 if (collider.CompareTag("Sell"))
                 {
                     Debug.Log("test");
                     SellZone s = collider.GetComponent<SellZone>();
                     SellCard(s);
+                    return;
                 }
 
                 if (collider.CompareTag("Buy") && ID == 1)
                 {
                     BuyZone b = collider.GetComponent<BuyZone>();
                     BuyCard(b);
-                }
-                else if(collider.CompareTag("Buy"))
+                    return;
+                } 
+                
+                if(collider.CompareTag("Buy"))
                 {
                     Vector3 p = collider.transform.position;
                     p.y -= 5;
                     transform.position = p;
+                    return;
                 }
             }
+
+            collide = true;
+
         }
+        
+        
         private void SellCard(SellZone s)
         {
             List<CardUI> stackCards = CardUtils.GetStackCardList(this);
@@ -415,6 +490,7 @@ namespace Leafy.Objects
             //cardBehavior.OnDrop();
 
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
+            TestSellCollision();
         }
 
         /// <summary>
@@ -476,6 +552,10 @@ namespace Leafy.Objects
             {
                 if ((card.harvestable && c.card.ID == card.ID) || !card.harvestable && card.ID != 11)
                     parent = c;
+                else
+                {
+                    parent = null;
+                }
             }
             else
             {
@@ -484,7 +564,7 @@ namespace Leafy.Objects
 
 
             if (parent != null)
-                c.child = this;
+                parent.child = this;
         }
         
         public void CardEnter()

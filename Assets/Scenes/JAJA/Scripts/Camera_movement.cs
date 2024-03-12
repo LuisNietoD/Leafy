@@ -20,6 +20,8 @@ public class Camera_movement : MonoBehaviour
     private Vector3 difference;
     private bool drag;
 
+    public ScaleWithFOV childScaler;
+
     private void Start()
     {
         mainCamera = GetComponent<CinemachineVirtualCamera>();
@@ -66,5 +68,6 @@ public class Camera_movement : MonoBehaviour
         p.x = Mathf.Clamp(p.x, -maxX, maxX);
         p.y = Mathf.Clamp(p.y, -maxY, maxY);
         transform.position = p;
+        childScaler.Scale();
     }
 }

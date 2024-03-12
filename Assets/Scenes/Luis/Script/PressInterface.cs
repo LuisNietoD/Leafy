@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Leafy.Data;
 using Leafy.Manager;
 using UnityEngine;
@@ -10,20 +11,57 @@ namespace Leafy.Objects
     {
         public Slot slot;
         
-
         public override void InterfaceAction()
         {
             if(slot.transform.childCount <= 0)
                 return;
+
+            CardUI cardUI = slot.transform.GetChild(0).GetComponent<CardUI>();
             
             Vector3 p = slot.transform.position;
             p.x += 2;
-            if (Craft.press.ContainsKey(slot.transform.GetChild(0).GetComponent<CardUI>().ID))
+            
+            List<CardUI> childList = CardUtils.GetStackCardList(cardUI.child);
+
+            foreach (var recipe in Craft.press)
             {
-                GameManager.instance.SpawnCard(p, Craft.press[slot.transform.GetChild(0).GetComponent<CardUI>().ID]);
-                Destroy(slot.transform.GetChild(0).gameObject);
+
+                List<CardUI> c = IsRecipeInChildStack(childList, recipe.Value);
+                if (c != null)
+                {
+                    GameManager.instance.SpawnCard(p, recipe.Key);
+                    foreach (CardUI card in childList)
+                    {
+                        Destroy(card.gameObject);
+                    }
+                    return;
+                }
+            }
+        }
+        
+        private List<CardUI> IsRecipeInChildStack(List<CardUI> childStack, List<int> recipe)
+        {
+            var remainingCards = new List<CardUI>(childStack);
+
+            if (remainingCards.Count < recipe.Count)
+            {
+                return null;
             }
 
+            var firstNCards = remainingCards.Take(recipe.Count);
+
+            var firstNCardsIDs = firstNCards.Select(card => card.ID).OrderBy(id => id).ToList();
+            var recipeIDs = recipe.OrderBy(id => id).ToList();
+
+            bool cardsMatch = firstNCardsIDs.SequenceEqual(recipeIDs);
+
+            if (cardsMatch)
+            {
+                return firstNCards.ToList();
+            }
+            
+            return null;
+            
         }
     }
 }

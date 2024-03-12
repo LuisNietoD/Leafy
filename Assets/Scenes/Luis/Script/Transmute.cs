@@ -94,28 +94,24 @@ namespace Leafy.Objects
         {
             var remainingCards = new List<CardUI>(childStack);
 
-            // Check if there are enough remaining cards to match the recipe size
             if (remainingCards.Count < recipe.recipe.Count)
             {
-                return null; // Not enough cards, return null
+                return null;
             }
 
-            // Take the first 'recipe.recipe.Count' cards from the remaining cards
             var firstNCards = remainingCards.Take(recipe.recipe.Count);
 
-            // Extract IDs from firstNCards and recipe and sort them
             var firstNCardsIDs = firstNCards.Select(card => card.ID).OrderBy(id => id).ToList();
             var recipeIDs = recipe.recipe.OrderBy(id => id).ToList();
 
-            // Check if the sorted IDs match
             bool cardsMatch = firstNCardsIDs.SequenceEqual(recipeIDs);
 
             if (cardsMatch)
             {
-                return firstNCards.ToList(); // Return the list of matching cards
+                return firstNCards.ToList();
             }
             
-            return null; // If the cards don't match, return null
+            return null;
             
         }
         

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Lingot d'Acier
   ID: 85
-  artwork: {fileID: 21300000, guid: 327e2b9cb8fdd89438cb2186479e8fce, type: 3}
+  artwork: {fileID: 21300000, guid: 22f7f233798386044b33a5d0bc11d2a9, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
@@ -83,6 +83,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0

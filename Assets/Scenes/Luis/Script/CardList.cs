@@ -50,13 +50,16 @@ namespace Leafy.Data
                                     Craft.list.Add(card.ID, recipe.recipe);
                                     break;
                                 case Machine.Press:
-                                    Craft.press.Add(recipe.recipe[0], card.ID);
+                                    Craft.press.Add(card.ID, recipe.recipe);
                                     break;
                                 case Machine.Genetic:
                                     Craft.gen.Add(card.ID, recipe.recipe);
                                     break;
                                 case Machine.Mixer:
                                     Craft.mixer.Add(card.ID, recipe.recipe);
+                                    break;
+                                case Machine.Assembleur:
+                                    Craft.assembleur.Add(card.ID, recipe.recipe);
                                     break;
                             }
                         }
