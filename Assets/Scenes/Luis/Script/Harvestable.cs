@@ -92,17 +92,25 @@ namespace Leafy.Objects
                 }
             }
 
-            if (card.activators.Count <= 0 && !card.shakable && cardIDs.Count < card.inventorySize + (card.inventorySize * card.storageLevel))
+            if (card.activators.Count <= 0 && !card.shakable)
             {
-                elapsedTime += Time.deltaTime * card.plantRate;
-                if (elapsedTime >= card.harvestTime - (card.harvestTime/10 * card.rateLevel))
+                if (card.storeCard && cardIDs.Count < card.inventorySize + (card.inventorySize * card.storageLevel))
                 {
-                    cardIDs.Add(card.drop.PickValue().ID);
-                    float r = Random.Range(0f, 1f);
-                    Debug.Log(r);
-                    if(r < 0.1f * card.productivityLevel)
+                    elapsedTime += Time.deltaTime * card.plantRate;
+                    if (elapsedTime >= card.harvestTime - (card.harvestTime / 10 * card.rateLevel))
+                    {
                         cardIDs.Add(card.drop.PickValue().ID);
-                    elapsedTime = 0;
+                        float r = Random.Range(0f, 1f);
+                        Debug.Log(r);
+                        if (r < 0.1f * card.productivityLevel)
+                            cardIDs.Add(card.drop.PickValue().ID);
+                        elapsedTime = 0;
+                    }
+                }
+                else if (!card.storeCard)
+                {
+                    GameManager.instance.LaunchCraft(card.drop.PickValue().ID, 
+                        new List<CardUI>() {cardUI}, card.harvestTime);
                 }
             }
 

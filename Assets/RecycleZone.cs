@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using Leafy.Data;
 using Leafy.Manager;
-using Leafy.Objects;
 using UnityEngine;
 
-public class SellZone : MonoBehaviour
+public class RecycleZone : MonoBehaviour
 {
     public LayerMask terrainLayer;
     public int stackType = 1;
     public int value = 0;
 
-    public void Sell(int value)
+    public void Recycle(int value)
     {
         if (Camera.main != null)
         {

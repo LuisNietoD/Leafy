@@ -8,10 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/125-Sphere de Dyson.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/125-Sphere de Dyson.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/122-Panneau Solaire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/122-Panneau Solaire.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/123-Station de Minage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/123-Station de Minage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/28-Tamis.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/28-Tamis.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/69-Plante de Zinc.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/69-Plante de Zinc.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/77-Plante de Sable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/77-Plante de Sable.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Peach Cake SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Peach Cake SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/SellZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/SellZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MixeurInterface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OpenerDelete.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RecycleZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScaleWithFov.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -166,6 +179,7 @@
       <workItem from="1709906098116" duration="13488000" />
       <workItem from="1710163092521" duration="13405000" />
       <workItem from="1710260274560" duration="9551000" />
+      <workItem from="1710318920086" duration="4253000" />
     </task>
     <servers />
   </component>

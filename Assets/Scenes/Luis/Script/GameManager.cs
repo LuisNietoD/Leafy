@@ -36,7 +36,7 @@ namespace Leafy.Manager
 
         public GameObject crafterPrefab;
         private float crafterOffsetY = 2;
-
+        
         private void Awake()
         {
             if (instance == null)
@@ -413,6 +413,8 @@ namespace Leafy.Manager
                 _hoveredCardUI.CardExit();
             return null;
         }
+
+        
         
         public Transform RayTestUI()
         {

@@ -657,12 +657,17 @@ MonoBehaviour:
   growIcon: {fileID: 0}
   stockIcon: {fileID: 0}
   interfaceSlot: {fileID: 0}
+  parent: {fileID: 0}
+  child: {fileID: 0}
   ID: -1
   dragged: 0
   pushForce: 0.02
   cardLayer:
     serializedVersion: 2
-    m_Bits: 576
+    m_Bits: 1600
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &3730662432702582655
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using Leafy.Manager;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Leafy.Objects
 {
@@ -351,6 +352,30 @@ namespace Leafy.Objects
 
             foreach (var collider in colliders)
             {
+                switch (collider.tag)
+                {
+                    case "Sell":
+                        SellZone s = collider.GetComponent<SellZone>();
+                        SellCard(s);
+                        break;
+                    
+                    case "Buy":
+                        BuyZone b = collider.GetComponent<BuyZone>();
+                        BuyCard(b);
+                        break;
+                    
+                    case "Recycle":
+                        RecycleZone r = collider.GetComponent<RecycleZone>();
+                        RecycleCard(r);
+                        break;
+                    
+                    case "HUD":
+                        transform.position = CameraCenterToPoint();
+                        break;
+                }
+                
+                return;
+
                 if (collider.CompareTag("Sell"))
                 {
                     Debug.Log("test");
@@ -364,7 +389,14 @@ namespace Leafy.Objects
                     BuyZone b = collider.GetComponent<BuyZone>();
                     BuyCard(b);
                     return;
-                } 
+                }
+
+                if (collider.CompareTag("Recycle") && card.type == "Plant")
+                {
+                    RecycleZone r = collider.GetComponent<RecycleZone>();
+                    RecycleCard(r);
+                    return;
+                }
                 
                 if(collider.CompareTag("Buy"))
                 {
@@ -396,6 +428,26 @@ namespace Leafy.Objects
                 s.Sell(totalNumberOfCards);
                 CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
             }
+            else
+            {
+                transform.position = CameraCenterToPoint();
+            }
+        }
+        
+        private void RecycleCard(RecycleZone r)
+        {
+            List<CardUI> stackCards = CardUtils.GetStackCardList(this);
+
+            if (stackCards.All(c => c.card.type == "Plant"))
+            {
+                int totalNumberOfCards = stackCards.Count;
+                r.Recycle(totalNumberOfCards);
+                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            }
+            else
+            {
+                transform.position = CameraCenterToPoint();
+            }
         }
 
         private void BuyCard(BuyZone buyZone)
@@ -425,9 +477,7 @@ namespace Leafy.Objects
             }
             else
             {
-                Vector3 p = collider.transform.position;
-                p.y -= 4;
-                transform.position = p;
+                transform.position = CameraCenterToPoint();
             }
         }
         private bool AllCardsInStackHaveID(int targetID)
@@ -603,7 +653,63 @@ namespace Leafy.Objects
             if(child != null)
                 child.SetParent(parent);
         }
-        
-        
+
+        public Vector3 CameraCenterToPoint()
+        {
+            if (Camera.main != null)
+            {
+                Vector3 mousePosition = Input.mousePosition;
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                Vector3 rayDirection = mouseWorldPosition - Camera.main.transform.position;
+
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, rayDirection, Mathf.Infinity, terrainLayer);
+
+                if (hit.collider != null)
+                {
+                    Vector3 spawnPoint = hit.point;
+                    spawnPoint.z = 0;
+                    return spawnPoint;
+                }
+                else
+                {
+                    Vector2 nearestPoint = FindNearestPointOnTerrain(Camera.main.transform.position, rayDirection);
+                    Vector3 spawnPoint = nearestPoint;
+                    spawnPoint.z = 0;
+                    return spawnPoint;
+                }
+                
+            }
+
+            return Vector3.zero;
+        }
+
+        public LayerMask terrainLayer;
+        private Vector2 FindNearestPointOnTerrain(Vector3 position, Vector3 direction)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 50f, terrainLayer);
+
+            if (colliders.Length > 0)
+            {
+                Vector2 nearestPoint = colliders[0].ClosestPoint(position);
+                float nearestDistance = Vector2.Distance(position, nearestPoint);
+
+                foreach (Collider2D collider in colliders)
+                {
+                    Vector2 point = collider.ClosestPoint(position);
+                    float distance = Vector2.Distance(position, point);
+                
+                    if (distance < nearestDistance)
+                    {
+                        nearestPoint = point;
+                        nearestDistance = distance;
+                    }
+                }
+
+                return nearestPoint;
+            }
+
+            // If no terrain collider found, return current position
+            return position;
+        }
     }
 }

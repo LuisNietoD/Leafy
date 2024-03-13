@@ -206,25 +206,25 @@ MonoBehaviour:
       m_PLID: 849477be-1f5d-41ef-ba8c-6fb71d7e2f33
       m_ProbabilityItems:
       - m_Value: {fileID: 11400000, guid: 90ffa43961275b6468c53d509c5772df, type: 2}
-        m_BaseProbability: 0.24999999
+        m_BaseProbability: 0.35
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       - m_Value: {fileID: 11400000, guid: 7be3ab285fa53144181aea08d0950349, type: 2}
-        m_BaseProbability: 0.24999999
+        m_BaseProbability: 0.14999999
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       - m_Value: {fileID: 11400000, guid: 80986df54dc016e41bdee27155a90529, type: 2}
-        m_BaseProbability: 0.25
+        m_BaseProbability: 0.35
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       - m_Value: {fileID: 11400000, guid: 6293d9c36d81d734da790553a9d0d8ee, type: 2}
-        m_BaseProbability: 0.25
+        m_BaseProbability: 0.15
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
@@ -1409,25 +1409,25 @@ MonoBehaviour:
       m_PLID: c01a5ca6-aef2-4de3-8014-3a9d834125da
       m_ProbabilityItems:
       - m_Value: {fileID: 11400000, guid: 8d87b14ea38da6a47852615587c3e0ef, type: 2}
-        m_BaseProbability: 0.24999999
+        m_BaseProbability: 0.14999999
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       - m_Value: {fileID: 11400000, guid: 0d2980657cbe3a84fbf3d01f2bfd3e9f, type: 2}
-        m_BaseProbability: 0.24999999
+        m_BaseProbability: 0.35
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       - m_Value: {fileID: 11400000, guid: 83210f150497cf74b8ab2f6439f4dda3, type: 2}
-        m_BaseProbability: 0.25
+        m_BaseProbability: 0.35
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
         m_InfluenceProvider: {fileID: 0}
       - m_Value: {fileID: 11400000, guid: 3f9e7a306cfdb084eb5f706ea6142f79, type: 2}
-        m_BaseProbability: 0.25
+        m_BaseProbability: 0.15
         m_Enabled: 1
         m_Locked: 0
         m_InfluenceSpread: {x: 0, y: 1}
