@@ -323,11 +323,11 @@ namespace Leafy.Objects
 
                 if (otherCard != null && otherCard != this && !dragged && !CardUtils.IsInTheSameStack(this, otherCard))
                 {
-                    if (uniqueID < otherCard.uniqueID)
+                    if (uniqueID > otherCard.uniqueID)
                     {
-                        if (parent == null && otherCard.child == null)
+                        if (parent == null)
                         {
-                            SetParent(otherCard);
+                            SetParent(CardUtils.GetLastCard(otherCard));
                             CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
                             return;
                         }
@@ -374,6 +374,7 @@ namespace Leafy.Objects
                         break;
                 }
                 
+                collide = true;
                 return;
 
                 if (collider.CompareTag("Sell"))
@@ -407,7 +408,7 @@ namespace Leafy.Objects
                 }
             }
 
-            collide = true;
+            
 
         }
         

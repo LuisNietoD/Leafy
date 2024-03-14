@@ -57,6 +57,9 @@ namespace Leafy.Data
         public int storageLevel;
         public bool precise;
         public List<ScriptableCard> preciseList;
+        public int actualstoredCardID;
+        public int actualstoredCard;
+        public List<int> cardIDs = new List<int>(); 
         
 
         public Card(ScriptableCard card)

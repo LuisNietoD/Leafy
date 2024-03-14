@@ -75,7 +75,7 @@ namespace Leafy.Objects
                                 if(card.actualEnergy < card.energyCost)
                                     return;
                             }
-                                
+
                             List<int> ids = new List<int>();
                             
                             for (int i = 0; i < recipe.resultAmount; i++)

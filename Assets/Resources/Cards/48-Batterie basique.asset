@@ -86,7 +86,7 @@ MonoBehaviour:
   activators: 
   preciseSpawn: 0
   preciseList: []
-  slotAmount: 10
+  slotAmount: 100
   slotType: 0
   preciseCardID: 39
   preciseCard: 1

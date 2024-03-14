@@ -15,7 +15,6 @@ namespace Leafy.Objects
         private Vector3 lastPosition;
         private float speed;
         private float elapsedTime;
-        private List<int> cardIDs = new List<int>(); 
         
         public float shakeIntensity = 0.2f;
         public float shakeSpeed = 10f;
@@ -68,9 +67,9 @@ namespace Leafy.Objects
             
             Vector3 p = cardUI.transform.position;
             p.x += 4;
-            if(cardIDs.Count > 0)
-                GameManager.instance.SpawnStackPrecise(p, cardIDs);
-            cardIDs.Clear();
+            if(card.cardIDs.Count > 0)
+                GameManager.instance.SpawnStackPrecise(p, card.cardIDs);
+            card.cardIDs.Clear();
         }
 
         public override void OnHover()
@@ -94,16 +93,16 @@ namespace Leafy.Objects
 
             if (card.activators.Count <= 0 && !card.shakable)
             {
-                if (card.storeCard && cardIDs.Count < card.inventorySize + (card.inventorySize * card.storageLevel))
+                if (card.storeCard && card.cardIDs.Count < card.inventorySize + (card.inventorySize * card.storageLevel))
                 {
                     elapsedTime += Time.deltaTime * card.plantRate;
-                    if (elapsedTime >= card.harvestTime - (card.harvestTime / 10 * card.rateLevel))
+                    if (elapsedTime >= card.harvestTime - ((card.harvestTime / 10) * card.rateLevel))
                     {
-                        cardIDs.Add(card.drop.PickValue().ID);
+                        card.cardIDs.Add(card.drop.PickValue().ID);
                         float r = Random.Range(0f, 1f);
                         Debug.Log(r);
-                        if (r < 0.1f * card.productivityLevel)
-                            cardIDs.Add(card.drop.PickValue().ID);
+                        if (r < 0.2f * card.productivityLevel)
+                            card.cardIDs.Add(card.drop.PickValue().ID);
                         elapsedTime = 0;
                     }
                 }
@@ -114,7 +113,7 @@ namespace Leafy.Objects
                 }
             }
 
-            if (card.storeCard && cardIDs.Count == card.inventorySize + (card.inventorySize * card.storageLevel))
+            if (card.storeCard && card.cardIDs.Count == card.inventorySize + (card.inventorySize * card.storageLevel))
             {
                 float offsetX = Mathf.PerlinNoise(0, Time.time * shakeSpeed) * shakeIntensity - shakeIntensity / 2f;
                 float offsetY = Mathf.PerlinNoise(Time.time * shakeSpeed, 0) * shakeIntensity - shakeIntensity / 2f;

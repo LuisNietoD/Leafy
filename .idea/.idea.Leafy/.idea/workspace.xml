@@ -10,20 +10,25 @@
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/122-Panneau Solaire.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/122-Panneau Solaire.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/123-Station de Minage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/123-Station de Minage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/28-Tamis.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/28-Tamis.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/69-Plante de Zinc.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/69-Plante de Zinc.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/77-Plante de Sable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/77-Plante de Sable.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/106-Batterie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/106-Batterie.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/119-ADN de Quartz.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/119-ADN de Quartz.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/120-Plante de Quartz.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/120-Plante de Quartz.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/125-Sphere de Dyson.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/125-Sphere de Dyson.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/40-Microscope.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/40-Microscope.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/48-Batterie basique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/48-Batterie basique.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/82-Melangeur.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/82-Melangeur.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JAJA/Scripts/ScriptableCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GeneticInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GeneticInterface.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/SellZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/SellZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Transmute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Transmute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StackParent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RectMask2D.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -91,7 +97,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Leafy.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Leafy.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\Projet\LeafyGit\Leafy\Build" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -180,6 +186,7 @@
       <workItem from="1710163092521" duration="13405000" />
       <workItem from="1710260274560" duration="9551000" />
       <workItem from="1710318920086" duration="4253000" />
+      <workItem from="1710369463308" duration="8649000" />
     </task>
     <servers />
   </component>

@@ -63,6 +63,8 @@ namespace Leafy.Data
 
         public static int ChildCount(CardUI cardUI)
         {
+            if (cardUI.child == null)
+                return 0;
             CardUI c = cardUI.child;
             int count = 0;
             

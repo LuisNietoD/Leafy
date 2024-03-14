@@ -26,6 +26,9 @@ MonoBehaviour:
   interfaces: 0
   transmute: 1
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
   - 5 x Lingot de Fer<br>3 x Verre
   utilities:
@@ -145,6 +148,8 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -201,7 +206,7 @@ MonoBehaviour:
   - recipe: 11000000
     resultAmount: 1
     result:
-      m_PLID: 26aedada-1412-4f16-bd4c-a3aae082bb66
+      m_PLID: 4a874e81-a750-4518-8559-a3ec1bf13fa5
       m_ProbabilityItems:
       - m_Value: {fileID: 11400000, guid: f3163d9c5e1e6ac4d85c830bb3452a8c, type: 2}
         m_BaseProbability: 1
@@ -258,7 +263,7 @@ MonoBehaviour:
   - recipe: 10000000
     resultAmount: 1
     result:
-      m_PLID: c01a5ca6-aef2-4de3-8014-3a9d834125da
+      m_PLID: 680cbbf2-bba7-4980-a8d3-9e7dc8f5eb18
       m_ProbabilityItems:
       - m_Value: {fileID: 11400000, guid: ffb0341d47c19304c81d30b4515a71ce, type: 2}
         m_BaseProbability: 1
@@ -296,7 +301,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_Seed: 2280688202
+      m_Seed: 2598402630
       m_KeepSeed: 0
       m_PickHistory:
         m_History:
@@ -309,3 +314,5 @@ MonoBehaviour:
         m_Capacity: 1000
       m_LastPickCount: 1
       m_SelectionMethodID: LSMRegular
+  savoirList: []
+  behavior: 

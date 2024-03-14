@@ -52,6 +52,7 @@ public class SavoirList
     public List<int> result;
 }
 
+[Serializable]
 [CreateAssetMenuAttribute(fileName = "Scriptable Card", menuName = "My Game/ Scriptable Card")]
 public class ScriptableCard : ScriptableObject
 {

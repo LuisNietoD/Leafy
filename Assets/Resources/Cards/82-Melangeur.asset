@@ -81,13 +81,15 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 34000000340000003400000034000000
+    recipe: 3500000035000000230000002300000023000000230000002100000021000000210000001f0000001f0000001e0000001e000000
   evolveTime: 0
   evolutions:
     m_PLID: 

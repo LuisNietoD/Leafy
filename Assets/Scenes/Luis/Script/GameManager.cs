@@ -36,6 +36,7 @@ namespace Leafy.Manager
 
         public GameObject crafterPrefab;
         private float crafterOffsetY = 2;
+        public GameObject stackParent;
         
         private void Awake()
         {
@@ -59,7 +60,14 @@ namespace Leafy.Manager
             if (Input.GetMouseButtonDown(0) && _hoveredCardUI != null && _draggedBooster == null)
             {
                 offset = _hoveredCardUI.SetDragged();
-                _hoveredCardUI.transform.parent = null;
+                GameObject p = null;
+                if(_hoveredCardUI.transform.parent != null)
+                    p = _hoveredCardUI.transform.parent.gameObject;
+                CardUtils.ApplyMethodOnStack(_hoveredCardUI, c =>
+                {
+                    c.transform.parent = null;
+                });
+                
                 _draggedCardUI = _hoveredCardUI;
                 _draggedCardUI.behavior?.OnDrag();
                 CardUtils.ApplyMethodOnStack(_draggedCardUI, card =>
@@ -69,7 +77,11 @@ namespace Leafy.Manager
                     card.UpdateRenderLayer(SortingLayer.NameToID("HUD"));
                 });
                 _hoveredCardUI = null;
+                
                 CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
+                if(p != null)
+                    if(p.transform.childCount <= 0)
+                        Destroy(p);
             }
             //Drop the dragged card
             else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
@@ -82,6 +94,38 @@ namespace Leafy.Manager
                 
                 _draggedCardUI.behavior?.OnDrop();
                 _draggedCardUI.Drop(_hoveredCardUI);
+
+                List<GameObject> p = new List<GameObject>();
+                if (_draggedCardUI.transform.parent != null)
+                    p.Add(_draggedCardUI.transform.parent.gameObject);
+                
+                if (CardUtils.GetStackIDList(_draggedCardUI).Count > 1)
+                {
+                    GameObject par = Instantiate(stackParent, Vector3.zero, Quaternion.identity);
+                    StackParent sp = par.GetComponent<StackParent>();
+                    CardUtils.ApplyMethodOnStack(_draggedCardUI, c =>
+                    {
+                        if (c.transform.parent != null)
+                        {
+                            if (!p.Contains(c.transform.parent.gameObject))
+                            {
+                                p.Add(c.transform.parent.gameObject);
+                            }
+                        }
+                        c.transform.parent = par.transform; 
+                        sp.inStack.Add(c);
+                    });
+                }
+
+                if (p.Count > 0)
+                {
+                    foreach (GameObject parents in p)
+                    {
+                        Destroy(parents);
+                    }
+                }
+                    
+                
                 _draggedCardUI.transform.position = new Vector3(Mathf.Clamp(_draggedCardUI.transform.position.x, -maxX, maxX),
                     Mathf.Clamp(_draggedCardUI.transform.position.y, -maxY, maxY), _draggedCardUI.transform.position.z);
                 
