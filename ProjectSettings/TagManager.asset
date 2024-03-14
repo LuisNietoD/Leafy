@@ -8,6 +8,7 @@ TagManager:
   - Sell
   - Buy
   - Recycle
+  - CardList
   layers:
   - Default
   - TransparentFX

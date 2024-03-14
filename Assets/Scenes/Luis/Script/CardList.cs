@@ -14,9 +14,24 @@ namespace Leafy.Data
 
         public static event Action OnScriptableObjectsLoaded;
 
-        void Start()
+       
+        void Awake()
         {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("CardList");
+
+            if (objs.Length > 1)
+            {
+                Destroy(this.gameObject);
+            }
+
+            DontDestroyOnLoad(this.gameObject);
+        }
+        
+
+        void Start()
+        { 
             StartCoroutine(LoadScriptableObjectsCoroutine());
+            DontDestroyOnLoad(gameObject);
         }
 
         IEnumerator LoadScriptableObjectsCoroutine()

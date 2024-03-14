@@ -10,7 +10,7 @@ public class GameStart : MonoBehaviour
     
     void Start()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, "SaveFile.es3");
+        string filePath = Path.Combine(Application.persistentDataPath, ES3AutoSaveMgr.Current.settings.path);
         if (!File.Exists(filePath))
         {
             GameObject o = Instantiate(originalPack, Vector3.zero, quaternion.identity);
