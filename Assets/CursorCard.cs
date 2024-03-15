@@ -50,7 +50,7 @@ public class CursorCard : MonoBehaviour
                 {
                     GameManager.instance.LaunchCraft(craftButton.craft,
                         CardUtils.GetRootCard(craftButton.toFollow.gameObject.GetComponent<CardUI>()));
-                    Destroy(craftButton);
+                    Destroy(craftButton.gameObject);
                 }
             }
             else
