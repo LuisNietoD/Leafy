@@ -14,8 +14,22 @@ namespace Leafy.Data
 
         public static event Action OnScriptableObjectsLoaded;
 
-        void Start()
+       
+        void Awake()
         {
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("CardList");
+
+            if (objs.Length > 1)
+            {
+                Destroy(this.gameObject);
+            }
+
+            DontDestroyOnLoad(this.gameObject);
+        }
+        
+
+        void Start()
+        { 
             StartCoroutine(LoadScriptableObjectsCoroutine());
         }
 
@@ -50,10 +64,16 @@ namespace Leafy.Data
                                     Craft.list.Add(card.ID, recipe.recipe);
                                     break;
                                 case Machine.Press:
-                                    Craft.press.Add(recipe.recipe[0], card.ID);
+                                    Craft.press.Add(card.ID, recipe.recipe);
                                     break;
                                 case Machine.Genetic:
                                     Craft.gen.Add(card.ID, recipe.recipe);
+                                    break;
+                                case Machine.Mixer:
+                                    Craft.mixer.Add(card.ID, recipe.recipe);
+                                    break;
+                                case Machine.Assembleur:
+                                    Craft.assembleur.Add(card.ID, recipe.recipe);
                                     break;
                             }
                         }

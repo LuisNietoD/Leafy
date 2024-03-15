@@ -7,42 +7,34 @@ namespace Leafy.Objects
     {
         public ClassicCard()
         {
-            Debug.Log("test");
         }
         
         public override void Spawn()
         {
-            Debug.Log("spawn");
         }
 
         public override void OnDrag()
         {
-            Debug.Log("OnDrag");
         }
 
         public override void OnDrop()
         {
-            Debug.Log("OnDrop");
         }
 
         public override void OnClick()
         {
-            Debug.Log("OnClick");
         }
 
         public override void OnHover()
         {
-            Debug.Log("OnHover");
         }
 
         public override void OnHoverStay()
         {
-            Debug.Log("OnHoverStay");
         }
 
         public override void StayAction()
         {
-            Debug.Log("StayAction");
         }
     }
 }

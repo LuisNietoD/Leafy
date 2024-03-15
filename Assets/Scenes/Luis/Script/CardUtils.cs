@@ -60,6 +60,22 @@ namespace Leafy.Data
 
             return cards;
         }
+
+        public static int ChildCount(CardUI cardUI)
+        {
+            if (cardUI.child == null)
+                return 0;
+            CardUI c = cardUI.child;
+            int count = 0;
+            
+            do
+            {
+                count++;
+                c = c.child;
+            } while (c != null);
+
+            return count;
+        }
         
         /// <summary>
         /// Return the first card of the stack

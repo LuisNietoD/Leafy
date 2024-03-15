@@ -5,11 +5,13 @@ using Leafy.Manager;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Leafy.Objects
 {
     public class CardUI : MonoBehaviour
     {
+        [ES3Serializable]
         public Card card;
         public CardBehavior behavior;
         public GameObject loader;
@@ -40,12 +42,15 @@ namespace Leafy.Objects
         public GameObject sellable;
         public TextMeshPro price;
         public SpriteRenderer priceIcon;
+        public SpriteRenderer speedIcon;
+        public SpriteRenderer growIcon;
+        public SpriteRenderer stockIcon;
 
         public GameObject interfaceSlot;
 
-        internal CardUI parent;
-        internal CardUI child;
-        internal int ID;
+        public CardUI parent;
+        public CardUI child;
+        public int ID = -1;
 
         private GameObject _interface;
 
@@ -78,18 +83,30 @@ namespace Leafy.Objects
             sellable = transform.Find("MODEL/SELLABLE").gameObject;
             priceIcon = transform.Find("MODEL/SELLABLE/ICON").GetComponent<SpriteRenderer>();
             price = transform.Find("MODEL/SELLABLE/PRICE").GetComponent<TextMeshPro>();
+            speedIcon = transform.Find("MODEL/SPEEDICON").GetComponent<SpriteRenderer>();
+            growIcon = transform.Find("MODEL/GROWICON").GetComponent<SpriteRenderer>();
+            stockIcon = transform.Find("MODEL/STOCKICON").GetComponent<SpriteRenderer>();
+
             
             energy.SetActive(false);
             noEnergy.SetActive(false);
             inventory.SetActive(false);
             sellable.SetActive(false);
-
+            speedIcon.enabled = false;
+            growIcon.enabled = false;
+            stockIcon.enabled = false;
+            
         }
 
         private void Start()
         {
-            behavior?.Spawn();
             uniqueID = CardUtils.ID++;
+            
+            if(card != null)
+                UpdateCardInfo(card);
+
+            SpawnCollision();
+            behavior?.Spawn();
         }
 
         public void UpdateCardInfo(Card c)
@@ -137,12 +154,15 @@ namespace Leafy.Objects
 
             foreach (GameObject i in card.interfaceList)
             {
-                GameObject g = Instantiate(i, transform.position, Quaternion.identity);
-                g.transform.SetParent(transform);
-                g.transform.localPosition = Vector3.zero;
-                g.name = "INTERFACE";
+                if (interfaceSlot == null)
+                {
+                    GameObject g = Instantiate(i, transform.position, Quaternion.identity);
+                    g.transform.SetParent(transform);
+                    g.transform.localPosition = Vector3.zero;
+                    g.name = "INTERFACE";
 
-                interfaceSlot = g;
+                    interfaceSlot = g;
+                }
             }
 
             if (card.requiereEnergy)
@@ -173,6 +193,30 @@ namespace Leafy.Objects
             shadow.sortingOrder = id - 1;
             priceIcon.sortingOrder = id;
             price.sortingOrder = id;
+            speedIcon.sortingOrder = id;
+            growIcon.sortingOrder = id;
+            stockIcon.sortingOrder = id;
+        }
+        
+        public void UpdateRenderLayer(int value)
+        {
+            background.sortingLayerID = value;
+            bord.sortingLayerID = value;
+            cardName.sortingLayerID = value;
+            artwork.sortingLayerID = value;
+            typeName.sortingLayerID = value;
+            energyText.sortingLayerID = value;
+            energyIcon.sortingLayerID = value;
+            noEnergyBar.sortingLayerID = value;
+            noEnergyIcon.sortingLayerID = value;
+            slotIcon.sortingLayerID = value;
+            slotText.sortingLayerID = value;
+            shadow.sortingLayerID = value;
+            priceIcon.sortingLayerID = value;
+            price.sortingLayerID = value;
+            speedIcon.sortingLayerID = value;
+            growIcon.sortingLayerID = value;
+            stockIcon.sortingLayerID = value;
         }
 
         private void FixedUpdate()
@@ -212,6 +256,19 @@ namespace Leafy.Objects
                     CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
                 }
             }
+
+            if (card.rateLevel > 0)
+            {
+                speedIcon.enabled = true;
+            }
+            if (card.storageLevel > 0)
+            {
+                stockIcon.enabled = true;
+            }
+            if (card.productivityLevel > 0)
+            {
+                growIcon.enabled = true;
+            }
         }
 
         public float pushForce = 1.0f;
@@ -219,11 +276,19 @@ namespace Leafy.Objects
 
         public void PushCard(Vector2 force)
         {
+            float maxX = GameManager.instance.maxX;
+            float maxY = GameManager.instance.maxY;
+            
+            
             transform.Translate(force);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -maxX, maxX),
+                Mathf.Clamp(transform.position.y, -maxY, maxY), transform.position.z);
         }
 
         private void TestCollision()
         {
+            if(!collide)
+                return;
             Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
 
             foreach (var collider in colliders)
@@ -245,30 +310,109 @@ namespace Leafy.Objects
 
                     CardUtils.GetRootCard(this).PushCard(pushDirection * (pushForce * forcePercent));
                 }
+            }
+        }
+        
+        private void SpawnCollision()
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
 
-                if(Input.GetMouseButton(0))
-                    return;
+            foreach (var collider in colliders)
+            {
+                CardUI otherCard = collider.GetComponent<CardUI>();
+
+                if (otherCard != null && otherCard != this && !dragged && !CardUtils.IsInTheSameStack(this, otherCard))
+                {
+                    if (uniqueID > otherCard.uniqueID)
+                    {
+                        if (parent == null)
+                        {
+                            SetParent(CardUtils.GetLastCard(otherCard));
+                            CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                            return;
+                        }
+                        
+                        if (child == null && otherCard.parent == null)
+                        {
+                            otherCard.SetParent(this);
+                            CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        private bool collide = true;
+        
+        private void TestSellCollision()
+        {
+            collide = false;
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0f, cardLayer);
+
+            foreach (var collider in colliders)
+            {
+                switch (collider.tag)
+                {
+                    case "Sell":
+                        SellZone s = collider.GetComponent<SellZone>();
+                        SellCard(s);
+                        break;
+                    
+                    case "Buy":
+                        BuyZone b = collider.GetComponent<BuyZone>();
+                        BuyCard(b);
+                        break;
+                    
+                    case "Recycle":
+                        RecycleZone r = collider.GetComponent<RecycleZone>();
+                        RecycleCard(r);
+                        break;
+                    
+                    case "HUD":
+                        transform.position = CameraCenterToPoint();
+                        break;
+                }
                 
+                collide = true;
+                return;
+
                 if (collider.CompareTag("Sell"))
                 {
                     Debug.Log("test");
                     SellZone s = collider.GetComponent<SellZone>();
                     SellCard(s);
+                    return;
                 }
 
                 if (collider.CompareTag("Buy") && ID == 1)
                 {
                     BuyZone b = collider.GetComponent<BuyZone>();
                     BuyCard(b);
+                    return;
                 }
-                else if(collider.CompareTag("Buy"))
+
+                if (collider.CompareTag("Recycle") && card.type == "Plant")
+                {
+                    RecycleZone r = collider.GetComponent<RecycleZone>();
+                    RecycleCard(r);
+                    return;
+                }
+                
+                if(collider.CompareTag("Buy"))
                 {
                     Vector3 p = collider.transform.position;
                     p.y -= 5;
                     transform.position = p;
+                    return;
                 }
             }
+
+            
+
         }
+        
+        
         private void SellCard(SellZone s)
         {
             List<CardUI> stackCards = CardUtils.GetStackCardList(this);
@@ -284,6 +428,42 @@ namespace Leafy.Objects
                 
                 s.Sell(totalNumberOfCards);
                 CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            }
+            else
+            {
+                transform.position = CameraCenterToPoint();
+            }
+        }
+        
+        private void RecycleCard(RecycleZone r)
+        {
+            List<CardUI> stackCards = CardUtils.GetStackCardList(this);
+
+            if (stackCards.All(c => c.card.type == "Plant"))
+            {
+                int totalNumberOfCards = stackCards.Count;
+                r.Recycle(totalNumberOfCards);
+                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            }
+            else
+            {
+                transform.position = CameraCenterToPoint();
+            }
+        }
+        
+        private void AddToCraftCard(RecycleZone r)
+        {
+            List<CardUI> stackCards = CardUtils.GetStackCardList(this);
+
+            if (stackCards.All(c => c.card.type == "Plant"))
+            {
+                int totalNumberOfCards = stackCards.Count;
+                r.Recycle(totalNumberOfCards);
+                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            }
+            else
+            {
+                transform.position = CameraCenterToPoint();
             }
         }
 
@@ -314,9 +494,7 @@ namespace Leafy.Objects
             }
             else
             {
-                Vector3 p = collider.transform.position;
-                p.y -= 4;
-                transform.position = p;
+                transform.position = CameraCenterToPoint();
             }
         }
         private bool AllCardsInStackHaveID(int targetID)
@@ -379,6 +557,7 @@ namespace Leafy.Objects
             //cardBehavior.OnDrop();
 
             CardUtils.ApplyMethodOnStack(this, c => c.ChangeCollider(true));
+            TestSellCollision();
         }
 
         /// <summary>
@@ -438,8 +617,12 @@ namespace Leafy.Objects
 
             if (c != null)
             {
-                if ((card.harvestable && c.card.ID == card.ID) || !card.harvestable)
+                if ((card.harvestable && c.card.ID == card.ID) || !card.harvestable && card.ID != 11)
                     parent = c;
+                else
+                {
+                    parent = null;
+                }
             }
             else
             {
@@ -448,7 +631,7 @@ namespace Leafy.Objects
 
 
             if (parent != null)
-                c.child = this;
+                parent.child = this;
         }
         
         public void CardEnter()
@@ -487,7 +670,63 @@ namespace Leafy.Objects
             if(child != null)
                 child.SetParent(parent);
         }
-        
-        
+
+        public Vector3 CameraCenterToPoint()
+        {
+            if (Camera.main != null)
+            {
+                Vector3 mousePosition = Input.mousePosition;
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                Vector3 rayDirection = mouseWorldPosition - Camera.main.transform.position;
+
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, rayDirection, Mathf.Infinity, terrainLayer);
+
+                if (hit.collider != null)
+                {
+                    Vector3 spawnPoint = hit.point;
+                    spawnPoint.z = 0;
+                    return spawnPoint;
+                }
+                else
+                {
+                    Vector2 nearestPoint = FindNearestPointOnTerrain(Camera.main.transform.position, rayDirection);
+                    Vector3 spawnPoint = nearestPoint;
+                    spawnPoint.z = 0;
+                    return spawnPoint;
+                }
+                
+            }
+
+            return Vector3.zero;
+        }
+
+        public LayerMask terrainLayer;
+        private Vector2 FindNearestPointOnTerrain(Vector3 position, Vector3 direction)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 50f, terrainLayer);
+
+            if (colliders.Length > 0)
+            {
+                Vector2 nearestPoint = colliders[0].ClosestPoint(position);
+                float nearestDistance = Vector2.Distance(position, nearestPoint);
+
+                foreach (Collider2D collider in colliders)
+                {
+                    Vector2 point = collider.ClosestPoint(position);
+                    float distance = Vector2.Distance(position, point);
+                
+                    if (distance < nearestDistance)
+                    {
+                        nearestPoint = point;
+                        nearestDistance = distance;
+                    }
+                }
+
+                return nearestPoint;
+            }
+
+            // If no terrain collider found, return current position
+            return position;
+        }
     }
 }

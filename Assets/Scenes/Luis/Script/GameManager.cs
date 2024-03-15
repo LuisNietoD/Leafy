@@ -12,6 +12,10 @@ namespace Leafy.Manager
         
         public LayerMask cardLayer;
         public GameObject cardPrefab;
+
+        public float maxX;
+        public float maxY;
+        public Collider2D board;
         
         
         public float snapX = 1;
@@ -32,7 +36,8 @@ namespace Leafy.Manager
 
         public GameObject crafterPrefab;
         private float crafterOffsetY = 2;
-
+        public GameObject stackParent;
+        
         private void Awake()
         {
             if (instance == null)
@@ -55,17 +60,28 @@ namespace Leafy.Manager
             if (Input.GetMouseButtonDown(0) && _hoveredCardUI != null && _draggedBooster == null)
             {
                 offset = _hoveredCardUI.SetDragged();
-                _hoveredCardUI.transform.parent = null;
+                GameObject p = null;
+                if(_hoveredCardUI.transform.parent != null)
+                    p = _hoveredCardUI.transform.parent.gameObject;
+                CardUtils.ApplyMethodOnStack(_hoveredCardUI, c =>
+                {
+                    c.transform.parent = null;
+                });
+                
                 _draggedCardUI = _hoveredCardUI;
                 _draggedCardUI.behavior?.OnDrag();
                 CardUtils.ApplyMethodOnStack(_draggedCardUI, card =>
                 {
                     card.BringToFront();
                     card.ChangeID(ID++);
+                    card.UpdateRenderLayer(SortingLayer.NameToID("HUD"));
                 });
                 _hoveredCardUI = null;
+                
                 CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
-                //add event for update craft loader
+                if(p != null)
+                    if(p.transform.childCount <= 0)
+                        Destroy(p);
             }
             //Drop the dragged card
             else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
@@ -78,15 +94,53 @@ namespace Leafy.Manager
                 
                 _draggedCardUI.behavior?.OnDrop();
                 _draggedCardUI.Drop(_hoveredCardUI);
-                
 
-                int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
-                if (craft >= 0)
+                List<GameObject> p = new List<GameObject>();
+                if (_draggedCardUI.transform.parent != null)
+                    p.Add(_draggedCardUI.transform.parent.gameObject);
+                
+                if (CardUtils.GetStackIDList(_draggedCardUI).Count > 1)
                 {
-                    LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
+                    GameObject par = Instantiate(stackParent, Vector3.zero, Quaternion.identity);
+                    StackParent sp = par.GetComponent<StackParent>();
+                    CardUtils.ApplyMethodOnStack(_draggedCardUI, c =>
+                    {
+                        if (c.transform.parent != null)
+                        {
+                            if (!p.Contains(c.transform.parent.gameObject))
+                            {
+                                p.Add(c.transform.parent.gameObject);
+                            }
+                        }
+                        c.transform.parent = par.transform; 
+                        sp.inStack.Add(c);
+                    });
                 }
 
-                CardUtils.ApplyMethodOnStack(_draggedCardUI, c => c.dragged = false);
+                if (p.Count > 0)
+                {
+                    foreach (GameObject parents in p)
+                    {
+                        Destroy(parents);
+                    }
+                }
+                    
+                
+                _draggedCardUI.transform.position = new Vector3(Mathf.Clamp(_draggedCardUI.transform.position.x, -maxX, maxX),
+                    Mathf.Clamp(_draggedCardUI.transform.position.y, -maxY, maxY), _draggedCardUI.transform.position.z);
+                
+
+                /*int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
+                if (craft >= 0 && _draggedCardUI.ID != 11)
+                {
+                    LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
+                }*/
+
+                CardUtils.ApplyMethodOnStack(_draggedCardUI, c =>
+                {
+                    c.dragged = false; 
+                    c.UpdateRenderLayer(SortingLayer.NameToID("Card"));
+                });
                 CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrop());
 
                 
@@ -133,7 +187,17 @@ namespace Leafy.Manager
             {
                 time = 0;
             }
-            
+
+            maxX = board.bounds.max.x - 2;
+            maxY = board.bounds.max.y - 3;
+
+            if (_draggedCardUI != null)
+            {
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    SortStack();
+                }
+            }
         }
 
         private void SnapCardToGrid(Transform obj)
@@ -150,7 +214,7 @@ namespace Leafy.Manager
             obj.position = Vector3.Lerp(obj.position, finalSnappedPosition, Time.deltaTime * lerpingSpeed);
         }
 
-        private void LaunchCraft(int craftID, CardUI firstStackCardUI)
+        public void LaunchCraft(int craftID, CardUI firstStackCardUI)
         {
             if(firstStackCardUI.loader != null)
                 return;
@@ -297,6 +361,39 @@ namespace Leafy.Manager
             }
         }
 
+        public void SortStack()
+        {
+            List<CardUI> cards = CardUtils.GetStackCardList(_draggedCardUI);
+            cards.Sort((card1, card2) => card1.ID.CompareTo(card2.ID));
+
+            foreach (var c in cards)
+            {
+                c.SetParent(null);
+            }
+            
+            //Rearrange parent based on list
+            cards[0].SetParent(null);
+            cards[0].ChangeID(ID++);
+            for (int i = 1; i < cards.Count; i++)
+            {
+                cards[i].SetParent(cards[i-1]);
+                cards[i].ChangeID(ID++);
+            }
+            cards[0].child = cards[1];
+            
+            //Take the first card of the list has dragged
+            cards[0].transform.parent = null;
+            cards[0].SetDragged();
+            _draggedCardUI = cards[0];
+            CardUtils.ApplyMethodOnStack(cards[0], card =>
+            {
+                card.BringToFront();
+                card.UpdateRenderLayer(SortingLayer.NameToID("HUD"));
+            });
+            _hoveredCardUI = null;
+            CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
+        }
+
         /// <summary>
         /// Return the first card hit on the board
         /// </summary>
@@ -319,6 +416,7 @@ namespace Leafy.Manager
 
                     return cardUI;
                 }
+                
                 if(hit.collider.TryGetComponent(out Booster b))
                 {
                     _hoveredBooster = b.gameObject;
@@ -326,6 +424,28 @@ namespace Leafy.Manager
                 else
                 {
                     _hoveredBooster = null;
+                }
+
+                if (hit.collider.TryGetComponent(out SpaceObject s))
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        CardUI c = SpawnCardRef(s.transform.position, s.cardID);
+                        Destroy(s.gameObject);
+
+                        c.SetDragged();
+                        c.transform.parent = null;
+                        _draggedCardUI = c;
+                        _draggedCardUI.behavior?.OnDrag();
+                        CardUtils.ApplyMethodOnStack(_draggedCardUI, card =>
+                        {
+                            card.BringToFront();
+                            card.ChangeID(ID++);
+                        });
+                        _hoveredCardUI = null;
+                        CardUtils.ApplyMethodOnAllChild(_draggedCardUI, card => card.CardDrag());
+                        return null;
+                    }
                 }
             }
             else
@@ -337,6 +457,8 @@ namespace Leafy.Manager
                 _hoveredCardUI.CardExit();
             return null;
         }
+
+        
         
         public Transform RayTestUI()
         {

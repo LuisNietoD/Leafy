@@ -28,6 +28,7 @@ MonoBehaviour:
   activableInterface: 0
   customBehavior: 0
   machineSavoir: 0
+  upgradable: 1
   recipeText:
   - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
   utilities:
@@ -40,7 +41,7 @@ MonoBehaviour:
   storeCard: 1
   inventorySize: 5
   shakable: 0
-  harvestTime: 5
+  harvestTime: 15
   drop:
     m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
     m_ProbabilityItems:
@@ -80,10 +81,25 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 1369586402
+    m_Seed: 2230452313
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457632215026851
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457632164702035
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457632114688338
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457632064371378
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457632014354349
       - m_Index: 0
         m_Time:
           Ticks: 638453523515713363
@@ -373,6 +389,8 @@ MonoBehaviour:
     m_LastPickCount: 1
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0

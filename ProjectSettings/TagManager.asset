@@ -7,6 +7,8 @@ TagManager:
   - Card
   - Sell
   - Buy
+  - Recycle
+  - CardList
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - Card
   - Terrain
   - Lever
-  - 
-  - 
-  - 
+  - HUD
+  - Button
+  - InGameUI
   - 
   - 
   - 
@@ -49,4 +51,7 @@ TagManager:
     locked: 0
   - name: Icon
     uniqueID: 3810283941
+    locked: 0
+  - name: HUD
+    uniqueID: 2747817345
     locked: 0

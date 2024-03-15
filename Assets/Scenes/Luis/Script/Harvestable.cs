@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Leafy.Data;
 using Leafy.Manager;
+using RNGNeeds;
 using UnityEngine;
 
 namespace Leafy.Objects
@@ -14,10 +15,10 @@ namespace Leafy.Objects
         private Vector3 lastPosition;
         private float speed;
         private float elapsedTime;
-        private List<int> cardIDs = new List<int>(); 
         
         public float shakeIntensity = 0.2f;
         public float shakeSpeed = 10f;
+        public int i = 0;
 
         public Harvestable(CardUI cardUI)
         {
@@ -40,11 +41,35 @@ namespace Leafy.Objects
 
         public override void OnClick()
         {
+            if (card.shakable)
+            {
+                if (card.precise)
+                {
+                    Vector3 pos = cardUI.transform.position; 
+                    pos.x += 3;
+                    pos.y -= 1.5f * i;
+                    
+                    GameManager.instance.SpawnCard(pos, card.preciseList[i].ID, cardUI);
+                    cardUI.ReduceLife();
+                    i++;
+                }
+                else
+                {
+                    Vector3 pos = cardUI.transform.position;
+                    pos.x += 3;
+                    pos.y -= 1.5f * i;
+                    GameManager.instance.SpawnCard(pos, card.drop.PickValue().ID, cardUI);
+                    cardUI.ReduceLife();
+                    i++;
+                }
+                
+            }
+            
             Vector3 p = cardUI.transform.position;
             p.x += 4;
-            if(cardIDs.Count > 0)
-                GameManager.instance.SpawnStackPrecise(p, cardIDs);
-            cardIDs.Clear();
+            if(card.cardIDs.Count > 0)
+                GameManager.instance.SpawnStackPrecise(p, card.cardIDs);
+            card.cardIDs.Clear();
         }
 
         public override void OnHover()
@@ -66,17 +91,29 @@ namespace Leafy.Objects
                 }
             }
 
-            if (card.activators.Count <= 0 && !card.shakable && cardIDs.Count < card.inventorySize)
+            if (card.activators.Count <= 0 && !card.shakable)
             {
-                elapsedTime += Time.deltaTime * card.plantRate;
-                if (elapsedTime >= card.harvestTime)
+                if (card.storeCard && card.cardIDs.Count < card.inventorySize + (card.inventorySize * card.storageLevel))
                 {
-                    cardIDs.Add(card.drop.PickValue().ID);
-                    elapsedTime = 0;
+                    elapsedTime += Time.deltaTime * card.plantRate;
+                    if (elapsedTime >= card.harvestTime - ((card.harvestTime / 10) * card.rateLevel))
+                    {
+                        card.cardIDs.Add(card.drop.PickValue().ID);
+                        float r = Random.Range(0f, 1f);
+                        Debug.Log(r);
+                        if (r < 0.2f * card.productivityLevel)
+                            card.cardIDs.Add(card.drop.PickValue().ID);
+                        elapsedTime = 0;
+                    }
+                }
+                else if (!card.storeCard)
+                {
+                    GameManager.instance.LaunchCraft(card.drop.PickValue().ID, 
+                        new List<CardUI>() {cardUI}, card.harvestTime);
                 }
             }
 
-            if (card.storeCard && cardIDs.Count == card.inventorySize)
+            if (card.storeCard && card.cardIDs.Count == card.inventorySize + (card.inventorySize * card.storageLevel))
             {
                 float offsetX = Mathf.PerlinNoise(0, Time.time * shakeSpeed) * shakeIntensity - shakeIntensity / 2f;
                 float offsetY = Mathf.PerlinNoise(Time.time * shakeSpeed, 0) * shakeIntensity - shakeIntensity / 2f;
@@ -97,15 +134,6 @@ namespace Leafy.Objects
             currentPosition.z = lastPosition.z;
             speed = (currentPosition - lastPosition).magnitude / Time.deltaTime;
             lastPosition = currentPosition;
-
-            if (card.shakable && speed > shakeThreshold && elapsed >= 0.8f)
-            {
-                elapsed = 0;
-                Vector3 pos = cardUI.transform.position;
-                pos.y -= 2;
-                GameManager.instance.SpawnCard(pos, card.drop.PickValue().ID, cardUI);
-                cardUI.ReduceLife();
-            }
         }
         
     }

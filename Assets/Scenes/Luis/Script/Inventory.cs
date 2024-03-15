@@ -10,8 +10,7 @@ namespace Leafy.Objects
     {
         private CardUI cardUI;
         private Card card;
-        private int actualstoredCardID;
-        private int actualstoredCard;
+        
 
         public Inventory(CardUI cardUI)
         {
@@ -42,15 +41,15 @@ namespace Leafy.Objects
         {
             Vector3 p = cardUI.transform.position;
             p.x += 3;
-            if (actualstoredCard >= 5)
+            if (card.actualstoredCard >= 5)
             {
-                GameManager.instance.SpawnStack(p, actualstoredCardID, 5);
-                actualstoredCard -= 5;
+                GameManager.instance.SpawnStack(p, card.actualstoredCardID, 5);
+                card.actualstoredCard -= 5;
             }
-            else if (actualstoredCard > 0)
+            else if (card.actualstoredCard > 0)
             {
-                GameManager.instance.SpawnStack(p, actualstoredCardID, actualstoredCard);
-                actualstoredCard = 0;
+                GameManager.instance.SpawnStack(p, card.actualstoredCardID, card.actualstoredCard);
+                card.actualstoredCard = 0;
             }
 
            
@@ -73,19 +72,19 @@ namespace Leafy.Objects
             {
                 if (card.preciseCard && card.preciseCardID == cardUI.child.ID)
                 {
-                    if (actualstoredCard < cardUI.card.slotAmount)
+                    if (card.actualstoredCard < cardUI.card.slotAmount)
                     {
-                        actualstoredCardID = card.preciseCardID;
-                        actualstoredCard++;
+                        card.actualstoredCardID = card.preciseCardID;
+                        card.actualstoredCard++;
                         GameManager.instance.DestroyObject(cardUI.child.gameObject);
                     }
                 }
-                else if (!card.preciseCard && (cardUI.child.ID == actualstoredCardID || actualstoredCardID == 0) && cardUI.child.card.type == card.typeSlot.ToString())
+                else if (!card.preciseCard && (cardUI.child.ID == card.actualstoredCardID || card.actualstoredCardID == 0) && cardUI.child.card.type == card.typeSlot.ToString())
                 {
-                    if (actualstoredCard < cardUI.card.slotAmount)
+                    if (card.actualstoredCard < cardUI.card.slotAmount)
                     {
-                        actualstoredCardID = cardUI.child.ID;
-                        actualstoredCard++;
+                        card.actualstoredCardID = cardUI.child.ID;
+                        card.actualstoredCard++;
                         GameManager.instance.DestroyObject(cardUI.child.gameObject);
                     }
                 }
@@ -100,29 +99,29 @@ namespace Leafy.Objects
                 }
             }
 
-            if (actualstoredCardID != 0)
+            if (card.actualstoredCardID != 0)
             {
                 cardUI.slotIcon.enabled = true;
-                cardUI.slotIcon.sprite = CardList.GetCardByID(actualstoredCardID).artwork;
+                cardUI.slotIcon.sprite = CardList.GetCardByID(card.actualstoredCardID).artwork;
             }
             else if (card.preciseCard)
             {
                 cardUI.slotIcon.sprite = CardList.GetCardByID(card.preciseCardID).artwork;
             }
             
-            if (actualstoredCard <= 0)
+            if (card.actualstoredCard <= 0)
             {
-                actualstoredCardID = 0;
+                card.actualstoredCardID = 0;
                 if (!card.preciseCard)
                     cardUI.slotIcon.enabled = false;
                 card.stockEmpty = true;
             }
-            else if(actualstoredCard > 0)
+            else if(card.actualstoredCard > 0)
             {
                 card.stockEmpty = false;
             }
 
-            cardUI.slotText.text = actualstoredCard + "/" + card.slotAmount;
+            cardUI.slotText.text = card.actualstoredCard + "/" + card.slotAmount;
         }
     }
 }

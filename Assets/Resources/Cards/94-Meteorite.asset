@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
+  m_Name: 94-Meteorite
+  m_EditorClassIdentifier: 
+  name: Meteorite
+  ID: 94
+  artwork: {fileID: 21300000, guid: 3d2f7b1c22889d84a84c65eba6c5cc33, type: 3}
+  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  type: 2
+  sellable: 0
+  craftable: 0
+  harvestable: 1
+  inventory: 0
+  evolve: 0
+  interfaces: 0
+  transmute: 0
+  activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
+  recipeText:
+  - Obtenu dans les booster
+  utilities:
+  - cardName: Secouez la boite
+    recipe: 1 x Terre<br>1 x Sable<br>1 x Graine<br>1 x Pot
+  price: 5
+  timeToCraft: 0
+  infinite: 0
+  life: 4
+  storeCard: 0
+  inventorySize: 0
+  shakable: 1
+  harvestTime: 0
+  drop:
+    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 825b65c8faae7a54fb2bf36f13cd4b9d, type: 2}
+      m_BaseProbability: 0.45161286
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 36b414930593faf45ac5de307cbf4b1d, type: 2}
+      m_BaseProbability: 0.112903215
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: f2ece99580f734f49b4227a4b8ef6179, type: 2}
+      m_BaseProbability: 0.43548387
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    m_PreventRepeat: 2
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 3696138958
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456263920785740
+      - m_Index: 2
+        m_Time:
+          Ticks: 638456263918802755
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456263917146855
+      - m_Index: 2
+        m_Time:
+          Ticks: 638456263894870490
+      - m_Index: 1
+        m_Time:
+          Ticks: 638456263892698209
+      - m_Index: 2
+        m_Time:
+          Ticks: 638456263890920205
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456263862034549
+      - m_Index: 1
+        m_Time:
+          Ticks: 638456263855295287
+      - m_Index: 0
+        m_Time:
+          Ticks: 638456263852734178
+      m_Capacity: 1000
+    m_LastPickCount: 1
+    m_SelectionMethodID: LSMRegular
+  activators: 
+  preciseSpawn: 1
+  preciseList:
+  - {fileID: 11400000, guid: 825b65c8faae7a54fb2bf36f13cd4b9d, type: 2}
+  - {fileID: 11400000, guid: 825b65c8faae7a54fb2bf36f13cd4b9d, type: 2}
+  - {fileID: 11400000, guid: 98b46fa6fbe107044ad6c9ccb07b04a5, type: 2}
+  - {fileID: 11400000, guid: 4f9fe46481fdedf41927ccf43e3aff8d, type: 2}
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
+  recipes: []
+  evolveTime: 0
+  evolutions:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 0
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
+  transmuteList: []
+  savoirList: []
+  behavior: 
