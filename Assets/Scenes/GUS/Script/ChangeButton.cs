@@ -93,8 +93,6 @@ public class ChangeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 Delete.SetActive(true);
                 Click.Play(); 
                 break;
-            
-            
         }
     }
     
