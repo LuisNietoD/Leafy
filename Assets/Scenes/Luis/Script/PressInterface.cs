@@ -30,7 +30,7 @@ namespace Leafy.Objects
                 if (c != null)
                 {
                     GameManager.instance.SpawnCard(p, recipe.Key);
-                    foreach (CardUI card in childList)
+                    foreach (CardUI card in c)
                     {
                         Destroy(card.gameObject);
                     }

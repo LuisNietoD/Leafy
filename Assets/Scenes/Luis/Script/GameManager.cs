@@ -130,11 +130,11 @@ namespace Leafy.Manager
                     Mathf.Clamp(_draggedCardUI.transform.position.y, -maxY, maxY), _draggedCardUI.transform.position.z);
                 
 
-                int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
+                /*int craft = Craft.GetCraft(CardUtils.GetStackIDList(_draggedCardUI));
                 if (craft >= 0 && _draggedCardUI.ID != 11)
                 {
                     LaunchCraft(craft, CardUtils.GetRootCard(_draggedCardUI));
-                }
+                }*/
 
                 CardUtils.ApplyMethodOnStack(_draggedCardUI, c =>
                 {
@@ -214,7 +214,7 @@ namespace Leafy.Manager
             obj.position = Vector3.Lerp(obj.position, finalSnappedPosition, Time.deltaTime * lerpingSpeed);
         }
 
-        private void LaunchCraft(int craftID, CardUI firstStackCardUI)
+        public void LaunchCraft(int craftID, CardUI firstStackCardUI)
         {
             if(firstStackCardUI.loader != null)
                 return;

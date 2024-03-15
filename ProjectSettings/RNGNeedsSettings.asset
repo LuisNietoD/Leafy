@@ -237,7 +237,7 @@ MonoBehaviour:
     SpreadPercentageDigits: 2
   - DrawerID: d5a39b70-b5fa-46de-868a-7b1c13e86b36
     Created: 638432758444531639
-    Modified: 638459801025598789
+    Modified: 638460575481209533
     DrawerOptionSection: 1
     PalettePath: Default
     DimColors: 1
@@ -835,7 +835,7 @@ MonoBehaviour:
     SpreadPercentageDigits: 2
   - DrawerID: a40c18d9-6e51-45db-9e19-390082c469f0
     Created: 638457744267855779
-    Modified: 638458040192761745
+    Modified: 638460444361823317
     DrawerOptionSection: 0
     PalettePath: Default
     DimColors: 1
@@ -858,7 +858,7 @@ MonoBehaviour:
     SpreadPercentageDigits: 2
   - DrawerID: 31fa0e45-01c0-4a2e-9c89-985776f1892a
     Created: 638457744268897072
-    Modified: 638458040192983782
+    Modified: 638460444361828503
     DrawerOptionSection: 0
     PalettePath: Default
     DimColors: 1
@@ -927,7 +927,7 @@ MonoBehaviour:
     SpreadPercentageDigits: 2
   - DrawerID: 680cbbf2-bba7-4980-a8d3-9e7dc8f5eb18
     Created: 638459720880715153
-    Modified: 638459730311166996
+    Modified: 638460591171346110
     DrawerOptionSection: 1
     PalettePath: Default
     DimColors: 1
@@ -950,7 +950,7 @@ MonoBehaviour:
     SpreadPercentageDigits: 2
   - DrawerID: 4a874e81-a750-4518-8559-a3ec1bf13fa5
     Created: 638459721374841785
-    Modified: 638459730311166996
+    Modified: 638460591171330974
     DrawerOptionSection: 0
     PalettePath: Default
     DimColors: 1
@@ -974,6 +974,98 @@ MonoBehaviour:
   - DrawerID: b258b16d-2ef0-4a2a-9dfe-a34536739ebe
     Created: 638459731753028935
     Modified: 638459731753028935
+    DrawerOptionSection: 0
+    PalettePath: Default
+    DimColors: 1
+    Monochrome: 0
+    MonochromeColor: {r: 1, g: 0.78, b: 0.4, a: 1}
+    ShowIndex: 0
+    ShowInfo: 1
+    ShowPercentage: 1
+    StripeHeight: 2
+    StripePercentageDigits: 0
+    ItemPercentageDigits: 2
+    TestPercentageDigits: 2
+    ColorizePreviewBars: 1
+    NormalizePreviewBars: 0
+    TestColorizeSensitivity: 3
+    SpreadColorizeSensitivity: 2
+    ElementInfoSpace: 0.5
+    ShowInfluenceToggle: 0
+    ShowSpreadOnBars: 0
+    SpreadPercentageDigits: 2
+  - DrawerID: d88bd93e-4b36-4b19-9925-4d30e70cf758
+    Created: 638460270822872461
+    Modified: 638460273788846343
+    DrawerOptionSection: 0
+    PalettePath: Default
+    DimColors: 1
+    Monochrome: 0
+    MonochromeColor: {r: 1, g: 0.78, b: 0.4, a: 1}
+    ShowIndex: 0
+    ShowInfo: 1
+    ShowPercentage: 1
+    StripeHeight: 2
+    StripePercentageDigits: 0
+    ItemPercentageDigits: 2
+    TestPercentageDigits: 2
+    ColorizePreviewBars: 1
+    NormalizePreviewBars: 0
+    TestColorizeSensitivity: 3
+    SpreadColorizeSensitivity: 2
+    ElementInfoSpace: 0.5
+    ShowInfluenceToggle: 0
+    ShowSpreadOnBars: 0
+    SpreadPercentageDigits: 2
+  - DrawerID: 15dc3d3b-12d1-4378-b804-741fc59760ed
+    Created: 638460270824321824
+    Modified: 638460273789053656
+    DrawerOptionSection: 0
+    PalettePath: Default
+    DimColors: 1
+    Monochrome: 0
+    MonochromeColor: {r: 1, g: 0.78, b: 0.4, a: 1}
+    ShowIndex: 0
+    ShowInfo: 1
+    ShowPercentage: 1
+    StripeHeight: 2
+    StripePercentageDigits: 0
+    ItemPercentageDigits: 2
+    TestPercentageDigits: 2
+    ColorizePreviewBars: 1
+    NormalizePreviewBars: 0
+    TestColorizeSensitivity: 3
+    SpreadColorizeSensitivity: 2
+    ElementInfoSpace: 0.5
+    ShowInfluenceToggle: 0
+    ShowSpreadOnBars: 0
+    SpreadPercentageDigits: 2
+  - DrawerID: cb0719f0-d527-4755-9ec8-835f369021bf
+    Created: 638460446867609642
+    Modified: 638460458982951134
+    DrawerOptionSection: 0
+    PalettePath: Default
+    DimColors: 1
+    Monochrome: 0
+    MonochromeColor: {r: 1, g: 0.78, b: 0.4, a: 1}
+    ShowIndex: 0
+    ShowInfo: 1
+    ShowPercentage: 1
+    StripeHeight: 2
+    StripePercentageDigits: 0
+    ItemPercentageDigits: 2
+    TestPercentageDigits: 2
+    ColorizePreviewBars: 1
+    NormalizePreviewBars: 0
+    TestColorizeSensitivity: 3
+    SpreadColorizeSensitivity: 2
+    ElementInfoSpace: 0.5
+    ShowInfluenceToggle: 0
+    ShowSpreadOnBars: 0
+    SpreadPercentageDigits: 2
+  - DrawerID: 6df6cc28-6e20-43ad-8b65-eae7dd3385ae
+    Created: 638460446867669888
+    Modified: 638460458985226827
     DrawerOptionSection: 0
     PalettePath: Default
     DimColors: 1

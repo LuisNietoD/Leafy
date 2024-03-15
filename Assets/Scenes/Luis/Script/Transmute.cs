@@ -78,9 +78,17 @@ namespace Leafy.Objects
 
                             List<int> ids = new List<int>();
                             
-                            for (int i = 0; i < recipe.resultAmount; i++)
+                            for (var i = 0; i < recipe.resultAmount; i++)
                             {
-                                ids.Add(recipe.result.PickValue().ID);
+                                if (recipe.result.TryPickValue(out var scriptableCard))
+                                {
+                                    ids.Add(scriptableCard.ID);
+                                }
+                                else
+                                {
+                                    Debug.Log("No item was selected.");
+                                }
+                                // ids.Add(recipe.result.PickValue().ID);
                             }
 
                             GameManager.instance.LaunchTransmute(cardUI, ids, c, 2);

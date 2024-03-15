@@ -31,7 +31,6 @@ namespace Leafy.Data
         void Start()
         { 
             StartCoroutine(LoadScriptableObjectsCoroutine());
-            DontDestroyOnLoad(gameObject);
         }
 
         IEnumerator LoadScriptableObjectsCoroutine()

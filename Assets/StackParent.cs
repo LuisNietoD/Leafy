@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Leafy.Data;
 using Leafy.Manager;
 using Leafy.Objects;
 using UnityEngine;
@@ -11,12 +12,12 @@ public class StackParent : MonoBehaviour
     public List<CardUI> inStack = new List<CardUI>();
 
     public bool firstSpawn = true;
+    public int lastChilCount = 0;
+    public GameObject craftButton;
+    public GameObject actualButton;
 
     private void Start()
     {
-        /*if(transform.childCount <= 0)
-            Destroy(gameObject);
-*/
         //Rearrange parent based on list
         if (!firstSpawn)
         {
@@ -52,6 +53,47 @@ public class StackParent : MonoBehaviour
                 inStack[0].child = inStack[1];
         }
 
+        if(actualButton != null)
+            Destroy(actualButton);
+        int craft = Craft.GetCraft(CardUtils.GetStackIDList(inStack[0]));
+        if (craft >= 0 && inStack[0].ID != 11)
+        {
+            actualButton = Instantiate(craftButton, transform.position, Quaternion.identity);
+            CraftButton cb = actualButton.GetComponent<CraftButton>();
+            cb.toFollow = inStack[0].transform;
+            cb.craft = craft;
+        }
+        
         firstSpawn = false;
+    }
+
+    private void Update()
+    {
+        if (lastChilCount != transform.childCount && transform.childCount > 0)
+        {
+            if(actualButton != null)
+                Destroy(actualButton);
+            if (inStack.Count > 0)
+            {
+                if(inStack[0].loader != null)
+                    Destroy(inStack[0].loader);
+                int craft = Craft.GetCraft(CardUtils.GetStackIDList(inStack[0]));
+                if (craft >= 0 && inStack[0].ID != 11)
+                {
+                    actualButton = Instantiate(craftButton, transform.position, Quaternion.identity);
+                    CraftButton cb = actualButton.GetComponent<CraftButton>();
+                    cb.toFollow = inStack[0].transform;
+                    cb.craft = craft;
+                }
+            }
+
+            lastChilCount = transform.childCount;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if(actualButton != null)
+            Destroy(actualButton);
     }
 }

@@ -450,6 +450,22 @@ namespace Leafy.Objects
                 transform.position = CameraCenterToPoint();
             }
         }
+        
+        private void AddToCraftCard(RecycleZone r)
+        {
+            List<CardUI> stackCards = CardUtils.GetStackCardList(this);
+
+            if (stackCards.All(c => c.card.type == "Plant"))
+            {
+                int totalNumberOfCards = stackCards.Count;
+                r.Recycle(totalNumberOfCards);
+                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+            }
+            else
+            {
+                transform.position = CameraCenterToPoint();
+            }
+        }
 
         private void BuyCard(BuyZone buyZone)
         {

@@ -8,16 +8,11 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
 {
     public GameObject cardShow;
     public TextMeshProUGUI title;
-    private TextMeshProUGUI textMeshPro;
+    public TextMeshProUGUI textMeshPro;
     private bool isMouseOverText;
     public float offset;
     public TutoDisplayer tuto;
-
-    void Start()
-    {
-        textMeshPro = GetComponent<TextMeshProUGUI>();
-    }
-
+    
     public void OnPointerEnter(PointerEventData eventData)
     {
         isMouseOverText = true;
@@ -56,9 +51,7 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    title.text = card.name;
-                    textMeshPro.text = card.recipeText[0];
-                    tuto.ChangeTuto(textMeshPro);
+                    DisplayTuto(card);
                 }
 
                 cardShow.transform.position = mousePosition;
@@ -69,5 +62,13 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
                 cardShow.SetActive(false);
             }
         }
+    }
+
+    public void DisplayTuto(ScriptableCard c)
+    {
+        title.text = c.name;
+        Debug.Log(c.recipeText[0]);
+        textMeshPro.text = c.recipeText[0];
+        tuto.ChangeTuto(textMeshPro);
     }
 }

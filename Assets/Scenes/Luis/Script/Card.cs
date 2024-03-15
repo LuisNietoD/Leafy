@@ -22,7 +22,7 @@ namespace Leafy.Data
         public bool infinite;
         public float harvestTime;
         public ProbabilityList<ScriptableCard> drop;
-        public List<int> activators;
+        public List<int> activators = new List<int>();
         public bool inventory;
         public int slotAmount;
         public Card_Type typeSlot;
@@ -36,7 +36,7 @@ namespace Leafy.Data
         public bool interfaces;
         public List<GameObject> interfaceList = new List<GameObject>();
         public bool transmute;
-        public List<TransmuteRecipe> transmuteRecipes;
+        public List<TransmuteRecipe> transmuteRecipes = new List<TransmuteRecipe>();
         public bool requiereEnergy;
         public bool activableInterface;
         public int energyCost;
@@ -47,7 +47,7 @@ namespace Leafy.Data
         public List<string> recipes;
         public List<utility> utilities;
         public bool machineSavoir;
-        public List<SavoirList> SavoirList;
+        public List<SavoirList> SavoirList = new List<SavoirList>();
         public bool customBehavior;
         public string behavior;
         public float plantRate = 1;
@@ -123,7 +123,7 @@ namespace Leafy.Data
                     energyCost = card.energyPerCraft;
                     actualEnergy = 0;
                 }
-                transmuteRecipes = new List<TransmuteRecipe>(card.transmuteList);
+                transmuteRecipes = card.transmuteList;
             }
 
             if (machineSavoir)
