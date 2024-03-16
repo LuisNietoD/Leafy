@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 50-Machine a Savoir
   m_EditorClassIdentifier: 
-  name: Machine a Savoir
+  name: Knowledge Engine
   ID: 50
   artwork: {fileID: 21300000, guid: 838b80ceb1e2c3247a23f57965f4f0e9, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -26,7 +26,9 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
   machineSavoir: 1
+  upgradable: 0
   recipeText:
   - 1 x Pepite de Lithium(Slot de Press)
   utilities: []
@@ -79,6 +81,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -161,3 +165,4 @@ MonoBehaviour:
     result: 33000000
   - pointDeSavoir: 5
     result: 2100000020000000
+  behavior: 

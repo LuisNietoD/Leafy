@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 14-Arbuste
   m_EditorClassIdentifier: 
-  name: Arbuste
+  name: Shrub
   ID: 14
   artwork: {fileID: 21300000, guid: 64ef33829b8b3a0478770d0878b25665, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

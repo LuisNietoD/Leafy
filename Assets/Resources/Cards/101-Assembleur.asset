@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 101-Assembleur
   m_EditorClassIdentifier: 
-  name: Assembleur
+  name: Assembly Machine
   ID: 101
   artwork: {fileID: 21300000, guid: c38eb36adb675c44d9441b2273c8521f, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

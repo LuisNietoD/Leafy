@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 121-Cellule Photovoltaique
   m_EditorClassIdentifier: 
-  name: Cellule Photovoltaique
+  name: Photovoltaic Cell
   ID: 121
   artwork: {fileID: 21300000, guid: c081fcf8d4a16654cb001186f0aa184a, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 9-Infinite source
   m_EditorClassIdentifier: 
-  name: Source infinie
+  name: Infinite Source
   ID: 9
   artwork: {fileID: 21300000, guid: 72ac722c3fedd9d4d8c2745f5317bff1, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

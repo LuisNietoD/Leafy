@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 82-Melangeur
   m_EditorClassIdentifier: 
-  name: Melangeur
+  name: Merging Machine
   ID: 82
   artwork: {fileID: 21300000, guid: d81f256eaf35a8946ae5ba0e12e20ddb, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -89,7 +89,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 3500000035000000230000002300000023000000230000002100000021000000210000001f0000001f0000001e0000001e000000
+    recipe: 1e0000001e0000001f0000001f000000210000002100000021000000230000002300000023000000230000003500000035000000
   evolveTime: 0
   evolutions:
     m_PLID: 

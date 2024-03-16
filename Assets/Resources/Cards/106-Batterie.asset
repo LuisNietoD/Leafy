@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 106-Batterie
   m_EditorClassIdentifier: 
-  name: Batterie
+  name: Big Battery
   ID: 106
   artwork: {fileID: 21300000, guid: d5b291fa1a796174fa47d0cc0abe94c3, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

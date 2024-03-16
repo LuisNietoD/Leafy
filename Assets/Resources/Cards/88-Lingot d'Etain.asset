@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 88-Lingot d'Etain
   m_EditorClassIdentifier: 
-  name: Lingot d'Etain
+  name: Tin Ingot
   ID: 88
   artwork: {fileID: 21300000, guid: d56b63fe5863bdd4fa5a8c424b4daa21, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -83,6 +83,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0

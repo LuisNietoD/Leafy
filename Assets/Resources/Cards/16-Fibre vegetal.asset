@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 16-Fibre vegetal
   m_EditorClassIdentifier: 
-  name: Fibre vegetal
+  name: Natural fiber
   ID: 16
   artwork: {fileID: 21300000, guid: e970d7fa1a430584dae131840451e448, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -26,6 +26,9 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
   - Produit par la Plante de Base
   utilities:
@@ -82,6 +85,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -133,3 +138,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 

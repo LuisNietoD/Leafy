@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 95-Pierre de Rosette
   m_EditorClassIdentifier: 
-  name: Pierre de Rosette
+  name: Rosetta Stone
   ID: 95
   artwork: {fileID: 21300000, guid: 9e5abe6c53c27c6428b2c1384046b4c0, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

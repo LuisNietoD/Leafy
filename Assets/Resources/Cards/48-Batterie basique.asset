@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 48-Batterie basique
   m_EditorClassIdentifier: 
-  name: Batterie Basique
+  name: Small Battery
   ID: 48
   artwork: {fileID: 21300000, guid: 4c23d5deaf48ffd4c9fbdcfffeda2425, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}

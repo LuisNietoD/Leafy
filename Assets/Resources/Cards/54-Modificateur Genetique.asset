@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 54-Modificateur Genetique
   m_EditorClassIdentifier: 
-  name: Modificateur Genetique
+  name: Genetic Modifier
   ID: 54
   artwork: {fileID: 21300000, guid: afe5897d649dca4469e67296c4b36776, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -89,7 +89,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 1d0000001d000000340000002a0000003500000035000000
+    recipe: 1d0000001d0000002a000000340000003500000035000000
   evolveTime: 0
   evolutions:
     m_PLID: 

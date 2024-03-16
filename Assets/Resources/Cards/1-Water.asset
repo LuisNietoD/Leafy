@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 1-Water
   m_EditorClassIdentifier: 
-  name: Eau
+  name: Water
   ID: 1
   artwork: {fileID: 21300000, guid: cf09f25dc8260f94391e15d92bd124d0, type: 3}
   background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
@@ -26,34 +26,40 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
   machineSavoir: 0
+  upgradable: 0
   recipeText:
-  - '<link="Stack,1:Source,1:Seau"></link>
+  - '<link="Stack,1:Source,1:Bucket"></link>
 
-    Money du jeu, Permet d''acheter des
-    packs mais aussi de faire pousser des <color=yellow> <link="Plante">plantes</link></color>
-    et de les upgrades.
+    A scarce resource, nowadays used
+    as <color=grey>currency </color>. Can be used to grow out <color=yellow><link="Plante">plants</link></color>
+    and accelerate their harvesting point by using a <color=yellow><link="Arrosoir">watering
+    can</link></color>. Can be <color=grey>stocked</color>.
+
+
+    Required :
+
+    1
+    x <color=yellow> <link="Source">Source</link></color>
+
+    1 x <color=yellow>
+    <link="Seau">Seau</link></color>'
+  - '<link="Stack,1:Source infinie,1:Seau"></link>
+
+    A scarce resource, nowadays
+    used as <color=grey>currency </color>. Can be used to grow out <color=yellow><link="Plante">plants</link></color>
+    and accelerate their harvesting point by using a <color=yellow><link="Arrosoir">watering
+    can</link></color>. Can be <color=grey>stocked</color>.
 
 
     Recette:
 
-    1 x <color=yellow> <link="Source">Source</link></color>
+    1
+    x <color=yellow> <link="Source infinie">Source infinie</link></color>
 
     1
     x <color=yellow> <link="Seau">Seau</link></color>'
-  - '<link="Stack,1:Source infinie,1:Seau"></link>
-
-    Money du jeu, Permet d''acheter
-    des packs mais aussi de faire pousser des <color=yellow> <link="Plante">plantes</link></color>
-    et de les upgrades.
-
-
-    Recette:
-
-    1 x <color=yellow> <link="Source infinie">Source
-    infinie</link></color>
-
-    1 x <color=yellow> <link="Seau">Seau</link></color>'
   utilities:
   - cardName: Eau
     recipe: Sert a acheter des cartes
@@ -108,6 +114,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -160,3 +168,4 @@ MonoBehaviour:
   energyPerCraft: 0
   transmuteList: []
   savoirList: []
+  behavior: 
