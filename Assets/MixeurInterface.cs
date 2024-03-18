@@ -15,8 +15,8 @@ public class MixeurInterface : CardGameInterface
         if (first.transform.childCount > 0 && second.transform.childCount > 0)
         {
             List<int> cards = new List<int>();
-            cards.Add(first.transform.GetChild(0).GetComponent<CardUI>().ID);
-            cards.Add(second.transform.GetChild(0).GetComponent<CardUI>().ID);
+            cards.Add(first.transform.GetChild(0).GetComponent<StackParent>().inStack[0].ID);
+            cards.Add(second.transform.GetChild(0).GetComponent<StackParent>().inStack[0].ID);
 
             int result = Craft.GetMixCraft(cards);
 
@@ -25,8 +25,8 @@ public class MixeurInterface : CardGameInterface
                 Vector3 p = transform.position;
                 p.y -= 3.5f;
                 GameManager.instance.SpawnCard(p, result);
-                Destroy(first.transform.GetChild(0).gameObject);
-                Destroy(second.transform.GetChild(0).gameObject);
+                Destroy(first.transform.GetChild(0).GetComponent<StackParent>().inStack[0].gameObject);
+                Destroy(second.transform.GetChild(0).GetComponent<StackParent>().inStack[0].gameObject);
             }
         }
     }

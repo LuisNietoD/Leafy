@@ -89,6 +89,9 @@ public class StackParent : MonoBehaviour
 
             lastChilCount = transform.childCount;
         }
+        
+        if(transform.childCount <= 0)
+            Destroy(gameObject);
     }
 
     private void OnDestroy()

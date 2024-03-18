@@ -5,7 +5,6 @@ using Leafy.Manager;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Leafy.Objects
 {
@@ -54,12 +53,49 @@ namespace Leafy.Objects
 
         private GameObject _interface;
 
+        public Vector3 startPosition;
+        public float animTime = 0.7f;
+        public float elapsedTime = 0;
+        private bool halfway = false;
+        private Vector3 originalScale;
+        public bool halfTime;
+
 
         //private CardBehavior cardBehavior;
         private bool hovered;
         public bool dragged;
 
         private static int BuyPack = 0;
+        
+        private void Update()
+        {
+            if (elapsedTime < animTime/2)
+            {
+                elapsedTime += Time.deltaTime;
+
+                background.material.SetFloat("_Dissolve", 1.1f - ((elapsedTime/animTime) * 1.1f));
+            }
+            else if (elapsedTime < animTime && elapsedTime >= animTime / 2)
+            {
+                elapsedTime += Time.deltaTime;
+
+                float r = Mathf.Lerp(-180, 0, (elapsedTime-animTime/2)/(animTime/2));
+                if (r > -90 && !bord.gameObject.activeSelf)
+                {
+                    UpdateCardInfo(card);
+                }
+                model.transform.localEulerAngles = new Vector3(0, r, 0);
+                shadow.transform.localEulerAngles = new Vector3(0, r, 0);
+                background.material.SetFloat("_Dissolve", 1.1f - ((elapsedTime/animTime) * 1.1f));
+
+            }
+            else if (elapsedTime > animTime)
+            {
+                model.transform.localEulerAngles = new Vector3(0, 0, 0);
+                shadow.transform.localEulerAngles = new Vector3(0, 0, 0);
+                shadow.gameObject.SetActive(true);
+            }
+        }
 
         private void Awake()
         {
@@ -106,16 +142,32 @@ namespace Leafy.Objects
                 UpdateCardInfo(card);
 
             SpawnCollision();
+            if (transform.parent == null)
+            {
+                GameManager.instance.SetToParent(this);
+            }
             behavior?.Spawn();
+
+            foreach (Transform child in model.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+            background.gameObject.SetActive(true);
+            shadow.gameObject.SetActive(false);
+
         }
 
         public void UpdateCardInfo(Card c)
         {
             card = c;
             cardName.text = card.name;
+            cardName.gameObject.SetActive(true);
             typeName.text = card.type;
-            background.color = card.backgroundColor;
+            typeName.gameObject.SetActive(true);
+            background.sprite = card.background;
             artwork.sprite = card.artwork;
+            artwork.gameObject.SetActive(true);
+            bord.gameObject.SetActive(true);
             ID = card.ID;
             if (card.harvestable && behavior == null)
             {
@@ -218,6 +270,36 @@ namespace Leafy.Objects
             growIcon.sortingLayerID = value;
             stockIcon.sortingLayerID = value;
         }
+
+        /*private void Update()
+        {
+            if (elapsedTime < animTime)
+            {
+                elapsedTime += Time.deltaTime;
+                Vector3 p = Vector3.Lerp(startPosition, Vector3.zero, elapsedTime / animTime);
+                p.z = 1;
+                model.transform.localPosition = p;
+                shadow.gameObject.transform.localPosition = new Vector3(model.transform.localPosition.x - 0.048f,
+                    model.transform.localPosition.y - 0.048f, 1);
+                rotation = Mathf.Lerp(-180, 0, elapsedTime / animTime);
+                Vector3 rot = new Vector3(0, rotation, 0);
+                model.transform.localEulerAngles = rot;
+                shadow.transform.localEulerAngles = rot;
+
+                if (rot.y > -90 && !artwork.gameObject.activeSelf)
+                {
+                    UpdateCardInfo(card);
+                }
+            }
+            else
+            {
+                model.transform.localPosition = new Vector3(0, 0, 1);
+                shadow.gameObject.transform.localPosition = new Vector3( -0.048f, -0.048f, 1);
+                model.transform.localEulerAngles = new Vector3(0, 0, 0);
+                shadow.transform.localEulerAngles = new Vector3(0, 0, 0);
+            }
+            
+        }*/
 
         private void FixedUpdate()
         {
@@ -329,6 +411,7 @@ namespace Leafy.Objects
                         {
                             SetParent(CardUtils.GetLastCard(otherCard));
                             CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                            GameManager.instance.SetToParent(this);
                             return;
                         }
                         
@@ -336,6 +419,7 @@ namespace Leafy.Objects
                         {
                             otherCard.SetParent(this);
                             CardUtils.ApplyMethodOnStack(this, c => c.ChangeID(GameManager.instance.ID++));
+                            GameManager.instance.SetToParent(this);
                             return;
                         }
                     }
@@ -549,6 +633,10 @@ namespace Leafy.Objects
         /// <param name="cardUI"></param>
         public void Drop(CardUI cardUI)
         {
+            if (cardUI != null)
+            {
+                QuestManager.instance.UpdateQuest(1);
+            }
             Vector3 p = transform.position;
             p.z = 0;
             transform.position = p;
@@ -669,6 +757,10 @@ namespace Leafy.Objects
                 Destroy(loader);
             if(child != null)
                 child.SetParent(parent);
+            if (transform.parent.TryGetComponent(out StackParent stackParent))
+            {
+                stackParent.inStack.Remove(this);
+            }
         }
 
         public Vector3 CameraCenterToPoint()

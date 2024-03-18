@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Filled Pot
   ID: 10
   artwork: {fileID: 21300000, guid: 06548df6ad3a8aa47adaf9b0bf596b82, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
   type: 1
   sellable: 1

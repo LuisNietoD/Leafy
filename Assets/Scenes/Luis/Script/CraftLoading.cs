@@ -34,7 +34,7 @@ public class CraftLoading : MonoBehaviour
         {
             
             Vector3 pos = stack[0].transform.position;
-            pos.x += 2;
+            pos.x += 3;
             if (multipleCards)
             {
                 GameManager.instance.SpawnStackPrecise(pos, toCraft);

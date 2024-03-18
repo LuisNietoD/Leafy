@@ -17,8 +17,8 @@ namespace Leafy.Objects
             if (first.transform.childCount > 0 && second.transform.childCount > 0)
             {
                 List<int> cards = new List<int>();
-                cards.Add(first.transform.GetChild(0).GetComponent<CardUI>().ID);
-                cards.Add(second.transform.GetChild(0).GetComponent<CardUI>().ID);
+                cards.Add(first.transform.GetChild(0).GetComponent<StackParent>().inStack[0].ID);
+                cards.Add(second.transform.GetChild(0).GetComponent<StackParent>().inStack[0].ID);
 
                 int result = Craft.GetGenCraft(cards);
 
@@ -27,15 +27,15 @@ namespace Leafy.Objects
                     Vector3 p = transform.position;
                     p.y -= 3.5f;
                     GameManager.instance.SpawnCard(p, result);
-                    Destroy(first.transform.GetChild(0).gameObject);
-                    Destroy(second.transform.GetChild(0).gameObject);
+                    Destroy(first.transform.GetChild(0).GetComponent<StackParent>().inStack[0].gameObject);
+                    Destroy(second.transform.GetChild(0).GetComponent<StackParent>().inStack[0].gameObject);
                 }
                 else
                 {
                     cards.Clear();
                     List<CardUI> c = new List<CardUI>();
-                    c.Add(first.transform.GetChild(0).GetComponent<CardUI>());
-                    c.Add(second.transform.GetChild(0).GetComponent<CardUI>());
+                    c.Add(first.transform.GetChild(0).GetComponent<StackParent>().inStack[0]);
+                    c.Add(second.transform.GetChild(0).GetComponent<StackParent>().inStack[0]);
                     bool plant = false;
 
                     foreach (CardUI card in c)
@@ -51,8 +51,8 @@ namespace Leafy.Objects
                     {
                         if (cards[0] == cards[1])
                         {
-                            CardUI newPlant = first.transform.GetChild(0).GetComponent<CardUI>();
-                            CardUI oldPlant = second.transform.GetChild(0).GetComponent<CardUI>();
+                            CardUI newPlant = first.transform.GetChild(0).GetComponent<StackParent>().inStack[0];
+                            CardUI oldPlant = second.transform.GetChild(0).GetComponent<StackParent>().inStack[0];
 
                             if(newPlant.card.productivityLevel >= 5 || oldPlant.card.productivityLevel >= 5)
                                 return;
@@ -70,7 +70,7 @@ namespace Leafy.Objects
                             p.y -= 3.5f;
                             newPlant.transform.position = p;
                             newPlant.transform.parent = null;
-                            Destroy(second.transform.GetChild(0).gameObject);
+                            Destroy(second.transform.GetChild(0).GetComponent<StackParent>().inStack[0].gameObject);
                             
                         }
                         return;

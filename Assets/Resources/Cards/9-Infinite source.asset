@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Infinite Source
   ID: 9
   artwork: {fileID: 21300000, guid: 72ac722c3fedd9d4d8c2745f5317bff1, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: aacd6ac016a4eec48bad5beee6732559, type: 3}
   background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
   type: 2
   sellable: 0

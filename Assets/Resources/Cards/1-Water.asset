@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Water
   ID: 1
   artwork: {fileID: 21300000, guid: cf09f25dc8260f94391e15d92bd124d0, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: d95fa8e4a124d35428ef050d6f2ceb45, type: 3}
   background_color: {r: 0.5153079, g: 0.7283019, b: 0.55790675, a: 1}
   type: 0
   sellable: 0

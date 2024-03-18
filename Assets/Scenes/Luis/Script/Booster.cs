@@ -42,6 +42,7 @@ public class Booster : MonoBehaviour
         else
             newCard.GetComponent<CardUI>().UpdateCardInfo(new Card(fixedCard[index]));
         index++;
+        QuestManager.instance.UpdateQuest(0);
         if(index >= numberOfPositions)
             Destroy(gameObject);
     }

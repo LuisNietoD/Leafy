@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Bucket
   ID: 3
   artwork: {fileID: 21300000, guid: f196100b84802784eb1d37515a7f8359, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.6528301, g: 0.6251716, b: 0.4126379, a: 1}
   type: 3
   sellable: 1

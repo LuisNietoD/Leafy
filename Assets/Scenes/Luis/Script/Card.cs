@@ -12,7 +12,7 @@ namespace Leafy.Data
         public string name;
         public string type;
         public Sprite artwork;
-        public Color backgroundColor;
+        public Sprite background;
         public int ID;
         public bool harvestable;
         public int life;
@@ -67,7 +67,7 @@ namespace Leafy.Data
             name = card.name;
             type = card.type.ToString();
             artwork = card.artwork;
-            backgroundColor = card.background_color;
+            background = card.background;
             ID = card.ID;
             harvestable = card.harvestable;
             inventory = card.inventory;

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Iron Nugget
   ID: 20
   artwork: {fileID: 21300000, guid: 5243c0aaf0550ee40b65425967d21809, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
   sellable: 1

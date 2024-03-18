@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Leafy.Objects;
 using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Leafy.Data
 {
@@ -41,6 +42,7 @@ namespace Leafy.Data
             do
             {
                 cards.Add(c);
+                Debug.Log(c);
                 c = c.child;
             } while (c != null);
 

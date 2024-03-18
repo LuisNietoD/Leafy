@@ -11,6 +11,7 @@ namespace Leafy.Manager
         public static GameManager instance;
         
         public LayerMask cardLayer;
+        public LayerMask slotLayer;
         public GameObject cardPrefab;
 
         public float maxX;
@@ -87,44 +88,16 @@ namespace Leafy.Manager
             else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
             {
                 Transform slot = RayTestUI();
-                if (slot != null)
-                {
-                    _draggedCardUI.transform.parent = slot;
-                }
+                
                 
                 _draggedCardUI.behavior?.OnDrop();
                 _draggedCardUI.Drop(_hoveredCardUI);
 
-                List<GameObject> p = new List<GameObject>();
-                if (_draggedCardUI.transform.parent != null)
-                    p.Add(_draggedCardUI.transform.parent.gameObject);
-                
-                if (CardUtils.GetStackIDList(_draggedCardUI).Count > 1)
+                SetToParent(_draggedCardUI);
+                if (slot != null)
                 {
-                    GameObject par = Instantiate(stackParent, Vector3.zero, Quaternion.identity);
-                    StackParent sp = par.GetComponent<StackParent>();
-                    CardUtils.ApplyMethodOnStack(_draggedCardUI, c =>
-                    {
-                        if (c.transform.parent != null)
-                        {
-                            if (!p.Contains(c.transform.parent.gameObject))
-                            {
-                                p.Add(c.transform.parent.gameObject);
-                            }
-                        }
-                        c.transform.parent = par.transform; 
-                        sp.inStack.Add(c);
-                    });
+                    _draggedCardUI.transform.parent.parent = slot;
                 }
-
-                if (p.Count > 0)
-                {
-                    foreach (GameObject parents in p)
-                    {
-                        Destroy(parents);
-                    }
-                }
-                    
                 
                 _draggedCardUI.transform.position = new Vector3(Mathf.Clamp(_draggedCardUI.transform.position.x, -maxX, maxX),
                     Mathf.Clamp(_draggedCardUI.transform.position.y, -maxY, maxY), _draggedCardUI.transform.position.z);
@@ -196,6 +169,39 @@ namespace Leafy.Manager
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     SortStack();
+                }
+            }
+        }
+
+        public void SetToParent(CardUI cardToParent)
+        {
+            List<GameObject> p = new List<GameObject>();
+            if (cardToParent.transform.parent != null)
+                p.Add(cardToParent.transform.parent.gameObject);
+                
+            if (CardUtils.GetStackIDList(cardToParent).Count >= 1)
+            {
+                GameObject par = Instantiate(stackParent, Vector3.zero, Quaternion.identity);
+                StackParent sp = par.GetComponent<StackParent>();
+                CardUtils.ApplyMethodOnStack(cardToParent, c =>
+                {
+                    if (c.transform.parent != null)
+                    {
+                        if (!p.Contains(c.transform.parent.gameObject))
+                        {
+                            p.Add(c.transform.parent.gameObject);
+                        }
+                    }
+                    c.transform.parent = par.transform; 
+                    sp.inStack.Add(c);
+                });
+            }
+
+            if (p.Count > 0)
+            {
+                foreach (GameObject parents in p)
+                {
+                    Destroy(parents);
                 }
             }
         }
@@ -463,7 +469,7 @@ namespace Leafy.Manager
         public Transform RayTestUI()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, cardLayer);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, slotLayer);
 
             if (hit.collider != null)
             {
@@ -475,7 +481,7 @@ namespace Leafy.Manager
                         {
                             if (slot.transform.childCount <= 0)
                                 return hit.collider.transform;
-                    }
+                        }
                 }
             }
             return null;
@@ -486,6 +492,9 @@ namespace Leafy.Manager
         {
             GameObject newCard = Instantiate(cardPrefab, pos, Quaternion.identity);
             CardUI c = newCard.GetComponent<CardUI>();
+            Vector3 v = pos;
+            v.x -= 3;
+            c.startPosition = v;
             c.UpdateCardInfo(new Card(CardList.GetCardByID(id)));
             c.ChangeID(ID++);
             card.ChangeID(ID++);
@@ -495,6 +504,9 @@ namespace Leafy.Manager
         {
             GameObject newCard = Instantiate(cardPrefab, pos, Quaternion.identity);
             CardUI c = newCard.GetComponent<CardUI>();
+            Vector3 v = pos;
+            v.x -= 3;
+            c.startPosition = v;
             c.UpdateCardInfo(new Card(CardList.GetCardByID(id)));
             c.ChangeID(ID++);
         }
@@ -503,6 +515,9 @@ namespace Leafy.Manager
         {
             GameObject newCard = Instantiate(cardPrefab, pos, Quaternion.identity);
             CardUI c = newCard.GetComponent<CardUI>();
+            Vector3 v = pos;
+            v.x -= 3;
+            c.startPosition = v;
             c.UpdateCardInfo(new Card(CardList.GetCardByID(id)));
             c.ChangeID(ID++);
             return c;

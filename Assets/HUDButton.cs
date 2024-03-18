@@ -43,13 +43,14 @@ public class HUDButton : MonoBehaviour
             active.ui.SetActive(false);
         }
 
-        if (a.ui != null)
+        if (a.ui != null && a.ui != active.ui)
         {
             SpriteRenderer s = a.button.GetComponent<SpriteRenderer>();
             s.color = Color.white;
             s.sortingOrder = 1;
             a.ui.SetActive(true);
-            active = a;
+            active.ui = a.ui;
+            active.button = a.button;
 
             Vector3 p = transform.parent.localPosition;
             p.x = -10;
@@ -60,6 +61,9 @@ public class HUDButton : MonoBehaviour
             Vector3 p = transform.parent.localPosition;
             p.x = -21.4f;
             transform.parent.localPosition = p;
+            active.ui.SetActive(false);
+            active.ui = null;
+            active.button = null;
         }
     }
 }

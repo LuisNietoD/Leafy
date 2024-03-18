@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Shrub
   ID: 14
   artwork: {fileID: 21300000, guid: 64ef33829b8b3a0478770d0878b25665, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.45092228, g: 0.6150943, b: 0.31915268, a: 1}
   type: 5
   sellable: 1
@@ -81,10 +81,31 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 2230452313
+    m_Seed: 2960085605
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461212572860924
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461212557590653
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461187721836300
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461187571856796
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461187421849646
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461187271852080
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461187121834147
       - m_Index: 0
         m_Time:
           Ticks: 638457632215026851
