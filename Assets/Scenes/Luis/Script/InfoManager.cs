@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Leafy.Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InfoManager : MonoBehaviour
 {

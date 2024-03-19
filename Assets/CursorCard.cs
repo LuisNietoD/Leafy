@@ -14,6 +14,8 @@ public class CursorCard : MonoBehaviour
     public SpriteRenderer icon;
     public TextMeshPro type;
     public TextMeshPro cardName;
+    public bool onWord;
+    public CardDisplay cardDisplay;
     
     public LayerMask UiMask;
 
@@ -26,6 +28,7 @@ public class CursorCard : MonoBehaviour
         icon.sprite = card.artwork;
         type.text = card.type.ToString();
         cardName.text = card.name;
+        cardDisplay.UpdateCard(card);
         fakeCard.SetActive(true);
     }
     
@@ -36,6 +39,13 @@ public class CursorCard : MonoBehaviour
 
     private void Update()
     {
+        Vector3 p = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        p.x += offset;
+        p.z = 0;
+        transform.position = p;
+        
+        if(onWord)
+            return;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, UiMask);
 
@@ -62,11 +72,5 @@ public class CursorCard : MonoBehaviour
         {
             DisableCard();
         }
-        
-       
-        Vector3 p = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        p.x += offset;
-        p.z = 0;
-        transform.position = p;
     }
 }

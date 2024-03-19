@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CursorCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CursorCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScaleWithFov.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScaleWithFov.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ShowBigCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ShowBigCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/WordHoverDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/WordHoverDetector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +179,7 @@
       <workItem from="1710330261880" duration="1194000" />
       <workItem from="1710688856330" duration="1226000" />
       <workItem from="1710715282725" duration="8779000" />
-      <workItem from="1710772500626" duration="10966000" />
+      <workItem from="1710772500626" duration="13214000" />
     </task>
     <servers />
   </component>

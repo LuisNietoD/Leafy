@@ -15,6 +15,7 @@ public class WordHoverDetector : MonoBehaviour
     public TutoDisplayer tuto;
     public LayerMask inGameTextUI;
     public CardDisplay cardDisplay;
+    public CursorCard cursorCard;
 
     void Update()
     {
@@ -30,13 +31,13 @@ public class WordHoverDetector : MonoBehaviour
             else
             {
                 isMouseOverText = false;
-                cardShow.SetActive(false);
+                cursorCard.onWord = false;
             }
         }
         else
         {
             isMouseOverText = false;
-            cardShow.SetActive(false);
+            cursorCard.onWord = false;
         }
 
         
@@ -57,7 +58,7 @@ public class WordHoverDetector : MonoBehaviour
 
             if (linkIndex != -1 && card != null)
             {
-                //cardShow.GetComponent<FakeCard>().ChangeVisual(card);
+                ShowCard(card);
                 
                 Vector3 mousePosition = Input.mousePosition;
                 mousePosition.z = Camera.main.nearClipPlane;
@@ -71,11 +72,11 @@ public class WordHoverDetector : MonoBehaviour
                 }
 
                 cardShow.transform.position = mousePosition;
-                cardShow.SetActive(true);
+                ShowCard(card);
             }
             else
             {
-                cardShow.SetActive(false);
+                cursorCard.onWord = false;
             }
         }
     }
@@ -85,6 +86,13 @@ public class WordHoverDetector : MonoBehaviour
         title.text = c.name;
         textMeshPro.text = c.recipeText[0];
         cardDisplay.UpdateCard(c);
+        
         //tuto.ChangeTuto(textMeshPro);
+    }
+
+    public void ShowCard(ScriptableCard c)
+    {
+        cursorCard.onWord = true;
+        cursorCard.EnableCard(c.ID);
     }
 }

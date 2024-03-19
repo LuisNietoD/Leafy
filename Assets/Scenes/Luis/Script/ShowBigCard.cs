@@ -14,13 +14,13 @@ public class ShowBigCard : MonoBehaviour
 
     public void ShowBig(ScriptableCard c)
     {
-        bigCard.gameObject.SetActive(true);
+        cardDisplay.gameObject.SetActive(true);
         bigCard.ChangeVisual(c);
     }
 
     public void HideBig()
     {
-        bigCard.gameObject.SetActive(false);
+        cardDisplay.gameObject.SetActive(false);
     }
 
     public void ChangeTuto(ScriptableCard c, int index)
