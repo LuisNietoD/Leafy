@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Copper Plant
   ID: 71
   artwork: {fileID: 21300000, guid: 0f8b8a9488ff8114c9e2bfffa900fe48, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -87,10 +87,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 1303508612
+    m_Seed: 2807470307
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044973833951
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044972481194
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044673818426
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044672485941
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044373802220
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044372480125
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044073839318
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044072478406
       - m_Index: 0
         m_Time:
           Ticks: 638457773545623646

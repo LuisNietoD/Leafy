@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Silver ADN
   ID: 62
   artwork: {fileID: 21300000, guid: 268b6eea2f3eec04592b7405ef22a37f, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40392157, g: 0.5686275, b: 0.65882355, a: 1}
   type: 1
   sellable: 1

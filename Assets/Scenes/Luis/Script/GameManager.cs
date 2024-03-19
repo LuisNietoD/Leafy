@@ -384,6 +384,7 @@ namespace Leafy.Manager
             {
                 cards[i].SetParent(cards[i-1]);
                 cards[i].ChangeID(ID++);
+                QuestManager.instance.UpdateQuest(6);
             }
             cards[0].child = cards[1];
             

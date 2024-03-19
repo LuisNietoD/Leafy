@@ -15,9 +15,9 @@ MonoBehaviour:
   name: Assembly Machine
   ID: 101
   artwork: {fileID: 21300000, guid: c38eb36adb675c44d9441b2273c8521f, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.90188676, g: 0.7289636, b: 0.24333921, a: 1}
-  type: 6
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0

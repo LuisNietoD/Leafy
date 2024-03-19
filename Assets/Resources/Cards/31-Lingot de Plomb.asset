@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Lead Ingot
   ID: 31
   artwork: {fileID: 21300000, guid: 08feeb38e2a6bfd459b8b7b298f8f58b, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
   sellable: 1

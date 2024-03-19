@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Sand Plant
   ID: 77
   artwork: {fileID: 21300000, guid: 184de16b8b06abf41ae413da7849c79d, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -81,10 +81,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 675800170
+    m_Seed: 122834252
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044988166551
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044986829847
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044688487886
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044686837100
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044388180613
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044386832480
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044088185411
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044087483938
       - m_Index: 0
         m_Time:
           Ticks: 638459216927950635

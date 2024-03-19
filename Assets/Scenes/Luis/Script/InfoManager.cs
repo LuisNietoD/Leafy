@@ -34,6 +34,7 @@ public class InfoManager : MonoBehaviour
                     recipeList = info.recipes;
                     
                     index = 0;
+                    QuestManager.instance.UpdateQuest(5);
                     buttonNext.SetActive(recipeList.Count > 1); 
                     infoCanvas.SetActive(true);
                     recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), 0);

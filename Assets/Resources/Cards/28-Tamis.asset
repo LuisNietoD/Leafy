@@ -15,9 +15,9 @@ MonoBehaviour:
   name: Sieve
   ID: 28
   artwork: {fileID: 21300000, guid: f0a70a5f6a559c248b63b607c8437285, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 5
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0

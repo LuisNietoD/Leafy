@@ -14,11 +14,9 @@ public enum Card_Type
     Energy,
     Resource,
     Harvestable,
-    Activator,
-    Storage,
-    Plant,
-    Standalone,
-    Tools
+    Machine,
+    Vivant,
+    Plant
 }
 
 public enum Machine

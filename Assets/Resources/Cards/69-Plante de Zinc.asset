@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Zinc Plant
   ID: 69
   artwork: {fileID: 21300000, guid: 85cd5df1eaac3f94d8f4275cd003a5a6, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -87,10 +87,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 70811285
+    m_Seed: 409162586
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044970497240
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044969476017
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044670494334
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044669475749
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044370821443
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044369476146
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044070803397
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044069479526
       - m_Index: 0
         m_Time:
           Ticks: 638459216923373963

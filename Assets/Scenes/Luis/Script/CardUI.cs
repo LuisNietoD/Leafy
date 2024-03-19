@@ -154,6 +154,10 @@ namespace Leafy.Objects
             }
             background.gameObject.SetActive(true);
             shadow.gameObject.SetActive(false);
+            if (card.ID == 1)
+            {
+                QuestManager.instance.UpdateQuest(2);
+            }
 
         }
 
@@ -511,7 +515,11 @@ namespace Leafy.Objects
                 }
                 
                 s.Sell(totalNumberOfCards);
-                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+                CardUtils.ApplyMethodOnStack(this, c =>
+                {
+                    QuestManager.instance.UpdateQuest(3);
+                    Destroy(c.gameObject);
+                });
             }
             else
             {
@@ -633,10 +641,6 @@ namespace Leafy.Objects
         /// <param name="cardUI"></param>
         public void Drop(CardUI cardUI)
         {
-            if (cardUI != null)
-            {
-                QuestManager.instance.UpdateQuest(1);
-            }
             Vector3 p = transform.position;
             p.z = 0;
             transform.position = p;

@@ -15,9 +15,9 @@ MonoBehaviour:
   name: Seed of Life
   ID: 96
   artwork: {fileID: 21300000, guid: 5f3dea572757f9040b768ffcb9cc8b18, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.60535944, g: 0.15760048, b: 0.8792453, a: 1}
-  type: 0
+  type: 1
   sellable: 0
   craftable: 0
   harvestable: 0

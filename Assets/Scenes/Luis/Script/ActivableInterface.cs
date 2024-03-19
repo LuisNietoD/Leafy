@@ -43,8 +43,8 @@ namespace Leafy.Objects
                 child.GetComponent<SpriteRenderer>().enabled = interfaceActive;
                 if (child.childCount > 0)
                 {
-                    child.GetChild(0).GetComponent<CardUI>().model.SetActive(interfaceActive);
-                    child.GetChild(0).GetChild(1).gameObject.SetActive(interfaceActive);
+                    child.GetChild(0).GetComponent<StackParent>().inStack[0].model.SetActive(interfaceActive);
+                    child.GetChild(0).GetComponent<StackParent>().inStack[0].transform.GetChild(1).gameObject.SetActive(interfaceActive);
                 }
             }
         }

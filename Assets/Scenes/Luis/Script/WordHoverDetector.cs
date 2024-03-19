@@ -51,6 +51,7 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
                 if (Input.GetMouseButtonDown(0))
                 {
+                    QuestManager.instance.UpdateQuest(5);
                     DisplayTuto(card);
                 }
 
