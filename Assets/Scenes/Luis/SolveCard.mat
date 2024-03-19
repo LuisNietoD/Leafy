@@ -52,7 +52,7 @@ Material:
     - _Dissolve: 1.1
     - _OutlineThickness: 0.06
     m_Colors:
-    - _LineColor: {r: 0.2711236, g: 3.0575871, b: 0, a: 1}
+    - _LineColor: {r: 3.4351418, g: 3.371382, b: 0.43425372, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &110177990125343000
 MonoBehaviour:

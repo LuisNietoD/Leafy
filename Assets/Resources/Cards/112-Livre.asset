@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Book
   ID: 112
-  artwork: {fileID: 21300000, guid: 327e2b9cb8fdd89438cb2186479e8fce, type: 3}
+  artwork: {fileID: 21300000, guid: 68c9a8d83e0d1954ab4c37f28e7f23cf, type: 3}
   background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 3

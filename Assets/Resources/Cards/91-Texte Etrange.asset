@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Unreadable Text
   ID: 91
-  artwork: {fileID: 21300000, guid: 327e2b9cb8fdd89438cb2186479e8fce, type: 3}
+  artwork: {fileID: 21300000, guid: baf1affdada08394bb3f145ba4c842e4, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1

@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/43-Serre.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/43-Serre.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/52-ARN.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/52-ARN.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/53-ADN.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/53-ADN.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/54-Modificateur Genetique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/54-Modificateur Genetique.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/55-Grande Serre.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/55-Grande Serre.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/FakeCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/FakeCard.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ShowBigCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/ShowBigCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +175,7 @@
       <workItem from="1710330261880" duration="1194000" />
       <workItem from="1710688856330" duration="1226000" />
       <workItem from="1710715282725" duration="8779000" />
-      <workItem from="1710772500626" duration="8653000" />
+      <workItem from="1710772500626" duration="9249000" />
     </task>
     <servers />
   </component>

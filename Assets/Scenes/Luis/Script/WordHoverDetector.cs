@@ -83,6 +83,6 @@ public class WordHoverDetector : MonoBehaviour
     {
         title.text = c.name;
         textMeshPro.text = c.recipeText[0];
-        tuto.ChangeTuto(textMeshPro);
+        //tuto.ChangeTuto(textMeshPro);
     }
 }
