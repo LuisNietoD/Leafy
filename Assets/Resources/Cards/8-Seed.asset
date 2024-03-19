@@ -30,16 +30,14 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Vieille boite"></link>
-
-    Obtenu aleatoirement en secouant
-    des <link="Vieille boite">Vieille boite</link></color>.
+  - 'An unidentified seed. Can be <color=grey>planted</color> and <color=grey>watered</color>
+    to grow a <color=yellow><link="Plant">plant</link></color>. Perhaps its unknown
+    origin holds some surprises?
 
 
     Recette:
 
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
+    1 x <color=yellow><link="Box">Box</link></color>'
   utilities:
   - cardName: Plant(Fournaise, Arbuste, Base)
     recipe: 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau

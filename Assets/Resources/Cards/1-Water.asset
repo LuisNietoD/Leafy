@@ -30,36 +30,31 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Source,1:Bucket"></link>
-
-    A scarce resource, nowadays used
-    as <color=grey>currency </color>. Can be used to grow out <color=yellow><link="Plante">plants</link></color>
-    and accelerate their harvesting point by using a <color=yellow><link="Arrosoir">watering
+  - 'A scarce resource, nowadays used as <color=grey>currency</color>. Can be used
+    to grow out <color=yellow><link="Plant">plants</link></color> and accelerate
+    their harvesting point by using a <color=yellow><link="Watering Can">watering
     can</link></color>. Can be <color=grey>stocked</color>.
 
 
     Required :
 
     1
-    x <color=yellow> <link="Source">Source</link></color>
+    x <color=yellow><link="Source">Source</link></color>
 
-    1 x <color=yellow>
-    <link="Seau">Seau</link></color>'
-  - '<link="Stack,1:Source infinie,1:Seau"></link>
-
-    A scarce resource, nowadays
-    used as <color=grey>currency </color>. Can be used to grow out <color=yellow><link="Plante">plants</link></color>
-    and accelerate their harvesting point by using a <color=yellow><link="Arrosoir">watering
+    1 x <color=yellow><link="Bucket">Seau</link></color>'
+  - 'A scarce resource, nowadays used as <color=grey>currency </color>. Can be used
+    to grow out <color=yellow><link="Plant">plants</link></color> and accelerate
+    their harvesting point by using a <color=yellow><link="Watering Can">watering
     can</link></color>. Can be <color=grey>stocked</color>.
 
 
-    Recette:
+    Required :
 
     1
-    x <color=yellow> <link="Source infinie">Source infinie</link></color>
+    x <color=yellow><link="Infinite Source">Infinite Source</link></color>
 
     1
-    x <color=yellow> <link="Seau">Seau</link></color>'
+    x <color=yellow><link="Bucket">Seau</link></color>'
   utilities:
   - cardName: Eau
     recipe: Sert a acheter des cartes

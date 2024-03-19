@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  - 'A fiery plant whose petals and center burn with intense <color=grey>heat</color>.
+    Used to <color=grey>melt</color> nuggets into ingots and to <color=grey>burn</color>
+    <color=yellow><link="Wood">wood</link></color> to make <color=yellow><link="Coal">charcoal</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Plant">Plant</link></color>'
   utilities:
   - cardName: Coal
     recipe: 1 x Bois<br>1 x Plante Fournaise

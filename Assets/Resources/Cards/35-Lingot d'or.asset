@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 5 x Pepite d'Or<br>1 x Plante Fournaise
+  - 'A bar of pure <color=grey>gold</color>. Can be used to <color=grey>build</color>
+    <color=yellow><link="Small Battery">small batteries</link></color> or a <color=yellow><link="Thermoelectric
+    Generator">thermoelectric generator</link></color> due to its excellent <color=grey>conducting</color>
+    properties.
+
+
+    Required :
+
+    1 x <color=yellow><link="Furnace Plant">Furnace
+    Plant</link></color>
+
+    3 x <color=yellow><link="Gold Nugget">Gold Nugget</link></color>'
   utilities:
   - cardName: Generateur Thermique
     recipe: 4 x Lingot de Plomb<br>4 x Lingot d'Aluminium<br>3 x Lingot d'Or

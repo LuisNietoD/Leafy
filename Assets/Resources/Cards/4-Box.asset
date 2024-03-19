@@ -30,7 +30,10 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Obtenu dans les booster
+  - "An old cardboard box. Can <color=grey>contain</color> <color=yellow><link=\"Soil\">soil</link></color>,
+    <color=yellow><link=\"Sand\">sand</link></color>, <color=yellow><link=\"Seed\">seeds</link></color>,
+    or <color=yellow><link=\"Pot\">Pot</link></color>.\n\nRequired :\r\n1 x Basic
+    Booster\r"
   utilities:
   - cardName: Secouez la boite
     recipe: 1 x Terre<br>1 x Sable<br>1 x Graine<br>1 x Pot

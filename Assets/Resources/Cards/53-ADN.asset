@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 53-ADN
   m_EditorClassIdentifier: 
-  name: ADN
+  name: DNA
   ID: 53
   artwork: {fileID: 21300000, guid: 626de954ed4a13547ad7890a4fce3355, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}

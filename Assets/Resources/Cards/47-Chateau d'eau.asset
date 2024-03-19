@@ -30,7 +30,15 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 10 x Fer
+  - 'A container capable of <color=grey>storing</color> up to <color=grey>500</color>
+    units of <color=yellow><link="Water">water</link></color>.
+
+    
+
+    Required
+    :
+
+    10 x <color=yellow><link="Iron Ingot">Iron Ingot</link></color>'
   utilities:
   - cardName: Upgrade
     recipe: 1 x Chateau d'Eau<br>1 x Chateau d'Eau (vide)

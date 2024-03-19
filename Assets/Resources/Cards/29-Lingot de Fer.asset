@@ -30,7 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 5 x Pepite de Fer<br>1 x Plante Fournaise
+  - ' A bar of pure <color=grey>iron</color>. Can be used to <color=grey>build</color>
+    various structures and machines such as the <color=yellow><link="Microscope">microscope</link></color>,
+    for example.
+
+
+    Required :
+
+    1 x <color=yellow><link="Furnace Plant">Furnace
+    Plant</link></color>
+
+    3 x <color=yellow><link="Iron Nugget">Iron Nugget</link></color>'
   utilities:
   - cardName: Serre
     recipe: 4 x Lingot de Fer<br>4 x Verre Renforce

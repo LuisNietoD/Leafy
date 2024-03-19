@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Produit par l'Arbuste
+  - 'Wood produced by a <color=yellow><link="Shrub">shrub</link></color>. Can be
+    <color=grey>burned</color> to produce <color=yellow><link="Coal">coal</link></color>
+    or be used to make <color=yellow><link="Paper">paper</link></color> by putting
+    it under a <color=yellow><link="Press">press</link></color>.
+
+
+    Required :
+
+    1
+    x <color=yellow><link="Shrub">Shrub</link></color>'
   utilities:
   - cardName: Coffre en Bois
     recipe: 4 x Bois

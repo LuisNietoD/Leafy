@@ -30,7 +30,19 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 5 x Pepite d'Aluminium<br>1 x Plante Fournaise
+  - 'A bar of pure <color=grey>aluminum</color>. Can be used to <color=grey>build</color>
+    various machines like a <color=yellow><link="Thermoelectric Generator">thermoelectric
+    generator</link></color>.
+
+    
+
+    Required :
+
+    1 x <color=yellow><link="Furnace
+    Plant">Furnace Plant</link></color>
+
+    3 x <color=yellow><link="Aluminum Nugget">Aluminum
+    Nugget</link></color>'
   utilities:
   - cardName: Generateur Thermique
     recipe: 4 x Lingot de Plomb<br>4 x Lingot d'Aluminium<br>3 x Lingot d'Or

@@ -30,16 +30,30 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Vieille boite"></link>
+  - 'A small pile of soil. Can be placed in a <color=yellow><link="Pot">pot</link></color>
+    to <color=grey>plant</color> a <color=yellow><link="Seed">seed</link></color>
+    or be <color=grey>sifted</color> to extract <color=yellow><link="Iron Nugget">iron</link></color>,
+    <color=yellow><link="Zinc Nugget">zinc</link></color>, <color=yellow><link="Lead
+    Nugget">lead</link></color>, or <color=yellow><link="Copper Nugget">copper nuggets</link></color>.
 
-    Obtenu aleatoirement en secouant
-    des <link="Vieille boite">Vieille boite</link></color>.
+
+    Required
+    :
+
+    1 x <color=yellow><link="Box">Box</link></color>
+
+'
+  - 'A small pile of soil. Can be placed in a <color=yellow><link="Pot">pot</link></color>
+    to <color=grey>plant</color> a <color=yellow><link="Seed">seed</link></color>
+    or be <color=grey>sifted</color> to extract <color=yellow><link="Iron Nugget">iron</link></color>,
+    <color=yellow><link="Zinc Nugget">zinc</link></color>, <color=yellow><link="Lead
+    Nugget">lead</link></color>, or <color=yellow><link="Copper Nugget">copper nuggets</link></color>.
 
 
-    Obtenu dans:
+    Required
+    :
 
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>
+    1 x <color=yellow><link="Soil Plant">Soil Plant</link></color>
 
 '
   utilities:

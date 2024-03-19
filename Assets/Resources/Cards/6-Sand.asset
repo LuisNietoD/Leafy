@@ -30,16 +30,27 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Vieille boite"></link>
+  - 'A small pile of sand. Can be <color=grey>melted</color> to obtain <color=yellow><link="Glass">glass</link></color>
+    or be <color=grey>sifted</color> to extract <color=yellow><link="Aluminum Nugget">aluminum</link></color>,
+    <color=yellow><link="Gold Nugget">gold</link></color>, <color=yellow><link="Silver
+    Nugget">silver nuggets</link></color> or <color=yellow><link="Lithium Piece">pieces
+    of lithium</link></color>.
 
-    Obtenu aleatoirement en secouant
-    des <link="Vieille boite">Vieille boite</link></color>.
+
+    Required :
+
+    1 x <color=yellow><link="Box">Box</link></color>'
+  - 'A small pile of sand. Can be <color=grey>melted</color> to obtain <color=yellow><link="Glass">glass</link></color>
+    or be <color=grey>sifted</color> to extract <color=yellow><link="Aluminum Nugget">aluminum</link></color>,
+    <color=yellow><link="Gold Nugget">gold</link></color>, <color=yellow><link="Silver
+    Nugget">silver nuggets</link></color> or <color=yellow><link="Lithium Piece">pieces
+    of lithium</link></color>.
 
 
-    Recette:
+    Required :
 
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
+    1 x <color=yellow><link="Sand
+    Plant">Sand Plant</link></color>'
   utilities:
   - cardName: Verre
     recipe: 1 x Plante Fournaise<br>1 x Sable

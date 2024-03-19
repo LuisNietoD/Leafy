@@ -30,7 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 5 x Pepite de Zinc<br>1 x Plante Fournaise
+  - ' A bar of pure <color=grey>zinc</color>. Can be used to <color=grey>build</color>
+    <color=yellow><link="Small Battery">small batteries</link></color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Furnace Plant">Furnace Plant</link></color>
+
+    3
+    x <color=yellow><link="Zinc Nugget">Zinc Nugget</link></color>'
   utilities: []
   price: 2
   timeToCraft: 0

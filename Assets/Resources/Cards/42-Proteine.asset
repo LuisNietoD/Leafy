@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Fibre Vegetal<br>1 x Microscope
+  - 'A biological molecule extracted from <color=yellow><link="Natural Fiber">natural
+    fibers</link></color>. <color=grey>Merging</color> 4 together creates <color=yellow><link="RNA">RNA</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Microscope">Microscope</link></color>
+
+    1
+    x <color=yellow><link="Natural Fiber">Natural Fiber</link></color>'
   utilities:
   - cardName: WIP
     recipe: WIP

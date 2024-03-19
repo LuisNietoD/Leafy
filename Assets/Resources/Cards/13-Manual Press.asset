@@ -30,7 +30,21 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 3 x Lingot de Fer<br>3 x Lingot de Plomb
+  - 'A metal press. Used to <color=grey>crush</color> particular materials to transform
+    them such as <color=yellow><link="Wood">wood</link></color> or <color=yellow><link="Lithium
+    Piece">lithium</link></color>. Simply <color=grey>place</color> the materials
+    to be transformed on the press emplacement and <color=grey>press</color> the
+    lever to <color=grey>crush</color> them.
+
+    
+
+    Required :
+
+    3 x <color=yellow><link="Iron
+    Ingot">Iron Ingot</link></color>
+
+    3 x <color=yellow><link="Lead Ingot">Lead
+    Ingot</link></color>'
   utilities:
   - cardName: Cylindre de Lithium
     recipe: 1 x Morceau de Lithium<br>(Slot de press)

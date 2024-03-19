@@ -30,16 +30,15 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,4:Source"></link>
+  - 'An <color=grey>infinite</color> water well. Produces water more slowly than
+    a basic <color=yellow><link="Source">source</link></color> but <color=grey>never</color>
+    runs out.
 
-    Produit de <color=yellow> <link="Eau">l''eau</link></color>
-    a l''infini, mais produit plus lentement qu''une <color=yellow> <link="Source">source</link></color>.
+    
 
+    Required :
 
-    Recette:
-
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
+    4 x <color=yellow><link="Source">Source</link></color>'
   utilities:
   - cardName: Eau
     recipe: 1 x Seau<br>1 x Source infinie

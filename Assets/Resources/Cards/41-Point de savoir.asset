@@ -30,7 +30,19 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pollen<br>1 x Microscope
+  - 'Knowledge used to feed the <color=yellow><link="Knowledge Engine">Knowledge
+    engine</link></color>. Can be obtained by <color=grey>inspecting</color> <color=yellow><link="Pollen">pollen</link></color>
+    under a <color=yellow><link="Microscope">microscope</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Microscope">Microscope</link></color>
+
+    1
+    x <color=yellow><link="Pollen">Pollen</link></color>'
   utilities:
   - cardName: WIP
     recipe: WIP

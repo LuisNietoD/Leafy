@@ -30,7 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 4 x Lingot de Fer
+  - 'An <color=yellow><link="Iron Ingot">iron</link></color> container capable of
+    <color=grey>storing</color> up to <color=grey>50</color> units of the same resources.
+    It cannot store <color=grey>energy</color>. Can be combined with others to increase
+    its <color=grey>storage capacity</color>.
+
+    
+
+    Required :
+
+    4 x <color=yellow><link="Iron
+    Ingot">Iron Ingot</link></color>'
   utilities:
   - cardName: Upgrade
     recipe: 1 x Coffre en Fer<br>1 x Coffre en Fer (vide)

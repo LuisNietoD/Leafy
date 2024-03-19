@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A cylinder of pure <color=grey>lithium</color>. Can be used to <color=grey>build</color>
+    <color=yellow><link="Big Battery">large batteries</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Press">Press</link></color>
+
+    3 x <color=yellow><link="Lithium
+    Piece">Lithium Piece</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2

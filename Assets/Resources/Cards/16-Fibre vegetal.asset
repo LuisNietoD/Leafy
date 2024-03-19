@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Produit par la Plante de Base
+  - 'A natural fiber produced from <color=yellow><link="Basic Plant">basic plants</link></color>.
+    Its fine filaments can be <color=grey>braided</color> to make a <color=yellow><link="Sieve">sieve</link></color>
+    or <color=grey>inspected</color> using a <color=yellow><link="Microscope">microscope</link></color>
+    to extract <color=yellow><link="Protein">proteins</link></color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Basic Plant">Basic Plant</link></color>'
   utilities:
   - cardName: Tami
     recipe: 4 x Fibre Vegetal

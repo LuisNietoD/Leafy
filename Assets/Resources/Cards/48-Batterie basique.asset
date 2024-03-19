@@ -29,7 +29,22 @@ MonoBehaviour:
   customBehavior: 0
   machineSavoir: 0
   upgradable: 0
-  recipeText: []
+  recipeText:
+  - 'A simple battery capable of <color=grey>storing</color> up to <color=grey>100</color>
+    units of <color=yellow><link="Electricity">electricity</link></color>.
+
+    
+
+    Required
+    :
+
+    2 x <color=yellow><link="Copper Ingot">Copper Ingot</link></color>
+
+    2
+    x <color=yellow><link="Zinc Ingot">Zinc Ingot</link></color>
+
+    1 x <color=yellow><link="Lithium
+    Piece">Lithium Piece</link></color>'
   utilities:
   - cardName: Upgrade
     recipe: 1 x Batterie Basique<br>1 x Batterie Basique (vide)

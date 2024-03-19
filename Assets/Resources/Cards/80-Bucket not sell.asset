@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Obtenu dans les booster
+  - 'A container used to collect <color=yellow><link="Water">water</link></color>.
+    Can be placed under a <color=yellow><link="Source">source</link></color> or <color=yellow><link="Infinite
+    Source">infinite source</link></color> to <color=grey>collect</color> <color=yellow><link="Water">water</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x Basic Booster'
   utilities:
   - cardName: Eau
     recipe: 1 x Seau<br>1 x Source

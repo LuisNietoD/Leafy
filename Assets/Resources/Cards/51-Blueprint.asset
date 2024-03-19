@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'Blueprints for building <color=grey>complex machines</color>. They are automatically
+    added to the "<color=grey>Fabrication</color>" tab of <color=grey>A.D.A.M</color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Knowledge Engine">Knowledge Engine</link></color>
+
+    ?
+    x <color=yellow><link="Knowledge">Knowledge</link></color>'
   utilities: []
   price: 2
   timeToCraft: 0

@@ -30,16 +30,25 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Thermoelectric Generator,1:Coal"></link>
-
-    An extremely useful
-    resource. Allows you to <color=grey>supply</color> energy to various <color=grey>devices</color>.
+  - 'An extremely useful resource. Allows you to <color=grey>supply</color> energy
+    to various <color=grey>devices</color>. Can be <color=grey>stocked</color>.
 
 
     Required
     :
 
-    1 x Generateur Thermique<br>1 x Charbon'
+    1 x <color=yellow><link="Thermoelectric Generator">Thermoelectric Generator</link></color>
+
+    1
+    x <color=yellow><link="Coal">Coal</link></color>'
+  - 'An extremely useful resource. Allows you to <color=grey>supply</color> energy
+    to various <color=grey>devices</color>. Can be <color=grey>stocked</color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Solar Panel">Solar Panel</link></color>'
   utilities:
   - cardName: Microscope
     recipe: Le Microscope utilise 5 x Electricite par utilisation

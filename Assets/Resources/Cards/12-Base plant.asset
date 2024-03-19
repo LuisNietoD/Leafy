@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 1
   recipeText:
-  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  - 'A small, frail plant. <color=grey>Produces</color> <color=yellow><link="Natural
+    Fiber">natural fibers</link></color> and <color=yellow><link="Pollen">pollen</link></color>.
+    When it reaches its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Plant">Plant</link></color>'
   utilities:
   - cardName: Fibre, Pollen
     recipe: Cliquez pour recolter du Pollen et des Fibres, tremble quand elle est
@@ -88,10 +97,22 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 1021055880
+    m_Seed: 1849714421
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464715681047303
+      - m_Index: 1
+        m_Time:
+          Ticks: 638464715588041967
+      - m_Index: 1
+        m_Time:
+          Ticks: 638464715481071028
+      - m_Index: 1
+        m_Time:
+          Ticks: 638464715388051686
       - m_Index: 1
         m_Time:
           Ticks: 638461176586165393

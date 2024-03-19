@@ -30,7 +30,15 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Produit par la Plante de Base
+  - 'Pollen found on a <color=yellow><link="Basic Plant">basic plant</link></color>.
+    <color=grey>Looking</color> at it under a <color=yellow><link="Microscope">microscope</link></color>
+    could turn out useful.
+
+
+    Required :
+
+    1 x <color=yellow><link="Basic Plant">Basic
+    Plant</link></color>'
   utilities:
   - cardName: Point de Savoir
     recipe: 1 x Pollen<br>1 x Microscope

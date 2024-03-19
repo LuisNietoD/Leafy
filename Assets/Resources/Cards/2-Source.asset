@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Obtenu dans les booster
+  - 'A <color=grey>temporary</color> water well. Produces water more quickly than
+    an <color=yellow><link="Infinite Source">infinite source</link></color> but is
+    <color=grey>destroyed</color> after total use.
+
+    
+
+    Required :
+
+    1
+    x Basic Booster'
   utilities:
   - cardName: Source infinie
     recipe: 4 x Source

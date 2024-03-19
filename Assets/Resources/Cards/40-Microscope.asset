@@ -30,7 +30,19 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 5 x Lingot de Fer<br>3 x Verre
+  - 'An instrument for observing things on a microscopic scale. Allows for more precise
+    <color=grey>inspection</color> of <color=yellow><link="Pollen">pollen</link></color>
+    or <color=yellow><link="Natural Fiber">natural fibers</link></color> to extract
+    <color=grey>resources</color>.
+
+    
+
+    Required :
+
+    4 x <color=yellow><link="Iron
+    Ingot">Iron Ingot</link></color>
+
+    3 x <color=yellow><link="Glass">Glass</link></color>'
   utilities:
   - cardName: Utilisation
     recipe: Le Microscope a besoin d'electricite, Chargez le en posant des cartes

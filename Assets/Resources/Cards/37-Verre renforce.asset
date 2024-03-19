@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Plomb<br>1 x Verre
+  - 'A more sturdy glass. Can be used to build a <color=yellow><link="Telescope">telescope</link></color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Glass">Glass</link></color>
+
+    1 x <color=yellow><link="Lead
+    Nugget">Lead Nugget</link></color>'
   utilities:
   - cardName: Serre
     recipe: 4 x Lingot de Fer<br>4 x Verre Renforce

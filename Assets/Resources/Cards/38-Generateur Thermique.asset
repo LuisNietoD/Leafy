@@ -30,7 +30,22 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 4 x Lingot de Plomb<br>4 x Lingot d'Aluminium<br>3 x Lingot d'Or
+  - 'A generator converting heat into <color=grey>electrical energy</color>. Used
+    to generate <color=yellow><link="Electricity">electricity</link></color> using
+    <color=yellow><link="Coal">coal</link></color>.
+
+    
+
+    Required :
+
+    4
+    x <color=yellow><link="Lead Ingot">Lead Ingot</link></color>
+
+    4 x <color=yellow><link="Aluminum
+    Ingot">Aluminum Ingot</link></color>
+
+    3 x <color=yellow><link="Gold Ingot">Gold
+    Ingot</link></color>'
   utilities:
   - cardName: Electricite
     recipe: 1 x Generateur Thermique<br>1 x Charbon

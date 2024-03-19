@@ -30,7 +30,8 @@ MonoBehaviour:
   machineSavoir: 1
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - "A machine using <color=yellow><link=\"Knowledge\">knowledge</link></color> as
+    its driving force. Allows for obtaining <color=yellow><link=\"Blueprint\">blueprints</link></color>.\r"
   utilities: []
   price: 2
   timeToCraft: 0

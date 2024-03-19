@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Plante Fournaise<br>1 x Sable
+  - 'A hard but fragile material with a transparent appearance. Can be used in the
+    design of many <color=grey>technological devices</color>.
+
+
+    Required :
+
+    1
+    x <color=yellow><link="Furnace Plant">Furnace Plant</link></color>
+
+    1 x <color=yellow><link="Sand">Sand</link></color>'
   utilities:
   - cardName: Verre Renforce
     recipe: 1 x Pepite de Plomb<br>1 x Verre

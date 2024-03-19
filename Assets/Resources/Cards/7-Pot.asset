@@ -30,16 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Vieille boite"></link>
+  - 'A small terracotta pot. <color=grey>Planting</color> a <color=yellow><link="Seed">seed</link></color>
+    inside it with <color=yellow><link="Soil">soil</link></color> and <color=yellow><link="Water">water</link></color>
+    allows a <color=yellow><link="Plant">plant</link></color> to <color=grey>grow</color>.
 
-    Obtenu aleatoirement en secouant
-    des <link="Vieille boite">Vieille boite</link></color>.
+    
 
+    Required
+    :
 
-    Recette:
-
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
+    1 x <color=yellow><link="Box">Box</link></color>'
   - Obtenu dans les booster
   utilities:
   - cardName: Pot Rempli

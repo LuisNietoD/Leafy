@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Bois<br>1 x Plante Fournaise
+  - 'A fuel derived from the carbonization of <color=yellow><link="Wood">wood</link></color>.
+    Used to <color=grey>generate</color> <color=yellow><link="Electricity">electricity</link></color>
+    by placing it in a <color=yellow><link="Thermoelectric Generator">thermoelectric
+    generator</link></color>.
+
+
+    Required :
+
+    1 x <color=yellow><link="Furnace
+    Plant">Furnace Plant</link></color>
+
+    1 x <color=yellow><link="Wood">Wood</link></color>'
   utilities:
   - cardName: Electricite
     recipe: 1 x Generateur Thermique<br>1 x Charbon

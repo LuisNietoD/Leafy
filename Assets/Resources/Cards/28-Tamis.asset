@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 4 x Fibre Vegetal
+  - 'A primal sieve made from <color=yellow><link="Natural Fiber">natural fibers</link></color>.
+    Used to <color=grey>sift</color> <color=yellow><link="Soil">soil</link></color>
+    and <color=yellow><link="Sand">sand</link></color> to find metal <color=grey>nuggets</color>.
+
+    
+
+    Required
+    :
+
+    4 x <color=yellow><link="Natural Fiber">Natural Fiber</link></color>'
   utilities:
   - cardName: 2 Pepite(Fer, Zinc, Plomb, Cuivre)
     recipe: 1 x Terre<br>1 x Tami
