@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 102-Circuit
   m_EditorClassIdentifier: 
-  name: Circuit Imprime
+  name: Printed Circuit Board
   ID: 102
   artwork: {fileID: 21300000, guid: 777daff231e737b4bb37d5654349d12e, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
   sellable: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 68000000200000002000000058000000580000005800000058000000
+    recipe: 20000000200000005800000058000000580000005800000068000000
   evolveTime: 0
   evolutions:
     m_PLID: 

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 72-Plante d'Aluminium
   m_EditorClassIdentifier: 
-  name: Plante d'Aluminium
+  name: Aluminum Plant
   ID: 72
   artwork: {fileID: 21300000, guid: de04fa976b3b34247acd670ff7d7c5f6, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -87,10 +87,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 3261400425
+    m_Seed: 2094824792
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044976542692
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044975176047
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044676491207
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044675463486
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044376494093
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044375152486
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044076482971
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044075465887
       - m_Index: 0
         m_Time:
           Ticks: 638457773542909367

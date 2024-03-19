@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 99-Jarre d'Ame
   m_EditorClassIdentifier: 
-  name: Jarre d'Ame
+  name: Soul Jar
   ID: 99
   artwork: {fileID: 21300000, guid: 321961035d9426f4da999a588ea7715e, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 4
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0

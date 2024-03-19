@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 83-Plante d'Acier
   m_EditorClassIdentifier: 
-  name: Plante d'Acier
+  name: Steel Plant
   ID: 83
   artwork: {fileID: 21300000, guid: cea9a611cfaff9a4bb67c6cb44f60d37, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -87,10 +87,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 4106104662
+    m_Seed: 2189519691
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044993469111
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044992137412
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044693823853
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044692138363
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044393491518
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044392184658
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044093500558
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044092163624
       - m_Index: 0
         m_Time:
           Ticks: 638457773539856387

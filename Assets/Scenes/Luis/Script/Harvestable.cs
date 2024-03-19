@@ -59,6 +59,7 @@ namespace Leafy.Objects
                     pos.x += 3;
                     pos.y -= 1.5f * i;
                     GameManager.instance.SpawnCard(pos, card.drop.PickValue().ID, cardUI);
+                    QuestManager.instance.UpdateQuest(1);
                     cardUI.ReduceLife();
                     i++;
                 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Pot
   ID: 7
   artwork: {fileID: 21300000, guid: 7ac6006d0cf062542bb342566d1f8b46, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40392157, g: 0.5686275, b: 0.65882355, a: 1}
   type: 1
   sellable: 1
@@ -26,17 +26,20 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
-  - '<link="Stack,1:Vieille boite"></link>
+  - 'A small terracotta pot. <color=grey>Planting</color> a <color=yellow><link="Seed">seed</link></color>
+    inside it with <color=yellow><link="Soil">soil</link></color> and <color=yellow><link="Water">water</link></color>
+    allows a <color=yellow><link="Plant">plant</link></color> to <color=grey>grow</color>.
 
-    Obtenu aleatoirement en secouant
-    des <link="Vieille boite">Vieille boite</link></color>.
+    
 
+    Required
+    :
 
-    Recette:
-
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
+    1 x <color=yellow><link="Box">Box</link></color>'
   - Obtenu dans les booster
   utilities:
   - cardName: Pot Rempli
@@ -90,6 +93,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -141,3 +146,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 

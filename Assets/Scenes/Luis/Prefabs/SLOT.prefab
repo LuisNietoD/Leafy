@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3691570178816010167}
   - component: {fileID: 5318084905734291048}
   - component: {fileID: 5495738236209518683}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: SLOT
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 46-Bidon d'eau
   m_EditorClassIdentifier: 
-  name: Bidon d'Eau
+  name: Water Storage
   ID: 46
   artwork: {fileID: 21300000, guid: 7246298642b0aaa4a8050996dec210c5, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 4
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0
@@ -30,7 +30,15 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 6 x Fer
+  - 'A container capable of <color=grey>storing</color> up to <color=grey>100</color>
+    units of <color=yellow><link="Water">water</link></color>.
+
+    
+
+    Required
+    :
+
+    6 x <color=yellow><link="Iron Ingot">Iron Ingot</link></color>'
   utilities:
   - cardName: Upgrade
     recipe: 1 x Bidon d'Eau<br>1 x Bidon d'Eau (vide)

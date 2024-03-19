@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 12-Base plant
   m_EditorClassIdentifier: 
-  name: Plante de base
+  name: Basic Plant
   ID: 12
   artwork: {fileID: 21300000, guid: 2c227ec730bd6fa4099637287c71e4f4, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.45092228, g: 0.6150943, b: 0.31915268, a: 1}
   type: 5
   sellable: 1
@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 1
   recipeText:
-  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  - 'A small, frail plant. <color=grey>Produces</color> <color=yellow><link="Natural
+    Fiber">natural fibers</link></color> and <color=yellow><link="Pollen">pollen</link></color>.
+    When it reaches its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Plant">Plant</link></color>'
   utilities:
   - cardName: Fibre, Pollen
     recipe: Cliquez pour recolter du Pollen et des Fibres, tremble quand elle est
@@ -88,10 +97,28 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 329627708
+    m_Seed: 1849714421
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464715681047303
+      - m_Index: 1
+        m_Time:
+          Ticks: 638464715588041967
+      - m_Index: 1
+        m_Time:
+          Ticks: 638464715481071028
+      - m_Index: 1
+        m_Time:
+          Ticks: 638464715388051686
+      - m_Index: 1
+        m_Time:
+          Ticks: 638461176586165393
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461176386185416
       - m_Index: 0
         m_Time:
           Ticks: 638457632087371944

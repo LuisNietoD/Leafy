@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 29-Lingot de Fer
   m_EditorClassIdentifier: 
-  name: Lingot de Fer
+  name: Iron Ingot
   ID: 29
   artwork: {fileID: 21300000, guid: d0142bc0a7ed4e741989e924b7057a23, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
   sellable: 1
@@ -26,8 +26,21 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
-  - 5 x Pepite de Fer<br>1 x Plante Fournaise
+  - ' A bar of pure <color=grey>iron</color>. Can be used to <color=grey>build</color>
+    various structures and machines such as the <color=yellow><link="Microscope">microscope</link></color>,
+    for example.
+
+
+    Required :
+
+    1 x <color=yellow><link="Furnace Plant">Furnace
+    Plant</link></color>
+
+    3 x <color=yellow><link="Iron Nugget">Iron Nugget</link></color>'
   utilities:
   - cardName: Serre
     recipe: 4 x Lingot de Fer<br>4 x Verre Renforce
@@ -84,6 +97,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -135,3 +150,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 

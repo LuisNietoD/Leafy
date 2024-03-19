@@ -23,7 +23,6 @@ namespace Leafy.Objects
         private void Update()
         {
             
-            Debug.Log("ahdiahdi " + moving);
             if (!moving)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -32,7 +31,7 @@ namespace Leafy.Objects
                 if (hit.collider != null)
                 {
                     Debug.Log(hit.collider.transform.name);
-                    if (hit.collider.transform == transform && Input.GetMouseButton(0))
+                    if (hit.collider.transform == transform && Input.GetMouseButtonDown(0))
                     {
                         moving = true;
                     }

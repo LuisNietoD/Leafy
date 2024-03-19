@@ -52,4 +52,9 @@ public class QuestPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             }
         }
     }
+
+    public void ChangeActualQuest()
+    {
+        QuestManager.instance.ChangeQuest();
+    }
 }

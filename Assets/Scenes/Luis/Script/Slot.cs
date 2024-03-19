@@ -11,9 +11,10 @@ public class Slot : MonoBehaviour
     {
         if (transform.childCount >= 1)
         {
-            Vector3 p = Vector3.zero;
+            Vector3 p = transform.position;
             p.z = -1;
-            transform.GetChild(0).localPosition = p;
+            if(transform.GetChild(0).childCount > 0)
+                transform.GetChild(0).GetComponent<StackParent>().inStack[0].transform.position = p;
         }
         
     }
@@ -23,7 +24,7 @@ public class Slot : MonoBehaviour
         if (transform.childCount <= 0)
                  return true;
         
-        if (transform.GetChild(0).TryGetComponent(out CardUI plant))
+        if (transform.GetChild(0).GetComponent<StackParent>().inStack[0].TryGetComponent(out CardUI plant))
         {
             return plant.card.plantIsFull;
         }

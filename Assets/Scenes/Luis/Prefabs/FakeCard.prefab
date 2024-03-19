@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3465483026820856384
 Transform:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1547149951
   m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1242240387, guid: 36f9aa6aa5324cd43b28f6c63a181573, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.88235295}
   m_FlipX: 0
@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8053676850710996505}
+  - component: {fileID: 6970847204523473813}
   m_Layer: 9
   m_Name: FakeCard
   m_TagString: Untagged
@@ -110,13 +111,29 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.01, y: 2.01, z: 2.01}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7617838777880388798}
   - {fileID: 3465483026820856384}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6970847204523473813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256155859575106796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081110263ac0553429287e75d2f0d048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 8464183656386511111}
+  icon: {fileID: 6583482224202686753}
+  type: {fileID: 1528314203889654206}
+  cardName: {fileID: 6841575728413001556}
 --- !u!1 &3591398966110748612
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,8 +242,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -396,8 +413,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4290427578
+  m_fontColor: {r: 0.7283019, g: 0.7283019, b: 0.7283019, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -616,7 +633,7 @@ SpriteRenderer:
   m_SortingLayerID: -1547149951
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2b525f6b8b8ad894fa279a689cba729c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5858a406a470e8499bbaa0f95ffb38a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

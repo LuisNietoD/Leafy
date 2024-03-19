@@ -16,12 +16,12 @@ namespace Leafy.Objects
             if(slot.transform.childCount <= 0)
                 return;
 
-            CardUI cardUI = slot.transform.GetChild(0).GetComponent<CardUI>();
+            CardUI cardUI = slot.transform.GetChild(0).GetComponent<StackParent>().inStack[0];
             
             Vector3 p = slot.transform.position;
-            p.x += 2;
+            p.x += 3;
             
-            List<CardUI> childList = CardUtils.GetStackCardList(cardUI.child);
+            List<CardUI> childList = CardUtils.GetStackCardList(cardUI);
 
             foreach (var recipe in Craft.press)
             {

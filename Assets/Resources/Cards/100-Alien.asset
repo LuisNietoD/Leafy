@@ -15,9 +15,9 @@ MonoBehaviour:
   name: Alien
   ID: 100
   artwork: {fileID: 21300000, guid: 17354d072f32548449cbcd6bf4464763, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 834c7ec866bed524aaf241e6e10ee2a1, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 6
+  type: 4
   sellable: 0
   craftable: 0
   harvestable: 0

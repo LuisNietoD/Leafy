@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 3-Bucket
   m_EditorClassIdentifier: 
-  name: Seau
+  name: Bucket
   ID: 3
   artwork: {fileID: 21300000, guid: f196100b84802784eb1d37515a7f8359, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.6528301, g: 0.6251716, b: 0.4126379, a: 1}
   type: 3
   sellable: 1
@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Obtenu dans les booster
+  - 'A container used to collect <color=yellow><link="Water">water</link></color>.
+    Can be placed under a <color=yellow><link="Source">source</link></color> or <color=yellow><link="Infinite
+    Source">infinite source</link></color> to <color=grey>collect</color> <color=yellow><link="Water">water</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x Basic Booster'
   utilities:
   - cardName: Eau
     recipe: 1 x Seau<br>1 x Source

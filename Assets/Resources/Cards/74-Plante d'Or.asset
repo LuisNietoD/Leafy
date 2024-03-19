@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 74-Plante d'Or
   m_EditorClassIdentifier: 
-  name: Plante d'Or
+  name: Gold Plant
   ID: 74
   artwork: {fileID: 21300000, guid: 635d1588f0ad28e47a7b7c3188e012ff, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -87,10 +87,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 2319593579
+    m_Seed: 336831207
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044982456796
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044980488005
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044681832029
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044680477930
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044382165797
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044380787951
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044081816642
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044080478205
       - m_Index: 0
         m_Time:
           Ticks: 638457773512043784

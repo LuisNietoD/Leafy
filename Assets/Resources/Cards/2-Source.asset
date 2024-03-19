@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Source
   ID: 2
   artwork: {fileID: 21300000, guid: d54e7f01144d0d048a5681e506f966a7, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: aacd6ac016a4eec48bad5beee6732559, type: 3}
   background_color: {r: 0.5320754, g: 0.5320754, b: 0.5320754, a: 1}
   type: 2
   sellable: 0
@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Obtenu dans les booster
+  - 'A <color=grey>temporary</color> water well. Produces water more quickly than
+    an <color=yellow><link="Infinite Source">infinite source</link></color> but is
+    <color=grey>destroyed</color> after total use.
+
+    
+
+    Required :
+
+    1
+    x Basic Booster'
   utilities:
   - cardName: Source infinie
     recipe: 4 x Source

@@ -12,20 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 43-Serre
   m_EditorClassIdentifier: 
-  name: Serre
+  name: Small Greenhouse
   ID: 43
   artwork: {fileID: 21300000, guid: 7001c442ac6142245b4c8893184ac1ff, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 6
+  type: 3
   sellable: 1
-  craftable: 1
+  craftable: 0
   harvestable: 0
   inventory: 0
   evolve: 0
   interfaces: 1
   transmute: 0
   activableInterface: 1
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
   - 4 x Lingot de Fer<br>4 x Verre Renforce
   utilities:
@@ -81,6 +84,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -135,3 +140,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 

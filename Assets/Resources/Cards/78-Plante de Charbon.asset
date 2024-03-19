@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 78-Plante de Charbon
   m_EditorClassIdentifier: 
-  name: Plante de Charbon
+  name: Coal Plant
   ID: 78
   artwork: {fileID: 21300000, guid: 32b99ce85838fad4091b1bd8b173b678, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
   background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
   type: 5
   sellable: 1
@@ -81,10 +81,34 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 3611708155
+    m_Seed: 1316415715
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044991137366
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044989505696
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044690840811
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044689827169
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044391469172
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044389519465
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044090833964
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044089487058
       - m_Index: 0
         m_Time:
           Ticks: 638457756993918148

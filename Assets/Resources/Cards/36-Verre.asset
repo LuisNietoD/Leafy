@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 36-Verre
   m_EditorClassIdentifier: 
-  name: Verre
+  name: Glass
   ID: 36
   artwork: {fileID: 21300000, guid: a1e12fa28687b7740b255f7117a44882, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
   type: 1
   sellable: 1
@@ -26,8 +26,20 @@ MonoBehaviour:
   interfaces: 0
   transmute: 0
   activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
   recipeText:
-  - 1 x Plante Fournaise<br>1 x Sable
+  - 'A hard but fragile material with a transparent appearance. Can be used in the
+    design of many <color=grey>technological devices</color>.
+
+
+    Required :
+
+    1
+    x <color=yellow><link="Furnace Plant">Furnace Plant</link></color>
+
+    1 x <color=yellow><link="Sand">Sand</link></color>'
   utilities:
   - cardName: Verre Renforce
     recipe: 1 x Pepite de Plomb<br>1 x Verre
@@ -82,6 +94,8 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   activators: 
+  preciseSpawn: 0
+  preciseList: []
   slotAmount: 0
   slotType: 0
   preciseCardID: 0
@@ -133,3 +147,5 @@ MonoBehaviour:
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
+  savoirList: []
+  behavior: 

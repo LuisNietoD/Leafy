@@ -15,9 +15,9 @@ MonoBehaviour:
   name: Microscope
   ID: 40
   artwork: {fileID: 21300000, guid: 55685ebcc0c6ea049ba928b4064b80fb, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 6
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0
@@ -30,7 +30,19 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 5 x Lingot de Fer<br>3 x Verre
+  - 'An instrument for observing things on a microscopic scale. Allows for more precise
+    <color=grey>inspection</color> of <color=yellow><link="Pollen">pollen</link></color>
+    or <color=yellow><link="Natural Fiber">natural fibers</link></color> to extract
+    <color=grey>resources</color>.
+
+    
+
+    Required :
+
+    4 x <color=yellow><link="Iron
+    Ingot">Iron Ingot</link></color>
+
+    3 x <color=yellow><link="Glass">Glass</link></color>'
   utilities:
   - cardName: Utilisation
     recipe: Le Microscope a besoin d'electricite, Chargez le en posant des cartes

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2eb5e3de-c861-47c4-8c28-30ff045cec82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/QuestManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/QuestManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/CARD (1).controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/CARD (1).controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene/Global Volume Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene/Global Volume Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/New Animation.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/New Animation.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/New Shader Graph.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/New Shader Graph.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/SolveCard.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/SolveCard.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Bordure_De_Carte.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Bordure_De_Carte.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Energie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Energie.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Harvestable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Harvestable.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Machine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Machine.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Plante.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Plante.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Ressources.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Ressources.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Vivant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_BG_Vivant.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssembleurInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssembleurInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MixeurInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MixeurInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/1-Water.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/10-FullPot.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/11-Plant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/11-Plant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/12-Base plant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/12-Base plant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/13-Manual Press.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/13-Manual Press.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/14-Arbuste.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/14-Arbuste.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/15-Wood.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/15-Wood.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/16-Fibre vegetal.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/16-Fibre vegetal.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/17-Pollen.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/17-Pollen.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/18-Plante fournaise.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/18-Plante fournaise.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/19-Coal.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/19-Coal.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/2-Source.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/2-Source.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/20-Pepite de fer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/20-Pepite de fer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/3-Bucket.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/3-Bucket.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/4-Box.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/4-Box.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/5-Dirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/5-Dirt.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/6-Sand.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/6-Sand.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/7-Pot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/7-Pot.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/8-Seed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/8-Seed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/80-Bucket not sell.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/80-Bucket not sell.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/81-OriginalSource.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/81-OriginalSource.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/9-Infinite source.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/9-Infinite source.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/MyScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GeneticInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GeneticInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/PressInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/PressInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/Pack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/Pack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2dpuIeZrUZN79c9ZBsHfD1ic2rR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2eb5e3de-c861-47c4-8c28-30ff045cec82" name="Changes" comment="" />
+      <created>1710717264960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710717264960</updated>
+    </task>
+    <servers />
+  </component>
+</project>

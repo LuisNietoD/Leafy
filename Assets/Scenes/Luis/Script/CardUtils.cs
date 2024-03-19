@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Leafy.Objects;
 using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Leafy.Data
 {

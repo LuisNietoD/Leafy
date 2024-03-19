@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 116-Graine Avancee
   m_EditorClassIdentifier: 
-  name: Graine Avancee
+  name: Advanced Seed
   ID: 116
   artwork: {fileID: 21300000, guid: e5b407872fd5de9408d17afe4ad83f3a, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
   background_color: {r: 0.40392157, g: 0.5686275, b: 0.65882355, a: 1}
   type: 1
   sellable: 1

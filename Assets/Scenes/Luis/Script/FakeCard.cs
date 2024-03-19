@@ -21,7 +21,7 @@ public class FakeCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         card = c;
         
-        background.color = card.background_color;
+       // background.sprite = card.background;
         icon.sprite = card.artwork;
         type.text = card.type.ToString();
         nameText.text = card.name;

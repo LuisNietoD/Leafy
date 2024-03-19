@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 107-Arrosage Auto
   m_EditorClassIdentifier: 
-  name: Arrosage Automatique
+  name: Sprinkler
   ID: 107
   artwork: {fileID: 21300000, guid: 4e7a63eed23736845b0350c76b7df90e, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.78867924, g: 0.49106398, b: 0.16517623, a: 1}
-  type: 7
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0

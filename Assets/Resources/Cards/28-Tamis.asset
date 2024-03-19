@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 28-Tamis
   m_EditorClassIdentifier: 
-  name: Tamis
+  name: Sieve
   ID: 28
   artwork: {fileID: 21300000, guid: f0a70a5f6a559c248b63b607c8437285, type: 3}
-  background: {fileID: 21300000, guid: 3cad655abbad6314fa0e24ab7239e04a, type: 3}
+  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
-  type: 5
+  type: 3
   sellable: 1
   craftable: 1
   harvestable: 0
@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 4 x Fibre Vegetal
+  - 'A primal sieve made from <color=yellow><link="Natural Fiber">natural fibers</link></color>.
+    Used to <color=grey>sift</color> <color=yellow><link="Soil">soil</link></color>
+    and <color=yellow><link="Sand">sand</link></color> to find metal <color=grey>nuggets</color>.
+
+    
+
+    Required
+    :
+
+    4 x <color=yellow><link="Natural Fiber">Natural Fiber</link></color>'
   utilities:
   - cardName: 2 Pepite(Fer, Zinc, Plomb, Cuivre)
     recipe: 1 x Terre<br>1 x Tami

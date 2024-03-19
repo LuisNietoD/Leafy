@@ -1,34 +1,49 @@
+using System;
 using Leafy.Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 
-public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class WordHoverDetector : MonoBehaviour
 {
     public GameObject cardShow;
-    public TextMeshProUGUI title;
-    public TextMeshProUGUI textMeshPro;
+    public TextMeshPro title;
+    public TextMeshPro textMeshPro;
     private bool isMouseOverText;
     public float offset;
     public TutoDisplayer tuto;
-    
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        isMouseOverText = true;
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        isMouseOverText = false;
-        cardShow.SetActive(false);
-    }
+    public LayerMask inGameTextUI;
+    public CardDisplay cardDisplay;
+    public CursorCard cursorCard;
 
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, inGameTextUI);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.gameObject == gameObject)
+            {
+                isMouseOverText = true;
+            }
+            else
+            {
+                isMouseOverText = false;
+                cursorCard.onWord = false;
+            }
+        }
+        else
+        {
+            isMouseOverText = false;
+            cursorCard.onWord = false;
+        }
+
+        
         if (isMouseOverText)
         {
-            int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMeshPro, Input.mousePosition, null);
+            int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMeshPro, Input.mousePosition, Camera.main);
             string word = "";
             if(linkIndex != -1)
             {
@@ -43,7 +58,7 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
             if (linkIndex != -1 && card != null)
             {
-                cardShow.GetComponent<FakeCard>().ChangeVisual(card);
+                ShowCard(card);
                 
                 Vector3 mousePosition = Input.mousePosition;
                 mousePosition.z = Camera.main.nearClipPlane;
@@ -51,15 +66,17 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
                 if (Input.GetMouseButtonDown(0))
                 {
+                    Debug.Log("heyyyyyyyyyyyy");
+                    QuestManager.instance.UpdateQuest(5);
                     DisplayTuto(card);
                 }
 
                 cardShow.transform.position = mousePosition;
-                cardShow.SetActive(true);
+                ShowCard(card);
             }
             else
             {
-                cardShow.SetActive(false);
+                cursorCard.onWord = false;
             }
         }
     }
@@ -67,8 +84,15 @@ public class WordHoverDetector : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void DisplayTuto(ScriptableCard c)
     {
         title.text = c.name;
-        Debug.Log(c.recipeText[0]);
         textMeshPro.text = c.recipeText[0];
-        tuto.ChangeTuto(textMeshPro);
+        cardDisplay.UpdateCard(c);
+        
+        //tuto.ChangeTuto(textMeshPro);
+    }
+
+    public void ShowCard(ScriptableCard c)
+    {
+        cursorCard.onWord = true;
+        cursorCard.EnableCard(c.ID);
     }
 }
