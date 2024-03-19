@@ -28,6 +28,6 @@ public class ShowBigCard : MonoBehaviour
         title.text = c.name;
         textMeshPro.text = c.recipeText[index];
         cardDisplay.UpdateCard(c);
-        tuto.ChangeTuto(textMeshPro);
+        //tuto.ChangeTuto(textMeshPro);
     }
 }
