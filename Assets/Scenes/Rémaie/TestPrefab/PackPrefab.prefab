@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2230850888664551480}
   - component: {fileID: -6753116455049772693}
   m_Layer: 6
-  m_Name: Pack
+  m_Name: PackPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
