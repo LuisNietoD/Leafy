@@ -9,6 +9,8 @@ TagManager:
   - Buy
   - Recycle
   - CardList
+  - AudioManager
+  - Music
   layers:
   - Default
   - TransparentFX
