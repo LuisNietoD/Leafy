@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Leafy.Data;
@@ -19,6 +20,17 @@ public class InfoManager : MonoBehaviour
     public GameObject wikiButton;
     public GameObject wikiMenu;
     public HUDButton hudButton;
+
+    private void Start()
+    {
+        CardList.OnScriptableObjectsLoaded += DefaultRecipe;
+    }
+
+    public void DefaultRecipe()
+    {
+        recipeMenu.ChangeTuto(CardList.GetCardByID(1), 0);
+    }
+    
 
     // Update is called once per frame
     void Update()
