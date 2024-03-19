@@ -19,7 +19,7 @@ MonoBehaviour:
   background_color: {r: 0.9019608, g: 0.7294118, b: 0.24313726, a: 1}
   type: 3
   sellable: 1
-  craftable: 1
+  craftable: 0
   harvestable: 0
   inventory: 0
   evolve: 0

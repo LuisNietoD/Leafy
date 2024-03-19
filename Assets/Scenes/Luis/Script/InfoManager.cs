@@ -40,7 +40,8 @@ public class InfoManager : MonoBehaviour
                     //buttonNext.SetActive(recipeList.Count > 1); 
                     infoCanvas.SetActive(true);
                     recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), 0);
-                    hudButton.ChangeActive(new ButtonLink(wikiButton, wikiMenu));
+                    if(!wikiMenu.activeSelf)
+                        hudButton.ChangeActive(new ButtonLink(wikiButton, wikiMenu));
                 }
             }
         }

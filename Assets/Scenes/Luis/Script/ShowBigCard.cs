@@ -10,6 +10,7 @@ public class ShowBigCard : MonoBehaviour
     public TutoDisplayer tuto;
     public WordHoverDetector wordDetector;
     public FakeCard bigCard;
+    public CardDisplay cardDisplay;
 
     public void ShowBig(ScriptableCard c)
     {
@@ -26,6 +27,7 @@ public class ShowBigCard : MonoBehaviour
     {
         title.text = c.name;
         textMeshPro.text = c.recipeText[index];
+        cardDisplay.UpdateCard(c);
         tuto.ChangeTuto(textMeshPro);
     }
 }

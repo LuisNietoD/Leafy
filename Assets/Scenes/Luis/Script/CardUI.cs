@@ -24,6 +24,7 @@ namespace Leafy.Objects
         private Collider2D collider;
         private TextMeshPro cardName;
         private SpriteRenderer artwork;
+        private SpriteRenderer artworkShadow;
         private SpriteRenderer background;
         private TextMeshPro typeName;
         private SpriteRenderer bord;
@@ -103,6 +104,7 @@ namespace Leafy.Objects
             cardName = transform.Find("MODEL/CARD NAME").GetComponent<TextMeshPro>();
             typeName = transform.Find("MODEL/TYPE").GetComponent<TextMeshPro>();
             artwork = transform.Find("MODEL/ICON").GetComponent<SpriteRenderer>();
+            artworkShadow = transform.Find("MODEL/ICONSHADOW").GetComponent<SpriteRenderer>();
             background = transform.Find("MODEL/BACKGROUND").GetComponent<SpriteRenderer>();
             bord = transform.Find("MODEL/BORD").GetComponent<SpriteRenderer>();
             shadow = transform.Find("SHADOW").GetComponent<SpriteRenderer>();
@@ -170,7 +172,9 @@ namespace Leafy.Objects
             typeName.gameObject.SetActive(true);
             background.sprite = card.background;
             artwork.sprite = card.artwork;
+            artworkShadow.sprite = card.artwork;
             artwork.gameObject.SetActive(true);
+            artworkShadow.gameObject.SetActive(true);
             bord.gameObject.SetActive(true);
             ID = card.ID;
             if (card.harvestable && behavior == null)
@@ -239,6 +243,7 @@ namespace Leafy.Objects
             bord.sortingOrder = id;
             cardName.sortingOrder = id;
             artwork.sortingOrder = id;
+            artworkShadow.sortingOrder = id;
             typeName.sortingOrder = id;
             energyText.sortingOrder = id;
             energyIcon.sortingOrder = id;
@@ -260,6 +265,7 @@ namespace Leafy.Objects
             bord.sortingLayerID = value;
             cardName.sortingLayerID = value;
             artwork.sortingLayerID = value;
+            artworkShadow.sortingLayerID = value;
             typeName.sortingLayerID = value;
             energyText.sortingLayerID = value;
             energyIcon.sortingLayerID = value;

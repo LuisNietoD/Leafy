@@ -89,7 +89,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 2a0000002a0000002a0000002a000000
+    recipe: 2a0000002a0000002a000000
   evolveTime: 0
   evolutions:
     m_PLID: 
