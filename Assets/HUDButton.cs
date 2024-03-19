@@ -9,6 +9,12 @@ public class ButtonLink
 {
     public GameObject button;
     public GameObject ui;
+
+    public ButtonLink(GameObject button, GameObject ui)
+    {
+        this.button = button;
+        this.ui = ui;
+    }
 }
 
 public class HUDButton : MonoBehaviour

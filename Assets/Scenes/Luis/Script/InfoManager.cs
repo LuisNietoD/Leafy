@@ -8,7 +8,6 @@ public class InfoManager : MonoBehaviour
 {
     public GameObject infoCanvas;
     public ShowBigCard recipeMenu;
-    public GameObject buttonNext;
     public LayerMask cardLayer;
 
     public string cardName;
@@ -16,6 +15,9 @@ public class InfoManager : MonoBehaviour
     public List<utility> utilityList;
     public bool isRecipe;
     public int index;
+    public GameObject wikiButton;
+    public GameObject wikiMenu;
+    public HUDButton hudButton;
 
     // Update is called once per frame
     void Update()
@@ -35,9 +37,10 @@ public class InfoManager : MonoBehaviour
                     
                     index = 0;
                     QuestManager.instance.UpdateQuest(5);
-                    buttonNext.SetActive(recipeList.Count > 1); 
+                    //buttonNext.SetActive(recipeList.Count > 1); 
                     infoCanvas.SetActive(true);
                     recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), 0);
+                    hudButton.ChangeActive(new ButtonLink(wikiButton, wikiMenu));
                 }
             }
         }
@@ -58,7 +61,7 @@ public class InfoManager : MonoBehaviour
                     //title.text = utilityList[0].cardName;
                     //recipe.text = utilityList[0].recipe;
                     index = 0;
-                    buttonNext.SetActive(utilityList.Count > 1); 
+                    //buttonNext.SetActive(utilityList.Count > 1); 
                     infoCanvas.SetActive(true);
                     
                 }

@@ -53,6 +53,43 @@ public class TutoDisplayer : MonoBehaviour
             stackTuto(info);
         }
     }
+    
+    public void ChangeTuto(TextMeshPro recipe)
+    {
+        foreach (Transform child in cardParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        
+        string word = recipe.text;
+        List<string> info = new List<string>();
+
+        int startIndex = word.IndexOf("<link=") + "<link=".Length;
+        int endIndex = word.IndexOf(">");
+        string itemsText = word.Substring(startIndex, endIndex - startIndex);
+
+        string[] parts = itemsText.Split(',');
+
+        foreach (string part in parts)
+        {
+            string trimmedPart = part.Trim('"'); // Remove extra quotes
+            info.Add(trimmedPart);
+        }
+
+        // Output the result
+        for (int i = 0; i < info.Count; i++)
+        {
+            Debug.Log("info[" + i + "]: " + info[i]);
+        }
+
+        string type = info[0];
+
+        
+        if (type == TutoType.Stack.ToString())
+        {
+            stackTuto(info);
+        }
+    }
 
     private bool right = false;
 

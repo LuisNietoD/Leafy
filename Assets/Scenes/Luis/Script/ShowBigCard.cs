@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ShowBigCard : MonoBehaviour
 {
-    public TextMeshProUGUI title;
-    public TextMeshProUGUI textMeshPro;
+    public TextMeshPro title;
+    public TextMeshPro textMeshPro;
     public TutoDisplayer tuto;
     public WordHoverDetector wordDetector;
     public FakeCard bigCard;
