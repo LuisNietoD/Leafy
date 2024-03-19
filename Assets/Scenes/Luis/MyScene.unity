@@ -917,6 +917,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 75212266}
     m_Modifications:
+    - target: {fileID: 1076208619207197047, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1743922840188660881, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
       propertyPath: m_Color.a
       value: 0.50980395
@@ -932,6 +936,18 @@ PrefabInstance:
     - target: {fileID: 3256155859575106796, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070765863844338024, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121963421217804338, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583482224202686753, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8053676850710996505, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
       propertyPath: m_LocalScale.x
@@ -984,6 +1000,10 @@ PrefabInstance:
     - target: {fileID: 8053676850710996505, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464183656386511111, guid: 802eb5eb61045254f94e79c7c128a67c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

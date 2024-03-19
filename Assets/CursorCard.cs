@@ -24,7 +24,6 @@ public class CursorCard : MonoBehaviour
     public void EnableCard(int c)
     {
         ScriptableCard card = CardList.GetCardByID(c);
-        background.color = card.background_color;
         icon.sprite = card.artwork;
         type.text = card.type.ToString();
         cardName.text = card.name;
