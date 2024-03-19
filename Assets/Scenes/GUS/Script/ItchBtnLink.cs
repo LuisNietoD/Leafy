@@ -5,7 +5,10 @@ using System.Diagnostics;
 
 public class ItchBtnLink : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    
     public string linkToOpen = "https://novaeka.itch.io/leafy";
+    [SerializeField] private AudioSource Hover;
+    [SerializeField] private AudioSource Click;
     
     void Start()
     {
@@ -14,6 +17,7 @@ public class ItchBtnLink : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     
     private void OpenLink()
     {
+        Click.Play();
         Process.Start(linkToOpen);
     }
     
@@ -21,6 +25,7 @@ public class ItchBtnLink : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         
         transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        Hover.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)

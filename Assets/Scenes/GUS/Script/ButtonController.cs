@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,10 +16,18 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public ButtonType type;
     public TextMeshProUGUI TextMeshPro;
     [SerializeField] private AudioSource Click;
+    [SerializeField] private AudioSource Hover;
 
     public enum ButtonType
     {
         JOUER, CREDITS, QUITTER, RETRY, MENU
+    }
+
+    private void OnEnable()
+    {
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().color=normal;
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().fontSize=70;
+        image.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -26,6 +35,7 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         gameObject.GetComponentInChildren<TextMeshProUGUI>().color=active;
         gameObject.GetComponentInChildren<TextMeshProUGUI>().fontSize=90;
         image.SetActive(true);
+        Hover.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)

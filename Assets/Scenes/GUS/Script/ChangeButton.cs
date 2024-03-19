@@ -11,6 +11,7 @@ using System.IO;
 
 public class ChangeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    public OpenSave openSave;
     public GameObject bloc;
     public GameObject Delete;
     public GameObject image;
@@ -19,15 +20,22 @@ public class ChangeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public ButtonType type;
     public TextMeshProUGUI TextMeshPro;
     [SerializeField] private AudioSource Click;
+    [SerializeField] private AudioSource Hover;
 
     public enum ButtonType
     {
         PLAY, DELETE
     }
-
+    
+    private void OnEnable()
+    {
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().color=normal;
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().fontSize=70;
+        image.SetActive(false);
+    }
     private void Update()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, "SaveFile.es3");
+        string filePath = Path.Combine(Application.persistentDataPath, ActualSave.fileName);
         if (File.Exists(filePath))
         {
             bloc.SetActive(false);
@@ -40,7 +48,7 @@ public class ChangeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void DeleteSaveFile()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, "SaveFile.es3");
+        string filePath = Path.Combine(Application.persistentDataPath, ActualSave.fileName);
 
         if (File.Exists(filePath))
         {
@@ -60,16 +68,13 @@ public class ChangeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             Debug.LogWarning("Le fichier n'existe pas à l'emplacement spécifié.");
         }
     }
-    public void Load()
-    {
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
-    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
             gameObject.GetComponentInChildren<TextMeshProUGUI>().color=active;
             gameObject.GetComponentInChildren<TextMeshProUGUI>().fontSize=90;
             image.SetActive(true);
+            Hover.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)
