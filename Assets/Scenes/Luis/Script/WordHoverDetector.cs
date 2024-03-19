@@ -14,6 +14,7 @@ public class WordHoverDetector : MonoBehaviour
     public float offset;
     public TutoDisplayer tuto;
     public LayerMask inGameTextUI;
+    public CardDisplay cardDisplay;
 
     void Update()
     {
@@ -83,6 +84,7 @@ public class WordHoverDetector : MonoBehaviour
     {
         title.text = c.name;
         textMeshPro.text = c.recipeText[0];
+        cardDisplay.UpdateCard(c);
         //tuto.ChangeTuto(textMeshPro);
     }
 }
