@@ -19,6 +19,14 @@ public class EndSequence : MonoBehaviour
         img.material = mat;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            End();
+        }
+    }
+
     public void End()
     {
         end = true;

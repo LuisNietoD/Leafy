@@ -24,6 +24,7 @@ public class InfoManager : MonoBehaviour
     private void Start()
     {
         CardList.OnScriptableObjectsLoaded += DefaultRecipe;
+        CardButtonManager.OnClickCard += CardClick;
     }
 
     public void DefaultRecipe()
@@ -58,6 +59,19 @@ public class InfoManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void CardClick(ScriptableCard c)
+    {
+        isRecipe = true;
+        cardName = c.name;
+                    
+        index = 0;
+        //buttonNext.SetActive(recipeList.Count > 1); 
+        infoCanvas.SetActive(true);
+        recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), 0);
+        if(!wikiMenu.activeSelf)
+            hudButton.ChangeActive(new ButtonLink(wikiButton, wikiMenu));
     }
 
     public void Next()

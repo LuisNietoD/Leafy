@@ -65,7 +65,7 @@ public class HUDButton : MonoBehaviour
         else
         {
             Vector3 p = transform.parent.localPosition;
-            p.x = -21.4f;
+            p.x = -21.8f;
             transform.parent.localPosition = p;
             active.ui.SetActive(false);
             active.ui = null;

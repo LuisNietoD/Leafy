@@ -11,10 +11,13 @@ public class CardDisplay : MonoBehaviour
     public SpriteRenderer icon;
     public TextMeshPro type;
     public TextMeshPro cardName;
+    public bool defaultID = false;
+    public int id;
 
-    private void Start()
+    private void OnEnable()
     {
-        //UpdateCard(CardList.GetCardByID(1));
+        if(defaultID)
+            UpdateCard(CardList.GetCardByID(id));
     }
 
     public void UpdateCard(ScriptableCard c)
@@ -23,5 +26,6 @@ public class CardDisplay : MonoBehaviour
         icon.sprite = c.artwork;
         type.text = c.type.ToString();
         cardName.text = c.name;
+        id = c.ID;
     }
 }

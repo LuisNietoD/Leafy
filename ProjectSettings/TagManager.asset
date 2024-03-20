@@ -11,6 +11,7 @@ TagManager:
   - CardList
   - AudioManager
   - Music
+  - Blueprint
   layers:
   - Default
   - TransparentFX
