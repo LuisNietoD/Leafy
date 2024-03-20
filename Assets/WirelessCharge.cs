@@ -42,11 +42,11 @@ public class WirelessCharge : MonoBehaviour
                 machine.Add(cardUI.gameObject);
             }
 
-            if (CardUtils.GetLastCard(cardUI).card.ID == 39)
+            if (cardUI.card.ID == 39)
             {
                 if (cardParent.card.actualEnergy < cardParent.card.maxEnergy)
                 {
-                    Destroy(CardUtils.GetLastCard(cardUI).gameObject);
+                    Destroy(cardUI.gameObject);
                     cardParent.card.actualEnergy++;
                 }
             }

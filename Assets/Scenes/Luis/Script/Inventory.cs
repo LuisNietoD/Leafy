@@ -68,6 +68,7 @@ namespace Leafy.Objects
         
         public override void StayAction()
         {
+            cardUI.inventory.SetActive(true);
             if (cardUI.child != null)
             {
                 if (card.preciseCard && card.preciseCardID == cardUI.child.ID)
