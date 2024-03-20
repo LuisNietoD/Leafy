@@ -129,10 +129,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5515715992360792092}
-  - component: {fileID: 8520269993008969710}
   - component: {fileID: -4138843063340776789}
+  - component: {fileID: 55820476678947682}
   m_Layer: 14
-  m_Name: RainZone
+  m_Name: RainZoneStable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,19 +155,6 @@ Transform:
   - {fileID: 5379893103761423525}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8520269993008969710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869551595423895090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d80d5c64832c10e469e4bc040c793101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plants: []
 --- !u!50 &-4138843063340776789
 Rigidbody2D:
   serializedVersion: 4
@@ -195,6 +182,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &55820476678947682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869551595423895090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd06b62fe87dc614c9ce98a58c31c62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plants: []
+  waterTime: 3
+  cardParent: {fileID: 0}
 --- !u!1 &8571139964127054346
 GameObject:
   m_ObjectHideFlags: 0

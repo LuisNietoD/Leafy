@@ -24,9 +24,9 @@ MonoBehaviour:
   inventory: 0
   evolve: 0
   interfaces: 1
-  transmute: 0
+  transmute: 1
   activableInterface: 0
-  customBehavior: 1
+  customBehavior: 0
   machineSavoir: 0
   upgradable: 0
   recipeText:
@@ -132,9 +132,9 @@ MonoBehaviour:
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
   interfaceList:
-  - {fileID: 2869551595423895090, guid: d7ea442df20a6c0409201c9577e64f5d, type: 3}
-  requireEnergy: 0
-  maxEnergyStored: 0
+  - {fileID: 2869551595423895090, guid: b70aad13a2e88de478256ede347d8fdb, type: 3}
+  requireEnergy: 1
+  maxEnergyStored: 500
   energyPerCraft: 0
   transmuteList: []
   savoirList: []
