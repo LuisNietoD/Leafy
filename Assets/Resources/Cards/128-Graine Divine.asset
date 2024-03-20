@@ -10,30 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 107-Arrosage Auto
+  m_Name: 128-Graine Divine
   m_EditorClassIdentifier: 
-  name: Sprinkler
-  ID: 107
-  artwork: {fileID: 21300000, guid: 4e7a63eed23736845b0350c76b7df90e, type: 3}
-  background: {fileID: 21300000, guid: 7da7bc5dfc16a8244b54c902ea8706fd, type: 3}
-  background_color: {r: 0.78867924, g: 0.49106398, b: 0.16517623, a: 1}
-  type: 3
-  sellable: 1
-  craftable: 1
+  name: Divine Seed
+  ID: 128
+  artwork: {fileID: 21300000, guid: 1fe4af89c16abdb4592a8b1229ba2b48, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
+  background_color: {r: 0.60535944, g: 0.15760048, b: 0.8792453, a: 1}
+  type: 1
+  sellable: 0
+  craftable: 0
   harvestable: 0
-  inventory: 1
+  inventory: 0
   evolve: 0
-  interfaces: 1
+  interfaces: 0
   transmute: 0
   activableInterface: 0
   customBehavior: 0
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
-  utilities: []
+  - 1 x Terre<br>1 x Tami
+  utilities:
+  - cardName: Lingot de Fer
+    recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise
   price: 2
-  timeToCraft: 2
+  timeToCraft: 0
   infinite: 0
   life: 0
   storeCard: 0
@@ -83,13 +85,11 @@ MonoBehaviour:
   activators: 
   preciseSpawn: 0
   preciseList: []
-  slotAmount: 1000
+  slotAmount: 0
   slotType: 0
-  preciseCardID: 1
-  preciseCard: 1
-  recipes:
-  - machine: 4
-    recipe: 6600000066000000660000006600000038000000
+  preciseCardID: 0
+  preciseCard: 0
+  recipes: []
   evolveTime: 0
   evolutions:
     m_PLID: 
@@ -131,11 +131,10 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  interfaceList:
-  - {fileID: 2869551595423895090, guid: 08e942944da49d74f886c0072d0c66d7, type: 3}
+  interfaceList: []
   requireEnergy: 0
   maxEnergyStored: 0
   energyPerCraft: 0
   transmuteList: []
   savoirList: []
-  behavior: WateringCanBehavior
+  behavior: 
