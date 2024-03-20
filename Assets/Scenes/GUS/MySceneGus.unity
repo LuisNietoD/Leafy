@@ -2557,7 +2557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &490272022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6348,7 +6348,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questText: {fileID: 1633999617}
   wordHoverDetector: {fileID: 1698019373}
-  tutoObject: {fileID: 1389477984}
+  recipeMenu: {fileID: 0}
+  wikiButton: {fileID: 0}
+  wikiMenu: {fileID: 0}
+  hudButton: {fileID: 0}
 --- !u!95 &1156450376
 Animator:
   serializedVersion: 5

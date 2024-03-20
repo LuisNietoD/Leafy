@@ -708,7 +708,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: 'Play
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -878,7 +880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SAVE 2
+  m_text: Save 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -1076,7 +1078,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SAVE 1
+  m_text: Save 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -1210,7 +1212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PLAY
+  m_text: 'Play
 
 '
   m_isRightToLeft: 0
@@ -1449,7 +1451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &305590546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1604,7 +1606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CREDITS
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -2278,7 +2280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SAVE 3
+  m_text: Save 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -2733,13 +2735,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 271986175}
   - {fileID: 1101859365}
+  - {fileID: 271986175}
   m_Father: {fileID: 1274917042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66, y: 272}
+  m_AnchoredPosition: {x: -66, y: 308}
   m_SizeDelta: {x: 483.773, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992329417
@@ -3058,7 +3060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DELETE
+  m_text: Delete
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -3323,7 +3325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -46}
+  m_AnchoredPosition: {x: 9, y: -49}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1114704773
@@ -3501,8 +3503,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 131770653}
   - {fileID: 1267390867}
+  - {fileID: 131770653}
   m_Father: {fileID: 305590546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4021,7 +4023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -45}
+  m_AnchoredPosition: {x: 2, y: -48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1274917041
@@ -4039,7 +4041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1274917042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4825,7 +4827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DELETE
+  m_text: Delete
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
@@ -5301,7 +5303,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUIT
+  m_text: 'Quit
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
   m_sharedMaterial: {fileID: -3119452961020870925, guid: 5c35115cacf7b4d4e9374833abb8800d, type: 2}
