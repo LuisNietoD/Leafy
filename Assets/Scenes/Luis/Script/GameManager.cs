@@ -370,6 +370,8 @@ namespace Leafy.Manager
         public void SortStack()
         {
             List<CardUI> cards = CardUtils.GetStackCardList(_draggedCardUI);
+            if(cards.Count <= 1)
+                return;
             cards.Sort((card1, card2) => card1.ID.CompareTo(card2.ID));
 
             foreach (var c in cards)
