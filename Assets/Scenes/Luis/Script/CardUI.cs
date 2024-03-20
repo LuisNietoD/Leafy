@@ -95,6 +95,10 @@ namespace Leafy.Objects
                 model.transform.localEulerAngles = new Vector3(0, 0, 0);
                 shadow.transform.localEulerAngles = new Vector3(0, 0, 0);
                 shadow.gameObject.SetActive(true);
+                if (!bord.gameObject.activeSelf)
+                {
+                    UpdateCardInfo(card);
+                }
             }
         }
 
