@@ -14,7 +14,7 @@ public class CardDisplay : MonoBehaviour
 
     private void Start()
     {
-        UpdateCard(CardList.GetCardByID(1));
+        //UpdateCard(CardList.GetCardByID(1));
     }
 
     public void UpdateCard(ScriptableCard c)

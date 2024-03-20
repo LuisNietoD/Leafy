@@ -106,7 +106,14 @@ public class QuestManager : MonoBehaviour
 
     public void ChangeQuest()
     {
-        actualQuest = QuestCategories[0].quests[actualQuest.ID + 1];
-        DisplayQuest();
+        if (QuestCategories[0].quests.Count > actualQuest.ID + 1)
+        {
+            actualQuest = QuestCategories[0].quests[actualQuest.ID + 1];
+            DisplayQuest();
+        }
+        else
+        {
+            questPanel.gameObject.SetActive(false);
+        }
     }
 }

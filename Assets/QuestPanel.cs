@@ -11,7 +11,10 @@ public class QuestPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public TextMeshProUGUI questText;
     private bool isMouseOverText;
     public WordHoverDetector wordHoverDetector;
-    public GameObject tutoObject;
+    public ShowBigCard recipeMenu;
+    public GameObject wikiButton;
+    public GameObject wikiMenu;
+    public HUDButton hudButton;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -47,7 +50,9 @@ public class QuestPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                 if (Input.GetMouseButtonDown(0))
                 {
                     wordHoverDetector.DisplayTuto(card);
-                    tutoObject.SetActive(true);
+                    recipeMenu.ChangeTuto(card, 0);
+                    if(!wikiMenu.activeSelf)
+                        hudButton.ChangeActive(new ButtonLink(wikiButton, wikiMenu));
                 }
             }
         }

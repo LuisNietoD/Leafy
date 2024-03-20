@@ -41,7 +41,7 @@ MonoBehaviour:
     1
     x <color=yellow><link="Source">Source</link></color>
 
-    1 x <color=yellow><link="Bucket">Seau</link></color>'
+    1 x <color=yellow><link="Bucket">Bucket</link></color>'
   - 'A scarce resource, nowadays used as <color=grey>currency </color>. Can be used
     to grow out <color=yellow><link="Plant">plants</link></color> and accelerate
     their harvesting point by using a <color=yellow><link="Watering Can">watering
@@ -54,7 +54,7 @@ MonoBehaviour:
     x <color=yellow><link="Infinite Source">Infinite Source</link></color>
 
     1
-    x <color=yellow><link="Bucket">Seau</link></color>'
+    x <color=yellow><link="Bucket">Bucket</link></color>'
   utilities:
   - cardName: Eau
     recipe: Sert a acheter des cartes

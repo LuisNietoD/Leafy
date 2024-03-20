@@ -58,29 +58,6 @@ public class InfoManager : MonoBehaviour
                 }
             }
         }
-        
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, cardLayer);
-
-            if (hit.collider != null)
-            {
-                if (hit.collider.TryGetComponent(out Info info))
-                {
-                    isRecipe = false;
-                    utilityList = info.utility;
-                    
-                    
-                    //title.text = utilityList[0].cardName;
-                    //recipe.text = utilityList[0].recipe;
-                    index = 0;
-                    //buttonNext.SetActive(utilityList.Count > 1); 
-                    infoCanvas.SetActive(true);
-                    
-                }
-            }
-        }
     }
 
     public void Next()
