@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 67-ADN de Charbon
   m_EditorClassIdentifier: 
-  name: Coal ADN
+  name: Coal DNA
   ID: 67
   artwork: {fileID: 21300000, guid: 9e6c55d6518fecc428b658c2faaed86b, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}

@@ -30,7 +30,20 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A container with a spout used for <color=grey>watering</color> plants. When
+    lifted, it creates a <color=grey>watering zone</color> that <color=grey>speeds</color>
+    up the time to reach the harvesting point of plants within it. Its water capacity
+    is so impressive that it seems <color=grey>endless</color>.
+
+    
+
+    Required
+    :
+
+    8 x <color=yellow><link="Iron Ingot">Iron Ingot</link></color>
+
+    1
+    x <color=yellow><link="Water">Water</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2

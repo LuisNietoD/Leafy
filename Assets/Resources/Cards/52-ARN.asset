@@ -30,7 +30,15 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A molecule created by merging <color=yellow><link="Protein">proteins</link></color>.
+    <color=grey>Merging</color> 4 together creates <color=yellow><link="DNA">DNA</link></color>.
+
+    
+
+    Required
+    :
+
+    4 x <color=yellow><link="Protein">Protein</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2

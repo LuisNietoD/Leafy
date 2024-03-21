@@ -30,17 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - '<link="Stack,1:Vieille boite"></link>
+  - 'A resource derived from the decomposition of plant and organic waste, especially
+    from plants. <color=grey>Adding</color> compost to a plant using the <color=yellow><link="Genetic
+    Modifier">genetic modifier</link></color> <color=grey>increases</color> its growth
+    speed up to its harvesting point! Putting a plant in the "<color=grey>Composter</color>"
+    tab of A.D.A.M. yields compost.
 
-    Obtenu aleatoirement en secouant
-    des <link="Vieille boite">Vieille boite</link></color>.
+    
 
+    Required :
 
-    Recette:
-
-    1
-    x <color=yellow> <link="Vieille boite">Vieille boite</link></color>'
-  - Obtenu dans les booster
+    1 x Any plants'
   utilities:
   - cardName: Pot Rempli
     recipe: 1 x Terre<br>1 x Pot

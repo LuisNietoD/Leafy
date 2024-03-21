@@ -30,7 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A molecule containing the <color=grey>genetic code</color> of every living being.
+    Allows for <color=grey>building</color> a <color=yellow><link="Genetic Modifier">genetic
+    modifier</link></color> and can be <color=grey>modified</color> within to create
+    DNA of various metals, <color=yellow><link="Sand">sand</link></color>, <color=yellow><link="Soil">soil</link></color>,
+    or even <color=yellow><link="Coal">coal</link></color>.
+
+
+    Required :
+
+    4
+    x <color=yellow><link="RNA">RNA</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2

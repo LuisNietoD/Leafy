@@ -30,7 +30,32 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A machine allowing for the modification of the <color=grey>genetic material</color>
+    of a plant. <color=grey>Place</color> <color=yellow><link="DNA">DNA</link></color>
+    and another resource on the machine''s slots and <color=grey>press</color> the
+    lever to <color=grey>merge</color> them and create DNA of that <color=grey>same
+    resource</color>! Then use this DNA to create <color=grey>resource plants</color>
+    by merging it with <color=yellow><link="Basic Plant">basic plants</link></color>.
+    Also <color=grey>increase</color> the <color=grey>growth speed</color>, <color=grey>yield</color>,
+    and interior <color=grey>space</color> of your plants by respectively using <color=yellow><link="Compost">compost</link></color>,
+    a similar plant, or a <color=yellow><link="Pot">pot</link></color> by merging
+    it with a <color=yellow><link="Basic Plant">basic plant</link></color>.
+
+
+    Required
+    :
+
+    2 x <color=yellow><link="Iron Ingot">Iron Ingot</link></color>
+
+    2
+    x <color=yellow><link="Glass">Glass</link></color>
+
+    2 x <color=yellow><link="DNA">DNA</link></color>
+
+    1
+    x <color=yellow><link="Protein">Protein</link></color>
+
+    1 x <color=yellow><link="RNA">RNA</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2
@@ -89,7 +114,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 1d0000001d0000002a0000003400000035000000350000002400000024000000
+    recipe: 1d0000001d00000024000000240000002a000000340000003500000035000000
   evolveTime: 0
   evolutions:
     m_PLID: 
