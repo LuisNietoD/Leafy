@@ -34,7 +34,6 @@ MonoBehaviour:
     <color=yellow><link="Iron Nugget">iron nuggets</link></color>. When it reaches
     its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.
 
-    
 
     Required
     :
@@ -102,10 +101,13 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 80981586
+    m_Seed: 4248844431
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638466468300912360
       - m_Index: 0
         m_Time:
           Ticks: 638457773555025949

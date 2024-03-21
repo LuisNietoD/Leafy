@@ -37,18 +37,17 @@ MonoBehaviour:
     <color=yellow><link="Soil">soil</link></color>. When it reaches its <color=grey>harvesting
     point</color>, it <color=grey>shakes</color>.
 
-    
 
     Required :
 
-    1
-    x <color=yellow><link="Genetic Modifier">Genetic Modifier</link></color>
+    1 x <color=yellow><link="Genetic
+    Modifier">Genetic Modifier</link></color>
 
-    1
-    x <color=yellow><link="Basic Plant">Basic Plant</link></color>
+    1 x <color=yellow><link="Basic
+    Plant">Basic Plant</link></color>
 
-    1 x <color=yellow><link="Soil
-    DNA">Soil DNA</link></color>'
+    1 x <color=yellow><link="Soil DNA">Soil
+    DNA</link></color>'
   utilities:
   - cardName: Bois
     recipe: Cliquez pour recolter du Bois, tremble quand elle est rempli

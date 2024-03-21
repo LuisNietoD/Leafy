@@ -36,7 +36,6 @@ MonoBehaviour:
     <color=yellow><link="Gold Nugget">gold nuggets</link></color>. When it reaches
     its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.
 
-    
 
     Required
     :
@@ -104,10 +103,13 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 336831207
+    m_Seed: 1668997768
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638466468307207377
       - m_Index: 0
         m_Time:
           Ticks: 638464044982456796
