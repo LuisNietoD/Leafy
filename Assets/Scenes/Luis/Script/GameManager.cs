@@ -3,6 +3,7 @@ using System.Xml;
 using Leafy.Objects;
 using UnityEngine;
 using Leafy.Data;
+using UnityEngine.VFX;
 
 namespace Leafy.Manager
 {
@@ -25,6 +26,7 @@ namespace Leafy.Manager
         
         public CardUI _draggedCardUI;
         private CardUI _hoveredCardUI;
+        public VisualEffect dragFX;
         
         private GameObject _hoveredBooster;
         private GameObject _draggedBooster;
@@ -87,6 +89,8 @@ namespace Leafy.Manager
             //Drop the dragged card
             else if (Input.GetMouseButtonUp(0) && _draggedCardUI != null)
             {
+                dragFX.enabled = false;
+
                 Transform slot = RayTestUI();
                 
                 
@@ -349,6 +353,9 @@ namespace Leafy.Manager
                     float z = frontViewZ;
                     _draggedCardUI.transform.position = new Vector3(position.x, position.y, z);
                 }
+
+                dragFX.transform.position = _draggedCardUI.transform.position;
+                dragFX.enabled = true;
             }
 
             if (_draggedBooster != null)
@@ -364,6 +371,8 @@ namespace Leafy.Manager
                     float z = frontViewZ;
                     _draggedBooster.transform.position = new Vector3(position.x, position.y, z);
                 }
+                dragFX.transform.position = _draggedBooster.transform.position;
+                dragFX.enabled = true;
             }
         }
 

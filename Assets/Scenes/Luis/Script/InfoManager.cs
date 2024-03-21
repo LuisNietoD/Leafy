@@ -20,6 +20,7 @@ public class InfoManager : MonoBehaviour
     public GameObject wikiButton;
     public GameObject wikiMenu;
     public HUDButton hudButton;
+    public GameObject buttonNext;
 
     private void Start()
     {
@@ -67,7 +68,7 @@ public class InfoManager : MonoBehaviour
         cardName = c.name;
                     
         index = 0;
-        //buttonNext.SetActive(recipeList.Count > 1); 
+        buttonNext.SetActive(recipeList.Count > 1); 
         infoCanvas.SetActive(true);
         recipeMenu.ChangeTuto(CardList.GetCardByName(cardName), 0);
         if(!wikiMenu.activeSelf)

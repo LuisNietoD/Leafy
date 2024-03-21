@@ -46,7 +46,6 @@ public class QuestPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
             if (linkIndex != -1 && card != null)
             {
-                Debug.Log(card.recipeText[0]);
                 if (Input.GetMouseButtonDown(0))
                 {
                     wordHoverDetector.DisplayTuto(card);

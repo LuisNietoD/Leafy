@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class CardButtonManager : MonoBehaviour
 {
     public LayerMask hudLayer;
+    public LayerMask uiGuiLayer;
     public CardButton cardButton;
     public GameObject craftPage;
     public GameObject recipeList;
@@ -35,7 +36,7 @@ public class CardButtonManager : MonoBehaviour
         else
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, hudLayer);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, uiGuiLayer);
 
             if (hit.collider != null && Input.GetMouseButtonDown(0))
             {
