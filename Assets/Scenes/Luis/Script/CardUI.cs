@@ -22,8 +22,8 @@ namespace Leafy.Objects
         private float offsetZ = 0.1f;
 
         private Collider2D collider;
-        private TextMeshPro cardName;
-        private SpriteRenderer artwork;
+        public TextMeshPro cardName;
+        public SpriteRenderer artwork;
         private SpriteRenderer artworkShadow;
         private SpriteRenderer background;
         private TextMeshPro typeName;
@@ -209,6 +209,8 @@ namespace Leafy.Objects
             {
                 if(card.behavior == "WateringCanBehavior")
                     behavior = new WateringCanBehavior(this);
+                if (card.behavior == "Creature")
+                    behavior = new CreatureBehavior(this);
             }
             else if (behavior == null)
             {
@@ -550,7 +552,7 @@ namespace Leafy.Objects
         {
             List<CardUI> stackCards = CardUtils.GetStackCardList(this);
 
-            if (stackCards.All(c => c.card.type == "Plant"))
+            if (stackCards.All(c => c.card.type == "Plant" || c.card.ID == 131))
             {
                 int totalNumberOfCards = stackCards.Count;
                 r.Recycle(totalNumberOfCards);

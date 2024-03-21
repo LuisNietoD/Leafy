@@ -59,7 +59,9 @@ namespace Leafy.Data
         public List<ScriptableCard> preciseList;
         public int actualstoredCardID;
         public int actualstoredCard;
-        public List<int> cardIDs = new List<int>(); 
+        public List<int> cardIDs = new List<int>();
+        public int tool = 0;
+        public bool creatureChanged = false;
         
 
         public Card(ScriptableCard card)
