@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 58-ADN de Zinc
   m_EditorClassIdentifier: 
-  name: Zinc ADN
+  name: Zinc DNA
   ID: 58
   artwork: {fileID: 21300000, guid: f85785b789985ca4ca452e49b226568e, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}

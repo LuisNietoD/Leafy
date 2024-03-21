@@ -30,7 +30,26 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A small machine that <color=grey>merges</color> 2 <color=grey>compatible</color>
+    plants with each other to create a <color=grey>new</color> one.
+
+    
+
+    Required
+    :
+
+    2 x <color=yellow><link="Zinc Ingot">Zinc Ingot</link></color>
+
+    2
+    x <color=yellow><link="Lead Ingot">Lead Ingot</link></color>
+
+    3 x <color=yellow><link="Aluminum
+    Ingot">Aluminum Ingot</link></color>
+
+    4 x <color=yellow><link="Gold Ingot">Gold
+    Ingot</link></color>
+
+    2 x <color=yellow><link="DNA">DNA</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2

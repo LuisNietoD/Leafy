@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 62-ADN d'Argent
   m_EditorClassIdentifier: 
-  name: Silver ADN
+  name: Silver DNA
   ID: 62
   artwork: {fileID: 21300000, guid: 268b6eea2f3eec04592b7405ef22a37f, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}

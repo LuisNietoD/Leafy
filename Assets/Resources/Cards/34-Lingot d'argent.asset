@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - ddddd
+  - 'A bar of pure <color=grey>silver</color>. Can be used to make <color=grey>tin</color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Furnace Plant">Furnace Plant</link></color>
+
+    3
+    x <color=yellow><link="Silver Nugget">Silver Nugget</link></color>'
   utilities: []
   price: 2
   timeToCraft: 0

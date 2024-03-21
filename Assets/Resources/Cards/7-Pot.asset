@@ -40,7 +40,6 @@ MonoBehaviour:
     :
 
     1 x <color=yellow><link="Box">Box</link></color>'
-  - Obtenu dans les booster
   utilities:
   - cardName: Pot Rempli
     recipe: 1 x Terre<br>1 x Pot

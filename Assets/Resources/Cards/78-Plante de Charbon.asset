@@ -30,7 +30,23 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 1
   recipeText:
-  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  - 'A plant with foliage forming a significant mass of <color=yellow><link="Coal">coal</link></color>.
+
+    <color=grey>Produces</color>
+    <color=yellow><link="Coal">coal</link></color>. When it reaches its <color=grey>harvesting
+    point</color>, it <color=grey>shakes</color>.
+
+
+    Required :
+
+    1 x <color=yellow><link="Genetic
+    Modifier">Genetic Modifier</link></color>
+
+    1 x <color=yellow><link="Basic
+    Plant">Basic Plant</link></color>
+
+    1 x <color=yellow><link="Coal DNA">Coal
+    DNA</link></color>'
   utilities:
   - cardName: Bois
     recipe: Cliquez pour recolter du Bois, tremble quand elle est rempli
@@ -81,10 +97,13 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 1316415715
+    m_Seed: 484119423
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638466468313759442
       - m_Index: 0
         m_Time:
           Ticks: 638464044991137366

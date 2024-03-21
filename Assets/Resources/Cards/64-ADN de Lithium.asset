@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 64-ADN de Lithium
   m_EditorClassIdentifier: 
-  name: Lithium ADN
+  name: Lithium DNA
   ID: 64
   artwork: {fileID: 21300000, guid: 60372e2d07afd394f995c06bf0f901a1, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}

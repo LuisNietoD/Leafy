@@ -30,7 +30,23 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 1
   recipeText:
-  - 1 x Pot Rempli<br>1 x Graine<br> 1 x Eau
+  - 'A plant whose lithium stems surrounding it imitates the shape of petals.
+
+    <color=grey>Produces</color>
+    <color=yellow><link="Lithium Piece">pieces of lithium</link></color>. When it
+    reaches its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Genetic Modifier">Genetic Modifier</link></color>
+
+    1
+    x <color=yellow><link="Basic Plant">Basic Plant</link></color>
+
+    1 x <color=yellow><link="Lithium
+    DNA">Lithium DNA</link></color>'
   utilities:
   - cardName: Bois
     recipe: Cliquez pour recolter du Bois, tremble quand elle est rempli
@@ -87,10 +103,13 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_Seed: 3072081307
+    m_Seed: 3662893904
     m_KeepSeed: 0
     m_PickHistory:
       m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638466468308774341
       - m_Index: 0
         m_Time:
           Ticks: 638464044984478724
