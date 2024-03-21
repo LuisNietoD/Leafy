@@ -40,6 +40,7 @@ namespace Leafy.Manager
         public GameObject crafterPrefab;
         private float crafterOffsetY = 2;
         public GameObject stackParent;
+        public int uniqueCard = 0;
         
         private void Awake()
         {
@@ -288,6 +289,30 @@ namespace Leafy.Manager
             cl.drop = toCraft;
             cl.stack = stack;
             cl.destroyStack = destroy;
+            
+
+            cl.stack[0].SetLoader(cl.gameObject);
+        }
+        
+        public void LaunchCraft(int craftID, List<CardUI> stack, float harvestTime, bool destroy, bool oneTime)
+        {
+            if(stack[0].loader != null)
+                return;
+            ScriptableCard toCraft = CardList.GetCardByID(craftID);
+            if(toCraft == null)
+                Debug.LogError("Cannot find this craft ID");
+
+            Vector3 pos = stack[0].transform.position;
+            pos.y += crafterOffsetY;
+            GameObject crafter = Instantiate(crafterPrefab, pos, Quaternion.identity);
+
+            CraftLoading cl = crafter.GetComponent<CraftLoading>();
+
+            cl.timeToCraft = harvestTime;
+            cl.drop = toCraft;
+            cl.stack = stack;
+            cl.destroyStack = destroy;
+            cl.selfDestroy = oneTime;
             
 
             cl.stack[0].SetLoader(cl.gameObject);

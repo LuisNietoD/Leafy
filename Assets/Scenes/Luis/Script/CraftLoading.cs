@@ -17,6 +17,7 @@ public class CraftLoading : MonoBehaviour
     public bool multipleCards;
     public List<int> toCraft = new List<int>();
     public CardUI parent;
+    public bool selfDestroy;
     
     private void Start()
     {
@@ -62,9 +63,10 @@ public class CraftLoading : MonoBehaviour
             }
 
             elapsed = 0;
-            if (destroyStack)
-            {
+            if (destroyStack || selfDestroy)
+            {Debug.Log("tttttttttttttttttttttttttttt");
                 Destroy(gameObject);
+                
             }
         }
     }

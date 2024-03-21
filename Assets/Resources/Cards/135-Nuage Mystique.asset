@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
-  m_Name: 131-Creature
+  m_Name: 135-Nuage Mystique
   m_EditorClassIdentifier: 
-  name: Creature
-  ID: 131
-  artwork: {fileID: 21300000, guid: 3dea4af1a3c53b341a9d7650a46f0c50, type: 3}
-  background: {fileID: 21300000, guid: 834c7ec866bed524aaf241e6e10ee2a1, type: 3}
+  name: Mystical Cloud
+  ID: 135
+  artwork: {fileID: 21300000, guid: c3e88301d9db80a429a6c558eb4be826, type: 3}
+  background: {fileID: 21300000, guid: aacd6ac016a4eec48bad5beee6732559, type: 3}
   background_color: {r: 0.60535944, g: 0.15760048, b: 0.8792453, a: 1}
-  type: 4
+  type: 2
   sellable: 0
   craftable: 0
-  harvestable: 0
+  harvestable: 1
   inventory: 0
   evolve: 0
   interfaces: 0
   transmute: 0
   activableInterface: 0
-  customBehavior: 1
+  customBehavior: 0
   machineSavoir: 0
   upgradable: 0
   recipeText:
@@ -37,14 +37,26 @@ MonoBehaviour:
   price: 2
   timeToCraft: 0
   infinite: 0
-  life: 0
+  life: 5
   storeCard: 0
   inventorySize: 0
   shakable: 0
-  harvestTime: 0
+  harvestTime: 5
   drop:
     m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
-    m_ProbabilityItems: []
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 21ff63e7b54a96b4590984a46df6ad20, type: 2}
+      m_BaseProbability: 0.1
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 8bda0f3e21376f94db76fdf3e15dd43b, type: 2}
+      m_BaseProbability: 0.9
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
     m_PreventRepeat: 0
     m_ShuffleIterations: 1
     m_PickCountMin: 1
@@ -82,7 +94,7 @@ MonoBehaviour:
       m_Capacity: 1000
     m_LastPickCount: 0
     m_SelectionMethodID: LSMRegular
-  activators: 
+  activators: 00000000
   preciseSpawn: 0
   preciseList: []
   slotAmount: 0
