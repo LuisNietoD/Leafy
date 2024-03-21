@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - ssssss
+  - ' A bar of pure <color=grey>tin</color>. Can be used to <color=grey>build</color>
+    <color=yellow><link="Printed Circuit Board">printed circuit boards</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Furnace Plant">Furnace Plant</link></color>
+
+    3
+    x <color=yellow><link="Tin Nugget">Tin Nugget</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

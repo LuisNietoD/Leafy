@@ -30,7 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - sssss
+  - 'A bar of pure <color=grey>steel</color>.
+
+    
+
+    Required :
+
+    1 x <color=yellow><link="Furnace
+    Plant">Furnace Plant</link></color>
+
+    3 x <color=yellow><link="Steel Nugget">Steel
+    Nugget</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise
