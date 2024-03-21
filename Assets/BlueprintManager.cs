@@ -13,6 +13,10 @@ public class BlueprintManager : MonoBehaviour
         {
             listCraft[nextRecipeToUnlock].SetActive(true);
             nextRecipeToUnlock++;
+            if (nextRecipeToUnlock >= listCraft.Count)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

@@ -17,7 +17,10 @@ public class CardButton : MonoBehaviour
     private void Start()
     {
         craft = Craft.list[id];
+        remainCardForCraft = new List<int>(craft);
     }
+    
+    
 
     public void PutCardinCraft(List<CardUI> stack)
     {
@@ -28,7 +31,6 @@ public class CardButton : MonoBehaviour
             {
                 remainCardForCraft.Remove(c.card.ID);
                 CardInCraft.Add(c.card.ID);
-                craftZone.AddCard(c.card.ID);
                 Destroy(c.gameObject);
             }
             else
@@ -36,7 +38,8 @@ public class CardButton : MonoBehaviour
                 recenter.Add(c);
             }
         }
-
-        recenter[0].transform.position = recenter[0].CameraCenterToPoint();
+        
+        if(recenter.Count > 0)
+            recenter[0].transform.position = recenter[0].CameraCenterToPoint();
     }
 }

@@ -12,6 +12,8 @@ TagManager:
   - AudioManager
   - Music
   - Blueprint
+  - HUD
+  - Craft
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Slot
   - RecipeText
   - CardDetector
-  - 
+  - SpriteButton
   - 
   - 
   - 

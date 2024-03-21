@@ -470,6 +470,15 @@ namespace Leafy.Objects
                     case "HUD":
                         transform.position = CameraCenterToPoint();
                         break;
+                    
+                    case "Blueprint":
+                        BlueprintManager blueprintManager = collider.GetComponent<BlueprintManager>();
+                        Blueprint(blueprintManager);
+                        break;
+                    case "Craft":
+                        CraftZone craftZone = collider.GetComponent<CraftZone>();
+                        AddToCraftCard(craftZone);
+                        break;
                 }
                 
                 collide = true;
@@ -552,21 +561,37 @@ namespace Leafy.Objects
                 transform.position = CameraCenterToPoint();
             }
         }
-        
-        private void AddToCraftCard(RecycleZone r)
-        {
-            List<CardUI> stackCards = CardUtils.GetStackCardList(this);
 
-            if (stackCards.All(c => c.card.type == "Plant"))
+        public void Blueprint(BlueprintManager blueprintManager)
+        {
+            if (AllCardsInStackHaveID(51))
             {
-                int totalNumberOfCards = stackCards.Count;
-                r.Recycle(totalNumberOfCards);
-                CardUtils.ApplyMethodOnStack(this, c => Destroy(c.gameObject));
+                List<CardUI> stack = CardUtils.GetStackCardList(this);
+
+                foreach (CardUI c in stack)
+                {
+                    if (blueprintManager.gameObject.activeSelf)
+                    {
+                        blueprintManager.EnableNextRecipe();
+                        Destroy(c.gameObject);
+                    }
+                    else
+                    {
+                        transform.position = CameraCenterToPoint();
+                    }
+                }
             }
             else
             {
                 transform.position = CameraCenterToPoint();
             }
+        }
+        
+        private void AddToCraftCard(CraftZone r)
+        {
+            List<CardUI> stack = CardUtils.GetStackCardList(this);
+
+            r.AddCard(stack);
         }
 
         private void BuyCard(BuyZone buyZone)
@@ -771,9 +796,12 @@ namespace Leafy.Objects
                 Destroy(loader);
             if(child != null)
                 child.SetParent(parent);
-            if (transform.parent.TryGetComponent(out StackParent stackParent))
+            if (transform.parent != null)
             {
-                stackParent.inStack.Remove(this);
+                if (transform.parent.TryGetComponent(out StackParent stackParent))
+                {
+                    stackParent.inStack.Remove(this);
+                }
             }
         }
 
@@ -791,6 +819,7 @@ namespace Leafy.Objects
                 {
                     Vector3 spawnPoint = hit.point;
                     spawnPoint.z = 0;
+                    //spawnPoint.x += 5;
                     return spawnPoint;
                 }
                 else
@@ -798,6 +827,7 @@ namespace Leafy.Objects
                     Vector2 nearestPoint = FindNearestPointOnTerrain(Camera.main.transform.position, rayDirection);
                     Vector3 spawnPoint = nearestPoint;
                     spawnPoint.z = 0;
+                    //spawnPoint.x += 5;
                     return spawnPoint;
                 }
                 
@@ -831,6 +861,7 @@ namespace Leafy.Objects
                 return nearestPoint;
             }
 
+            
             // If no terrain collider found, return current position
             return position;
         }

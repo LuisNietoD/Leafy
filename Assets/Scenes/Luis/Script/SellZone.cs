@@ -25,6 +25,7 @@ public class SellZone : MonoBehaviour
             {
                 Vector3 spawnPoint = hit.point;
                 spawnPoint.z = 0;
+                //spawnPoint.x += 5;
 
                 GameManager.instance.SpawnStack(spawnPoint, stackType, value);
             }
@@ -33,6 +34,7 @@ public class SellZone : MonoBehaviour
                 Vector2 nearestPoint = FindNearestPointOnTerrain(Camera.main.transform.position, rayDirection);
                 Vector3 spawnPoint = nearestPoint;
                 spawnPoint.z = 0;
+                //spawnPoint.x += 5;
 
                 GameManager.instance.SpawnStack(spawnPoint, stackType, value);
             }

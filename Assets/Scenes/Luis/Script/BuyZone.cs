@@ -42,6 +42,7 @@ public class BuyZone : MonoBehaviour
                 {
                     Vector3 spawnPoint = hit.point;
                     spawnPoint.z = 0;
+                    //spawnPoint.x += 5;
 
                     QuestManager.instance.UpdateQuest(4);
                     Instantiate(booster, spawnPoint, Quaternion.identity);
@@ -51,6 +52,7 @@ public class BuyZone : MonoBehaviour
                     Vector2 nearestPoint = FindNearestPointOnTerrain(Camera.main.transform.position, rayDirection);
                     Vector3 spawnPoint = nearestPoint;
                     spawnPoint.z = 0;
+                    //spawnPoint.x += 5;
 
                     QuestManager.instance.UpdateQuest(4);
                     Instantiate(booster, spawnPoint, Quaternion.identity);

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Leafy.Data;
+using Leafy.Manager;
+using Leafy.Objects;
 using TMPro;
 using UnityEngine;
 
@@ -14,6 +16,11 @@ public class CraftZone : MonoBehaviour
     public Dictionary<int, int> idAmount = new Dictionary<int, int>();
     public Dictionary<int, int> idActual = new Dictionary<int, int>();
     private void OnEnable()
+    {
+        SetValue();
+    }
+
+    private void SetValue()
     {
         idAmount.Clear();
         idActual.Clear();
@@ -63,7 +70,14 @@ public class CraftZone : MonoBehaviour
             string s = "";
             if (idActual.ContainsKey(id))
             {
-                s = idActual[id] + "/" + idAmount[id];
+                if (idActual[id] == idAmount[id])
+                {
+                    s = "<color=green>" + idActual[id] + "/" + idAmount[id];
+                }
+                else
+                {
+                    s = idActual[id] + "/" + idAmount[id];
+                }
             }
             else
             {
@@ -74,33 +88,19 @@ public class CraftZone : MonoBehaviour
         }
     }
 
-    public void AddCard(int id)
+    public void AddCard(List<CardUI> stack)
     {
-        foreach (CardDisplay cd in fakecard)
+        cardButton.PutCardinCraft(stack);
+        Vector3 p = stack[0].CameraCenterToPoint();
+        
+        if (Craft.GetCraft(cardButton.CardInCraft) != -1)
         {
-            if (cd.id == id)
-            {
-                if (idActual.ContainsKey(id))
-                {
-                    idActual[id]++;
-                }
-                else
-                {
-                    idActual.Add(id, 1);
-                }
-                
-                string s = "";
-                if (idActual.TryGetValue(id, out int i))
-                {
-                    s = i + "/" + idAmount[id];
-                }
-                else
-                {
-                    s = "0/" + idAmount[id];
-                }
-                
-                textCard[fakecard.IndexOf(cd)].text = s;
-            }
+            GameManager.instance.SpawnCard(p, Craft.GetCraft(cardButton.CardInCraft));
+            cardButton.CardInCraft.Clear();
+            cardButton.remainCardForCraft.Clear();
+            cardButton.remainCardForCraft = new List<int>(cardButton.craft);
         }
+        
+        SetValue();
     }
 }
