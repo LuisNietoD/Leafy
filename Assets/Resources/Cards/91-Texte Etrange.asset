@@ -30,7 +30,10 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - An indecipherable text written in an alien language. There are <color=grey>many</color>
+    scattered throughout the universe. Can be <color=grey>translated</color> by placing
+    it in a <color=yellow><link="Translator">translator</link></color> with a fresh
+    piece of <color=yellow><link="Paper">paper</link></color>.
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise
