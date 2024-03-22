@@ -211,6 +211,8 @@ namespace Leafy.Objects
                     behavior = new WateringCanBehavior(this);
                 if (card.behavior == "Creature")
                     behavior = new CreatureBehavior(this);
+                if (card.behavior == "Telescope")
+                    behavior = new TelescopeBehavior(this);
             }
             else if (behavior == null)
             {

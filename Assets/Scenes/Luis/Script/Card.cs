@@ -62,6 +62,9 @@ namespace Leafy.Data
         public List<int> cardIDs = new List<int>();
         public int tool = 0;
         public bool creatureChanged = false;
+        public int spaceIndex;
+        public float spaceSpawnTime = 600;
+        public float elapsedSpaceTime = 570;
         
 
         public Card(ScriptableCard card)

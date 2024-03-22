@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/TelescopeBehavior.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/TelescopeBehavior.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/111-Pelle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/111-Pelle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/131-Creature.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/131-Creature.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/89-Telescope.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/89-Telescope.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/AlienSpaceObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/AlienSpaceObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/Meteorite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/Meteorite.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Scene/MainPlateau.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Scene/MainPlateau.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CraftLoading.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CustomBehavior/CreatureBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CustomBehavior/CreatureBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Mine_Polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Mine_Polish.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Nuage_etrange_Polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Nuage_etrange_Polish.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Quartz_Polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Quartz_Polish.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/GroundPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/GroundPack.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +184,8 @@
       <workItem from="1710872157359" duration="5570000" />
       <workItem from="1710932831508" duration="2749000" />
       <workItem from="1710941631843" duration="1073000" />
-      <workItem from="1711026387079" duration="14236000" />
+      <workItem from="1711026387079" duration="14972000" />
+      <workItem from="1711103486732" duration="3572000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Leafy.Data;
 using UnityEngine;
 
 public class SpaceObject : MonoBehaviour
@@ -9,16 +11,9 @@ public class SpaceObject : MonoBehaviour
     public int cardID;
     
     private Vector3 spawnPoint;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        SpaceObjectList.instance.actual = -1;
     }
 }
