@@ -29,8 +29,7 @@ MonoBehaviour:
   customBehavior: 0
   machineSavoir: 0
   upgradable: 0
-  recipeText:
-  - 4 x Lingot de Fer<br>4 x Verre Renforce
+  recipeText: []
   utilities:
   - cardName: Serre
     recipe: Cliquer pour Afficher/Cacher l'interface, Tremble quand toutes les plantes

@@ -30,7 +30,19 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'A <color=grey>translated</color> alien text using a <color=yellow><link="Translator">translator</link></color>.
+
+
+    Required
+    :
+
+    1 x <color=yellow><link="Translator">Translator</link></color>
+
+    1
+    x <color=yellow><link="Paper">Paper</link></color>
+
+    1 x <color=yellow><link="Unreadable
+    Text">Unreadable Text</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

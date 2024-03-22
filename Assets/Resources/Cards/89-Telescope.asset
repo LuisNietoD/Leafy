@@ -30,7 +30,18 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'A <color=grey>space</color> observation instrument. Allows you to <color=grey>observe</color>
+    space and discover many <color=grey>secrets</color> within.
+
+    
+
+    Required
+    :
+
+    4 x <color=yellow><link="Tempered Glass">Tempered Glass</link></color>
+
+    4
+    x <color=yellow><link="Tin Ingot">Tin Ingot</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

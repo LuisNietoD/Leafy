@@ -30,7 +30,21 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'An insulating plate covered with small circuits. Allows the <color=grey>fabrication</color>
+    of various machines such as the <color=yellow><link="Mechanical Arm">mechanical
+    arm</link></color>.
+
+    
+
+    Required :
+
+    2 x <color=yellow><link="Copper
+    Ingot">Copper Ingot</link></color>
+
+    4 x <color=yellow><link="Tin Ingot">Tin
+    Ingot</link></color>
+
+    1 x <color=yellow><link="Plastic">Plastic</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

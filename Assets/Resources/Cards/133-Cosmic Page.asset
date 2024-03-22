@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 133-Cosmic Page
   m_EditorClassIdentifier: 
-  name: Cosmic Page
+  name: Page of Cultures, Civilizations, and Beliefs of the Cosmos
   ID: 133
   artwork: {fileID: 21300000, guid: db1bb3fa688ae794c81e537feb25cbcc, type: 3}
   background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
@@ -30,7 +30,20 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'One of the pages of the stellar manuscript "Cultures, Civilizations, and Beliefs
+    of the Cosmos", transcribing the myths and legends of the <color=grey>Universe</color>.
+    <color=grey>Find</color> and gather the <color=grey>10</color> scattered pages
+    of the work to obtain the entirety of the document.
+
+    
+
+    Required :
+
+    1
+    x <color=yellow><link="Translator">Translator</link></color>
+
+    1 x <color=yellow><link="Unreadable
+    Text">Unreadable Text</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

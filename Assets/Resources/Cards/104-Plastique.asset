@@ -30,7 +30,17 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'A material that can be as malleable as it is solid. Can be used to <color=grey>build</color>
+    <color=yellow><link="Solar Panel">solar panels</link></color>.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Press">Press</link></color>
+
+    1 x <color=yellow><link="Rubber">Rubber</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
   m_Name: 135-Nuage Mystique
   m_EditorClassIdentifier: 
-  name: Mystical Cloud
+  name: Strange Cloud
   ID: 135
   artwork: {fileID: 21300000, guid: c3e88301d9db80a429a6c558eb4be826, type: 3}
   background: {fileID: 21300000, guid: aacd6ac016a4eec48bad5beee6732559, type: 3}
@@ -30,7 +30,9 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - "A strange low-altitude cloud. It seems to contain <color=grey>something</color>...\nOnly
+    found on the <color=yellow><link=\"Gaseous Planet\">Gaseous Planet</link></color>.\r\n\r\nRequired
+    :\r\n1 x <color=yellow><link=\"Creature\">Creature</link></color> with a <color=yellow><link=\"Backpack\">backpack</link></color>\r"
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

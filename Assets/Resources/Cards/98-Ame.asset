@@ -30,7 +30,16 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'The energy of a living being resides in this resource. Used to give <color=grey>life</color>
+    to artificial creatures. Can be <color=grey>stored</color> in a <color=yellow><link="Soul
+    Jar">soul jar</link></color>.
+
+    
+
+    Required :
+
+    1 x <color=yellow><link="Life
+    Plant">Life Plant</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

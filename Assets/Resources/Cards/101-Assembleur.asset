@@ -30,7 +30,20 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 3 x Lingot de Fer<br>3 x Lingot de Plomb
+  - 'A machine that can <color=grey>assemble</color> numerous complex objects with
+    unparalleled precision. <color=grey>Stack</color> all the objects to be assembled
+    together, <color=grey>place</color> them on the designated slot, and <color=grey>press</color>
+    the lever to create the desired object.
+
+    
+
+    Required :
+
+    4 x <color=yellow><link="Printed
+    Circuit Board">Printed Circuit Board</link></color>
+
+    3 x <color=yellow><link="Mechanical
+    Arm">Mechanical Arm</link></color>'
   utilities:
   - cardName: Cylindre de Lithium
     recipe: 1 x Morceau de Lithium<br>(Slot de press)

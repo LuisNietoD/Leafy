@@ -30,7 +30,19 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 4 x Bois
+  - 'A small <color=yellow><link="Glass">glass</link></color> jar capable of <color=grey>storing</color>
+    up to 10 <color=yellow><link="Soul">souls</link></color>. Can be <color=grey>combined</color>
+    with others to increase its <color=grey>storage capacity</color>.
+
+    
+
+    Required
+    :
+
+    5 x <color=yellow><link="Tempered Glass">Tempered Glass</link></color>
+
+    1
+    x <color=yellow><link="Soul">Soul</link></color>'
   utilities:
   - cardName: Upgrade
     recipe: 1 x Coffre en Bois<br>1 x Coffre en Bois (vide)

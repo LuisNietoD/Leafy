@@ -30,7 +30,7 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - Obtenu dans les booster
+  - "A huge meteorite. <color=grey>Open</color> it to discover what it contains!\r"
   utilities:
   - cardName: Secouez la boite
     recipe: 1 x Terre<br>1 x Sable<br>1 x Graine<br>1 x Pot

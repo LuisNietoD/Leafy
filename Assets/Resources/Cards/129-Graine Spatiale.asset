@@ -30,7 +30,9 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - "One of the 6 <color=grey>founding</color> seeds. <color=grey>Legends</color>
+    say it will only be given to a being considered a true <color=grey>explorer</color>
+    of the Cosmos.\r"
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

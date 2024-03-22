@@ -30,7 +30,22 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'A powerful reactor. Allows to <color=grey>build</color> a <color=yellow><link="Space
+    Launcher">space launcher</link></color> using an <color=yellow><link="Assembly
+    Machine">assembly machine</link></color>.
+
+    
+
+    Required :
+
+    1 x <color=yellow><link="Assembly
+    machine">Assembly machine</link></color>
+
+    1 x <color=yellow><link="Big Battery">Big
+    Battery</link></color>
+
+    4 x <color=yellow><link="Aluminum Ingot">Aluminum
+    Ingot</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise
