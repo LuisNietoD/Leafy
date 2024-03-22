@@ -30,7 +30,29 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Terre<br>1 x Tami
+  - 'A device for <color=grey>exploring</color> the universe. <color=grey>Load</color>
+    it with 100 units of <color=yellow><link="Electricity">electricity</link></color>
+    to embark on a round-trip <color=grey>space journey</color>. <color=grey>Choose</color>
+    the planet you want to visit, select one or more <color=grey>creatures</color>
+    equipped with <color=yellow><link="Pickaxe">pickaxes</link></color>, <color=yellow><link="Book">books</link></color>,
+    or <color=yellow><link="Backpack">backpacks</link></color>, and <color=grey>press</color>
+    the "<color=grey>Launch</color>" button to begin the expedition!
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Assembly machine">Assembly machine</link></color>
+
+    2
+    x <color=yellow><link="Rocket Engine">Rocket Engine</link></color>
+
+    4 x
+    <color=yellow><link="Aluminum Ingot">Aluminum Ingot</link></color>
+
+    3 x
+    <color=yellow><link="Printed Circuit Board">Printed Circuit Board</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise

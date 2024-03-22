@@ -30,7 +30,22 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'A small Tesla coil. <color=grey>Powers</color> all electrical machines within
+    the <color=grey>electrical zone</color> it creates around itself. Requires <color=yellow><link="Electricity">electricity</link></color>
+    to function.
+
+    
+
+    Required :
+
+    1 x <color=yellow><link="Assembly
+    machine">Assembly machine</link></color>
+
+    4 x <color=yellow><link="Printed
+    Circuit Board">Printed Circuit Board</link></color>
+
+    1 x <color=yellow><link="Big
+    Battery">Big Battery</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2

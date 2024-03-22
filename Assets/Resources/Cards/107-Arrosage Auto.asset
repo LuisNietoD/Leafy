@@ -30,7 +30,24 @@ MonoBehaviour:
   machineSavoir: 0
   upgradable: 0
   recipeText:
-  - 1 x Pepite de Lithium(Slot de Press)
+  - 'An <color=grey>automatic</color> watering system. It spontaneously creates a
+    <color=grey>watering zone</color> around it slightly <color=grey>larger</color>
+    than that of the <color=yellow><link="Watering Can">watering can</link></color>.
+    Like the watering can, it also appears to have an <color=grey>endless</color>
+    <color=yellow><link="Water">water</link></color> capacity.
+
+    
+
+    Required
+    :
+
+    1 x <color=yellow><link="Assembly machine">Assembly machine</link></color>
+
+    4
+    x <color=yellow><link="Printed Circuit Board">Printed Circuit Board</link></color>
+
+    1
+    x <color=yellow><link="Watering Can">Watering Can</link></color>'
   utilities: []
   price: 2
   timeToCraft: 2
