@@ -37,11 +37,34 @@ public class HUDButton : MonoBehaviour
                 ChangeActive(links.FirstOrDefault(l => l.button == hit.transform.gameObject));
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Vector3 p = transform.parent.localPosition;
+            if (active.ui.activeInHierarchy)
+            {
+                SpriteRenderer s = active.button.GetComponent<SpriteRenderer>();
+                s.color = new Color(0.8f, 0.8f, 0.8f);
+                s.sortingOrder = -1;
+                p.x = -21.8f;
+            }
+            else
+            {
+                SpriteRenderer s = active.button.GetComponent<SpriteRenderer>();
+                s.color = Color.white;
+                s.sortingOrder = 1;
+                p.x = -10;
+            }
+
+            transform.parent.localPosition = p;
+            if(active.ui != null)
+                active.ui.SetActive(!active.ui.activeInHierarchy);
+        }
     }
 
     public void ChangeActive(ButtonLink a)
     {
-        if (active.ui != null)
+        if (active.ui != null && active.ui != a.ui)
         {
             SpriteRenderer s = active.button.GetComponent<SpriteRenderer>();
             s.color = new Color(0.8f, 0.8f, 0.8f);
@@ -55,21 +78,32 @@ public class HUDButton : MonoBehaviour
             s.color = Color.white;
             s.sortingOrder = 1;
             a.ui.SetActive(true);
-            active.ui = a.ui;
-            active.button = a.button;
+            active = a;
 
             Vector3 p = transform.parent.localPosition;
             p.x = -10;
             transform.parent.localPosition = p;
         }
-        else
+        else if(a.ui == active.ui)
         {
             Vector3 p = transform.parent.localPosition;
-            p.x = -21.8f;
+            if (active.ui.activeSelf)
+            {
+                p.x = -21.8f;
+                SpriteRenderer s = active.button.GetComponent<SpriteRenderer>();
+                s.color = new Color(0.8f, 0.8f, 0.8f);
+                s.sortingOrder = -1;
+            }
+            else
+            {
+                SpriteRenderer s = active.button.GetComponent<SpriteRenderer>();
+                s.color = Color.white;
+                s.sortingOrder = 1;
+                p.x = -10;
+            }
+
             transform.parent.localPosition = p;
-            active.ui.SetActive(false);
-            active.ui = null;
-            active.button = null;
+            active.ui.SetActive(!active.ui.activeInHierarchy);
         }
     }
 }

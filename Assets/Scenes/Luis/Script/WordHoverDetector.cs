@@ -68,7 +68,7 @@ public class WordHoverDetector : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("heyyyyyyyyyyyy");
-                    QuestManager.instance.UpdateQuest(5);
+                    QuestManager.instance.UpdateQuest(0, 5, 0);
                     DisplayTuto(card);
                 }
 

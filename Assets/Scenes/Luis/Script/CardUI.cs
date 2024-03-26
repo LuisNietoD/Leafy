@@ -5,6 +5,7 @@ using Leafy.Manager;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
+using MoreMountains.Feedbacks;
 
 namespace Leafy.Objects
 {
@@ -16,6 +17,9 @@ namespace Leafy.Objects
         public GameObject loader;
         public GameObject pack;
         public int uniqueID;
+
+        public MMF_Player feedback_FullPlant;
+        public MMF_Player feedback_Grow;
 
         private float movementSpeed = 30.0f;
         private float offsetY = 0.6f;
@@ -160,9 +164,39 @@ namespace Leafy.Objects
             }
             background.gameObject.SetActive(true);
             shadow.gameObject.SetActive(false);
+            artwork.material = new Material(artwork.material);
+            
+            
             if (card.ID == 1)
             {
-                QuestManager.instance.UpdateQuest(2);
+                QuestManager.instance.UpdateQuest(0, 2, 0);
+            }
+            if (card.ID == 12)
+            {
+                QuestManager.instance.UpdateQuest(1,0, 0);
+            }
+            if (card.ID == 14)
+            {
+                QuestManager.instance.UpdateQuest(1,0, 0);
+            }
+            
+            if (card.ID == 18)
+            {
+                QuestManager.instance.UpdateQuest(1,0, 0);
+            }
+            
+            if (card.ID == 16)
+            {
+                QuestManager.instance.UpdateQuest(1,1, 0);
+            }
+            if (card.ID == 28)
+            {
+                QuestManager.instance.UpdateQuest(1,1,1);
+            }
+
+            if (20 <= card.ID && card.ID <= 27)
+            {
+                QuestManager.instance.UpdateQuest(1,2, 0);
             }
 
         }
@@ -540,7 +574,7 @@ namespace Leafy.Objects
                 s.Sell(totalNumberOfCards);
                 CardUtils.ApplyMethodOnStack(this, c =>
                 {
-                    QuestManager.instance.UpdateQuest(3);
+                    QuestManager.instance.UpdateQuest(0, 3, 0);
                     Destroy(c.gameObject);
                 });
             }

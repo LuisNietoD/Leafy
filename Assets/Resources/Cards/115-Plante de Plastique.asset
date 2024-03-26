@@ -33,7 +33,7 @@ MonoBehaviour:
   - 'A plant with a coarse appearance. <color=grey>Produces</color> <color=yellow><link="Plastic">plastic</link></color>.
     When it reaches its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.
 
-    
+
 
     Required
     :
@@ -113,7 +113,7 @@ MonoBehaviour:
   preciseCard: 0
   recipes:
   - machine: 0
-    recipe: 010000000a00000074000000
+    recipe: 01000000070000007400000005000000
   evolveTime: 6
   evolutions:
     m_PLID: ac33f840-1b86-4f72-9b69-04b8c955218a

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ES3Types
 {
 	[UnityEngine.Scripting.Preserve]
-	[ES3PropertiesAttribute("actualPrice", "priceText")]
+	[ES3PropertiesAttribute("price", "actualPrice", "priceText")]
 	public class ES3UserType_BuyZone : ES3ComponentType
 	{
 		public static ES3Type Instance = null;
@@ -16,6 +16,7 @@ namespace ES3Types
 		{
 			var instance = (BuyZone)obj;
 			
+			writer.WriteProperty("price", instance.price, ES3Type_int.Instance);
 			writer.WriteProperty("actualPrice", instance.actualPrice, ES3Type_int.Instance);
 			writer.WritePropertyByRef("priceText", instance.priceText);
 		}
@@ -28,6 +29,9 @@ namespace ES3Types
 				switch(propertyName)
 				{
 					
+					case "price":
+						instance.price = reader.Read<System.Int32>(ES3Type_int.Instance);
+						break;
 					case "actualPrice":
 						instance.actualPrice = reader.Read<System.Int32>(ES3Type_int.Instance);
 						break;

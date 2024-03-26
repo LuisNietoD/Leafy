@@ -25,23 +25,23 @@ MonoBehaviour:
   evolve: 0
   interfaces: 1
   transmute: 0
-  activableInterface: 1
-  customBehavior: 0
+  activableInterface: 0
+  customBehavior: 1
   machineSavoir: 0
   upgradable: 0
   recipeText:
   - 'A <color=grey>space</color> observation instrument. Allows you to <color=grey>observe</color>
     space and discover many <color=grey>secrets</color> within.
 
-    
 
-    Required
-    :
 
-    4 x <color=yellow><link="Tempered Glass">Tempered Glass</link></color>
+    Required :
 
     4
-    x <color=yellow><link="Tin Ingot">Tin Ingot</link></color>'
+    x <color=yellow><link="Tempered Glass">Tempered Glass</link></color>
+
+    4 x
+    <color=yellow><link="Tin Ingot">Tin Ingot</link></color>'
   utilities:
   - cardName: Lingot de Fer
     recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise
@@ -151,4 +151,4 @@ MonoBehaviour:
   energyPerCraft: 0
   transmuteList: []
   savoirList: []
-  behavior: 
+  behavior: Telescope

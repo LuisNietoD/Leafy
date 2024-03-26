@@ -36,10 +36,11 @@ public class QuestManager : MonoBehaviour
     public static QuestManager instance;
 
     public List<QuestCategory> QuestCategories;
-    public Quest actualQuest;
     public TextMeshProUGUI questTitle;
     public TextMeshProUGUI questDesc;
     public Animator questPanel;
+    public int actualIndex = -1;
+    public int actualCategories;
     
     private void Awake()
     {
@@ -55,23 +56,23 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        actualQuest = QuestCategories[0].quests[0];
+        ES3AutoSaveMgr._current.Load();
         DisplayQuest();
     }
 
-    public void UpdateQuest(int id, int objID = 0)
+    public void UpdateQuest(int cat, int id, int objID)
     {
-        if (id == actualQuest.ID)
+        if (id == actualIndex && cat == actualCategories)
         {
-            actualQuest.objectives[objID].progress++;
-            if (actualQuest.objectives[objID].progress >= actualQuest.objectives[objID].goal)
+            QuestCategories[actualCategories].quests[actualIndex].objectives[objID].progress++;
+            if (QuestCategories[actualCategories].quests[actualIndex].objectives[objID].progress >= QuestCategories[actualCategories].quests[actualIndex].objectives[objID].goal)
             {
-                actualQuest.objectives[objID].progress = actualQuest.objectives[objID].goal;
-                actualQuest.objectives[objID].done = true;
+                QuestCategories[actualCategories].quests[actualIndex].objectives[objID].progress = QuestCategories[actualCategories].quests[actualIndex].objectives[objID].goal;
+                QuestCategories[actualCategories].quests[actualIndex].objectives[objID].done = true;
             }
             DisplayQuest();
             bool nextQuest = true;
-            foreach (objective o in actualQuest.objectives)
+            foreach (objective o in QuestCategories[actualCategories].quests[actualIndex].objectives)
             {
                 if (!o.done)
                     nextQuest = false;
@@ -86,9 +87,9 @@ public class QuestManager : MonoBehaviour
 
     public void DisplayQuest()
     {
-        questTitle.text = QuestCategories[0].name;
-        string desc = actualQuest.desc + "<size=50>";
-        foreach (objective o in actualQuest.objectives)
+        questTitle.text = QuestCategories[actualCategories].name;
+        string desc = QuestCategories[actualCategories].quests[actualIndex].desc + "<size=50>";
+        foreach (objective o in QuestCategories[actualCategories].quests[actualIndex].objectives)
         {
             desc += "\n";
             if (o.done)
@@ -106,9 +107,15 @@ public class QuestManager : MonoBehaviour
 
     public void ChangeQuest()
     {
-        if (QuestCategories[0].quests.Count > actualQuest.ID + 1)
+        if (QuestCategories[actualCategories].quests.Count > actualIndex + 1)
         {
-            actualQuest = QuestCategories[0].quests[actualQuest.ID + 1];
+            actualIndex++;
+            DisplayQuest();
+        }
+        else if(QuestCategories.Count > actualCategories+1)
+        {
+            actualCategories++;
+            actualIndex = 0;
             DisplayQuest();
         }
         else

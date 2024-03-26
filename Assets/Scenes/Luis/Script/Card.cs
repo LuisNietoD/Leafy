@@ -65,6 +65,8 @@ namespace Leafy.Data
         public int spaceIndex;
         public float spaceSpawnTime = 600;
         public float elapsedSpaceTime = 570;
+        public int actualSavoir;
+        public int recipeIndex;
         
 
         public Card(ScriptableCard card)

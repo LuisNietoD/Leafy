@@ -58,6 +58,8 @@ namespace Leafy.Manager
 
         private void Update()
         {
+            if(PauseMenu.instance.gameIsPaused)
+                return;
             _hoveredCardUI = RayTestCard();
 
             //Grab the hovered card and drag it
@@ -364,6 +366,8 @@ namespace Leafy.Manager
         
         private void FixedUpdate()
         {
+            if(PauseMenu.instance.gameIsPaused)
+                return;
             //Drag the card with a little delay
             if (_draggedCardUI != null)
             {
@@ -420,7 +424,7 @@ namespace Leafy.Manager
             {
                 cards[i].SetParent(cards[i-1]);
                 cards[i].ChangeID(ID++);
-                QuestManager.instance.UpdateQuest(6);
+                QuestManager.instance.UpdateQuest(0, 6, 0);
             }
             cards[0].child = cards[1];
             

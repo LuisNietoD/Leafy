@@ -48,6 +48,7 @@ public class QuestPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    QuestManager.instance.UpdateQuest(0, 5, 0);
                     wordHoverDetector.DisplayTuto(card);
                     recipeMenu.ChangeTuto(card, 0);
                     if(!wikiMenu.activeSelf)

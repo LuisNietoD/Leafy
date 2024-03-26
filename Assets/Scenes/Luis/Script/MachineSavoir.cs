@@ -10,8 +10,7 @@ namespace Leafy.Objects
     {
         private CardUI cardUI;
         private Card card;
-        public int actualSavoir;
-        public int recipeIndex;
+        
 
 
         public MachineSavoir(CardUI cardUI)
@@ -22,6 +21,8 @@ namespace Leafy.Objects
         
         public override void Spawn()
         {
+            cardUI.inventory.SetActive(true);
+            cardUI.slotIcon.sprite = CardList.GetCardByID(41).artwork;
         }
 
         public override void OnDrag()
@@ -49,6 +50,8 @@ namespace Leafy.Objects
         
         public override void StayAction()
         {
+            
+            
             if(cardUI.child == null && cardUI.loader != null)
                 GameManager.instance.DestroyObject(cardUI.loader);
             
@@ -56,22 +59,26 @@ namespace Leafy.Objects
             {
                 if (cardUI.child.ID == 41)
                 {
-                    actualSavoir++;
+                    card.actualSavoir++;
                     GameManager.instance.DestroyObject(cardUI.child.gameObject);
                 }
                 
                 if (card.SavoirList != null)
                 {
-                    if (card.SavoirList[recipeIndex].pointDeSavoir <= actualSavoir)
+                    if (card.SavoirList[card.recipeIndex].pointDeSavoir <= card.actualSavoir)
                     {
-                        actualSavoir -= card.SavoirList[recipeIndex].pointDeSavoir;
+                        card.actualSavoir -= card.SavoirList[card.recipeIndex].pointDeSavoir;
                         Vector3 p = cardUI.transform.position;
                         p.x += 3;
-                        GameManager.instance.SpawnStackPrecise(p, card.SavoirList[recipeIndex].result);
-                        recipeIndex++;
+                        GameManager.instance.SpawnStackPrecise(p, card.SavoirList[card.recipeIndex].result);
+                        card.recipeIndex++;
                     }
+                    
+                    if(card.SavoirList.Count > card.recipeIndex)
+                        cardUI.slotText.text = card.actualSavoir + "/" + card.SavoirList[card.recipeIndex].pointDeSavoir;
                 }
             }
+
         }
     }
 }

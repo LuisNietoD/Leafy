@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: Save1
+    path: 1
     encryptionType: 0
     compressionType: 0
     encryptionPassword: password
@@ -34,8 +34,20 @@ MonoBehaviour:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - Cinemachine
+    - Lofelt.NiceVibrations
+    - Lofelt.NiceVibrations.Demo
     - LTX.ChanneledProperties
     - LTX.ChanneledProperties.Samples
+    - MoreMountains.Feedbacks
+    - MoreMountains.Feedbacks.Authorizations
+    - MoreMountains.Feedbacks.Cinemachine
+    - MoreMountains.Feedbacks.HDRP
+    - MoreMountains.Feedbacks.MMTools
+    - MoreMountains.Feedbacks.NiceVibrations
+    - MoreMountains.Feedbacks.PostProcessing
+    - MoreMountains.Feedbacks.TextMeshPro
+    - MoreMountains.Feedbacks.URP
+    - MoreMountains.Tools
     - RNGNeeds
     - SingularityGroup.HotReload.Runtime
     - SingularityGroup.HotReload.Runtime.Public

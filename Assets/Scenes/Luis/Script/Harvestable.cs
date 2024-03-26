@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Leafy.Data;
 using Leafy.Manager;
 using RNGNeeds;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Leafy.Objects
 {
@@ -41,6 +43,11 @@ namespace Leafy.Objects
 
         public override void OnClick()
         {
+            cardUI.feedback_FullPlant.StopFeedbacks();
+            cardUI.feedback_FullPlant.RestoreInitialValues();
+            cardUI.feedback_FullPlant.ResetFeedbacks();
+            cardUI.feedback_FullPlant.CanPlay = true;
+            
             if (card.shakable)
             {
                 if (card.precise)
@@ -59,7 +66,7 @@ namespace Leafy.Objects
                     pos.x += 3;
                     pos.y -= 1.5f * i;
                     GameManager.instance.SpawnCard(pos, card.drop.PickValue().ID, cardUI);
-                    QuestManager.instance.UpdateQuest(1);
+                    QuestManager.instance.UpdateQuest(0, 1, 0);
                     cardUI.ReduceLife();
                     i++;
                 }
@@ -96,7 +103,16 @@ namespace Leafy.Objects
             {
                 if (card.storeCard && card.cardIDs.Count < card.inventorySize + (card.inventorySize * card.storageLevel))
                 {
-                    elapsedTime += Time.deltaTime * card.plantRate;
+                    elapsedTime += Time.deltaTime; // Accumulate time using real-time seconds
+                    float f = card.harvestTime - 0.3f;
+
+                    if (elapsedTime >= f)
+                    {
+                        // Saturate elapsedTime to a maximum of card.plantRate to ensure it doesn't exceed the boundary
+                        float adjustedElapsedTime = Mathf.Min(elapsedTime, card.harvestTime);
+                        float blendValue = (adjustedElapsedTime - f) / 0.3f; // Calculate blend value within the last 0.2 seconds
+                        cardUI.artwork.material.SetFloat("_HitEffectBlend", blendValue);
+                    }
                     if (elapsedTime >= card.harvestTime - ((card.harvestTime / 10) * card.rateLevel))
                     {
                         card.cardIDs.Add(card.drop.PickValue().ID);
@@ -105,6 +121,7 @@ namespace Leafy.Objects
                         if (r < 0.2f * card.productivityLevel)
                             card.cardIDs.Add(card.drop.PickValue().ID);
                         elapsedTime = 0;
+                        cardUI.artwork.material.SetFloat("_HitEffectBlend", 0);
                     }
                 }
                 else if (!card.storeCard)
@@ -116,16 +133,22 @@ namespace Leafy.Objects
 
             if (card.storeCard && card.cardIDs.Count == card.inventorySize + (card.inventorySize * card.storageLevel))
             {
-                float offsetX = Mathf.PerlinNoise(0, Time.time * shakeSpeed) * shakeIntensity - shakeIntensity / 2f;
+                /*float offsetX = Mathf.PerlinNoise(0, Time.time * shakeSpeed) * shakeIntensity - shakeIntensity / 2f;
                 float offsetY = Mathf.PerlinNoise(Time.time * shakeSpeed, 0) * shakeIntensity - shakeIntensity / 2f;
 
                 Vector3 shakeOffset = new Vector3(offsetX, offsetY, 0f);
                 shakeOffset.y = cardUI.model.transform.localPosition.y;
-                cardUI.model.transform.localPosition = Vector3.zero + shakeOffset;
+                cardUI.model.transform.localPosition = Vector3.zero + shakeOffset;*/
+                if(cardUI.feedback_FullPlant.CanPlay)
+                    cardUI.feedback_FullPlant.PlayFeedbacks();
+                cardUI.feedback_FullPlant.CanPlay = false;
                 card.plantIsFull = true;
+                cardUI.artwork.material.SetFloat("_HitEffectBlend", 0);
             }
             else
             {
+                cardUI.feedback_FullPlant.StopFeedbacks();
+                cardUI.feedback_FullPlant.CanPlay = true;
                 card.plantIsFull = false;
             }
 

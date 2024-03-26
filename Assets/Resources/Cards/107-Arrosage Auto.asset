@@ -36,12 +36,12 @@ MonoBehaviour:
     Like the watering can, it also appears to have an <color=grey>endless</color>
     <color=yellow><link="Water">water</link></color> capacity.
 
-    
 
-    Required
-    :
 
-    1 x <color=yellow><link="Assembly machine">Assembly machine</link></color>
+    Required :
+
+    1
+    x <color=yellow><link="Assembly machine">Assembly machine</link></color>
 
     4
     x <color=yellow><link="Printed Circuit Board">Printed Circuit Board</link></color>

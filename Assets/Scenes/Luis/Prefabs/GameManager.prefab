@@ -10,7 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1224762961384196445}
   - component: {fileID: 4017708373968762946}
-  - component: {fileID: 5820990778572537248}
+  - component: {fileID: 8280399602357670995}
+  - component: {fileID: 4091168648066653353}
+  - component: {fileID: 2158022828688194485}
+  - component: {fileID: 3993870214759501468}
+  - component: {fileID: 5659863676626015089}
+  - component: {fileID: 955477270149272217}
+  - component: {fileID: 6858789311101810054}
+  - component: {fileID: 7237202393407476469}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,13 +54,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
+  slotLayer:
+    serializedVersion: 2
+    m_Bits: 4096
   cardPrefab: {fileID: 1819979330338786182, guid: dbc087cb741d81749bd1daf78187a172, type: 3}
-  snapX: 2.2
-  snapY: 3.2
+  maxX: 57.5
+  maxY: 24.5
+  board: {fileID: 0}
+  snapX: 3
+  snapY: 4
+  _draggedCardUI: {fileID: 0}
+  dragFX: {fileID: 0}
+  ID: 1
   crafterPrefab: {fileID: 6941699429152953829, guid: 6c432080b1a692b4cb6516bdca76e5bd, type: 3}
-  crafterOffsetY: 2
---- !u!114 &5820990778572537248
+  stackParent: {fileID: 4150122193755337715, guid: 4f6f449c0f5c79346ba729529dc55130, type: 3}
+  uniqueCard: 134
+--- !u!114 &8280399602357670995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,7 +79,355 @@ MonoBehaviour:
   m_GameObject: {fileID: 6678437371841458416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ccd996a30ff65a4fac60dcd6ecc7a57, type: 3}
+  m_Script: {fileID: 11500000, guid: 1afb7371ef5f265449a163836807c30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObjectsDirectory: Assets/Scenes/Luis/Cards
+  cursorTexture: {fileID: 2800000, guid: 326ae007ef81f524f929f15f1c2c9d08, type: 3}
+  cursorHotSpot: {x: 0, y: 0}
+--- !u!114 &4091168648066653353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba31802f879a08a4985354cb37f728a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoCanvas: {fileID: 0}
+  recipeMenu: {fileID: 0}
+  cardLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  cardName: 
+  recipeList: []
+  utilityList: []
+  isRecipe: 0
+  index: 0
+  wikiButton: {fileID: 0}
+  wikiMenu: {fileID: 0}
+  hudButton: {fileID: 0}
+  buttonNext: {fileID: 0}
+--- !u!114 &2158022828688194485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24987892a49307b418a9e3da0add1b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  objects:
+  - {fileID: 6763567489830989418, guid: f42c07c678efd0642a63b9e13c3e634f, type: 3}
+  - {fileID: 6763567489830989418, guid: d6c16786cb688eb4f88da358a94e34d6, type: 3}
+  timeBetweenSpawn: 5
+  actualObject: {fileID: 0}
+--- !u!114 &3993870214759501468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ac4034d27157c46b26eaef29171f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPack: {fileID: 1819979330338786182, guid: 77677a43a6446de478307ee8e1aa1b46, type: 3}
+--- !u!114 &5659863676626015089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbbc29c12f18f7d449ba519c754c9a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestCategories:
+  - name: Introduction
+    quests:
+    - ID: 0
+      desc: Open a booster to obtain cards
+      objectives:
+      - objectif: Cards
+        goal: 5
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 1
+      desc: Click on the box to open it
+      objectives:
+      - objectif: Cards
+        goal: 3
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 2
+      desc: Produce Water by stacking Bucket and Source
+      objectives:
+      - objectif: Water
+        goal: 5
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 3
+      desc: Sell a card (only card with price can be sell)
+      objectives:
+      - objectif: Cards sell
+        goal: 3
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 4
+      desc: Buy a booster (with water)
+      objectives:
+      - objectif: Booster
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 5
+      desc: 'Click on this yellow word: <color=yellow><link="Water">Water</link></color=yellow>
+        or press R on a card'
+      objectives:
+      - objectif: 'Information '
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 6
+      desc: Sort a stack by pressing X when holding a stack
+      objectives:
+      - objectif: Sorting
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+  - name: Farming
+    quests:
+    - ID: 0
+      desc: Get the 3 different <color=yellow><link="Plant">Plant</link></color>
+      objectives:
+      - objectif: <color=yellow><link="Plant">Plant</link></color>
+        goal: 3
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 1
+      desc: Harvest <color=yellow><link="Natural Fiber">Natural Fiber</link></color>
+        and make a Sieve
+      objectives:
+      - objectif: <color=yellow><link="Natural Fiber">Natural Fiber</link></color>
+        goal: 4
+        progress: 0
+        done: 0
+      - objectif: Sieve
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 2
+      desc: Retrieve the various ore
+      objectives:
+      - objectif: Ore
+        goal: 8
+        progress: 0
+        done: 0
+      done: 0
+  - name: Genetic
+    quests:
+    - ID: 0
+      desc: Make a Microscope
+      objectives:
+      - objectif: Microscope
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 1
+      desc: Obtain DNA
+      objectives:
+      - objectif: DNA
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 2
+      desc: Create a Genetic modifier
+      objectives:
+      - objectif: Genetic modifier
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 3
+      desc: Enhance a plant within the modifier using a pot, compost, or a similar
+        plant
+      objectives:
+      - objectif: Upgrade
+        goal: 3
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 4
+      desc: Make the Plant Mixer
+      objectives:
+      - objectif: Plant Mixer
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 5
+      desc: Make the Plant Mixer
+      objectives:
+      - objectif: Plant Mixer
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+  - name: Space
+    quests:
+    - ID: 0
+      desc: Make a Telescope
+      objectives:
+      - objectif: Telescope
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 1
+      desc: Make an encounter
+      objectives:
+      - objectif: Encounter
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 2
+      desc: Catch a meteorite
+      objectives:
+      - objectif: Meteorite
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 3
+      desc: Create our first creature
+      objectives:
+      - objectif: Creature
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+  - name: Technology
+    quests:
+    - ID: 0
+      desc: Craft an Assembler
+      objectives:
+      - objectif: Assembler
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 1
+      desc: Optimize our various machines
+      objectives:
+      - objectif: Wireless charger
+        goal: 1
+        progress: 0
+        done: 0
+      - objectif: Sprinkler
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 2
+      desc: Build a rocket
+      objectives:
+      - objectif: Spatial  launcher
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+    - ID: 3
+      desc: Complete the quests for the remaining 5 important seeds
+      objectives:
+      - objectif: Explore planets
+        goal: 3
+        progress: 0
+        done: 0
+      - objectif: Complete Knowledge machine
+        goal: 1
+        progress: 0
+        done: 0
+      - objectif: Create a Dyson sphere
+        goal: 1
+        progress: 0
+        done: 0
+      done: 0
+  - name: Universal Seed
+    quests: []
+  questTitle: {fileID: 0}
+  questDesc: {fileID: 0}
+  questPanel: {fileID: 0}
+  actualIndex: 0
+  actualCategories: 0
+--- !u!114 &955477270149272217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9ca9808caaeba4db7fa687cc252ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiLayer:
+    serializedVersion: 2
+    m_Bits: 32768
+--- !u!114 &6858789311101810054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfcc9ceea0bf419cb3bcaf548c2600d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveLayer: 0
+  saveTag: 0
+  saveName: 0
+  saveHideFlags: 0
+  saveActive: 0
+  saveChildren: 0
+  componentsToSave:
+  - {fileID: 5659863676626015089}
+  - {fileID: 2158022828688194485}
+--- !u!114 &7237202393407476469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678437371841458416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f7f8ffaa920dd45bbb9c0d9ad68186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveRateSeconds: 30

@@ -5,19 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7441872a-5399-4491-aedb-303c3622c0bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/TelescopeBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/TelescopeBehavior.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leafy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ActualSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ActualSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllIn1SpriteShader/Materials/Blurp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AllIn1SpriteShader/Materials/Blurp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Easy Save 3/Types/ES3UserType_BuyZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Easy Save 3/Types/ES3UserType_BuyZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HUDButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HUDButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QuestManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QuestManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QuestPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QuestPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/115-Plante de Plastique.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/115-Plante de Plastique.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/131-Creature.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/131-Creature.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/50-Machine a Savoir.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/50-Machine a Savoir.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Cards/89-Telescope.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Cards/89-Telescope.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/AlienSpaceObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/AlienSpaceObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/Meteorite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/SpaceObject/Meteorite.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/MySceneGus.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/MySceneGus.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GUS/Script/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GUS/Script/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/CARD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/GameManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/StackParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Prefabs/StackParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Scene/MainPlateau.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Scene/MainPlateau.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Booster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Booster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/BuyZone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/CardUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/Harvestable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/InfoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/MachineSavoir.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/MachineSavoir.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/WordHoverDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Script/WordHoverDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Cards.spriteatlasv2" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Cards.spriteatlasv2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_CiteAncienne_Polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_CiteAncienne_Polish.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Nuage_etrange_Polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/Carte_Nuage_etrange_Polish.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/UI_QUETES_Polish.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Luis/Sprite/Polish/UI_QUETES_Polish.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/AdvancedPack.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/GroundPack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/GroundPack.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpaceObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/PackPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Rémaie/TestPrefab/PackPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RNGNeedsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +53,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../DashBot/DashBot/Assets/BulletTeleporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BlueprintManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ButtonClicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CardButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -36,7 +61,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/CloneCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CreaturePicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EndSequence.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ListCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RainZoneStable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RegularAutoSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/Blinking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/ChangeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GUS/Script/StartMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,7 +113,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Leafy.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Leafy.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\Projet\LeafyGit\Leafy\Build" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -185,7 +212,9 @@
       <workItem from="1710932831508" duration="2749000" />
       <workItem from="1710941631843" duration="1073000" />
       <workItem from="1711026387079" duration="14972000" />
-      <workItem from="1711103486732" duration="3572000" />
+      <workItem from="1711103486732" duration="10171000" />
+      <workItem from="1711223694872" duration="1927000" />
+      <workItem from="1711389646155" duration="1866000" />
     </task>
     <servers />
   </component>

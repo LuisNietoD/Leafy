@@ -162,8 +162,10 @@ MonoBehaviour:
       m_LastPickCount: 0
       m_SelectionMethodID: 
   savoirList:
-  - pointDeSavoir: 5
+  - pointDeSavoir: 100
     result: 33000000
-  - pointDeSavoir: 5
-    result: 2100000020000000
+  - pointDeSavoir: 250
+    result: 33000000
+  - pointDeSavoir: 500
+    result: 33000000
   behavior: 

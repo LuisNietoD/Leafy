@@ -19,7 +19,7 @@ MonoBehaviour:
   background_color: {r: 0.60535944, g: 0.15760048, b: 0.8792453, a: 1}
   type: 4
   sellable: 0
-  craftable: 0
+  craftable: 1
   harvestable: 0
   inventory: 0
   evolve: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
     Launcher">space launcher</link></color> to send them on unknown planets to <color=grey>mine</color>,
     <color=grey>explore</color>, or even discover <color=grey>hidden places</color>!
 
-    
+
 
     Required
     :
@@ -101,7 +101,9 @@ MonoBehaviour:
   slotType: 0
   preciseCardID: 0
   preciseCard: 0
-  recipes: []
+  recipes:
+  - machine: 0
+    recipe: 0c00000062000000
   evolveTime: 0
   evolutions:
     m_PLID: 

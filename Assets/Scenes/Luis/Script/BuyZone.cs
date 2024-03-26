@@ -44,7 +44,7 @@ public class BuyZone : MonoBehaviour
                     spawnPoint.z = 0;
                     //spawnPoint.x += 5;
 
-                    QuestManager.instance.UpdateQuest(4);
+                    QuestManager.instance.UpdateQuest(0, 4, 0);
                     Instantiate(booster, spawnPoint, Quaternion.identity);
                 }
                 else
@@ -54,7 +54,7 @@ public class BuyZone : MonoBehaviour
                     spawnPoint.z = 0;
                     //spawnPoint.x += 5;
 
-                    QuestManager.instance.UpdateQuest(4);
+                    QuestManager.instance.UpdateQuest(0, 4, 0);
                     Instantiate(booster, spawnPoint, Quaternion.identity);
                 }
             }
