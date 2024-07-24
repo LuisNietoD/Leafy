@@ -49,25 +49,25 @@ MonoBehaviour:
     m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
     m_ProbabilityItems:
     - m_Value: {fileID: 11400000, guid: 4ece53c65e3e5ee4ab54f059d1cc1e63, type: 2}
-      m_BaseProbability: 0.3111111
+      m_BaseProbability: 0.20821725
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}
       m_InfluenceProvider: {fileID: 0}
     - m_Value: {fileID: 11400000, guid: a757f52c8aa381e4c90ed889eb79273e, type: 2}
-      m_BaseProbability: 0.07777777
+      m_BaseProbability: 0.11207579
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}
       m_InfluenceProvider: {fileID: 0}
     - m_Value: {fileID: 11400000, guid: d0124930a46a4a341a974de031b5cd8f, type: 2}
-      m_BaseProbability: 0.3
+      m_BaseProbability: 0.2271167
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}
       m_InfluenceProvider: {fileID: 0}
     - m_Value: {fileID: 11400000, guid: a011ba792e359e0408f7181be47ef2db, type: 2}
-      m_BaseProbability: 0.3111111
+      m_BaseProbability: 0.45259023
       m_Enabled: 1
       m_Locked: 0
       m_InfluenceSpread: {x: 0, y: 1}

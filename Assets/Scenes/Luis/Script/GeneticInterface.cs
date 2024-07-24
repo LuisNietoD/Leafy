@@ -56,6 +56,7 @@ namespace Leafy.Objects
 
                             if(newPlant.card.productivityLevel >= 5 || oldPlant.card.productivityLevel >= 5)
                                 return;
+                            QuestManager.instance.UpdateQuest(2,3, 0);
                             newPlant.card.productivityLevel += oldPlant.card.productivityLevel + 1;
                             newPlant.card.productivityLevel = Mathf.Clamp(newPlant.card.productivityLevel, 0, 5);
 
@@ -94,6 +95,7 @@ namespace Leafy.Objects
                             
                             if(newPlant.card.storageLevel >= 5)
                                 return;
+                            QuestManager.instance.UpdateQuest(2,3, 0);
                             newPlant.card.storageLevel += 1;
                             newPlant.card.storageLevel = Mathf.Clamp(newPlant.card.storageLevel, 0, 5);
 
@@ -111,6 +113,7 @@ namespace Leafy.Objects
                             
                             if(newPlant.card.rateLevel >= 5)
                                 return;
+                            QuestManager.instance.UpdateQuest(2,3, 0);
                             newPlant.card.rateLevel += 1;
                             newPlant.card.rateLevel = Mathf.Clamp(newPlant.card.rateLevel, 0, 5);
 

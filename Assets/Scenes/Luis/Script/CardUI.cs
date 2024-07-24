@@ -199,6 +199,66 @@ namespace Leafy.Objects
                 QuestManager.instance.UpdateQuest(1,2, 0);
             }
 
+            if (card.ID == 40)
+            {
+                QuestManager.instance.UpdateQuest(2,0, 0);
+            }
+            
+            if (card.ID == 53)
+            {
+                QuestManager.instance.UpdateQuest(2,1, 0);
+            }
+            if (card.ID == 54)
+            {
+                QuestManager.instance.UpdateQuest(2,2, 0);
+            }
+            
+            if (card.ID == 82)
+            {
+                QuestManager.instance.UpdateQuest(2,4, 0);
+            }
+            
+            if (card.ID == 89)
+            {
+                QuestManager.instance.UpdateQuest(3,0, 0);
+            }
+            
+            if (card.ID == 100)
+            {
+                QuestManager.instance.UpdateQuest(3,1, 0);
+            }
+            
+            if (card.ID == 94)
+            {
+                QuestManager.instance.UpdateQuest(3,2, 0);
+            }
+            
+            if (card.ID == 131)
+            {
+                QuestManager.instance.UpdateQuest(3,2, 0);
+            }
+            
+            if (card.ID == 101)
+            {
+                QuestManager.instance.UpdateQuest(4,0, 0);
+            }
+            
+            if (card.ID == 107)
+            {
+                QuestManager.instance.UpdateQuest(4,1, 1);
+            }
+            
+            if (card.ID == 108)
+            {
+                QuestManager.instance.UpdateQuest(4,1, 0);
+            }
+            
+            if (card.ID == 114)
+            {
+                QuestManager.instance.UpdateQuest(4,2, 0);
+            }
+            
+
         }
 
         public void UpdateCardInfo(Card c)
