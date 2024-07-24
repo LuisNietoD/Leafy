@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
+  m_Name: 121-Cellule Photovoltaique
+  m_EditorClassIdentifier: 
+  name: Photovoltaic Cell
+  ID: 121
+  artwork: {fileID: 21300000, guid: c081fcf8d4a16654cb001186f0aa184a, type: 3}
+  background: {fileID: 21300000, guid: 876521c0bcb243a4681f8a70129d211e, type: 3}
+  background_color: {r: 0.40245637, g: 0.56849307, b: 0.6603774, a: 1}
+  type: 1
+  sellable: 1
+  craftable: 1
+  harvestable: 0
+  inventory: 0
+  evolve: 0
+  interfaces: 0
+  transmute: 0
+  activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
+  recipeText:
+  - 'A device that converts sunlight into <color=yellow><link="Electricity">electricity</link></color>.
+    Used to <color=grey>build</color> a <color=yellow><link="Solar Panel">solar panel</link></color>.
+
+    
+
+    Required
+    :
+
+    6 x <color=yellow><link="Silicon">Silicon</link></color>'
+  utilities:
+  - cardName: Lingot de Fer
+    recipe: 5 x Pepite de Fer<br>1 x Plante Fournaise
+  price: 2
+  timeToCraft: 0
+  infinite: 0
+  life: 0
+  storeCard: 0
+  inventorySize: 0
+  shakable: 0
+  harvestTime: 0
+  drop:
+    m_PLID: 48ef651f-daf8-4c6a-9195-80dc70bf2381
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 901307760
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  activators: 
+  preciseSpawn: 0
+  preciseList: []
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
+  recipes:
+  - machine: 0
+    recipe: 760000007600000076000000760000007600000076000000
+  evolveTime: 0
+  evolutions:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 0
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
+  transmuteList: []
+  savoirList: []
+  behavior: 

@@ -1,0 +1,98 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mD40DD8F77D8FE295006AE6A628CF616896CB09F8 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE4C88B84AECE0FD1268F9D2A550A9BC2A790E0C4 (void);
+extern void SampleIPManager_Awake_m3DE98DA13A0E72AF17CF98BA1021972561B11652 (void);
+extern void SampleIPManager_Texts_OnValueChanged_m4F6ADBEF038CB09D801B4E819CFD366302BB82B2 (void);
+extern void SampleIPManager__ctor_m89F3499332C0161036A4E040C0F7587B9E1EB612 (void);
+extern void SampleIPToggle_Awake_mF1380DD613EE305A0D2BE599EDDB7F96B2DADB0B (void);
+extern void SampleIPToggle_OnValidate_m1B3897AAFEA04E69DBEFEE3C1D869A383F06BC1E (void);
+extern void SampleIPToggle_Start_m8DA72E44DD5EB6F18954C46C6ADBD731EA301788 (void);
+extern void SampleIPToggle_ChangeChannelActivity_m82413603DAEBA559102E57CAECAFB1C12D4E2950 (void);
+extern void SampleIPToggle__ctor_m38581DE728BD28DB09F0F126697479E515B69B34 (void);
+extern void SamplePPManager_Awake_m92837C27B77CA5B47639D5E1540CAB72C20D936D (void);
+extern void SamplePPManager_Texts_OnValueChanged_m18E93E1FD33BAC35E83A8BCA76ABB49D4B7B15AE (void);
+extern void SamplePPManager__ctor_mFCCD3C8137CA135E959CDA799D6A13315781141B (void);
+extern void SamplePPSlider_Awake_mAB70D17FA531B74A1109511258ABFB5BFC62FAE4 (void);
+extern void SamplePPSlider_OnValidate_m25EF03E98C66A531A41CE9A876A5655745FF55EF (void);
+extern void SamplePPSlider_Start_m245B58B80A524F10D6CC60BB65123829D96FE18B (void);
+extern void SamplePPSlider_ChangeSliderValue_mC2CEB2980133A6A9D00A0B13CE4717E52E021BFD (void);
+extern void SamplePPSlider_ChangeChannelActivity_m7B128BFE76617AAD01CF077ABC83E07573056164 (void);
+extern void SamplePPSlider__ctor_m0951E57E5696811F6263A91363483879A6186392 (void);
+static Il2CppMethodPointer s_methodPointers[19] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mD40DD8F77D8FE295006AE6A628CF616896CB09F8,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE4C88B84AECE0FD1268F9D2A550A9BC2A790E0C4,
+	SampleIPManager_Awake_m3DE98DA13A0E72AF17CF98BA1021972561B11652,
+	SampleIPManager_Texts_OnValueChanged_m4F6ADBEF038CB09D801B4E819CFD366302BB82B2,
+	SampleIPManager__ctor_m89F3499332C0161036A4E040C0F7587B9E1EB612,
+	SampleIPToggle_Awake_mF1380DD613EE305A0D2BE599EDDB7F96B2DADB0B,
+	SampleIPToggle_OnValidate_m1B3897AAFEA04E69DBEFEE3C1D869A383F06BC1E,
+	SampleIPToggle_Start_m8DA72E44DD5EB6F18954C46C6ADBD731EA301788,
+	SampleIPToggle_ChangeChannelActivity_m82413603DAEBA559102E57CAECAFB1C12D4E2950,
+	SampleIPToggle__ctor_m38581DE728BD28DB09F0F126697479E515B69B34,
+	SamplePPManager_Awake_m92837C27B77CA5B47639D5E1540CAB72C20D936D,
+	SamplePPManager_Texts_OnValueChanged_m18E93E1FD33BAC35E83A8BCA76ABB49D4B7B15AE,
+	SamplePPManager__ctor_mFCCD3C8137CA135E959CDA799D6A13315781141B,
+	SamplePPSlider_Awake_mAB70D17FA531B74A1109511258ABFB5BFC62FAE4,
+	SamplePPSlider_OnValidate_m25EF03E98C66A531A41CE9A876A5655745FF55EF,
+	SamplePPSlider_Start_m245B58B80A524F10D6CC60BB65123829D96FE18B,
+	SamplePPSlider_ChangeSliderValue_mC2CEB2980133A6A9D00A0B13CE4717E52E021BFD,
+	SamplePPSlider_ChangeChannelActivity_m7B128BFE76617AAD01CF077ABC83E07573056164,
+	SamplePPSlider__ctor_m0951E57E5696811F6263A91363483879A6186392,
+};
+static const int32_t s_InvokerIndices[19] = 
+{
+	16403,
+	9244,
+	9244,
+	7198,
+	9244,
+	9244,
+	9244,
+	9244,
+	7115,
+	9244,
+	9244,
+	7250,
+	9244,
+	9244,
+	9244,
+	9244,
+	7310,
+	7115,
+	9244,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_LTX_ChanneledProperties_Samples_CodeGenModule;
+const Il2CppCodeGenModule g_LTX_ChanneledProperties_Samples_CodeGenModule = 
+{
+	"LTX.ChanneledProperties.Samples.dll",
+	19,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

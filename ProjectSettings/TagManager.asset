@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Card
+  - Sell
+  - Buy
+  - Recycle
+  - CardList
+  - AudioManager
+  - Music
+  - Blueprint
+  - HUD
+  - Craft
   layers:
   - Default
   - TransparentFX
@@ -11,16 +21,16 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Card
+  - Terrain
+  - Lever
+  - HUD
+  - Button
+  - InGameUI
+  - Slot
+  - RecipeText
+  - CardDetector
+  - SpriteButton
   - 
   - 
   - 
@@ -40,4 +50,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Card
+    uniqueID: 2599857639
+    locked: 0
+  - name: Icon
+    uniqueID: 3810283941
+    locked: 0
+  - name: HUD
+    uniqueID: 2747817345
     locked: 0

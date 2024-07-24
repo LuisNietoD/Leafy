@@ -1,0 +1,486 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
+  m_Name: 71-Plante de Cuivre
+  m_EditorClassIdentifier: 
+  name: Copper Plant
+  ID: 71
+  artwork: {fileID: 21300000, guid: 0f8b8a9488ff8114c9e2bfffa900fe48, type: 3}
+  background: {fileID: 21300000, guid: 2a4e0a6d0bf08ae4ba6292bceeea7c43, type: 3}
+  background_color: {r: 0.4509804, g: 0.6156863, b: 0.31764707, a: 1}
+  type: 5
+  sellable: 1
+  craftable: 1
+  harvestable: 1
+  inventory: 0
+  evolve: 0
+  interfaces: 0
+  transmute: 0
+  activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 1
+  recipeText:
+  - "A plant with coppery petals and stems composed of intertwined copper wires.
+    <color=grey>Produces</color> <color=yellow><link=\"Copper Nugget\">copper nuggets</link></color>.
+    When it reaches its <color=grey>harvesting point</color>, it <color=grey>shakes</color>.\n\nRequired
+    :\r\n1 x <color=yellow><link=\"Genetic Modifier\">Genetic Modifier</link></color>\r\n1
+    x <color=yellow><link=\"Basic Plant\">Basic Plant</link></color>\r\n1 x <color=yellow><link=\"Copper
+    DNA\">Copper DNA</link></color>\r"
+  utilities:
+  - cardName: Bois
+    recipe: Cliquez pour recolter du Bois, tremble quand elle est rempli
+  price: 5
+  timeToCraft: 5
+  infinite: 1
+  life: 4
+  storeCard: 1
+  inventorySize: 5
+  shakable: 0
+  harvestTime: 30
+  drop:
+    m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 6293d9c36d81d734da790553a9d0d8ee, type: 2}
+      m_BaseProbability: 0.99
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    - m_Value: {fileID: 11400000, guid: 05dbef7d54506b743bfce9984a8116ad, type: 2}
+      m_BaseProbability: 0.00999999
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 2807470307
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044973833951
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044972481194
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044673818426
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044672485941
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044373802220
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044372480125
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044073839318
+      - m_Index: 0
+        m_Time:
+          Ticks: 638464044072478406
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457773545623646
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457773245645931
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457772945636418
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453829824802798
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453829774620403
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453829332748887
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453523515713363
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453523465493678
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453523416129791
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521667201807
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521617005514
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521566861701
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521516605350
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521467227920
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521170739119
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521120496341
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521070302100
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453521020117225
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520970755589
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520147926169
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520097670009
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453520047490430
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519997282541
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519947904722
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519545595482
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519495387439
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453519445806694
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518434345944
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518384130524
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518333950590
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518283750670
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518206142328
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518155920011
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518105731450
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518055518710
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453518006010621
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515598452190
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515547924551
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515314356801
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515264204106
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515214018232
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515084770900
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453515034568795
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453514984354645
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453514934157459
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453514884655117
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513177099997
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513156815367
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513136631169
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513116429895
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513096228916
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453513016834782
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512996622792
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512976432418
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512956210973
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512936023876
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512884828892
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512864633922
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512844418820
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512824230465
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453512804818160
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511298366515
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511278183026
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511257982404
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511237791806
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511217569197
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511197447753
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511177193986
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511156996848
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511136812592
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511097761691
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511077569678
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511057384184
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511037183349
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453511017618534
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453510731683226
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453510711486447
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453510692067111
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508786007527
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508765809664
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508691333958
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508671081292
+      - m_Index: 0
+        m_Time:
+          Ticks: 638453508651616163
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428259226989711
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428259218963592
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428259210314617
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428259202283853
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428256270478668
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428252199575310
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428252191572123
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428252183247721
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428252175230329
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247611623853
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247603306135
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247595302213
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428247586304314
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428207452322590
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428207444112286
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428207435923697
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428207427714240
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428204324440253
+      m_Capacity: 1000
+    m_LastPickCount: 1
+    m_SelectionMethodID: LSMRegular
+  activators: 
+  preciseSpawn: 0
+  preciseList: []
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
+  recipes:
+  - machine: 2
+    recipe: 0c0000003c000000
+  evolveTime: 6
+  evolutions:
+    m_PLID: ac33f840-1b86-4f72-9b69-04b8c955218a
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 940904725
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
+  transmuteList: []
+  savoirList: []
+  behavior: 

@@ -1,0 +1,1004 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m0C396BF7B9F6A2A535BBA5A04AF86EC6C73D134D (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m9A117D7C8F62FC74FDF413662FCE799B710DCEDE (void);
+extern void DefaultSeedProvider_get_NewSeed_m5AA3C134C498074D5E9A49512F647F24D18346DE (void);
+extern void DefaultSeedProvider__ctor_m828DCC55755072E29A05EEC24FB1B584E6BB6E00 (void);
+extern void HistoryEntry_get_Index_m566875EDFB876D6A449A01E951807C725B1FF3D5 (void);
+extern void HistoryEntry_get_Time_m1C3C9196370D757E1B4054B14F49100509101972 (void);
+extern void HistoryEntry_SetEntry_m01DFB17481CB3A76082D652401F7C306616F83D9 (void);
+extern void HistoryEntry_Clean_mA50EE9B5089B24214A99489006C812BED25325A5 (void);
+extern void HistoryEntry__ctor_m91998E2E973E72447A0380A5B199CB3B01E8BD44 (void);
+extern void PickHistory_get_History_m418B74C55923E85C369E7DD95C3FF262C84C6194 (void);
+extern void PickHistory__ctor_mDF14CA4308B457F428FC32933EA7F508C7EAD71D (void);
+extern void PickHistory_GetLatestEntries_m26B16826D15DE2F9507A12BEE911085E3C04432F (void);
+extern void PickHistory_GetLatestEntries_mD043D9BEBA42554F0088B5C1DFC2D0C7CE5C384E (void);
+extern void PickHistory_GetLatestPicks_mCE6FCC48F84F620838F4FCA0BC08EE17B9BDCFBB (void);
+extern void PickHistory_GetLatestPicks_mB287464AEE3263C864D0D5D7E44EACA655976865 (void);
+extern void PickHistory_get_Capacity_mDEE38D5D99F6F1628E6C0DF1156EFD2218203B9F (void);
+extern void PickHistory_set_Capacity_m9C9F32094F35EC557E9B640508110EFCA3BDBF73 (void);
+extern void PickHistory_get_LatestIndex_m56B8CCD966CB8AF4F3EF15B4EE04AF8482D20A22 (void);
+extern void PickHistory_get_LatestEntry_m27AD37EE8707A2D7D15290907C1DBF39E8F03B23 (void);
+extern void PickHistory_ClearHistory_m8BE27BCF2FDC59CFA963A20F2917AFD61C5E2394 (void);
+extern void PickHistory_AddEntry_mBEEF5E82E479893FE8193032591842085648F7F3 (void);
+extern void PickHistory_AddEntries_mD83481501BD9EA8134544B8A109D6F7373480300 (void);
+extern void PickHistory_Trim_mC96EC03853A278E0437A08F13164E12E062326ED (void);
+extern void ProbabilityTools_CalculateInfluencedProbability_m8EBAFAC89C7CFEAE06152E17AAFEC0D0AF997FEA (void);
+extern void ProbabilityTools_NormalizeList_m941EA0548A137333A813C3D2B8287650579800A9 (void);
+extern void ProbabilityTools_CountRepeats_mDD493380BF5620058436E38D37CD15138715C290 (void);
+extern void ProbabilityTools__cctor_m6BB5BE918693E25FF3D2903DAD629CACE46C71D6 (void);
+extern void RLogger__cctor_m269305D589FA944227B75C549B3C0A6F38B46234 (void);
+extern void RLogger_SetLogLevel_m9BA3F4C6811B6F885049D93EC26A512459F102C7 (void);
+extern void RLogger_SetAllowColors_mA623E8093398C293E6A218E7BBC5373F5208BF54 (void);
+extern void RLogger_Log_m725C7F43497652E4BE8200B03416A24667880E5A (void);
+extern void RNGNeedsCore_get_m_Initialized_mA31BEFB67C75F8BF629AF17DB57BF354A20B453A (void);
+extern void RNGNeedsCore_set_m_Initialized_m5D765A164CE44E2BE718D14A33DD7E405069E2D2 (void);
+extern void RNGNeedsCore_get_SelectionMethodFallback_m6AA0DE0B9619A976458279647A7EE95B6702A61E (void);
+extern void RNGNeedsCore_set_SelectionMethodFallback_m5F4AEE35FFC44F139D5876BEEFF39633C50ED230 (void);
+extern void RNGNeedsCore_get_m_SeedProvider_m00427FDF1841F2317A7896BE1DC5ABEC8D36B4BC (void);
+extern void RNGNeedsCore_set_m_SeedProvider_m1951E01BED6C6B2E3C08A05A3552EDC69FB0770F (void);
+extern void RNGNeedsCore_get_SelectionMethods_mE0ED9A1D696FD5F81A910FCCE28A80647D145969 (void);
+extern void RNGNeedsCore_set_SelectionMethods_m2E1F989AA1BC62FE5926BC06B8D1E5EF27F66114 (void);
+extern void RNGNeedsCore_Initialize_m2402181D22E06ECD0BC07B1714943540C7B5CE8E (void);
+extern void RNGNeedsCore_SetLogLevel_m5DF602F5BAD1ACC90A71F1A7569F1A15DF821374 (void);
+extern void RNGNeedsCore_SetLogAllowColors_mC343CEB544BDF92AE3F2CBB6055AA8A017FF7DF1 (void);
+extern void RNGNeedsCore_TryGetMethodChange_m0564BEADFCC5F6DC2F0BC6DFCF4EF14D650AA5C2 (void);
+extern void RNGNeedsCore_SelectItemsInternal_m700F631CD96C36354ADC1923961B04DE7ACF955E (void);
+extern void RNGNeedsCore_get_NewSeed_mB539EBF4E8DBE56F880A33DDAFB80466DCDE05B3 (void);
+extern void RNGNeedsCore_get_RegisteredSelectionMethods_m31A153C0288915D0659B5C05FC714C13DEC868E8 (void);
+extern void RNGNeedsCore_get_DefaultSelectionMethodID_m618BE5443F395BE77EBFC2A23485A7DD502F1278 (void);
+extern void RNGNeedsCore_SetSeedProvider_m31949941E2A847B3BE7030CBCBE4A415B94912A1 (void);
+extern void RNGNeedsCore_ResetSeedProvider_mD5BA0148E8925D8994BAC1267D009D0B592F0806 (void);
+extern void RNGNeedsCore_RegisterSelectionMethod_m1DE6CB9CB3E1CDC53C9F7228D7C9E6081B7FE46A (void);
+extern void RNGNeedsCore_GetSelectionMethod_m414ADB1F23099DCE7BE4AAF7DA6ACCE9068041EF (void);
+extern void RNGNeedsCore_WarmupHistoryEntries_mAAB949111A91F20E6754BDEC1E4FD2B5DCB1F84C (void);
+extern void RNGNeedsCore__cctor_m88EA04C55D8E5E667BD49C7D0194E13D2B8DC861 (void);
+extern void CumulativeProbability_get_Identifier_m916F896EF158CF47D591C8005EE3F78DE1DA01B5 (void);
+extern void CumulativeProbability_get_Name_m8F063AE847E71F1FA648933440FFE9C5A5838E72 (void);
+extern void CumulativeProbability_Prep_m78063256BE38BB156C9F3C0B4BCFD0947022E855 (void);
+extern void CumulativeProbability_PrepItem_mF48A48E4CD5B1249BD2BBEF9B1A47E14FF9616CB (void);
+extern void CumulativeProbability_SelectItem_m133BE699BF29B4A538CBBF91ED9C1D04E7E3F287 (void);
+extern void CumulativeProbability_Clean_mC349F8BDE64751EDF4832FD4798EDD009D157388 (void);
+extern void CumulativeProbability__ctor_mF8DDA3A39AEA893E9EFC109D44A52A5101626CF9 (void);
+extern void CumulativeProbabilityBurst_get_Identifier_m50C5E03C999B09290C1EC4E423857C4A6E9A611F (void);
+extern void CumulativeProbabilityBurst_get_Name_mE8704F9223E0616FC96A57A48D4D5B251D8B05CF (void);
+extern void CumulativeProbabilityBurst_SelectItems_mA8047361A72A9AC0777395A85E0F8195C7AAF80A (void);
+extern void CumulativeProbabilityBurst__ctor_m3BFF58710C22CB5D132FBA1631C6A8345DCCC59F (void);
+extern void CumulativeBurstSelectJob_Prep_m6225EEA6001C980EC626EFA80448304A9A45E951 (void);
+extern void CumulativeBurstSelectJob_Execute_mD4256C54D697B9DDC4F0F369731493BFD56634EE (void);
+extern void CumulativeBurstSelectJob_Clean_m14BB42A0405486A061910D82A3F834560B13A34A (void);
+extern void LinearSearchMethod_get_Identifier_mBBA0C0B8EF6C3C35D97263B3AD73484C96165822 (void);
+extern void LinearSearchMethod_get_Name_m62DE7B995E010C3ED7F1CBC71184D09FBFF1C093 (void);
+extern void LinearSearchMethod_SelectItem_m1FA418DB126B5F6368D78F29036DF2CC36C42382 (void);
+extern void LinearSearchMethod__ctor_m0372219D308945857EE0AB5CEF9AA2273E1FF756 (void);
+extern void LinearSearchMethodBurst_get_Identifier_m658254F35220A38B9CDD5312F0DDD414A8DA7103 (void);
+extern void LinearSearchMethodBurst_get_Name_m4304FB7532D08D16A3950E381DF50BC0D9E0D1FA (void);
+extern void LinearSearchMethodBurst_SelectItems_mE257EBD9B01AFA29E86C32D4575F403125A10C6D (void);
+extern void LinearSearchMethodBurst__ctor_mAAC057290295EAA4A94142D0F15683DD18EBF3F9 (void);
+extern void LinearBurstSelectJob_Prep_mA9CEBADB94D2B508CF2C49693D0C43995DFE242C (void);
+extern void LinearBurstSelectJob_Execute_mF4C4B05346ECE03CB9AF16E8F8D83C6B19B8CF53 (void);
+extern void LinearBurstSelectJob_Clean_mDAB1E92E0BEAD64320CFA1DABFBAEB57B59AC473 (void);
+extern void RandomSelectionMethod_get_Identifier_mE7DDD1873496D2ED390724FA605A8FD2122D9892 (void);
+extern void RandomSelectionMethod_get_Name_mD1520A72CC5094D850C11D11D0FCF1F9BCC181A2 (void);
+extern void RandomSelectionMethod_SelectItem_m51E4760D139445E4AB490556F51254E87C522940 (void);
+extern void RandomSelectionMethod__ctor_m36A9A35B04EC133DF456B23ACFFE4624ED88784A (void);
+extern void SelectionMethodBase_PrepItemInternal_mD66E65EC12676B050BA931288F37663AA3B07CAD (void);
+extern void SelectionMethodBase_Prep_m5C9BE3515B58823B67E25ED5712CD0ABDE544CB1 (void);
+extern void SelectionMethodBase_PrepItem_m7ED7C23719C4230D9388158886B523D8329ABEE5 (void);
+extern void SelectionMethodBase_SelectItems_m8DEB3FFB9AECEDA518887628A8A04F105E7B0B60 (void);
+extern void SelectionMethodBase_Clean_m70CC525A99505639189625472D6875A1C8B5A175 (void);
+extern void SelectionMethodBase_SpreadResult_mFECB37063298E1DCADA8405952FBEF77B068F055 (void);
+extern void SelectionMethodBase_ShuffleResult_m6E703AC1B378DA57377C597F15942C1AD6A9EDDF (void);
+extern void SelectionMethodBase__ctor_m379EB7A30CD87359D346624D8566CBF59C37BD4D (void);
+extern void ItemData__ctor_m2F59EDD971B4010BDE69C832DB59C1609DB108DB (void);
+extern void SelectionTools_SpreadResult_m0FC15BAFE432BD30BB9DF55C36636EBEAD7E2E20 (void);
+extern void SelectionTools_ShuffleResult_m333257AC4358D4AB71B17F56A21E7D862CE066BD (void);
+extern void SelectionTools_BinarySearch_m373B00C1B5400FC32EF889608E836836694D21D2 (void);
+extern void SelectionTools_LinearSearch_m521FD667F921F268D8A9F43A63ED483300095992 (void);
+extern void SelectionTools_GetItemData_mCF6359C55E0C7F133E7375DA0BDB6ED2FDD77FDD (void);
+extern void SelectJobUtility_GetJobData_m984E16E29EAE95A13D335B86802AFC12BF5C8418 (void);
+extern void TestResults_get_RepeatsPercentage_mFAFFE33D1443292908BC3CA5062D043C068E0526 (void);
+extern void TestResults_get_SelectionMethodInfo_m93ED03B18F6CAD6D8517B5C7F37E6FA5B698E399 (void);
+extern void TestResults_get_PickCountInfo_m0CE4648CB627D974731DC7E9073EB44AEE4EBCA3 (void);
+extern void TestResults_get_ActualPickCountInfo_mD446282618DDA2664B557A6D3309AFDECA252CD4 (void);
+extern void TestResults_get_TestDurationInfo_mC8DDB3DC6FDB742F2B5D400F3D321F54D81BEF60 (void);
+extern void TestResults_GetFormattedPickDetails_m95680EC05B1AF94BF4CB276A5C758C459E02C619 (void);
+extern void TestResults_GetFormattedResultsWithDetails_mF5C5313E93AB099958CF0DF9D716FA3B79FD348A (void);
+extern void TestResults_GetFormattedResults_m6E0D93984310E372584A76A140F3A145B7A45D44 (void);
+extern void TestResults_Print_m9AAA7F702FAD95B0C35A7E4489A4FC9A86A35DF4 (void);
+extern void TestResults_Clear_mF12DFC6992D5FC33BBD5C298EBDCC4F3E2E86385 (void);
+extern void TestResults__ctor_m1FAF650D7A363DEB20FFD8959BB28F4B1EF8F51D (void);
+static Il2CppMethodPointer s_methodPointers[256] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m0C396BF7B9F6A2A535BBA5A04AF86EC6C73D134D,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m9A117D7C8F62FC74FDF413662FCE799B710DCEDE,
+	DefaultSeedProvider_get_NewSeed_m5AA3C134C498074D5E9A49512F647F24D18346DE,
+	DefaultSeedProvider__ctor_m828DCC55755072E29A05EEC24FB1B584E6BB6E00,
+	HistoryEntry_get_Index_m566875EDFB876D6A449A01E951807C725B1FF3D5,
+	HistoryEntry_get_Time_m1C3C9196370D757E1B4054B14F49100509101972,
+	HistoryEntry_SetEntry_m01DFB17481CB3A76082D652401F7C306616F83D9,
+	HistoryEntry_Clean_mA50EE9B5089B24214A99489006C812BED25325A5,
+	HistoryEntry__ctor_m91998E2E973E72447A0380A5B199CB3B01E8BD44,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	PickHistory_get_History_m418B74C55923E85C369E7DD95C3FF262C84C6194,
+	PickHistory__ctor_mDF14CA4308B457F428FC32933EA7F508C7EAD71D,
+	PickHistory_GetLatestEntries_m26B16826D15DE2F9507A12BEE911085E3C04432F,
+	PickHistory_GetLatestEntries_mD043D9BEBA42554F0088B5C1DFC2D0C7CE5C384E,
+	PickHistory_GetLatestPicks_mCE6FCC48F84F620838F4FCA0BC08EE17B9BDCFBB,
+	PickHistory_GetLatestPicks_mB287464AEE3263C864D0D5D7E44EACA655976865,
+	PickHistory_get_Capacity_mDEE38D5D99F6F1628E6C0DF1156EFD2218203B9F,
+	PickHistory_set_Capacity_m9C9F32094F35EC557E9B640508110EFCA3BDBF73,
+	PickHistory_get_LatestIndex_m56B8CCD966CB8AF4F3EF15B4EE04AF8482D20A22,
+	PickHistory_get_LatestEntry_m27AD37EE8707A2D7D15290907C1DBF39E8F03B23,
+	PickHistory_ClearHistory_m8BE27BCF2FDC59CFA963A20F2917AFD61C5E2394,
+	PickHistory_AddEntry_mBEEF5E82E479893FE8193032591842085648F7F3,
+	PickHistory_AddEntries_mD83481501BD9EA8134544B8A109D6F7373480300,
+	PickHistory_Trim_mC96EC03853A278E0437A08F13164E12E062326ED,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ProbabilityTools_CalculateInfluencedProbability_m8EBAFAC89C7CFEAE06152E17AAFEC0D0AF997FEA,
+	ProbabilityTools_NormalizeList_m941EA0548A137333A813C3D2B8287650579800A9,
+	NULL,
+	ProbabilityTools_CountRepeats_mDD493380BF5620058436E38D37CD15138715C290,
+	ProbabilityTools__cctor_m6BB5BE918693E25FF3D2903DAD629CACE46C71D6,
+	RLogger__cctor_m269305D589FA944227B75C549B3C0A6F38B46234,
+	RLogger_SetLogLevel_m9BA3F4C6811B6F885049D93EC26A512459F102C7,
+	RLogger_SetAllowColors_mA623E8093398C293E6A218E7BBC5373F5208BF54,
+	RLogger_Log_m725C7F43497652E4BE8200B03416A24667880E5A,
+	RNGNeedsCore_get_m_Initialized_mA31BEFB67C75F8BF629AF17DB57BF354A20B453A,
+	RNGNeedsCore_set_m_Initialized_m5D765A164CE44E2BE718D14A33DD7E405069E2D2,
+	RNGNeedsCore_get_SelectionMethodFallback_m6AA0DE0B9619A976458279647A7EE95B6702A61E,
+	RNGNeedsCore_set_SelectionMethodFallback_m5F4AEE35FFC44F139D5876BEEFF39633C50ED230,
+	RNGNeedsCore_get_m_SeedProvider_m00427FDF1841F2317A7896BE1DC5ABEC8D36B4BC,
+	RNGNeedsCore_set_m_SeedProvider_m1951E01BED6C6B2E3C08A05A3552EDC69FB0770F,
+	RNGNeedsCore_get_SelectionMethods_mE0ED9A1D696FD5F81A910FCCE28A80647D145969,
+	RNGNeedsCore_set_SelectionMethods_m2E1F989AA1BC62FE5926BC06B8D1E5EF27F66114,
+	RNGNeedsCore_Initialize_m2402181D22E06ECD0BC07B1714943540C7B5CE8E,
+	RNGNeedsCore_SetLogLevel_m5DF602F5BAD1ACC90A71F1A7569F1A15DF821374,
+	RNGNeedsCore_SetLogAllowColors_mC343CEB544BDF92AE3F2CBB6055AA8A017FF7DF1,
+	RNGNeedsCore_TryGetMethodChange_m0564BEADFCC5F6DC2F0BC6DFCF4EF14D650AA5C2,
+	RNGNeedsCore_SelectItemsInternal_m700F631CD96C36354ADC1923961B04DE7ACF955E,
+	RNGNeedsCore_get_NewSeed_mB539EBF4E8DBE56F880A33DDAFB80466DCDE05B3,
+	RNGNeedsCore_get_RegisteredSelectionMethods_m31A153C0288915D0659B5C05FC714C13DEC868E8,
+	RNGNeedsCore_get_DefaultSelectionMethodID_m618BE5443F395BE77EBFC2A23485A7DD502F1278,
+	RNGNeedsCore_SetSeedProvider_m31949941E2A847B3BE7030CBCBE4A415B94912A1,
+	RNGNeedsCore_ResetSeedProvider_mD5BA0148E8925D8994BAC1267D009D0B592F0806,
+	RNGNeedsCore_RegisterSelectionMethod_m1DE6CB9CB3E1CDC53C9F7228D7C9E6081B7FE46A,
+	RNGNeedsCore_GetSelectionMethod_m414ADB1F23099DCE7BE4AAF7DA6ACCE9068041EF,
+	RNGNeedsCore_WarmupHistoryEntries_mAAB949111A91F20E6754BDEC1E4FD2B5DCB1F84C,
+	RNGNeedsCore__cctor_m88EA04C55D8E5E667BD49C7D0194E13D2B8DC861,
+	CumulativeProbability_get_Identifier_m916F896EF158CF47D591C8005EE3F78DE1DA01B5,
+	CumulativeProbability_get_Name_m8F063AE847E71F1FA648933440FFE9C5A5838E72,
+	CumulativeProbability_Prep_m78063256BE38BB156C9F3C0B4BCFD0947022E855,
+	CumulativeProbability_PrepItem_mF48A48E4CD5B1249BD2BBEF9B1A47E14FF9616CB,
+	CumulativeProbability_SelectItem_m133BE699BF29B4A538CBBF91ED9C1D04E7E3F287,
+	CumulativeProbability_Clean_mC349F8BDE64751EDF4832FD4798EDD009D157388,
+	CumulativeProbability__ctor_mF8DDA3A39AEA893E9EFC109D44A52A5101626CF9,
+	CumulativeProbabilityBurst_get_Identifier_m50C5E03C999B09290C1EC4E423857C4A6E9A611F,
+	CumulativeProbabilityBurst_get_Name_mE8704F9223E0616FC96A57A48D4D5B251D8B05CF,
+	CumulativeProbabilityBurst_SelectItems_mA8047361A72A9AC0777395A85E0F8195C7AAF80A,
+	CumulativeProbabilityBurst__ctor_m3BFF58710C22CB5D132FBA1631C6A8345DCCC59F,
+	CumulativeBurstSelectJob_Prep_m6225EEA6001C980EC626EFA80448304A9A45E951,
+	CumulativeBurstSelectJob_Execute_mD4256C54D697B9DDC4F0F369731493BFD56634EE,
+	CumulativeBurstSelectJob_Clean_m14BB42A0405486A061910D82A3F834560B13A34A,
+	LinearSearchMethod_get_Identifier_mBBA0C0B8EF6C3C35D97263B3AD73484C96165822,
+	LinearSearchMethod_get_Name_m62DE7B995E010C3ED7F1CBC71184D09FBFF1C093,
+	LinearSearchMethod_SelectItem_m1FA418DB126B5F6368D78F29036DF2CC36C42382,
+	LinearSearchMethod__ctor_m0372219D308945857EE0AB5CEF9AA2273E1FF756,
+	LinearSearchMethodBurst_get_Identifier_m658254F35220A38B9CDD5312F0DDD414A8DA7103,
+	LinearSearchMethodBurst_get_Name_m4304FB7532D08D16A3950E381DF50BC0D9E0D1FA,
+	LinearSearchMethodBurst_SelectItems_mE257EBD9B01AFA29E86C32D4575F403125A10C6D,
+	LinearSearchMethodBurst__ctor_mAAC057290295EAA4A94142D0F15683DD18EBF3F9,
+	LinearBurstSelectJob_Prep_mA9CEBADB94D2B508CF2C49693D0C43995DFE242C,
+	LinearBurstSelectJob_Execute_mF4C4B05346ECE03CB9AF16E8F8D83C6B19B8CF53,
+	LinearBurstSelectJob_Clean_mDAB1E92E0BEAD64320CFA1DABFBAEB57B59AC473,
+	RandomSelectionMethod_get_Identifier_mE7DDD1873496D2ED390724FA605A8FD2122D9892,
+	RandomSelectionMethod_get_Name_mD1520A72CC5094D850C11D11D0FCF1F9BCC181A2,
+	RandomSelectionMethod_SelectItem_m51E4760D139445E4AB490556F51254E87C522940,
+	RandomSelectionMethod__ctor_m36A9A35B04EC133DF456B23ACFFE4624ED88784A,
+	NULL,
+	NULL,
+	SelectionMethodBase_PrepItemInternal_mD66E65EC12676B050BA931288F37663AA3B07CAD,
+	SelectionMethodBase_Prep_m5C9BE3515B58823B67E25ED5712CD0ABDE544CB1,
+	SelectionMethodBase_PrepItem_m7ED7C23719C4230D9388158886B523D8329ABEE5,
+	SelectionMethodBase_SelectItems_m8DEB3FFB9AECEDA518887628A8A04F105E7B0B60,
+	SelectionMethodBase_Clean_m70CC525A99505639189625472D6875A1C8B5A175,
+	SelectionMethodBase_SpreadResult_mFECB37063298E1DCADA8405952FBEF77B068F055,
+	SelectionMethodBase_ShuffleResult_m6E703AC1B378DA57377C597F15942C1AD6A9EDDF,
+	NULL,
+	SelectionMethodBase__ctor_m379EB7A30CD87359D346624D8566CBF59C37BD4D,
+	ItemData__ctor_m2F59EDD971B4010BDE69C832DB59C1609DB108DB,
+	SelectionTools_SpreadResult_m0FC15BAFE432BD30BB9DF55C36636EBEAD7E2E20,
+	SelectionTools_ShuffleResult_m333257AC4358D4AB71B17F56A21E7D862CE066BD,
+	SelectionTools_BinarySearch_m373B00C1B5400FC32EF889608E836836694D21D2,
+	SelectionTools_LinearSearch_m521FD667F921F268D8A9F43A63ED483300095992,
+	SelectionTools_GetItemData_mCF6359C55E0C7F133E7375DA0BDB6ED2FDD77FDD,
+	SelectJobUtility_GetJobData_m984E16E29EAE95A13D335B86802AFC12BF5C8418,
+	TestResults_get_RepeatsPercentage_mFAFFE33D1443292908BC3CA5062D043C068E0526,
+	TestResults_get_SelectionMethodInfo_m93ED03B18F6CAD6D8517B5C7F37E6FA5B698E399,
+	TestResults_get_PickCountInfo_m0CE4648CB627D974731DC7E9073EB44AEE4EBCA3,
+	TestResults_get_ActualPickCountInfo_mD446282618DDA2664B557A6D3309AFDECA252CD4,
+	TestResults_get_TestDurationInfo_mC8DDB3DC6FDB742F2B5D400F3D321F54D81BEF60,
+	TestResults_GetFormattedPickDetails_m95680EC05B1AF94BF4CB276A5C758C459E02C619,
+	TestResults_GetFormattedResultsWithDetails_mF5C5313E93AB099958CF0DF9D716FA3B79FD348A,
+	TestResults_GetFormattedResults_m6E0D93984310E372584A76A140F3A145B7A45D44,
+	TestResults_Print_m9AAA7F702FAD95B0C35A7E4489A4FC9A86A35DF4,
+	TestResults_Clear_mF12DFC6992D5FC33BBD5C298EBDCC4F3E2E86385,
+	TestResults__ctor_m1FAF650D7A363DEB20FFD8959BB28F4B1EF8F51D,
+};
+extern void CumulativeBurstSelectJob_Prep_m6225EEA6001C980EC626EFA80448304A9A45E951_AdjustorThunk (void);
+extern void CumulativeBurstSelectJob_Execute_mD4256C54D697B9DDC4F0F369731493BFD56634EE_AdjustorThunk (void);
+extern void CumulativeBurstSelectJob_Clean_m14BB42A0405486A061910D82A3F834560B13A34A_AdjustorThunk (void);
+extern void LinearBurstSelectJob_Prep_mA9CEBADB94D2B508CF2C49693D0C43995DFE242C_AdjustorThunk (void);
+extern void LinearBurstSelectJob_Execute_mF4C4B05346ECE03CB9AF16E8F8D83C6B19B8CF53_AdjustorThunk (void);
+extern void LinearBurstSelectJob_Clean_mDAB1E92E0BEAD64320CFA1DABFBAEB57B59AC473_AdjustorThunk (void);
+extern void ItemData__ctor_m2F59EDD971B4010BDE69C832DB59C1609DB108DB_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[7] = 
+{
+	{ 0x060000D2, CumulativeBurstSelectJob_Prep_m6225EEA6001C980EC626EFA80448304A9A45E951_AdjustorThunk },
+	{ 0x060000D3, CumulativeBurstSelectJob_Execute_mD4256C54D697B9DDC4F0F369731493BFD56634EE_AdjustorThunk },
+	{ 0x060000D4, CumulativeBurstSelectJob_Clean_m14BB42A0405486A061910D82A3F834560B13A34A_AdjustorThunk },
+	{ 0x060000DD, LinearBurstSelectJob_Prep_mA9CEBADB94D2B508CF2C49693D0C43995DFE242C_AdjustorThunk },
+	{ 0x060000DE, LinearBurstSelectJob_Execute_mF4C4B05346ECE03CB9AF16E8F8D83C6B19B8CF53_AdjustorThunk },
+	{ 0x060000DF, LinearBurstSelectJob_Clean_mDAB1E92E0BEAD64320CFA1DABFBAEB57B59AC473_AdjustorThunk },
+	{ 0x060000EF, ItemData__ctor_m2F59EDD971B4010BDE69C832DB59C1609DB108DB_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[256] = 
+{
+	16416,
+	9244,
+	9222,
+	9244,
+	9055,
+	8999,
+	3682,
+	9244,
+	9244,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	9094,
+	7198,
+	6435,
+	4053,
+	6435,
+	4053,
+	9055,
+	7198,
+	9055,
+	9094,
+	9244,
+	7198,
+	6960,
+	9244,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	11334,
+	15489,
+	0,
+	15011,
+	16381,
+	16381,
+	15471,
+	15464,
+	12534,
+	16302,
+	15464,
+	16332,
+	15489,
+	16332,
+	15489,
+	16332,
+	15489,
+	16381,
+	15471,
+	15464,
+	13024,
+	11465,
+	16374,
+	16332,
+	16332,
+	15489,
+	16381,
+	15489,
+	15148,
+	15471,
+	16381,
+	9094,
+	9094,
+	7250,
+	1401,
+	5064,
+	9244,
+	9244,
+	9094,
+	9094,
+	2252,
+	9244,
+	9244,
+	9244,
+	9244,
+	9094,
+	9094,
+	5064,
+	9244,
+	9094,
+	9094,
+	2252,
+	9244,
+	9244,
+	9244,
+	9244,
+	9094,
+	9094,
+	5064,
+	9244,
+	0,
+	0,
+	4053,
+	7250,
+	1401,
+	2252,
+	9244,
+	6062,
+	3324,
+	0,
+	9244,
+	1942,
+	11936,
+	12383,
+	11903,
+	13247,
+	12777,
+	13467,
+	9159,
+	9094,
+	9094,
+	9094,
+	9094,
+	9094,
+	9094,
+	9094,
+	9244,
+	9244,
+	9244,
+};
+static const Il2CppTokenRangePair s_rgctxIndices[6] = 
+{
+	{ 0x02000011, { 0, 23 } },
+	{ 0x02000012, { 23, 18 } },
+	{ 0x02000013, { 41, 88 } },
+	{ 0x02000014, { 129, 6 } },
+	{ 0x060000A7, { 135, 10 } },
+	{ 0x060000AA, { 145, 12 } },
+};
+extern const uint32_t g_rgctx_PLCollection_1_tA3F328635E0D4404A26363FA57D3824F9C1F49AA;
+extern const uint32_t g_rgctx_List_1_t1DF1FE28D302C94E3287916D257D8DA3F6C6C39B;
+extern const uint32_t g_rgctx_List_1_get_Item_mFEF751BF13843E5E938E4FDD2E6C92769958C4E9;
+extern const uint32_t g_rgctx_ProbabilityList_1_t31F04CA78643FCE8870F3E1516C7E0618D4AA41F;
+extern const uint32_t g_rgctx_List_1_Add_mD9070B850A62E6F4F39DD556C0F8FA49E5E48ACA;
+extern const uint32_t g_rgctx_ProbabilityList_1__ctor_m9BC9724E9366B4ED4867233F362E4EA5EBD006D4;
+extern const uint32_t g_rgctx_PLCollection_1_AddList_mDE1284471B6DF0AEE268B0C853E764C4BC86C148;
+extern const uint32_t g_rgctx_List_1_RemoveAt_m1AADEECE4106951A06DB7477BC2D7167BA5AD2A5;
+extern const uint32_t g_rgctx_List_1_Clear_m994E125102A8178DD737F81CF32674571EED9648;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_ItemCount_mC6723808BDF7AE3A96DCAF49AFD70677DED1BAA8;
+extern const uint32_t g_rgctx_List_1_t6D3FA2A2E632D568A84FE16207A5D3F6D9160363;
+extern const uint32_t g_rgctx_List_1__ctor_mA3DDA4B31468FD84E362DDCC70AE4CF783BA07FF;
+extern const uint32_t g_rgctx_List_1_GetEnumerator_mACEE256F4D6B5F893F299EFEA54511AA41031990;
+extern const uint32_t g_rgctx_Enumerator_tECAFC769E3856395AAED44A85CCF9FA56BDFE5E4;
+extern const uint32_t g_rgctx_Enumerator_get_Current_m10C3AA31EF06CACCF0EE2680CAD38D716EB36AD6;
+extern const uint32_t g_rgctx_Enumerator_tECAFC769E3856395AAED44A85CCF9FA56BDFE5E4;
+extern const uint32_t g_rgctx_ProbabilityList_1_PickValues_m72A6B9282E76A15F86EEB9720EECCE4E7412ABD2;
+extern const uint32_t g_rgctx_List_1_AddRange_mBDFEE98375BD36AE2A69965E1BE49A5E8AFF424B;
+extern const uint32_t g_rgctx_IEnumerable_1_t922EDCF95E8745EE05AE6E6CF1C033ED3DAF492B;
+extern const uint32_t g_rgctx_Enumerator_MoveNext_m53398EB905C0556F74C22DBD3B82676BC67001BD;
+extern const Il2CppRGCTXConstrainedData g_rgctx_Enumerator_tECAFC769E3856395AAED44A85CCF9FA56BDFE5E4_IDisposable_Dispose_m3C902735BE731EE30AC1185E7AEF6ACE7A9D9CC7;
+extern const uint32_t g_rgctx_T_tD5E2DBDE3C71A1146FD4B1F532F1A2DD3935C096;
+extern const uint32_t g_rgctx_List_1__ctor_m79BE62CDB1E75AD4DD1F0086663F01BD1504AA63;
+extern const uint32_t g_rgctx_ProbabilityItem_1_tEC82AC001C164C5533369BFE2D9719863B66D152;
+extern const uint32_t g_rgctx_T_t53522373FFC8FF92290AABB81C8D92E403CCE857;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_Value_mD5927606F92DAA5C4F7A69E2372D9D1AEAF40A01;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_BaseProbability_m7E407C706213F39B58954FBBB13C0BD637CAEF17;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_Enabled_mB948DC213B8994CF7547EE7E674A8B025B15E82B;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_Locked_m413F3F889E966D9BA6AB627A858EB3A7DAA0B89D;
+extern const uint32_t g_rgctx_T_t53522373FFC8FF92290AABB81C8D92E403CCE857;
+extern const uint32_t g_rgctx_ProbabilityItem_1_GetProviderTypes_m74E679F86D89BD573B705950506289B1368A1D2D;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_PropertiesUpdated_mFA3C34950AEC816D5E538CBF90AE7DD00EE9AFE3;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_BaseProbability_m68906AC3A4FB75E5E576D5AEF57E6DF49156435F;
+extern const uint32_t g_rgctx_ProbabilityItem_1_ClampSpreadToProbability_m6EC16B0B16AF0973BDCCB44F3F4D93B98A18B593;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_IsInfluencedItem_m159A31C9F1C4486365CF6E23380DF1B7C9E111D0;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_InfluenceProvider_m244FB88EF53342BE3D7F52D22257789CE96D86F4;
+extern const uint32_t g_rgctx_ProbabilityItem_1_GetInfluencedProbability_m64F4182475D60F6DFDBFE3A2718F70AE8A13CA57;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_InfluenceSpread_mF9F6A17E90F70284087CFF4B6C5803FE9D25A1AD;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_PropertiesUpdated_mE30FCB4E519E9BFD794F9410D2E27CDBCA54A5EE;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_Value_m086D08C7551F772A10956A56F671F226703B1244;
+extern const Il2CppRGCTXConstrainedData g_rgctx_T_t53522373FFC8FF92290AABB81C8D92E403CCE857_Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3;
+extern const uint32_t g_rgctx_ProbabilityList_1_t99FE5F237ABE71F3170251AA6B0CC6BA9F8F2D01;
+extern const uint32_t g_rgctx_List_1_t05296AC930242A6E44123F562862EBD153AADC3B;
+extern const uint32_t g_rgctx_List_1_get_Item_m7AD823FD0EA70257F5E48CDBDF1A0A046C17BA24;
+extern const uint32_t g_rgctx_ProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_ProbabilityItems_mCBC47C5DAB56F167B552FBD0BD4EA0CB77C51B09;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_InfluenceProvider_m8DE28595A6C9F3C47F2C1DCB69CD70EBA6E012A8;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_SelectionMethodID_m7BB0037AFD5ED642180CAB4C5D529AF05116BE20;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_ItemCount_m8DE4304DC009204948707118E130686BA74224C0;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_UnlockedItemsCount_m56A260FF7A6A5E6457C980E0C1A02A7B989D192A;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_Locked_mCE7D631CC74D313084FDDB3A33FAA91011EBEBDF;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_BaseProbability_m637E064D562D460865F0D1E63B06600521F8F69B;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_SelectionMethodInstance_m3DB128B1ADB8DBA85A6739BFFC58C1D72B039B3B;
+extern const uint32_t g_rgctx_ProbabilityList_1_set_LastPickCount_m47A5F7F2E47810A25F92C2C3C6552FE99DE11A8D;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickHistory_m8388B162F9C8421BAE0D98613BF1F10DA794D786;
+extern const uint32_t g_rgctx_List_1_GetEnumerator_m0D59CB06B4FDD501F0E341C8AB32D3EE6000962D;
+extern const uint32_t g_rgctx_Enumerator_t44B59C7A77F248CA31557216B2BB02C9E24B5240;
+extern const uint32_t g_rgctx_Enumerator_get_Current_m94FE7CA84B84D64CCF7E376AA6D67B7E3676D2A3;
+extern const uint32_t g_rgctx_Enumerator_t44B59C7A77F248CA31557216B2BB02C9E24B5240;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_IsInfluencedItem_mE48163B143921F4C4BF3D06930EF54BF7963D0CB;
+extern const uint32_t g_rgctx_Enumerator_MoveNext_m32B605E485D25EF42742F7E97271731C07157062;
+extern const Il2CppRGCTXConstrainedData g_rgctx_Enumerator_t44B59C7A77F248CA31557216B2BB02C9E24B5240_IDisposable_Dispose_m3C902735BE731EE30AC1185E7AEF6ACE7A9D9CC7;
+extern const uint32_t g_rgctx_U3CU3Ec_t8DA7351AA9EB30A8C7997DA96852373223ACB44B;
+extern const uint32_t g_rgctx_Func_2_t1952DDB79DD8E81BD1458BE97CC51288F23D0552;
+extern const uint32_t g_rgctx_U3CU3Ec_t8DA7351AA9EB30A8C7997DA96852373223ACB44B;
+extern const uint32_t g_rgctx_U3CU3Ec_U3Cget_UnlockedItemsCountU3Eb__29_0_mB5628375CCAA4A0DDAB282904F0C23CE6259C5E0;
+extern const uint32_t g_rgctx_Func_2__ctor_mCCAD2D65EB73C0C38AF78CFCF124F80BAFF31504;
+extern const uint32_t g_rgctx_Enumerable_Count_TisProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705_mB9DA0D99D190BDF4CB153CB0B28F927D259DC929;
+extern const uint32_t g_rgctx_IEnumerable_1_t95E0030D245E6123B85FBC5A995D08A05C6A94E1;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_LinkPickCounts_mE7C54D5F3F837B9DA2C57B6EC6EDB102918930C9;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickCountMin_m7F177A9B46651849089E615BE9E29408F7484EB0;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_KeepSeed_m1409C32E5D5FC6E163B84087525638154D8C9CE1;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_LastPickCount_m29F7416479C052D4B2F4F75832F17A082F5524F9;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_LastPickedIndices_m657E59C41BA6DFCF4B9059F54505CD1DCDA981EA;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_LastPickedIndex_m6EA928552A4F86A16D07404705CE382001A4F735;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_Value_m82B2211102C9394457FB8EBEDD8AB9A0805CEC86;
+extern const uint32_t g_rgctx_T_t8639B2DAEB539F5F16A6E5FF2F37479FBA427E4D;
+extern const uint32_t g_rgctx_List_1_t47D7B8602FC176032BEBDF61EBF504B2B1111051;
+extern const uint32_t g_rgctx_List_1_Clear_mDE5119B44F9818AE64117FCB913BA6B2A2D5501C;
+extern const uint32_t g_rgctx_List_1_Add_m1A689839043CEE791A2BFC3B31E34F243D6D9123;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_LastPickedValues_m155C3CE10E2A0D3895D0E2684BD61AF5A53CB95E;
+extern const uint32_t g_rgctx_List_1_AddRange_m43DCBD74F550B8E26C07E3A6C46FB15050A7D407;
+extern const uint32_t g_rgctx_IEnumerable_1_t31067AAA5C36E86F74F942D40467060E0A701FAB;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_Probability_m23D089B7196C3B0A923211D7DB70BD8BD389BB61;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_BaseProbability_mA372192D682FDE9C0A55986E790FC0954C7C30F2;
+extern const uint32_t g_rgctx_List_1_get_Count_mBBF72A6E0A47EE164CD585FD6C11C9DEC4190BE8;
+extern const uint32_t g_rgctx_U3CU3Ec_U3CSetItemBaseProbabilityU3Eb__82_0_m97BF49C0F0CF9E0A151B600641F58BAD2C2CD975;
+extern const uint32_t g_rgctx_ProbabilityList_1_NormalizeProbabilities_m486A1AD01C29421032412895DFD01689F93B2B13;
+extern const uint32_t g_rgctx_Func_2_tB159C37DF82DC2EC5EE6AFA793DFAB1B41FBF6C3;
+extern const uint32_t g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_0_m87BA1822EC3FA460BD3B4DA7E463054D3BF654D5;
+extern const uint32_t g_rgctx_Func_2__ctor_mF6D1F0FA0A6FDBAC83C6EE4FB744C2D035E79F5E;
+extern const uint32_t g_rgctx_Enumerable_Sum_TisProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705_m51EEF6F2253338479ADD8CD22DCCE233AD7D04BB;
+extern const uint32_t g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_1_m765FF69DBEC37B6F9D390AAFD5346B3163D065F9;
+extern const uint32_t g_rgctx_Enumerable_Where_TisProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705_m751D97ED0AC0AFADC12B089BBB9EB2F9DEB31E02;
+extern const uint32_t g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_2_m5EF7BC086742B810030D079C31FA83AF4E7681D3;
+extern const uint32_t g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_3_mFDE669C13485EA56718A662B957A091B4F9D409D;
+extern const uint32_t g_rgctx_ProbabilityList_1_AddItem_m0E9C8CA2F27268A2F3C15DA6BC471FBBEE0A396E;
+extern const uint32_t g_rgctx_ProbabilityItem_1__ctor_mAEE0D440C2FAF9999CE9DC10E88C28352BA91C77;
+extern const uint32_t g_rgctx_ProbabilityList_1_AddItem_m4D377B7E985E1A772ED3F8484B0FAC4C8B9FCB4A;
+extern const uint32_t g_rgctx_List_1_Add_m5AE40168FDF3C22EBE893698945546AA0865023C;
+extern const uint32_t g_rgctx_List_1_Contains_mB2ACBE12FD32C955B76929177FAECC0003B7602E;
+extern const uint32_t g_rgctx_List_1_IndexOf_mA1A90374E45068C6B337FF1505874CA21F08E0A5;
+extern const uint32_t g_rgctx_ProbabilityList_1_RemoveItemAtIndex_mA5B583154BBB1519939FAB7890B9B832BB2CE3FA;
+extern const uint32_t g_rgctx_ProbabilityList_1_IsOnlyUnlockedItemWithProbability_mDEFD71962D527000544A631A9D596F012110E3E2;
+extern const uint32_t g_rgctx_ProbabilityList_1_IsItemWithAllRemainingProbability_m3E942430391371BEED71C655EC3BBC9DE5E71A0F;
+extern const uint32_t g_rgctx_List_1_RemoveAt_m7892B9E0C77937B8EA0959B0DCE4F43F21397022;
+extern const uint32_t g_rgctx_ProbabilityList_1_ClearHistory_mAAF68276734DB5D01F07C2A57F2E64AFB5E39718;
+extern const uint32_t g_rgctx_List_1_Clear_m082A4D8F1A111D5D1C362DEAB454DB693E7478DE;
+extern const uint32_t g_rgctx_ProbabilityItem_1U26_t9B3F442FDB2E3552286669EE761BA6B11458B7EC;
+extern const uint32_t g_rgctx_ProbabilityList_1_TryGetProbabilityItem_mF41FF6038B4BD5DBD6A9FA1510ACF62F04237120;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_InfluenceProvider_mA516CC8A92A082655E16E95D4604AF7B4C22E4C7;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_Enabled_mEE543A3E78A9D53BD65F519E778BA96EB21473F2;
+extern const uint32_t g_rgctx_ProbabilityList_1_SetItemBaseProbability_m1CAF294228B80339E9DD1919C82393FA6A266EE6;
+extern const uint32_t g_rgctx_ProbabilityList_1_SetItemEnabled_m4BC506649DAEEE17D44CDDF700CF8725602081F7;
+extern const uint32_t g_rgctx_ProbabilityList_1_SetItemLocked_mBBCC7BC046BBCCAFB1B42742D61FAD0ACD9784C9;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_Enabled_m0B68D6F4267B0B7A4713672DC81473376743AFD4;
+extern const uint32_t g_rgctx_ProbabilityItem_1_set_Locked_m26CC1D9A5D1BCDDD7DCE18C52299EA353EF032F7;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_Seed_mD7B98A8CCECEC74D29281094E357C7CE6CE970BA;
+extern const uint32_t g_rgctx_ProbabilityList_1_Select_mF01E6D7399F597F3E4A653A224B3324DCB706A96;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_LastPickedValue_m87AFF57FB6221159959B81ECF2E66ED607B233C7;
+extern const uint32_t g_rgctx_TU26_t4535841C768D648049FE98EBC7A16FC01A5CA8B0;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickCountCurve_mC6C0918ED99AF91DD8755F4D5E3CAD9AB1058739;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickCountMax_mD2D4C871F866F54627121BD15AC8C4A7924F2D05;
+extern const uint32_t g_rgctx_ProbabilityList_1_TryPickValueWithIndex_m60F973C4ECDFCED6E4E68A8165F98C11068898DE;
+extern const uint32_t g_rgctx_ValueTuple_2_t034E59FF821D041B3E4507B82FBA91A02118F50E;
+extern const uint32_t g_rgctx_ValueTuple_2__ctor_mF8066DD62F5D03F3F03EF4B718493D93DB5B6129;
+extern const uint32_t g_rgctx_ProbabilityTools_Test_TisT_t8639B2DAEB539F5F16A6E5FF2F37479FBA427E4D_m7A66816F86FFA61664B231F0FD6E45A4F2B8BDB8;
+extern const uint32_t g_rgctx_List_1__ctor_mFDA16EFA204978B7F78008BA5375FE5E35202918;
+extern const uint32_t g_rgctx_List_1__ctor_mFFC57B035DAA44CBF35821B712D8BB76A5DC3696;
+extern const uint32_t g_rgctx_U3CU3Ec_t7A47F167B7D434FA4ADA3959DF9A5F060CCD25C4;
+extern const uint32_t g_rgctx_U3CU3Ec__ctor_mD397E22CF58AE13DF0D95021FA0EBCD3EA666FDD;
+extern const uint32_t g_rgctx_U3CU3Ec_t7A47F167B7D434FA4ADA3959DF9A5F060CCD25C4;
+extern const uint32_t g_rgctx_ProbabilityItem_1_t1478D237CAFF5181C731F69E46D8260868A9C40B;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_Locked_mB1B1DFC3C18D81F50739E76C4BBD9E656A27E4B4;
+extern const uint32_t g_rgctx_ProbabilityItem_1_get_BaseProbability_mEA9DD04868D2C5641A2292702465229C2E32564F;
+extern const uint32_t g_rgctx_List_1_t424570FDEC2ED003A269CFCAC3E05ADC2A3F5726;
+extern const uint32_t g_rgctx_List_1_GetEnumerator_m3D62174B59937371D15CE94C2DACE836FA9DD760;
+extern const uint32_t g_rgctx_Enumerator_t97AF5F3DD6DB97F8783A308A4C1C4E2C2E5034DB;
+extern const uint32_t g_rgctx_Enumerator_get_Current_m9E27C9773755DE0857349DEF832C6AB4BDA01827;
+extern const uint32_t g_rgctx_Enumerator_t97AF5F3DD6DB97F8783A308A4C1C4E2C2E5034DB;
+extern const uint32_t g_rgctx_ProbabilityItem_1_t42987B709F0E7BBD4E25980636C066A15569655A;
+extern const uint32_t g_rgctx_ProbabilityItem_1_GetInfluencedProbability_mAF4C96354A8C4C795D7929B35BD1566F82EA6FD2;
+extern const uint32_t g_rgctx_Enumerator_MoveNext_m29BA17764F135286489BA9E2904CEC940A50BB7D;
+extern const Il2CppRGCTXConstrainedData g_rgctx_Enumerator_t97AF5F3DD6DB97F8783A308A4C1C4E2C2E5034DB_IDisposable_Dispose_m3C902735BE731EE30AC1185E7AEF6ACE7A9D9CC7;
+extern const uint32_t g_rgctx_List_1_get_Count_m67708BD50D85C55C142EDBC1A79D57AF8FB21E99;
+extern const uint32_t g_rgctx_ProbabilityList_1_t3DB55C3CAF955934A45AC35122913899A6370796;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickCountCurve_m554017B05C247A8F05328E650D309C19562E4DAE;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickCountMin_m4AA4BA9B199F503B25597CA40B20045707C5EC04;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PickCountMax_m15E92C25A614A808CC45A9706BB8111DF7B97142;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_Seed_m4B5A38359EDA3C6686DCF61204B4D8E6720933C2;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_SelectionMethodInstance_m42852743309CA8C2DCF29A312B0A80F55B2DEE44;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_PreventRepeat_m7EB6185D1C5938F7B1C2AE0434D6EF641726E95A;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_CurrentSeed_m600276C3E593892B7D9D0938710B5E773987D9D4;
+extern const uint32_t g_rgctx_ProbabilityList_1_set_LastPickCount_mCFB83B4DF220F551B3716B5D8F70C2B638F7757D;
+extern const uint32_t g_rgctx_ProbabilityList_1_get_ProbabilityItems_m828993D6B83CC9AF373A120E8BC3C401B2FF7BD3;
+extern const uint32_t g_rgctx_List_1_tA4755643CB06B00D80D7672D041E58B256E8A012;
+extern const uint32_t g_rgctx_List_1_get_Count_m6B0B88C4FBE3E8B1E3FCBF9C9E2AB57BBCCC7F9D;
+static const Il2CppRGCTXDefinition s_rgctxValues[157] = 
+{
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_PLCollection_1_tA3F328635E0D4404A26363FA57D3824F9C1F49AA },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t1DF1FE28D302C94E3287916D257D8DA3F6C6C39B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Item_mFEF751BF13843E5E938E4FDD2E6C92769958C4E9 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityList_1_t31F04CA78643FCE8870F3E1516C7E0618D4AA41F },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Add_mD9070B850A62E6F4F39DD556C0F8FA49E5E48ACA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1__ctor_m9BC9724E9366B4ED4867233F362E4EA5EBD006D4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_PLCollection_1_AddList_mDE1284471B6DF0AEE268B0C853E764C4BC86C148 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_RemoveAt_m1AADEECE4106951A06DB7477BC2D7167BA5AD2A5 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Clear_m994E125102A8178DD737F81CF32674571EED9648 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_ItemCount_mC6723808BDF7AE3A96DCAF49AFD70677DED1BAA8 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t6D3FA2A2E632D568A84FE16207A5D3F6D9160363 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_mA3DDA4B31468FD84E362DDCC70AE4CF783BA07FF },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_GetEnumerator_mACEE256F4D6B5F893F299EFEA54511AA41031990 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Enumerator_tECAFC769E3856395AAED44A85CCF9FA56BDFE5E4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerator_get_Current_m10C3AA31EF06CACCF0EE2680CAD38D716EB36AD6 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Enumerator_tECAFC769E3856395AAED44A85CCF9FA56BDFE5E4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_PickValues_m72A6B9282E76A15F86EEB9720EECCE4E7412ABD2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_AddRange_mBDFEE98375BD36AE2A69965E1BE49A5E8AFF424B },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_IEnumerable_1_t922EDCF95E8745EE05AE6E6CF1C033ED3DAF492B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerator_MoveNext_m53398EB905C0556F74C22DBD3B82676BC67001BD },
+	{ (Il2CppRGCTXDataType)5, (const void *)&g_rgctx_Enumerator_tECAFC769E3856395AAED44A85CCF9FA56BDFE5E4_IDisposable_Dispose_m3C902735BE731EE30AC1185E7AEF6ACE7A9D9CC7 },
+	{ (Il2CppRGCTXDataType)1, (const void *)&g_rgctx_T_tD5E2DBDE3C71A1146FD4B1F532F1A2DD3935C096 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_m79BE62CDB1E75AD4DD1F0086663F01BD1504AA63 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityItem_1_tEC82AC001C164C5533369BFE2D9719863B66D152 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t53522373FFC8FF92290AABB81C8D92E403CCE857 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_Value_mD5927606F92DAA5C4F7A69E2372D9D1AEAF40A01 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_BaseProbability_m7E407C706213F39B58954FBBB13C0BD637CAEF17 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_Enabled_mB948DC213B8994CF7547EE7E674A8B025B15E82B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_Locked_m413F3F889E966D9BA6AB627A858EB3A7DAA0B89D },
+	{ (Il2CppRGCTXDataType)1, (const void *)&g_rgctx_T_t53522373FFC8FF92290AABB81C8D92E403CCE857 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_GetProviderTypes_m74E679F86D89BD573B705950506289B1368A1D2D },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_PropertiesUpdated_mFA3C34950AEC816D5E538CBF90AE7DD00EE9AFE3 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_BaseProbability_m68906AC3A4FB75E5E576D5AEF57E6DF49156435F },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_ClampSpreadToProbability_m6EC16B0B16AF0973BDCCB44F3F4D93B98A18B593 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_IsInfluencedItem_m159A31C9F1C4486365CF6E23380DF1B7C9E111D0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_InfluenceProvider_m244FB88EF53342BE3D7F52D22257789CE96D86F4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_GetInfluencedProbability_m64F4182475D60F6DFDBFE3A2718F70AE8A13CA57 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_InfluenceSpread_mF9F6A17E90F70284087CFF4B6C5803FE9D25A1AD },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_PropertiesUpdated_mE30FCB4E519E9BFD794F9410D2E27CDBCA54A5EE },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_Value_m086D08C7551F772A10956A56F671F226703B1244 },
+	{ (Il2CppRGCTXDataType)5, (const void *)&g_rgctx_T_t53522373FFC8FF92290AABB81C8D92E403CCE857_Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityList_1_t99FE5F237ABE71F3170251AA6B0CC6BA9F8F2D01 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t05296AC930242A6E44123F562862EBD153AADC3B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Item_m7AD823FD0EA70257F5E48CDBDF1A0A046C17BA24 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_ProbabilityItems_mCBC47C5DAB56F167B552FBD0BD4EA0CB77C51B09 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_InfluenceProvider_m8DE28595A6C9F3C47F2C1DCB69CD70EBA6E012A8 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_SelectionMethodID_m7BB0037AFD5ED642180CAB4C5D529AF05116BE20 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_ItemCount_m8DE4304DC009204948707118E130686BA74224C0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_UnlockedItemsCount_m56A260FF7A6A5E6457C980E0C1A02A7B989D192A },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_Locked_mCE7D631CC74D313084FDDB3A33FAA91011EBEBDF },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_BaseProbability_m637E064D562D460865F0D1E63B06600521F8F69B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_SelectionMethodInstance_m3DB128B1ADB8DBA85A6739BFFC58C1D72B039B3B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_set_LastPickCount_m47A5F7F2E47810A25F92C2C3C6552FE99DE11A8D },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickHistory_m8388B162F9C8421BAE0D98613BF1F10DA794D786 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_GetEnumerator_m0D59CB06B4FDD501F0E341C8AB32D3EE6000962D },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Enumerator_t44B59C7A77F248CA31557216B2BB02C9E24B5240 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerator_get_Current_m94FE7CA84B84D64CCF7E376AA6D67B7E3676D2A3 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Enumerator_t44B59C7A77F248CA31557216B2BB02C9E24B5240 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_IsInfluencedItem_mE48163B143921F4C4BF3D06930EF54BF7963D0CB },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerator_MoveNext_m32B605E485D25EF42742F7E97271731C07157062 },
+	{ (Il2CppRGCTXDataType)5, (const void *)&g_rgctx_Enumerator_t44B59C7A77F248CA31557216B2BB02C9E24B5240_IDisposable_Dispose_m3C902735BE731EE30AC1185E7AEF6ACE7A9D9CC7 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec_t8DA7351AA9EB30A8C7997DA96852373223ACB44B },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Func_2_t1952DDB79DD8E81BD1458BE97CC51288F23D0552 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec_t8DA7351AA9EB30A8C7997DA96852373223ACB44B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec_U3Cget_UnlockedItemsCountU3Eb__29_0_mB5628375CCAA4A0DDAB282904F0C23CE6259C5E0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Func_2__ctor_mCCAD2D65EB73C0C38AF78CFCF124F80BAFF31504 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerable_Count_TisProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705_mB9DA0D99D190BDF4CB153CB0B28F927D259DC929 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_IEnumerable_1_t95E0030D245E6123B85FBC5A995D08A05C6A94E1 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_LinkPickCounts_mE7C54D5F3F837B9DA2C57B6EC6EDB102918930C9 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickCountMin_m7F177A9B46651849089E615BE9E29408F7484EB0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_KeepSeed_m1409C32E5D5FC6E163B84087525638154D8C9CE1 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_LastPickCount_m29F7416479C052D4B2F4F75832F17A082F5524F9 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_LastPickedIndices_m657E59C41BA6DFCF4B9059F54505CD1DCDA981EA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_LastPickedIndex_m6EA928552A4F86A16D07404705CE382001A4F735 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_Value_m82B2211102C9394457FB8EBEDD8AB9A0805CEC86 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t8639B2DAEB539F5F16A6E5FF2F37479FBA427E4D },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t47D7B8602FC176032BEBDF61EBF504B2B1111051 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Clear_mDE5119B44F9818AE64117FCB913BA6B2A2D5501C },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Add_m1A689839043CEE791A2BFC3B31E34F243D6D9123 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_LastPickedValues_m155C3CE10E2A0D3895D0E2684BD61AF5A53CB95E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_AddRange_m43DCBD74F550B8E26C07E3A6C46FB15050A7D407 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_IEnumerable_1_t31067AAA5C36E86F74F942D40467060E0A701FAB },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_Probability_m23D089B7196C3B0A923211D7DB70BD8BD389BB61 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_BaseProbability_mA372192D682FDE9C0A55986E790FC0954C7C30F2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Count_mBBF72A6E0A47EE164CD585FD6C11C9DEC4190BE8 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec_U3CSetItemBaseProbabilityU3Eb__82_0_m97BF49C0F0CF9E0A151B600641F58BAD2C2CD975 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_NormalizeProbabilities_m486A1AD01C29421032412895DFD01689F93B2B13 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Func_2_tB159C37DF82DC2EC5EE6AFA793DFAB1B41FBF6C3 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_0_m87BA1822EC3FA460BD3B4DA7E463054D3BF654D5 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Func_2__ctor_mF6D1F0FA0A6FDBAC83C6EE4FB744C2D035E79F5E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerable_Sum_TisProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705_m51EEF6F2253338479ADD8CD22DCCE233AD7D04BB },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_1_m765FF69DBEC37B6F9D390AAFD5346B3163D065F9 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerable_Where_TisProbabilityItem_1_t0750799587516AFECBF5E7C59F649F8F23150705_m751D97ED0AC0AFADC12B089BBB9EB2F9DEB31E02 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_2_m5EF7BC086742B810030D079C31FA83AF4E7681D3 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec_U3CNormalizeProbabilitiesU3Eb__84_3_mFDE669C13485EA56718A662B957A091B4F9D409D },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_AddItem_m0E9C8CA2F27268A2F3C15DA6BC471FBBEE0A396E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1__ctor_mAEE0D440C2FAF9999CE9DC10E88C28352BA91C77 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_AddItem_m4D377B7E985E1A772ED3F8484B0FAC4C8B9FCB4A },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Add_m5AE40168FDF3C22EBE893698945546AA0865023C },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Contains_mB2ACBE12FD32C955B76929177FAECC0003B7602E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_IndexOf_mA1A90374E45068C6B337FF1505874CA21F08E0A5 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_RemoveItemAtIndex_mA5B583154BBB1519939FAB7890B9B832BB2CE3FA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_IsOnlyUnlockedItemWithProbability_mDEFD71962D527000544A631A9D596F012110E3E2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_IsItemWithAllRemainingProbability_m3E942430391371BEED71C655EC3BBC9DE5E71A0F },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_RemoveAt_m7892B9E0C77937B8EA0959B0DCE4F43F21397022 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_ClearHistory_mAAF68276734DB5D01F07C2A57F2E64AFB5E39718 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_Clear_m082A4D8F1A111D5D1C362DEAB454DB693E7478DE },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityItem_1U26_t9B3F442FDB2E3552286669EE761BA6B11458B7EC },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_TryGetProbabilityItem_mF41FF6038B4BD5DBD6A9FA1510ACF62F04237120 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_InfluenceProvider_mA516CC8A92A082655E16E95D4604AF7B4C22E4C7 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_Enabled_mEE543A3E78A9D53BD65F519E778BA96EB21473F2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_SetItemBaseProbability_m1CAF294228B80339E9DD1919C82393FA6A266EE6 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_SetItemEnabled_m4BC506649DAEEE17D44CDDF700CF8725602081F7 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_SetItemLocked_mBBCC7BC046BBCCAFB1B42742D61FAD0ACD9784C9 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_Enabled_m0B68D6F4267B0B7A4713672DC81473376743AFD4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_set_Locked_m26CC1D9A5D1BCDDD7DCE18C52299EA353EF032F7 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_Seed_mD7B98A8CCECEC74D29281094E357C7CE6CE970BA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_Select_mF01E6D7399F597F3E4A653A224B3324DCB706A96 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_LastPickedValue_m87AFF57FB6221159959B81ECF2E66ED607B233C7 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_TU26_t4535841C768D648049FE98EBC7A16FC01A5CA8B0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickCountCurve_mC6C0918ED99AF91DD8755F4D5E3CAD9AB1058739 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickCountMax_mD2D4C871F866F54627121BD15AC8C4A7924F2D05 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_TryPickValueWithIndex_m60F973C4ECDFCED6E4E68A8165F98C11068898DE },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ValueTuple_2_t034E59FF821D041B3E4507B82FBA91A02118F50E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ValueTuple_2__ctor_mF8066DD62F5D03F3F03EF4B718493D93DB5B6129 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityTools_Test_TisT_t8639B2DAEB539F5F16A6E5FF2F37479FBA427E4D_m7A66816F86FFA61664B231F0FD6E45A4F2B8BDB8 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_mFDA16EFA204978B7F78008BA5375FE5E35202918 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1__ctor_mFFC57B035DAA44CBF35821B712D8BB76A5DC3696 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec_t7A47F167B7D434FA4ADA3959DF9A5F060CCD25C4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec__ctor_mD397E22CF58AE13DF0D95021FA0EBCD3EA666FDD },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec_t7A47F167B7D434FA4ADA3959DF9A5F060CCD25C4 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityItem_1_t1478D237CAFF5181C731F69E46D8260868A9C40B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_Locked_mB1B1DFC3C18D81F50739E76C4BBD9E656A27E4B4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_get_BaseProbability_mEA9DD04868D2C5641A2292702465229C2E32564F },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_t424570FDEC2ED003A269CFCAC3E05ADC2A3F5726 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_GetEnumerator_m3D62174B59937371D15CE94C2DACE836FA9DD760 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Enumerator_t97AF5F3DD6DB97F8783A308A4C1C4E2C2E5034DB },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerator_get_Current_m9E27C9773755DE0857349DEF832C6AB4BDA01827 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Enumerator_t97AF5F3DD6DB97F8783A308A4C1C4E2C2E5034DB },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityItem_1_t42987B709F0E7BBD4E25980636C066A15569655A },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityItem_1_GetInfluencedProbability_mAF4C96354A8C4C795D7929B35BD1566F82EA6FD2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Enumerator_MoveNext_m29BA17764F135286489BA9E2904CEC940A50BB7D },
+	{ (Il2CppRGCTXDataType)5, (const void *)&g_rgctx_Enumerator_t97AF5F3DD6DB97F8783A308A4C1C4E2C2E5034DB_IDisposable_Dispose_m3C902735BE731EE30AC1185E7AEF6ACE7A9D9CC7 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Count_m67708BD50D85C55C142EDBC1A79D57AF8FB21E99 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ProbabilityList_1_t3DB55C3CAF955934A45AC35122913899A6370796 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickCountCurve_m554017B05C247A8F05328E650D309C19562E4DAE },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickCountMin_m4AA4BA9B199F503B25597CA40B20045707C5EC04 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PickCountMax_m15E92C25A614A808CC45A9706BB8111DF7B97142 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_Seed_m4B5A38359EDA3C6686DCF61204B4D8E6720933C2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_SelectionMethodInstance_m42852743309CA8C2DCF29A312B0A80F55B2DEE44 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_PreventRepeat_m7EB6185D1C5938F7B1C2AE0434D6EF641726E95A },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_CurrentSeed_m600276C3E593892B7D9D0938710B5E773987D9D4 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_set_LastPickCount_mCFB83B4DF220F551B3716B5D8F70C2B638F7757D },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ProbabilityList_1_get_ProbabilityItems_m828993D6B83CC9AF373A120E8BC3C401B2FF7BD3 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_List_1_tA4755643CB06B00D80D7672D041E58B256E8A012 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_List_1_get_Count_m6B0B88C4FBE3E8B1E3FCBF9C9E2AB57BBCCC7F9D },
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_RNGNeeds_CodeGenModule;
+const Il2CppCodeGenModule g_RNGNeeds_CodeGenModule = 
+{
+	"RNGNeeds.dll",
+	256,
+	s_methodPointers,
+	7,
+	s_adjustorThunks,
+	s_InvokerIndices,
+	0,
+	NULL,
+	6,
+	s_rgctxIndices,
+	157,
+	s_rgctxValues,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0df601a4a266346bb432fa4ac5a640, type: 3}
+  m_Name: 81-OriginalSource
+  m_EditorClassIdentifier: 
+  name: Infinite Source
+  ID: 81
+  artwork: {fileID: 21300000, guid: 72ac722c3fedd9d4d8c2745f5317bff1, type: 3}
+  background: {fileID: 21300000, guid: aacd6ac016a4eec48bad5beee6732559, type: 3}
+  background_color: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  type: 2
+  sellable: 0
+  craftable: 0
+  harvestable: 1
+  inventory: 0
+  evolve: 0
+  interfaces: 0
+  transmute: 0
+  activableInterface: 0
+  customBehavior: 0
+  machineSavoir: 0
+  upgradable: 0
+  recipeText:
+  - 'An <color=grey>infinite</color> water well. Produces water more slowly than
+    a basic <color=yellow><link="Source">source</link></color> but <color=grey>never</color>
+    runs out.
+
+    
+
+    Required :
+
+    4 x <color=yellow><link="Source">Source</link></color>'
+  utilities:
+  - cardName: Eau
+    recipe: 1 x Seau<br>1 x Source infinie
+  price: 0
+  timeToCraft: 5
+  infinite: 1
+  life: 0
+  storeCard: 0
+  inventorySize: 0
+  shakable: 0
+  harvestTime: 8
+  drop:
+    m_PLID: bec7d46e-fa24-405b-9708-b516d6a4b8b0
+    m_ProbabilityItems:
+    - m_Value: {fileID: 11400000, guid: 96635c6fe3d92274aa7eef144df5ff24, type: 2}
+      m_BaseProbability: 1
+      m_Enabled: 1
+      m_Locked: 0
+      m_InfluenceSpread: {x: 0, y: 1}
+      m_InfluenceProvider: {fileID: 0}
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 994123237
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History:
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461988876126980
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461988875792667
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461988064089443
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461988063740796
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461987278792744
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461987278451276
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461176323777517
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461176323633636
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461176157770329
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461176145364128
+      - m_Index: 0
+        m_Time:
+          Ticks: 638461174197560586
+      - m_Index: 0
+        m_Time:
+          Ticks: 638460938350015932
+      - m_Index: 0
+        m_Time:
+          Ticks: 638460938349914386
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457631734682839
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457631250354011
+      - m_Index: 0
+        m_Time:
+          Ticks: 638457629804340272
+      - m_Index: 0
+        m_Time:
+          Ticks: 638448502110385915
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447515208733371
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447506280646189
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447502146463989
+      - m_Index: 0
+        m_Time:
+          Ticks: 638447485385578660
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428130005288233
+      - m_Index: 0
+        m_Time:
+          Ticks: 638428110958725413
+      m_Capacity: 1000
+    m_LastPickCount: 1
+    m_SelectionMethodID: LSMRegular
+  activators: 0300000050000000
+  preciseSpawn: 0
+  preciseList: []
+  slotAmount: 0
+  slotType: 0
+  preciseCardID: 0
+  preciseCard: 0
+  recipes:
+  - machine: 0
+    recipe: 02000000020000000200000002000000
+  evolveTime: 0
+  evolutions:
+    m_PLID: 
+    m_ProbabilityItems: []
+    m_PreventRepeat: 0
+    m_ShuffleIterations: 1
+    m_PickCountMin: 1
+    m_PickCountMax: 1
+    m_LinkPickCounts: 1
+    m_MaintainPickCountIfDisabled: 0
+    m_PickCountCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_Seed: 0
+    m_KeepSeed: 0
+    m_PickHistory:
+      m_History: []
+      m_Capacity: 1000
+    m_LastPickCount: 0
+    m_SelectionMethodID: LSMRegular
+  interfaceList: []
+  requireEnergy: 0
+  maxEnergyStored: 0
+  energyPerCraft: 0
+  transmuteList: []
+  savoirList: []
+  behavior: 
